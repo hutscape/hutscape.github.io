@@ -1,7 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<!doctype html>
+<html class="no-js" lang="{{ page.lang | default: site.lang | default: "en" }}">
 {%- include head.html -%}
 <body>
+<!--[if IE]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
   {%- include header.html -%}
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
@@ -9,5 +13,9 @@
     </div>
   </main>
   {%- include footer.html -%}
+
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
 </body>
 </html>
