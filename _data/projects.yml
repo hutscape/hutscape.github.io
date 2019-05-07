@@ -1,0 +1,15 @@
+- name: Cactus
+  sequence: 1
+  url: /cactus
+  description: 🌵 Measure humidity in kitchen cupboards to keep food fresh 🍶
+  tags: [esp8266, humidity, temperature, lipo]
+  cogs: 35.41
+  bom: 35
+  status: completed
+
+- name: Palm
+  sequence: 2
+  url: /palm
+  description: 🌴 Get alerted on excessive UV radiation with a keychain 🗝 hanging from a backpack 🎒
+  tags: [nRF52, UV]
+  status: prototyping

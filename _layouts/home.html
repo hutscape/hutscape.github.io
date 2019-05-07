@@ -9,23 +9,37 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+
+  <h2 class="post-list-heading">Projects</h2>
+  <ul class="post-link">
+  {% assign projects = site.data.projects | sort: 'sequence' %}
+  {% for project in projects reversed %}
+    <li>
+      <a href="{{ project.url }}">
+        {{ project.name }}
+      </a>
+      <p>
+        {% for tag in project.tags %}
+          {{tag}}
+        {% endfor %}
+      </p>
+      <p>
+        {%- if project.cogs -%}
+          USD {{ project.cogs }}
+        {% endif %}
+      </p>
+      <p>
+        {%- if project.bom -%}
+          {{ project.bom }} items
+        {% endif %}
+      </p>
+      <p>
+        {%- if project.status -%}
+          {{ project.status }} stage
+        {% endif %}
+      </p>
+    </li>
+  {% endfor %}
+  </ul>
+
 </div>
