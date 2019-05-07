@@ -1,8 +1,8 @@
 ---
 layout: components
-title: mDNS in AP mode
-description: Create mDNS in Access Point mode
-code: mdns-access-point/mdns-access-point.ino
+title: Measure battery voltage
+description: Measure battery voltage
+code: measure-battery-voltage/measure-battery-voltage.ino
 hardware:
   - esp8266
   - WeMos

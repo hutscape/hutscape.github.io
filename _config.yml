@@ -8,3 +8,6 @@ collections:
   components:
     output: true
     permalink: /components/:name
+  checklists:
+    output: true
+    permalink: /checklists/:name
