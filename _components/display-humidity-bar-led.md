@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Display humidity with bar LED
-description: Display humidity with bar LED display and a shift register
 code: display-humidity-bar-led/display-humidity-bar-led.ino
 hardware:
   - esp8266

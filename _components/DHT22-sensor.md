@@ -1,7 +1,6 @@
 ---
 layout: components
 title: DHT22 temperature and humidity sensor
-description: Connect to WiFi with SSID and password
 code: wifi-esp8266/wifi-esp8266.ino
 hardware:
   - esp8266

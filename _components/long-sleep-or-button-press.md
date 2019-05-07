@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Wakeup after long sleep or on button press
-description: Send a POST request with data periodically to IFTTT with WeMos
 code: long-sleep-or-button-press/long-sleep-or-button-press.ino
 hardware:
   - esp8266

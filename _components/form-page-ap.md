@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Form page in AP
-description: Fill up a form page in AP mode
 code: form-page-ap/form-page-ap.ino
 hardware:
   - esp8266

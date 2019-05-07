@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Long deep sleep
-description: Sleep the ESP8266 for more than 20 minutes using the EEPROM count
 code: long-sleep/long-sleep.ino
 hardware:
   - esp8266

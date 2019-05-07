@@ -1,7 +1,6 @@
 ---
 layout: components
 title: POST request to IFTTT
-description: Send a POST request with data periodically to IFTTT with WeMos
 code: ifttt-post-data/ifttt-post-data.ino
 hardware:
   - esp8266

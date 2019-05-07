@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Erase WiFi credentials
-description: Erase stored WiFi credentials on ESP8266
 code: erase-wifi-credentials/erase-wifi-credentials.ino
 hardware:
   - esp8266

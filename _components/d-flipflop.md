@@ -1,7 +1,6 @@
 ---
 layout: components
 title: D-Flip-Flop
-description: Test D-Flip-Flop with Arduino
 code: d-flipflop/d-flipflop.ino
 hardware:
   - Arduino

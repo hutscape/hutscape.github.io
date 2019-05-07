@@ -1,7 +1,6 @@
 ---
 layout: components
 title: mDNS in AP mode
-description: Create mDNS in Access Point mode
 code: mdns-access-point/mdns-access-point.ino
 hardware:
   - esp8266
