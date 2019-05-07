@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: components
 title: Blinky
 description: Blink the on-board LED ON and OFF for `esp8266` NodeMCU
+code: blinky-esp8266/blinky-esp8266.ino
 mcu: esp8266
 ---
 
