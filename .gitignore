@@ -1,3 +1,8 @@
+# Temporary
+*.bin
+*.elf
+*.DS_Store
+
 ideas
 _site
 .sass-cache
