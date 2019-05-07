@@ -7,7 +7,14 @@ layout: default
   </header>
 
   <div class="post-content">
+    <ul>
+      {% for tag in page.hardware %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+    
     {{ content }}
+
     {% highlight c %}{% include_relative {{ page.code }} %}{% endhighlight %}
   </div>
 </article>

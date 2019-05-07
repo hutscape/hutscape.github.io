@@ -12,7 +12,7 @@ List of [Minimal, Complete and Verifiable examples of code](https://stackoverflo
     <a href="{{ component.url }}">{{ component.title }}</a>
       -
       {% for item in component.hardware %}
-        {{ item }},
+        {{ item }}
       {% endfor %}
   </li>
 {% endfor %}
