@@ -10,7 +10,7 @@ Pinouts, schematics, footprint layouts and data sheets of various ICs, chips and
 
 <ul>
 {% for ref in site.references %}
-  <li class="searchable" data-index="{{ ref.chip | downcase }} {{ ref. manufacturer | downcase }} {{ ref.type | downcase }} {{ ref.version | downcase }}">
+  <li class="searchable" data-index="{{ ref.title | downcase }} {{ ref.chip | downcase }} {{ ref. manufacturer | downcase }} {{ ref.type | downcase }} {{ ref.version | downcase }}">
     <p><a href="{{ ref.source }}">{{ ref.title }}</a></p>
     <p>
     Chip: {{ ref.chip }},
