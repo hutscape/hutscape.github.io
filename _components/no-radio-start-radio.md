@@ -1,6 +1,6 @@
 ---
 layout: components
-title: Sleep with radio disabled and wakeup to use radio
+title: Sleep with radio disabled
 code: no-radio-start-radio/no-radio-start-radio.ino
 hardware:
   - esp8266
