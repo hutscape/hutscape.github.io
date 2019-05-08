@@ -11,3 +11,5 @@ collections:
   checklists:
     output: true
     permalink: /checklists/:name
+  references:
+    output: true
