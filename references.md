@@ -19,11 +19,6 @@ Pinouts, schematics, footprint layouts and data sheets of various ICs, chips and
       Manufactured by: {{ ref.manufacturer }}
     {%- endif -%}
     </p>
-    <p> Tags:
-    {% for tag in ref.tags %}
-      {{ tag }}
-    {% endfor %}
-    </p>
   </li>
 {% endfor %}
 </ul>
