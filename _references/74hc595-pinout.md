@@ -1,9 +1,9 @@
 ---
 layout: references
-title: 74HC595 pinout
+title: 74HC595
 type: pinout
 tags:
   - shift register
 chip: 74HC595
-url: https://learn.pimoroni.com/tutorial/170pt-projects/the-shift-register-170pt
+source: https://learn.pimoroni.com/static/repos/learn/170pt-projects/pinout-74hc595.jpg
 ---
