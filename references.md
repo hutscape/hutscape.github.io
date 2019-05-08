@@ -6,12 +6,19 @@ permalink: /references/
 
 Pinouts, schematics, footprint layouts and data sheets of various ICs, chips and devices.
 
+<input type="text" placeholder="search" id="search">
+
 <ul>
 {% for ref in site.references %}
-  <li>
+  <li class="searchable" data-index="{{ ref.chip | downcase }} {{ ref. manufacturer | downcase }} {{ ref.type | downcase }} {{ ref.version | downcase }}">
     <p><a href="{{ ref.source }}">{{ ref.title }}</a></p>
-    <p>Chip: {{ ref.chip }}</p>
-    <p>Type: {{ ref.type }}</p>
+    <p>
+    Chip: {{ ref.chip }},
+    Type: {{ ref.type }},
+    {%- if ref.manufacturer -%}
+      Manufactured by: {{ ref.manufacturer }}
+    {%- endif -%}
+    </p>
     <p> Tags:
     {% for tag in ref.tags %}
       {{ tag }}
