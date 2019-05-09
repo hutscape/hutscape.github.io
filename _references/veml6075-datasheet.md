@@ -1,8 +1,8 @@
 ---
 layout: references
-title: SN74HC595 datasheet
+title: VEML6075 datasheet
 type: datasheet
-chip: SN74HC595
-manufacturer: Texas Instruments
-source: http://www.ti.com/lit/ds/symlink/sn74hc595.pdf
+chip: VEML6075
+manufacturer: Vishay Semiconductors
+source: https://www.vishay.com/docs/84304/veml6075.pdf
 ---
