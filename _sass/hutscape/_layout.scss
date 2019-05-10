@@ -119,7 +119,29 @@
   }
 }
 
+.site-description {
+  font-size: 2em;
+  padding: 1em;
+  text-align: center;
+}
 
+.header-image {
+  padding-bottom: $spacing-unit;
+}
+
+.searchbar {
+  font-size: 20px;
+  padding: 0.8em;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid $text-color;
+  width: 80%;
+  margin: 3em auto;
+  display: block;
+  &:focus {
+    border-color: $orange-color;
+  }
+}
 
 /**
  * Site footer

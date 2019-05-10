@@ -6,7 +6,7 @@ permalink: /components/
 
 List of [Minimal, Complete and Verifiable examples of code](https://stackoverflow.com/help/mcve) to flash into different devices.
 
-<input type="text" placeholder="search" id="search">
+<input type="text" class="searchbar" placeholder="search" id="search">
 
 <ul>
 {% for component in site.components %}

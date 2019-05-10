@@ -6,7 +6,7 @@ permalink: /references/
 
 Pinouts, schematics, footprint layouts and data sheets of various ICs, chips and devices.
 
-<input type="text" placeholder="search" id="search">
+<input type="text" class="searchbar" placeholder="search" id="search">
 
 <ul>
 {% for ref in site.references %}

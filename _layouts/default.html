@@ -10,7 +10,14 @@
   {%- include header.html -%}
 
   {% if page.url == "/" %}
-    <img src="/assets/images/header-1.jpg" alt="Header image for Huts 1">
+    <img src="/assets/images/header-1.jpg" class="header-image" alt="Header image for Huts 1">
+    <div class="wrapper">
+      <p class="site-description">
+        {{ site.description }}
+        <br>
+        🍶 🗝 🎐 🧺 🔋 📃 💡 🏡
+      </p>
+    </div>
   {% endif %}
 
   <main class="page-content" aria-label="Content">
