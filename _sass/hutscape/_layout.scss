@@ -21,9 +21,13 @@
     padding-right: 45px;
   }
 
-  &,
-  &:visited {
-    color: $grey-color-dark;
+  &:link, &:visited {
+    color: $text-color;
+  }
+
+  &:hover, &:active {
+    text-decoration: none;
+    color: $brand-color;
   }
 }
 
@@ -141,6 +145,7 @@
   color: $grey-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
+  text-align: center;
 }
 
 .footer-col {
@@ -226,6 +231,15 @@
 /**
  * Posts
  */
+.post {
+  width: $on-large;
+  margin: 0 auto;
+
+  @media screen and (max-width: $on-large) {
+    width: 95%;
+  }
+
+}
 .post-header {
   margin-bottom: $spacing-unit;
 }

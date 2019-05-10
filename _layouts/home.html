@@ -9,8 +9,6 @@ layout: default
 
   {{ content }}
 
-
-  <h2 class="post-list-heading">Projects</h2>
   <ul class="post-link">
   {% assign projects = site.data.projects | sort: 'sequence' %}
   {% for project in projects reversed %}

@@ -5,10 +5,14 @@
 <!--[if IE]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-
   <style id="search_style"></style>
-  
+
   {%- include header.html -%}
+
+  {% if page.url == "/" %}
+    <img src="/assets/images/header-1.jpg" alt="Header image for Huts 1">
+  {% endif %}
+
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       {{ content }}
