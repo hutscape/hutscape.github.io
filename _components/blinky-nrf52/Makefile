@@ -1,3 +1,8 @@
+.PHONY: lint compile upload clean
+
+lint:
+	cpplint --extensions=ino --filter=-legal/copyright *.ino
+
 compile:
 	arduino-cli compile --fqbn adafruit:nrf52:feather52832 ./
 
@@ -11,6 +16,4 @@ clean:
 	rm -f .*.hex
 	rm -f *.zip
 
-flash: compile upload clean
-
-.PHONY: compile upload clean
+flash: lint compile upload clean
