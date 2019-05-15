@@ -14,5 +14,3 @@ clean:
 	rm -f .*.elf
 
 flash: lint compile upload clean
-
-.PHONY: lint compile upload clean
