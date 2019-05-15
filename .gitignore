@@ -2,6 +2,7 @@
 *.bin
 *.elf
 *.DS_Store
+*.hex
 
 ideas
 _site
