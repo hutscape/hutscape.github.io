@@ -1,3 +1,8 @@
+.PHONY: lint compile upload clean
+
+lint:
+	cpplint --extensions=ino --filter=-legal/copyright,-readability/todo *.ino
+
 compile:
 	arduino-cli compile --fqbn esp8266com:esp8266:d1_mini .
 
@@ -5,7 +10,7 @@ upload: compile
 	arduino-cli upload -p /dev/cu.wchusbserial1410 --fqbn esp8266com:esp8266:d1_mini .
 
 clean:
-	rm *.bin
-	rm *.elf
+	rm -f .*.bin
+	rm -f .*.elf
 
-.PHONY: compile upload clean
+flash: lint compile upload clean

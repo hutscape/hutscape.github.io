@@ -3,7 +3,7 @@
 
 Ticker ticker;
 int count = 0;
-bool isLEDToggle = false; // some kind of status
+bool isLEDToggle = false;  // some kind of status
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -11,12 +11,12 @@ void setup() {
   Serial.begin(115200);
   Serial.println("Hello!");
 
-  ticker.attach(1, blink); // start the ticker
+  ticker.attach(1, blink);  // start the ticker
   isLEDToggle = true;
 }
 
 void loop() {
-  if (count > 10) { // off the LED when not require
+  if (count > 10) {  // off the LED when not require
     ticker.detach();
     ledOFF();
     isLEDToggle = false;
@@ -29,7 +29,7 @@ void loop() {
 
 void blink() {
   int state = digitalRead(LED_BUILTIN);
-  if(isLEDToggle){
+  if (isLEDToggle) {
     digitalWrite(LED_BUILTIN, !state);
   }
 }
