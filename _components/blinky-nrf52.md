@@ -14,6 +14,12 @@ Arduino IDE > Tools settings include:
 
 ![](/assets/images/components/blinky-nrf52-arduino-settings.png)
 
+To use command line [arduino-cli](https://github.com/arduino/arduino-cli), install [Adafruit nRF52 nrfutil](https://github.com/adafruit/Adafruit_nRF52_nrfutil) with `pip3`:
+
+```
+pip3 install --user adafruit-nrfutil
+```
+
 References
 
 - [Bluefruit nRF52 Feather Learning Guide
