@@ -1,9 +1,9 @@
 #include <EEPROM.h>
 
-const int sleepTime = 1200; // 1200 seconds = 20 minutes
+const int sleepTime = 1200;  // 1200 seconds = 20 minutes
 
-#define FINAL_SLEEP_INTERVAL 6 // 6 * sleepTime = 6 hours
-#define CURRENT_SLEEP_INTERVAL_ADDR 30 // EEPROM address to store sleep interval
+#define FINAL_SLEEP_INTERVAL 6  // 6 * sleepTime = 6 hours
+#define CURRENT_SLEEP_INTERVAL_ADDR 30  // Store sleep interval
 #define CURRENT_SLEEP_INTERVAL EEPROM.read(CURRENT_SLEEP_INTERVAL_ADDR)
 
 void setup() {
@@ -25,7 +25,7 @@ void setup() {
 }
 
 void blink(int times) {
-  for (int i=0; i <= times; i++){
+  for (int i=0; i <= times; i++) {
     digitalWrite(2, HIGH);
     delay(1000);
 

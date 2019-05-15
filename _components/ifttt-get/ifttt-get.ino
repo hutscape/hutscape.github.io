@@ -16,7 +16,7 @@ void setup() {
 
 void loop() {
   sendToIFTTT();
-  delay(10000); // every 10 seconds
+  delay(10000);  // every 10 seconds
 }
 
 void connectWiFi() {
@@ -46,6 +46,7 @@ void sendToIFTTT() {
                "User-Agent: ESP8266\r\n" +
                "Connection: close\r\n\r\n");
 
+  // TODO: Use int16/int64/etc, rather than the C type long  [runtime/int]
   unsigned long timeout = millis();
   while (client.available() == 0) {
     if (millis() - timeout > 5000) {
@@ -54,7 +55,7 @@ void sendToIFTTT() {
     }
   }
 
-  while(client.available()){
+  while (client.available()) {
     String line = client.readStringUntil('\r');
     Serial.print(line);
   }
