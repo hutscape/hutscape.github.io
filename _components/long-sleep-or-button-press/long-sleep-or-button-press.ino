@@ -4,12 +4,12 @@ extern "C" {
   #include "user_interface.h"
 }
 
-const int sleepTime = 10; // 10 seconds
+const int sleepTime = 10;  // 10 seconds
 
 #define FINAL_SLEEP_INTERVAL 6
-#define CURRENT_SLEEP_INTERVAL_ADDR 30 // EEPROM address to store sleep interval
+#define CURRENT_SLEEP_INTERVAL_ADDR 30  // Store sleep interval
 #define CURRENT_SLEEP_INTERVAL EEPROM.read(CURRENT_SLEEP_INTERVAL_ADDR)
-#define BUTTON_PRESS 12 // GPIO12 or D6
+#define BUTTON_PRESS 12  // GPIO12 or D6
 int val = 0;
 
 void setup() {
@@ -49,7 +49,7 @@ void blink(int times) {
   Serial.print(times);
   Serial.println(" times");
 
-  for (int i=0; i <= times; i++){
+  for (int i=0; i <= times; i++) {
     digitalWrite(2, HIGH);
     delay(1000);
 
