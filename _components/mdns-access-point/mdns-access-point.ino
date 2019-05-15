@@ -4,7 +4,7 @@
 
 String AP_NamePrefix = "Cactus ";
 const char WiFiAPPSK[] = "hutscape";
-const char* DomainName = "cactus"; // set domain name domain.local
+const char* DomainName = "cactus";  // set domain name domain.local
 
 ESP8266WebServer server(80);
 
@@ -34,7 +34,7 @@ void initAccessPoint() {
 void startMDNS() {
   if (!MDNS.begin(DomainName, WiFi.softAPIP())) {
     Serial.println("[ERROR] MDNS responder did not setup");
-    while(1) {
+    while (1) {
       delay(1000);
     }
   } else {
@@ -54,10 +54,10 @@ String getAPName() {
 void startServer() {
   server.on("/", handleRoot);
 
-  const char * headerkeys[] = {"User-Agent","Cookie"} ;
+  const char * headerkeys[] = {"User-Agent", "Cookie"};
   size_t headerkeyssize = sizeof(headerkeys)/sizeof(char*);
 
-  server.collectHeaders(headerkeys, headerkeyssize );
+  server.collectHeaders(headerkeys, headerkeyssize);
   server.begin();
 }
 
