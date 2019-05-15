@@ -8,7 +8,7 @@ int count = 0;
 void setup() {
   disableWiFi();
 
-  pinMode(2, OUTPUT); // GPIO02 on ESP-12 module is linked to on-board LED
+  pinMode(2, OUTPUT);  // GPIO02 on ESP-12 module is linked to on-board LED
   Serial.begin(115200);
   delay(10);
 
@@ -34,7 +34,7 @@ void disableWiFi() {
 }
 
 void wakeupWiFiModem() {
-  WiFi.forceSleepWake(); // wakeup WiFi modem
+  WiFi.forceSleepWake();  // wakeup WiFi modem
   delay(1);
 
   WiFi.mode(WIFI_STA);
@@ -67,7 +67,7 @@ void connectToWiFi() {
 }
 
 void blink(int count) {
-  for(int i = 0; i < count; i++) {
+  for (int i = 0; i < count; i++) {
     Serial.println("BLINK");
     digitalWrite(2, HIGH);
     delay(1000);
@@ -80,7 +80,7 @@ void sleepAndWakeupWithRadioDisabled() {
   Serial.println("Deep sleeping for 5 seconds...");
   Serial.println("Wakeup without WiFi next time");
 
-  WiFi.disconnect( true );
+  WiFi.disconnect(true);
   delay(1);
-  ESP.deepSleep(5000000, WAKE_RF_DISABLED); // sleep and wakeup with radio disabled
+  ESP.deepSleep(5000000, WAKE_RF_DISABLED);  // radio disabled after wakeup
 }
