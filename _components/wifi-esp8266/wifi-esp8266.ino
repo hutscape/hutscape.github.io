@@ -5,7 +5,7 @@ const char* ssid = "secret";
 const char* password = "secret";
 
 void setup() {
-  pinMode(2, OUTPUT); // GPIO02 on ESP-12 module is linked to on-board LED
+  pinMode(2, OUTPUT);  // GPIO02 on ESP-12 module is linked to on-board LED
 
   Serial.begin(115200);
   delay(10);
