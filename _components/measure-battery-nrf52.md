@@ -20,6 +20,7 @@ Instructions:
 1. Use the USB cable to charge
 1. Ensure yellow `CHG` LED is ON while charging
 1. Keep track of the charge percentage through the serial console
+1. Wait for the yellow `CHG` LED to be OFF to indicate complete charging
 
 ![](/assets/images/components/measure-battery-nrf52-console.png)
 
