@@ -29,10 +29,9 @@ void setupESService(void);
 void connect_callback(uint16_t conn_handle);
 void disconnect_callback(uint16_t conn_handle, uint8_t reason);
 
-void setup()
-{
+void setup() {
   Serial.begin(115200);
-  while ( !Serial ) delay(10);   // for nrf52840 with native usb
+  while (!Serial) delay(10);   // for nrf52840 with native usb
 
   Serial.println("Bluefruit52 UV Index sensor example");
   Serial.println("-------------------------------------\n");
@@ -64,8 +63,7 @@ void setup()
   Serial.println("\nAdvertising");
 }
 
-void startAdv(void)
-{
+void startAdv(void) {
   // Advertising packet
   Bluefruit.Advertising.addFlags(BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE);
   Bluefruit.Advertising.addTxPower();
@@ -86,13 +84,18 @@ void startAdv(void)
    * https://developer.apple.com/library/content/qa/qa1931/_index.html
    */
   Bluefruit.Advertising.restartOnDisconnect(true);
-  Bluefruit.Advertising.setInterval(32, 244);    // in unit of 0.625 ms
-  Bluefruit.Advertising.setFastTimeout(30);      // number of seconds in fast mode
-  Bluefruit.Advertising.start(0);                // 0 = Don't stop advertising after n seconds
+
+  // in unit of 0.625 ms
+  Bluefruit.Advertising.setInterval(32, 244);
+
+  // number of seconds in fast mode
+  Bluefruit.Advertising.setFastTimeout(30);
+
+  // 0 = Don't stop advertising after n seconds
+  Bluefruit.Advertising.start(0);
 }
 
-void setupESService(void)
-{
+void setupESService(void) {
   // Configure the Environmental Sensing service
   // See: https://www.bluetooth.com/wp-content/uploads/Sitecore-Media-Library/Gatt/Xml/Characteristics/org.bluetooth.characteristic.uv_index.xml
   // Supported Characteristics:
@@ -120,8 +123,7 @@ void setupESService(void)
   uvic.write(&uvindexvalue, sizeof(uvindexvalue));
 }
 
-void connect_callback(uint16_t conn_handle)
-{
+void connect_callback(uint16_t conn_handle) {
   // Get the reference to current connection
   BLEConnection* connection = Bluefruit.Connection(conn_handle);
 
@@ -137,8 +139,7 @@ void connect_callback(uint16_t conn_handle)
  * @param conn_handle connection where this event happens
  * @param reason is a BLE_HCI_STATUS_CODE which can be found in ble_hci.h
  */
-void disconnect_callback(uint16_t conn_handle, uint8_t reason)
-{
+void disconnect_callback(uint16_t conn_handle, uint8_t reason) {
   (void) conn_handle;
   (void) reason;
 
@@ -146,11 +147,12 @@ void disconnect_callback(uint16_t conn_handle, uint8_t reason)
   Serial.println("Advertising!");
 }
 
-void cccd_callback(uint16_t conn_hdl, BLECharacteristic* chr, uint16_t cccd_value)
-{
+void cccd_callback(uint16_t conn_hdl,
+  BLECharacteristic* chr, uint16_t cccd_value) {
     // Display the raw request packet
     Serial.print("CCCD Updated: ");
-    //Serial.printBuffer(request->data, request->len);
+
+    // Serial.printBuffer(request->data, request->len);
     Serial.print(cccd_value);
     Serial.println("");
 
@@ -165,15 +167,14 @@ void cccd_callback(uint16_t conn_hdl, BLECharacteristic* chr, uint16_t cccd_valu
     }
 }
 
-void loop()
-{
+void loop() {
   digitalToggle(LED_RED);
 
-  if ( Bluefruit.connected() ) {
+  if (Bluefruit.connected()) {
     // Note: We use .indicate instead of .write!
     // If it is connected but CCCD is not enabled
     // The characteristic's value is still updated although indicate is not sent
-    if (uvic.indicate(&uvindexvalue, sizeof(uvindexvalue)) ){
+    if (uvic.indicate(&uvindexvalue, sizeof(uvindexvalue))) {
       Serial.print("UV Index Measurement updated to: ");
       Serial.println(uvindexvalue);
     } else {

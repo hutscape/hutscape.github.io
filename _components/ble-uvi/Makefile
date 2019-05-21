@@ -16,4 +16,4 @@ clean:
 	rm -f .*.hex
 	rm -f *.zip
 
-flash: compile upload clean
+flash: lint compile upload clean
