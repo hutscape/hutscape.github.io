@@ -1,4 +1,5 @@
 #include <bluefruit.h>
+#include "Adafruit_VEML6075.h"
 
 /* GATT Services https://www.bluetooth.com/specifications/gatt/services/
     Name: Environmental Sensing
