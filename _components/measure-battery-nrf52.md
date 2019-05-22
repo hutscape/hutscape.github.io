@@ -21,8 +21,6 @@ Instructions:
 1. Keep track of the charge percentage through the serial console
 1. Wait for the yellow `CHG` LED to be OFF to indicate complete charging
 
-![](/assets/images/components/measure-battery-nrf52-console.png)
-
 Reference
 
 - [nRF52 ADC](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/nrf52-adc)

@@ -17,8 +17,6 @@ On WeMos board , the pin `REST` to `10kΩ` pulled up to `+3V3` is already there
 
 ![Arduino settings](/assets/images/components/periodic-wakeup-interrupt-arduino-settings.png)
 
-![Console](/assets/images/components/periodic-wakeup-interrupt-console.png)
-
 References
 
 - [Synchro Clock config pin schematic](https://raw.githubusercontent.com/liebman/AnalogClock/master/images/SynchroClock.png)

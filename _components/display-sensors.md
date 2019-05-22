@@ -27,8 +27,6 @@ Hardware used:
 
 Serial monitor:
 
-![](/assets/images/components/display-sensors-console.png)
-
 ![](/assets/images/components/display-sensors-prototype.jpg)
 
 Pre-requisites:

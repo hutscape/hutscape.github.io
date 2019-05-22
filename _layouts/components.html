@@ -18,5 +18,19 @@ layout: default
     <h2>Code</h2>
 
     {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.ino %}{% endhighlight %}
+
+    {% assign console_image_url_png = page.path | remove: "_components/" | remove: ".md" | prepend: '/assets/images/components/' | append: '-console.png' %}
+    {% capture console_image_png_exists %}{% file_exists {{ console_image_url_png }} %}{% endcapture %}
+    {% if console_image_png_exists == 'true' %}
+      <h2>Serial console</h2>
+      <img src="{{ console_image_url_png }}" alt="{{ page.title }} Serial console">
+    {% endif %}
+
+    {% assign console_image_url_jpg = page.path | remove: "_components/" | remove: ".md" | prepend: '/assets/images/components/' | append: '-console.jpg' %}
+    {% capture console_image_jpg_exists %}{% file_exists {{ console_image_url_jpg }} %}{% endcapture %}
+    {% if console_image_jpg_exists == 'true' %}
+      <h2>Serial console</h2>
+      <img src="{{ console_image_url_jpg }}" alt="{{ page.title }} Serial console">
+    {% endif %}
   </div>
 </article>

@@ -13,5 +13,3 @@ hardware:
 Read the UV sensor values with Adafruit nRF52 Feather and Adafruit VEML6075 breakout board.
 
 ![](/assets/images/components/sensor-uv-schematic.png)
-
-![](/assets/images/components/sensor-uv-console.png)
