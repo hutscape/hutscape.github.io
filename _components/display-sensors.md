@@ -11,6 +11,9 @@ hardware:
   - humidity
   - veml6075
   - si7021
+references:
+  - name: Adafruit Si7021 firmware
+    url: https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino
 ---
 
 Display UV and temperature / humidity sensor values with a LiPo.
@@ -30,7 +33,3 @@ Pre-requisites:
 1. [SHARP display](./sharp-display)
 1. [Display UV values](./display-uv)
 1. [Display UV and LiPo](./display-uv-lipo)
-
-References:
-
-- [Adafruit Si7021 firmware](https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino)

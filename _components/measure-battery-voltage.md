@@ -6,6 +6,9 @@ hardware:
   - WeMos
   - LiPo
   - battery
+references:
+  - name: Monitoring LiPo battery voltage with Wemos D1 mini battery shield and Thingspeak
+    url: https://arduinodiy.wordpress.com/2016/12/25/monitoring-lipo-battery-voltage-with-wemos-d1-minibattery-shield-and-thingspeak
 ---
 
 Measure the LiPo battery voltage and ping that value to the cloud.
@@ -19,7 +22,3 @@ Instructions:
 1. Get the current battery voltage by accessing `cactus.local`
 
 ![](/assets/images/components/measure-battery-voltage-webpage.png)
-
-Reference
-
-- [Monitoring LiPo battery voltage with Wemos D1 mini battery shield and Thingspeak](https://arduinodiy.wordpress.com/2016/12/25/monitoring-lipo-battery-voltage-with-wemos-d1-minibattery-shield-and-thingspeak/)

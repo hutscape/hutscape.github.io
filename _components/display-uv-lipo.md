@@ -9,6 +9,11 @@ hardware:
   - veml6075
   - lipo
   - display
+references:
+  - name: Adafruit SHARP memory display firmware
+    url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino
+  - name: Display LiPo battery voltage firmware
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/master/libraries/Bluefruit52Lib/examples/Hardware/adc_vbat/adc_vbat.ino
 ---
 
 Display UV sensor values with a LiPo
@@ -26,8 +31,3 @@ Pre-requisites
 1. [UV sensor](./sensor-uv)
 1. [SHARP display](./sharp-display)
 1. [Display UV values](./display-uv)
-
-References:
-
-- [Adafruit SHARP memory display firmware](https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino)
-- [Display LiPo battery voltage firmware](https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/master/libraries/Bluefruit52Lib/examples/Hardware/adc_vbat/adc_vbat.ino)
