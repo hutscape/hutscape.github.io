@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Measure battery voltage
-code: measure-battery-nrf52/measure-battery-nrf52.ino
 hardware:
   - nrf52
   - voltage

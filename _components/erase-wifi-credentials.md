@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Erase WiFi credentials
-code: erase-wifi-credentials/erase-wifi-credentials.ino
 hardware:
   - esp8266
   - WeMos

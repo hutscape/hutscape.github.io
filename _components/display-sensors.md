@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Display sensor values
-code: display-sensors/display-sensors.ino
 hardware:
   - nRF52
   - bluefruit

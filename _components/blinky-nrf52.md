@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Blinky nRF52
-code: blinky-nrf52/blinky-nrf52.ino
 hardware:
   - nRF52
   - bluefruit

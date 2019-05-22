@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Display UV and LiPo values
-code: display-uv-lipo/display-uv-lipo.ino
 hardware:
   - nRF52
   - adafruit

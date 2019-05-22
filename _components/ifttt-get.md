@@ -1,7 +1,6 @@
 ---
 layout: components
 title: GET request to IFTTT
-code: ifttt-get/ifttt-get.ino
 hardware:
   - esp8266
   - WeMos

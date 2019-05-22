@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Wakeup with no radio
-code: wakeup-with-no-radio/wakeup-with-no-radio.ino
 hardware:
   - esp8266
 ---

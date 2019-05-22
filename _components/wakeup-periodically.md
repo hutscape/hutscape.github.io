@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Periodic wakeup
-code: wakeup-periodically/wakeup-periodically.ino
 hardware:
   - esp8266
   - wakeup

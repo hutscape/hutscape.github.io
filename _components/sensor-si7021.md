@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Sensor Si7021
-code: sensor-si7021/sensor-si7021.ino
 hardware:
   - esp8266
   - Si7021

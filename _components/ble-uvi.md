@@ -1,7 +1,6 @@
 ---
 layout: components
 title: BLE publish UV Index
-code: ble-uvi/ble-uvi.ino
 hardware:
   - nRF52
   - bluefruit

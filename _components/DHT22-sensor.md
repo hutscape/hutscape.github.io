@@ -1,7 +1,6 @@
 ---
 layout: components
 title: DHT22 sensor
-code: wifi-esp8266/wifi-esp8266.ino
 hardware:
   - esp8266
   - WeMos

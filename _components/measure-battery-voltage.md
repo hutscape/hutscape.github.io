@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Measure battery voltage
-code: measure-battery-voltage/measure-battery-voltage.ino
 hardware:
   - esp8266
   - WeMos

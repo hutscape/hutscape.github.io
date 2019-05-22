@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Ticker
-code: ticker/ticker.ino
 hardware:
   - esp8266
 ---

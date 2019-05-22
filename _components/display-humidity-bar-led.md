@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Display humidity with bar LED
-code: display-humidity-bar-led/display-humidity-bar-led.ino
 hardware:
   - esp8266
   - WeMos

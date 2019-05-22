@@ -1,7 +1,6 @@
 ---
 layout: components
 title: mDNS in AP mode
-code: mdns-access-point/mdns-access-point.ino
 hardware:
   - esp8266
   - WeMos

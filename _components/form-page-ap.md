@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Form page in AP
-code: form-page-ap/form-page-ap.ino
 hardware:
   - esp8266
   - WeMos

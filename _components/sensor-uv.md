@@ -1,7 +1,6 @@
 ---
 layout: components
 title: UV Sensor VEML6075
-code: sensor-uv/sensor-uv.ino
 hardware:
   - uv
   - sensor

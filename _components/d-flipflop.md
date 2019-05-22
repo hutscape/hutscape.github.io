@@ -1,7 +1,6 @@
 ---
 layout: components
 title: D-Flip-Flop
-code: d-flipflop/d-flipflop.ino
 hardware:
   - Arduino
   - SN74HC174

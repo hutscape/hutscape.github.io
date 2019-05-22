@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Wakeup after long sleep or button press
-code: long-sleep-or-button-press/long-sleep-or-button-press.ino
 hardware:
   - esp8266
   - WeMos

@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Blinky
-code: blinky-esp8266/blinky-esp8266.ino
 hardware:
   - esp8266
 ---

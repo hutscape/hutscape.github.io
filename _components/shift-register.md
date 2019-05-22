@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Shift register
-code: shift-register/shift-register.ino
 hardware:
   - esp8266
   - shift register

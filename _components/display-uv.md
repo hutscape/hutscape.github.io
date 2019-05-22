@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Display UV values
-code: display-uv/display-uv.ino
 hardware:
   - nRF52
   - veml6075

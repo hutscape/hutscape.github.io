@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Send command via serial monitor
-code: serial-send/serial-send.ino
 hardware:
   - esp8266
   - serial

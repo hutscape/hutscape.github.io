@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Long deep sleep
-code: long-sleep/long-sleep.ino
 hardware:
   - esp8266
   - WeMos

@@ -1,7 +1,6 @@
 ---
 layout: components
 title: RTC Memory
-code: rtc-memory/rtc-memory.ino
 hardware:
   - esp8266
   - rtc

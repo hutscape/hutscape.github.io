@@ -1,10 +1,9 @@
 ---
 layout: components
 title: Sharp display
-code: sharp-display/sharp-display.ino
 hardware:
   - nRF52
-  - bluefruit 
+  - bluefruit
   - adafruit
   - sharp
   - display

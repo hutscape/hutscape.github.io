@@ -1,7 +1,6 @@
 ---
 layout: components
 title: Periodic or interrupt wakeup
-code: periodic-wakeup-interrupt/periodic-wakeup-interrupt.ino
 hardware:
   - esp8266
   - sleep
