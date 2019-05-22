@@ -22,7 +22,15 @@ BLECharacteristic uvic = BLECharacteristic(UUID16_CHR_UV_INDEX);
 
 BLEDis bledis;    // DIS (Device Information Service) helper class instance
 
+Adafruit_VEML6075 uv = Adafruit_VEML6075();
+
+// See https://www.bluetooth.com/wp-content/uploads/Sitecore-Media-Library/Gatt/Xml/Characteristics/org.bluetooth.characteristic.uv_index.xml
+
+// UV index GATT Characteristic format is in uint8
 uint8_t  uvindexvalue = 0x42;
+
+// VEML6075 UV sensor reading is in float
+float  readUVIndexValue = 0.0;
 
 // Advanced function prototypes
 void startAdv(void);
@@ -36,6 +44,11 @@ void setup() {
 
   Serial.println("Bluefruit52 UV Index sensor example");
   Serial.println("-------------------------------------\n");
+
+  // Initialise UV sensor VEML6075
+  if (!uv.begin()) {
+    Serial.println("Failed to communicate with VEML6075 sensor, check wiring?");
+  }
 
   // Initialise the Bluefruit module
   Serial.println("Initialise the Bluefruit nRF52 module");
@@ -62,6 +75,34 @@ void setup() {
   startAdv();
 
   Serial.println("\nAdvertising");
+}
+
+void loop() {
+  digitalToggle(LED_RED);
+
+  readUVIndexValue = uv.readUVI();
+  uvindexvalue = round(abs(readUVIndexValue));  // convert float to uint8_t
+
+  Serial.println("");
+  Serial.print("Raw UV Index (float): ");
+  Serial.println(readUVIndexValue);
+
+  Serial.print("Raw UV Index (uint8_t): ");
+  Serial.println(uvindexvalue);
+
+  if (Bluefruit.connected()) {
+    // Note: We use .indicate instead of .write!
+    // If it is connected but CCCD is not enabled
+    // The characteristic's value is still updated although indicate is not sent
+    if (uvic.indicate(&uvindexvalue, sizeof(uvindexvalue))) {
+      Serial.print("UV Index Measurement updated to: ");
+      Serial.println(uvindexvalue);
+    } else {
+      Serial.println("ERROR: Indicate not set in the CCCD or not connected!");
+    }
+  }
+
+  delay(2000);
 }
 
 void startAdv(void) {
@@ -166,25 +207,4 @@ void cccd_callback(uint16_t conn_hdl,
             Serial.println("UV Index Measurement 'Indicate' disabled");
         }
     }
-}
-
-void loop() {
-  digitalToggle(LED_RED);
-
-  if (Bluefruit.connected()) {
-    // Note: We use .indicate instead of .write!
-    // If it is connected but CCCD is not enabled
-    // The characteristic's value is still updated although indicate is not sent
-    if (uvic.indicate(&uvindexvalue, sizeof(uvindexvalue))) {
-      Serial.print("UV Index Measurement updated to: ");
-      Serial.println(uvindexvalue);
-    } else {
-      Serial.println("ERROR: Indicate not set in the CCCD or not connected!");
-    }
-
-    uvindexvalue += 1;
-  }
-
-  // Only send update once per second
-  delay(1000);
 }

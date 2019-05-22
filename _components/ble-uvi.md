@@ -9,13 +9,16 @@ hardware:
   - ble
   - gatt
   - uv index
+  - veml6075
 ---
 
-Publish a fake UV Index value via BLE and view it on iPhone app nRF Connect.
+Publish a UV Index value via BLE and view it on iPhone app nRF Connect.
+
+![](/assets/images/components/ble-uvi-schematic.jpg)
 
 ![](/assets/images/components/ble-uvi-console.jpg)
 
-Use the nRF Connect iPhone app to view the fake generated UV Index values.
+Use the nRF Connect iPhone app to view the UV Index values.
 
 ![](/assets/images/components/ble-uvi-nrf-connect.jpg)
 ![](/assets/images/components/ble-uvi-nrf-connect-services.jpg)
