@@ -9,5 +9,3 @@ hardware:
 ---
 
 Display LED as a bar graph going from 1 LED ON to all 5 LEDs ON.
-
-![Schematic](/assets/images/components/shift-register-schematic.png)

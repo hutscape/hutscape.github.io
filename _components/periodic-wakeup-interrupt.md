@@ -11,12 +11,6 @@ Do something periodically on wake up after deep sleep or by pressing the button 
 
 On WeMos board , the pin `REST` to `10kΩ` pulled up to `+3V3` is already there. Remember to include it back with the `ESP8266` module.
 
-![Wiring](/assets/images/components/periodic-wakeup-interrupt-schematic.jpg)
-
-![Prototype](/assets/images/components/periodic-wakeup-interrupt-prototype.jpg)
-
-![Arduino settings](/assets/images/components/periodic-wakeup-interrupt-arduino-settings.png)
-
 References
 
 - [Synchro Clock config pin schematic](https://raw.githubusercontent.com/liebman/AnalogClock/master/images/SynchroClock.png)

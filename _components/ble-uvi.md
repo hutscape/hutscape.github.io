@@ -13,8 +13,6 @@ hardware:
 
 Publish a UV Index value via BLE and view it on iPhone app nRF Connect.
 
-![](/assets/images/components/ble-uvi-schematic.png)
-
 Use the nRF Connect iPhone app to view the UV Index values.
 
 ![](/assets/images/components/ble-uvi-nrf-connect.jpg)

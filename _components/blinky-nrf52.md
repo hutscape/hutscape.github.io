@@ -9,10 +9,6 @@ hardware:
 
 Create a blinky LED with Adafruit Bluefruit nRF52 breakout board.
 
-Arduino IDE > Tools settings include:
-
-![](/assets/images/components/blinky-nrf52-arduino-settings.png)
-
 To use command line [arduino-cli](https://github.com/arduino/arduino-cli), install [Adafruit nRF52 nrfutil](https://github.com/adafruit/Adafruit_nRF52_nrfutil) with `pip3`:
 
 ```

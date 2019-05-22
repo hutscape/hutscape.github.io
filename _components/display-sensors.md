@@ -23,12 +23,6 @@ Hardware used:
 1. Adafruit Temperature/Humidity sensor Si7021 breakout board
 1. LiPo 1200mAh 3.7V
 
-![](/assets/images/components/display-sensors-schematic.png)
-
-Serial monitor:
-
-![](/assets/images/components/display-sensors-prototype.jpg)
-
 Pre-requisites:
 
 1. [Blinky nRF52](./blinky-nrf52)

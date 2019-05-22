@@ -15,22 +15,52 @@ layout: default
 
     {{ content }}
 
-    <h2>Code</h2>
+    {% for image in site.static_files %}
+      {% if image.path contains 'assets/images/components' %}
+        {% assign image_base = page.path | remove: "_components/" | remove: ".md" | remove: ".jpg" | remove: ".png" | downcase %}
+        {% if image.path contains image_base %}
 
+          {% assign arduino_settings_image = image_base | append: '-arduino-setting' %}
+          {% if image.path contains arduino_settings_image %}
+            <h2>Arduino settings</h2>
+            <img src="{{ image.path }}" alt="">
+          {% endif %}
+
+          {% assign schematic_image = image_base | append: '-schematic' %}
+          {% if image.path contains schematic_image %}
+            <h2>Schematic</h2>
+            <img src="{{ image.path }}" alt="">
+          {% endif %}
+
+          {% assign wiring_image = image_base | append: '-wiring' %}
+          {% if image.path contains wiring_image %}
+            <h2>Wiring</h2>
+            <img src="{{ image.path }}" alt="">
+          {% endif %}
+
+          {% assign prototype_image = image_base | append: '-prototype' %}
+          {% if image.path contains prototype_image %}
+            <h2>Prototype</h2>
+            <img src="{{ image.path }}" alt="">
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    <h2>Code</h2>
     {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.ino %}{% endhighlight %}
 
-    {% assign console_image_url_png = page.path | remove: "_components/" | remove: ".md" | prepend: '/assets/images/components/' | append: '-console.png' %}
-    {% capture console_image_png_exists %}{% file_exists {{ console_image_url_png }} %}{% endcapture %}
-    {% if console_image_png_exists == 'true' %}
-      <h2>Serial console</h2>
-      <img src="{{ console_image_url_png }}" alt="{{ page.title }} Serial console">
-    {% endif %}
 
-    {% assign console_image_url_jpg = page.path | remove: "_components/" | remove: ".md" | prepend: '/assets/images/components/' | append: '-console.jpg' %}
-    {% capture console_image_jpg_exists %}{% file_exists {{ console_image_url_jpg }} %}{% endcapture %}
-    {% if console_image_jpg_exists == 'true' %}
-      <h2>Serial console</h2>
-      <img src="{{ console_image_url_jpg }}" alt="{{ page.title }} Serial console">
-    {% endif %}
+    {% for image in site.static_files %}
+      {% if image.path contains 'assets/images/components' %}
+        {% assign image_base = page.path | remove: "_components/" | remove: ".md" | remove: ".jpg" | remove: ".png" %}
+        {% if image.path contains image_base %}
+          {% if image.path contains '-console' %}
+            <h2>Serial console</h2>
+            <img src="{{ image.path }}" alt="">
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
   </div>
 </article>

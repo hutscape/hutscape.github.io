@@ -15,10 +15,6 @@ Hardware used:
 - Adafruit SHARP Memory Monochrome Display Breakout 168x144 pixels
 - Adafruit UV sensor breakout board
 
-![](/assets/images/components/display-uv-schematic.png)
-
-![](/assets/images/components/display-uv-prototype.jpg)
-
 Pre-requisites:
 
 1. [nRF52 Breakout board](./nrf52-breakout)

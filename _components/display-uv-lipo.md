@@ -20,8 +20,6 @@ Hardware:
 1. Adafruit UV sensor breakout board
 1. LiPo 1200mAh 3.7V
 
-![](/assets/images/components/display-uv-lipo-schematic.png)
-
 Pre-requisites
 
 1. [Blinky nRF52](./blinky-nrf52)
