@@ -62,5 +62,14 @@ layout: default
         {% endif %}
       {% endif %}
     {% endfor %}
+
+    {% if page.references %}
+    <h2>References</h2>
+    <ul>
+      {% for ref in page.references %}
+        <li><a href="{{ref.url}}">{{ ref.name }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </div>
 </article>

@@ -9,10 +9,9 @@ hardware:
   - shift register
   - Si7021
   - humidity
+references:
+  - name: DHT-sensor-library
+    url: https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino
 ---
 
 Display humidity with sensor `Si7021` in a bar graph LED display via a `74HC595` shift register.
-
-Reference
-
-- [DHT-sensor-library](https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino) from Adafruit

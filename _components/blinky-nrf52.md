@@ -5,6 +5,11 @@ hardware:
   - nRF52
   - bluefruit
   - adafruit
+references:
+  - name: Get started now with our most powerful Bluefruit board yet
+    url: https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/introduction
+  - name: Adafruit Feather nRF52 Bluefruit LE - nRF52832
+    url: https://www.adafruit.com/product/3406
 ---
 
 Create a blinky LED with Adafruit Bluefruit nRF52 breakout board.
@@ -14,9 +19,3 @@ To use command line [arduino-cli](https://github.com/arduino/arduino-cli), insta
 ```
 pip3 install --user adafruit-nrfutil
 ```
-
-References
-
-- [Bluefruit nRF52 Feather Learning Guide
-Get started now with our most powerful Bluefruit board yet](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/introduction)
-- [Adafruit Feather nRF52 Bluefruit LE - nRF52832](https://www.adafruit.com/product/3406)
