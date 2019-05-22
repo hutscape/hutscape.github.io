@@ -12,9 +12,11 @@ layout: default
         <li>{{ tag }}</li>
       {% endfor %}
     </ul>
-    
+
     {{ content }}
 
-    {% highlight c %}{% include_relative {{ page.code }} %}{% endhighlight %}
+    <h2>Code</h2>
+
+    {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.ino %}{% endhighlight %}
   </div>
 </article>
