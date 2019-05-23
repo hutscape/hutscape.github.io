@@ -6,7 +6,6 @@ hardware:
   - WeMos
   - sleep
   - EEPROM
-  - sleep
   - wakeup
 references:
   - name: ESP8266 maximum deep sleep
