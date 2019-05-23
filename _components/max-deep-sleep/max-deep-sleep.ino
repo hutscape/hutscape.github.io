@@ -1,14 +1,16 @@
 void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(115200);
+  Serial.println("");
   Serial.println("[INFO] Wake up!");
+}
 
+void loop() {
   blinkLED();
 
   Serial.println("[INFO] Going to sleep for ESP.deepSleepMax()...");
   ESP.deepSleep(ESP.deepSleepMax());
 }
-
-void loop() {}
 
 void blinkLED() {
   Serial.println("LED ON");

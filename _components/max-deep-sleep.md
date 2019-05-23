@@ -14,4 +14,4 @@ references:
 
 How long can ESP8266 sleep? This firmware code will test it out.
 
-Connect the USB power to a WeMos module, open the serial monitor and wait for the console to show wakeup.
+If only ESP8266 is used, short pin `D0` to pin `RST` to enable wakeup. Then connect the USB power to a WeMos module, open the serial monitor and wait for the console to show wakeup.
