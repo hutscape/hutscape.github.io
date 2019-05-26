@@ -13,6 +13,15 @@ layout: default
       {% endfor %}
     </ul>
 
+    {% if page.prerequisites %}
+    <h2>Pre-requisites</h2>
+    <ul>
+      {% for pre in page.prerequisites %}
+        <li><a href="{{ pre.url }}">{{ pre.name }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
     {{ content }}
 
     {% for image in site.static_files %}
