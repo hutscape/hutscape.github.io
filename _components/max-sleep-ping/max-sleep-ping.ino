@@ -18,9 +18,7 @@ void setup() {
 
   pinMode(LED_BUILTIN, OUTPUT);
   connectWiFi();
-}
 
-void loop() {
   blinkLED();
   sendToIFTTT();
 
@@ -28,6 +26,8 @@ void loop() {
   ESP.deepSleep(ESP.deepSleepMax());  // Wakeup every 3h 45min
   // ESP.deepSleep(10e6);  // Wakeup every 10 seconds
 }
+
+void loop() {}
 
 void blinkLED() {
   Serial.println("LED ON");

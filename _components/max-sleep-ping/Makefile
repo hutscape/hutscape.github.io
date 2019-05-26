@@ -1,7 +1,7 @@
 .PHONY: lint compile upload clean
 
 lint:
-	cpplint --extensions=ino --filter=-legal/copyright *.ino
+	cpplint --extensions=ino --filter=-legal/copyright,-readability/todo,-runtime/int *.ino
 
 compile:
 	arduino-cli compile --fqbn esp8266com:esp8266:d1_mini ./
