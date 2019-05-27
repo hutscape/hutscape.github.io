@@ -22,9 +22,11 @@ void setup() {
   blinkLED();
   sendToIFTTT();
 
-  Serial.println("[INFO] Going to sleep for ESP.deepSleepMax()...");
-  ESP.deepSleep(ESP.deepSleepMax());  // Wakeup every 3h 45min
-  // ESP.deepSleep(10e6);  // Wakeup every 10 seconds
+  // ESP.deepSleep(ESP.deepSleepMax());  // Wakeup every 3h 45min
+
+  Serial.println("[INFO] Going to sleep for 3 hours...");
+  // Wakeup every 10,800,000,000 µs = 10,800s = 3 hours
+  ESP.deepSleep((uint64_t)10800000000);
 }
 
 void loop() {}
@@ -65,7 +67,8 @@ void sendToIFTTT() {
                "User-Agent: ESP8266\r\n" +
                "Connection: close\r\n\r\n");
 
-  // TODO: Use int16/int64/etc, rather than the C type long  [runtime/int]
+  // NOTE: cpplint rule runtime/int is ignored
+  // unsigned long is used instead of uint32 or uint64 because of millis()
   unsigned long timeout = millis();
   while (client.available() == 0) {
     if (millis() - timeout > 5000) {
