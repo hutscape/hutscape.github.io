@@ -2,10 +2,6 @@ int redPin = PIN_A1;
 int greenPin = PIN_A2;
 int bluePin = PIN_A3;
 
-int red = 0;
-int green = 0;
-int blue = 0;
-
 void setup() {
   Serial.begin(115200);
   while (!Serial) delay(10);
