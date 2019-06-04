@@ -30,7 +30,7 @@ After sleeping for a maximum period `ESP.deepSleep(ESP.deepSleepMax())`, the ESP
 system_rtc_clock_cali_proc
 ```
 
-| Function | Get RTC clock period.
+| Function | Get RTC clock period |
 | ------ | ------ |
 | Prototype | `uint32	system_get_rtc_time(void)`
 | Parameter | none
