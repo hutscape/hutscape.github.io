@@ -36,5 +36,9 @@ system_rtc_clock_cali_proc
 | Parameter | none
 | Return | RTC clock period (in us); `bit11` ~ `bit0` are decimal.
 | Example | `os_printf("clk	cal	:	%d	\r\n",system_rtc_clock_cali_proc()>>12);`
-| Note | - RTC clock period has decimal part. <br> - RTC clock period tends to drift with changes in temperature, so RTC timer is
-not very precise.
+
+Note
+
+- RTC clock period has decimal part
+- RTC clock period tends to drift with changes in temperature, so RTC timer is
+not very precise
