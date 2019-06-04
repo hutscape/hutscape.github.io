@@ -1,23 +1,29 @@
 ---
 layout: checklists
-title: parts
-description: Decision on parts
+title: symbols
+description: Creating symbols
 ---
 
-# Parts
+# Symbols
 
-## New parts
+## New
 
 - [ ] Follow the [reference designator standard](https://en.wikipedia.org/wiki/Reference_designator)
 
-## New ICs
+## Chip
 
 - [ ] Arrange pins around a rectangle
 - [ ] Group pins according to function, not according to the physical chip
-- [ ] Place `Vcc` pin on top of the rectangle
+- [ ] Place `Vcc` pin on the top of the rectangle
 - [ ] Place `GND` pin on the bottom of the rectangle
-- [ ] Fill the rectangle with background color
+- [ ] Fill the rectangle with background color yellow
 - [ ] Add datasheet URL
+- [ ] Label number numbers as according to physical pin placement clockwise
+
+## Footprint
+
+- [ ] Label power pins `Vcc`, `GND`, `5V`, `3V3`, and `EN`, `RST` pins on silkscreen
+- [ ] Match chip placement on PCB with the physical package to indicate `o` or `◖` on the silkscreen
 
 ## References
 
