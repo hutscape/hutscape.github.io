@@ -4,6 +4,8 @@ url: "https://hutscape.com"
 markdown: kramdown
 permalink: /:title
 google_analytics: UA-XXXXX-Y
+github:
+  repository_url: https://github.com/hutscape/hutscape.github.io
 collections:
   components:
     output: true
