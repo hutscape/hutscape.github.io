@@ -16,14 +16,15 @@ description: Bill of Materials
 ## Spreadsheet column titles
 
 - Designator
+- Value
 - Quantity
-- Type
-- Part No.
+- Package
+- Category
+- Stock
 - Manufacturer
-- Package Type
-- Part Name
-- Description
-- Minimum Order Quantity
-- Lead time
+- Manufacturer Part No. (Link to Datasheet)
+- Vendor (Link to Vendor item)
 - Unit Cost
-- Total Cost
+- Total Cost ( Max(Quantity, Minimum Order) * Unit Cost)
+- Minimum Order Quantity
+- Description
