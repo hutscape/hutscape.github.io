@@ -13,6 +13,10 @@ description: Footprint layouts
 
 ## After layout
 
+- [ ] Add project information to silkscreen layer
+    - Name, Version, Year
+    - Open source hardware logo
+    - Get started at URL
 - [ ] Run `b` to refill all zones on all layers in KiCad
 - [ ] Ensure ERC and DRC are passing
 - [ ] Eyeball 3D view
