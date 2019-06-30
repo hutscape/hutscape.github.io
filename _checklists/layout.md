@@ -11,12 +11,18 @@ description: Footprint layouts
 - [ ] Check manufacturer capabilities on via size and track width E.g. [OSHPark](https://docs.oshpark.com/submitting-orders/drill-specs/), [JLCPCB](https://jlcpcb.com/capabilities/Capabilities)
 - [ ] Round all sharp edges on the edge cuts layer
 
+## Silkscreen
+
+- [ ] Adhere to [standard text size](/checklists/standards)
+- [ ] Add project Name, Version, Year
+- [ ] Add open source hardware logo
+- [ ] Add get started at URL
+- [ ] Add `+` and `-` annotations to all power connectors
+- [ ] Add voltage number to all power connectors
+- [ ] Add notes beside all optional components
+
 ## After layout
 
-- [ ] Add project information to silkscreen layer
-    - Name, Version, Year
-    - Open source hardware logo
-    - Get started at URL
 - [ ] Run `b` to refill all zones on all layers in KiCad
 - [ ] Ensure ERC and DRC are passing
 - [ ] Eyeball 3D view
