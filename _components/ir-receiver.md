@@ -18,4 +18,12 @@ references:
     url: https://learn.adafruit.com/using-an-infrared-library/hardware-needed
 ---
 
-Use IR receiver `TSOP4838` and Arduino to receive remote controller IR codes/
+Use IR receiver `TSOP4838` and Arduino to receive remote controller IR codes. Start monitoring the serial console, and then press the remote controller button.
+
+### Debugging
+
+For error on `lto1: internal compiler error: in lto_output_varpool_node, at lto-cgraph.c:624`, install version `1.6.21` of the [IR Arduino library](https://github.com/cyborg5/IRLib2):
+
+```
+arduino-cli core install arduino:avr@1.6.21
+```
