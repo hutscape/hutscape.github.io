@@ -8,8 +8,6 @@ hardware:
   - IR
   - receiver
 references:
-  - name: Blink Arduino tutorial
-    url: https://www.arduino.cc/en/Tutorial/Blink
   - name: Use Arduino AVR Board version 1.6.21
     url: https://forum.arduino.cc/index.php?topic=574020.0
   - name: IRLib2 for Arduino Infrared
