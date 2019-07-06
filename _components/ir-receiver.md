@@ -18,6 +18,8 @@ references:
 
 Use IR receiver `TSOP4838` and Arduino to receive remote controller IR codes. Start monitoring the serial console, and then press the remote controller button.
 
+Only [supported protocols for the remote controllers](https://github.com/cyborg5/IRLib2/blob/master/IRLibProtocols/IRLibProtocols.h#L15-L29) can be used. If the protocol is supported, then the serial console's first line will show the decoded protocol and the hex code values.
+
 ### Debugging
 
 For error on `lto1: internal compiler error: in lto_output_varpool_node, at lto-cgraph.c:624`, install version `1.6.21` of the [IR Arduino library](https://github.com/cyborg5/IRLib2):

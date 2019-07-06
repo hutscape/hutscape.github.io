@@ -1,11 +1,10 @@
 #include <IRLibAll.h>
 
 IRrecvPCI myReceiver(2);
-
 IRdecode myDecoder;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(2000); while (!Serial);
   myReceiver.enableIRIn();
   Serial.println("Ready to receive IR signals");
