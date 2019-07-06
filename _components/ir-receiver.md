@@ -27,3 +27,24 @@ For error on `lto1: internal compiler error: in lto_output_varpool_node, at lto-
 ```
 arduino-cli core install arduino:avr@1.6.21
 ```
+
+## Sample Remote control HEX
+
+For Benq projector remote control
+
+```
+ON
+Decoded NEC(1): Value:CF20D
+
+OFF
+Decoded NEC(1): Value:C728D
+
+Increase volume
+Decoded NEC(1): Value:C41BE
+
+Decrease volume
+Decoded NEC(1): Value:CC13E
+
+Eco blank
+Decoded NEC(1): Value:CE01F
+```
