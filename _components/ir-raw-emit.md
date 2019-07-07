@@ -11,8 +11,8 @@ hardware:
 prerequisites:
   - name: IR Receiver
     url: ./ir-receiver
-    - name: IR Raw receive
-      url: ./ir-raw-receive
+  - name: IR Raw receive
+    url: ./ir-raw-receive
 references:
   - name: Use Arduino AVR Board version 1.6.21
     url: https://forum.arduino.cc/index.php?topic=574020.0
