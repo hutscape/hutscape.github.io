@@ -1,12 +1,12 @@
 ---
 layout: components
-title: IR Receiver raw codes
+title: IR emit raw codes
 hardware:
   - arduino
   - uno
   - infrared
   - IR
-  - receive
+  - emit
   - raw
 prerequisites:
   - name: IR Receiver
