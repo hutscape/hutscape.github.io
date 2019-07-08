@@ -57,6 +57,7 @@ layout: default
     {% endfor %}
 
     <h2>Code</h2>
+    <p><a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}">Try the code</a> with <code>make flash</code> command. </p>
     {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.ino %}{% endhighlight %}
 
 
