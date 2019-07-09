@@ -14,7 +14,7 @@ layout: default
   {% for project in projects reversed %}
     <li class="project-list-item">
       <div class="project-item-image">
-        <img src="/assets/images/projects/{{ project.name }}.jpg" alt="{{ project.name }} photo">
+        <img src="/assets/images/projects/{{ project.name | downcase }}.jpg" alt="{{ project.name }} photo">
         <p class="project-item-tag">
           {% for tag in project.tags %}
             {{ tag }}
