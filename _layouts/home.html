@@ -14,18 +14,19 @@ layout: default
   {% for project in projects reversed %}
     <li class="project-list-item">
       <div class="project-item-image">
-        <img src="" alt="">
-      </div>
-      <div class="project-item-text">
-        <p class="project-item-name">{{ project.name }}</p>
+        <img src="/assets/images/projects/{{ project.name }}.jpg" alt="{{ project.name }} photo">
         <p class="project-item-tag">
           {% for tag in project.tags %}
             {{ tag }}
           {% endfor %}
         </p>
-        <hr>
+      </div>
+      <div class="project-item-text">
+        <p class="project-item-name">{{ project.name }}</p>
         <p class="project-item-description">{{ project.description }}</p>
-        <p class="project-item-cost">USD {{ project.cogs }}</p>
+        <p class="project-item-cost"><strong>BOM Cost:</strong> USD {{ project.cogs }}</p>
+        <p class="project-item-cost"><strong>Total BOM items:</strong> {{ project.bom }}</p>
+        <p class="project-item-cost"><strong>Time to completion:</strong> {{ project.duration }} months</p>
         <a href="{{ project.url }}">How to build it</a>
       </div>
     </li>
