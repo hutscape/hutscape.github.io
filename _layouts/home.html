@@ -15,19 +15,22 @@ layout: default
     <li class="project-list-item">
       <div class="project-item-image">
         <img src="/assets/images/projects/{{ project.name | downcase }}.jpg" alt="{{ project.name }} photo">
+      </div>
+      <div class="project-item-text">
+        <p class="project-item-name">{{ project.name }}</p>
+        <p class="project-item-date">{{ project.completion }}</p>
         <p class="project-item-tag">
           {% for tag in project.tags %}
             {{ tag }}
           {% endfor %}
         </p>
-      </div>
-      <div class="project-item-text">
-        <p class="project-item-name">{{ project.name }}</p>
         <p class="project-item-description">{{ project.description }}</p>
-        <p class="project-item-cost"><strong>BOM Cost:</strong> USD {{ project.cogs }}</p>
-        <p class="project-item-cost"><strong>Total BOM items:</strong> {{ project.bom }}</p>
-        <p class="project-item-cost"><strong>Time to completion:</strong> {{ project.duration }} months</p>
-        <a href="{{ project.url }}">How to build it</a>
+        <ul class="project-item-list">
+          <li><strong>BOM Cost:</strong> USD {{ project.cogs }}</li>
+          <li><strong>Total BOM items:</strong> {{ project.bom }}</li>
+          <li><strong>Completed within:</strong> {{ project.duration }} months</li>
+        </ul>
+        <a class="project-item-action" href="{{ project.url }}">How to build it</a>
       </div>
     </li>
   {% endfor %}

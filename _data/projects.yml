@@ -1,19 +1,20 @@
-- name: Cactus
-  sequence: 1
-  url: /cactus
-  description: 🌵 Measure humidity in kitchen cupboards to keep food fresh 🍶
-  tags: [esp8266, WiFi, humidity, lipo]
-  cogs: 35.41
-  bom: 35
-  duration: 2
-  status: completed
-
 - name: Palm
   sequence: 2
   url: /palm
   description: 🌴 Get alerted on excessive UV radiation with a backpack keychain 🗝
-  tags: [nRF52, BLE, UV, lipo]
+  tags: [nRF52, BLE, UV, LiPo]
   cogs: 48.44
   bom: 14
   duration: 3
   status: completed
+  completion: May 2019
+- name: Cactus
+  sequence: 1
+  url: /cactus
+  description: 🌵 Measure humidity in kitchen cupboards to keep food fresh 🍶
+  tags: [ESP8266, WiFi, Humidity, LiPo]
+  cogs: 35.41
+  bom: 35
+  duration: 2
+  status: completed
+  completion: July 2019
