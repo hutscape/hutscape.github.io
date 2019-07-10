@@ -7,7 +7,7 @@
   bom: 14
   duration: 3
   status: completed
-  completion: May 2019
+  completion: July 2019
 - name: Cactus
   sequence: 1
   url: /cactus
@@ -17,4 +17,4 @@
   bom: 35
   duration: 2
   status: completed
-  completion: July 2019
+  completion: May 2019
