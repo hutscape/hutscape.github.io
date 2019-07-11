@@ -2,7 +2,10 @@
   sequence: 2
   url: /palm
   description: 🌴 Get alerted on excessive UV radiation with a backpack keychain 🗝
-  tags: [nRF52, BLE, UV, LiPo]
+  wireless: BLE
+  mcu: nRF52
+  sensor: UV
+  power: LiPo
   cogs: 48.44
   bom: 14
   duration: 3
@@ -12,7 +15,10 @@
   sequence: 1
   url: /cactus
   description: 🌵 Measure humidity in kitchen cupboards to keep food fresh 🍶
-  tags: [ESP8266, WiFi, Humidity, LiPo]
+  wireless: WiFi
+  mcu: ESP8266
+  sensor: Humidity
+  power: LiPo
   cogs: 35.41
   bom: 35
   duration: 2

@@ -1,35 +1,21 @@
-<!doctype html>
-<html class="no-js" lang="{{ page.lang | default: site.lang | default: "en" }}">
+<!DOCTYPE html>
+<html>
 {%- include head.html -%}
 <body>
-<!--[if IE]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-<![endif]-->
-  <style id="search_style"></style>
+{%- include navbar.html -%}
 
-  {%- include header.html -%}
+{{ content }}
+{%- include footer.html -%}
 
-  {% if page.url == "/" %}
-    <img src="/assets/images/header-1.jpg" class="header-image" alt="Header image for Huts 1">
-    <div class="wrapper">
-      <p class="site-description">
-        {{ site.description }}
-        <br>
-        🍶 🗝 🎐 🧺 🔋 📃 💡 🏡
-      </p>
-    </div>
-  {% endif %}
+<!-- Scripts -->
+{%- include menu-mobile.html -%}
 
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </main>
-  {%- include footer.html -%}
-
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+{% if page.url == "/components/" or "/references/" %}
   {%- include search.html -%}
+{%- endif -%}
+
+{%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+{%- endif -%}
 </body>
 </html>
