@@ -1,20 +1,21 @@
 ---
 layout: checklists
 title: Datasheets
-description: Datasheets
+description: Good practices to incorporate in a datasheet
+checks:
+  - title: Datasheets
+    list: [
+      "Conform to international standards for all abbreviations, terms, symbols, and schematic symbols",
+      "Provide tabulated data as text file data structure such as <code>CSV</code>, <code>XML</code>, <code>JSON</code>, <code>YAML</code>",
+      Have a search mode,
+      Have a design mode,
+      Use revision control,
+      Update often,
+      Use web format for dynamic rendering of data and visualizations
+    ]
+references:
+  - name: A Complete Guide to Data Sheets by Allegro Microsystems
+    url: https://www.allegromicro.com/~/media/Files/Technical-Documents/pub26000-Complete-Guide-To-Datasheets.ashx
+  - name: On better datasheets
+    url: https://boldport.com/blog/2019/3/8/on-better-datasheets
 ---
-
-# Datasheets
-
-- [ ] Conform to international standards for all abbreviations, terms, symbols, and schematic symbols
-- [ ] Provide tabulated data as text file data structure such as CSV, XML, JSON, YAML
-- [ ] Have a search mode
-- [ ] Have a design mode
-- [ ] Use revision control
-- [ ] Update often
-- [ ] Use web format for dynamic rendering of data and visualizations
-
-## References
-
-- [A Complete Guide to Data Sheets](https://www.allegromicro.com/~/media/Files/Technical-Documents/pub26000-Complete-Guide-To-Datasheets.ashx) by Allegro Microsystems
-- [On better datasheets](https://boldport.com/blog/2019/3/8/on-better-datasheets)

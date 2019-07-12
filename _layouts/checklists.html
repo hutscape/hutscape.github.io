@@ -1,12 +1,45 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
 
-  <div class="post-content">
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1">{{ page.title | escape }}</h1>
+    <h2 class="subtitle">{{ page.description | escape }}</h2>
+    <hr>
+    {% for check in page.checks %}
+      <p class="title is-2">{{check.title}}</p>
+      {%- if check.subtitle -%}
+      <p class="subtitletitle is-2">{{check.subtitle}}:</p>
+      {% endif %}
+
+      <div class="content">
+        <ul>
+          {% for li in check.list %}
+          <li>
+            <label class="checkbox">
+              <input type="checkbox">
+              {{ li }}
+            </label>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
+    {%- if page.references -%}
+    <hr>
+    <p class="title is-2">References</p>
+
+    <div class="content">
+      <ul>
+        {% for ref in page.references %}
+        <li><a href="{{ ref.url }}">{{ ref.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     {{ content }}
   </div>
-</article>
+</section>

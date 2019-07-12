@@ -1,20 +1,23 @@
 ---
 layout: checklists
-title: networking
-description: Computer networking
+title: Computer Networking
+description: Things to check for WiFi connectivity to the devices
+checks:
+  - title: WiFi
+    list: [
+      Create separate subnet for connecting to connected devices,
+      Check no secrets are placed in firmware code
+    ]
+  - title: Leaked secrets
+    subtitle: In case, the secrets are leaked, take these steps immediately
+    list: [
+      Reset WiFi credentials immediately,
+      Remove secrets from entire git history,
+      Re-connect all devices with the new WiFi credentials
+    ]
+references:
+  - name: git secrets by Amazon to automatically check for secret patterns in code
+    url: https://github.com/awslabs/git-secrets
+  - name: git history repository cleaner
+    url: https://rtyley.github.io/bfg-repo-cleaner/
 ---
-
-# Networking
-
-## WiFi
-
-- [ ] Create separate subnet for connecting to connected devices
-- [ ] Check no secrets are placed in firmware code with [git secrets](https://github.com/awslabs/git-secrets)
-
-## Leaked secrets
-
-In case, secrets are leaked, these are the immediately steps to take in order:
-
-1. Reset secrets immediately
-1. Remove secrets from [entire git history](https://rtyley.github.io/bfg-repo-cleaner/) in code
-1. Re-connect all devices with the new secrets
