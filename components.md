@@ -4,18 +4,32 @@ title: Components
 permalink: /components/
 ---
 
-List of [Minimal, Complete and Verifiable examples of code](https://stackoverflow.com/help/mcve) to flash into different devices.
+<h2 class="subtitle">List of <a href="https://stackoverflow.com/help/mcve">reprex code</a> to flash into different devices.</h2>
 
-<input type="text" class="searchbar" placeholder="search" id="search">
+<style id="search_style"></style>
 
-<ul>
-{% for component in site.components %}
-  <li class="searchable" data-index="{{ component.title | downcase }} {% for item in component.hardware %}{{ item | downcase }} {% endfor %}">
-    <a href="{{ component.url }}">{{ component.title }}</a>
-      -
-      {% for item in component.hardware %}
-        {{ item }}
-      {% endfor %}
-  </li>
-{% endfor %}
-</ul>
+<nav class="panel">
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input class="input is-large" type="text" id="search" placeholder="search">
+      <span class="icon is-small is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+
+  {% for component in site.components %}
+  <a class="panel-block searchable" data-index="{{ component.title | downcase }} {% for item in component.hardware %}{{ item | downcase }} {% endfor %}" href="{{ component.url }}">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    {{ component.title }}
+
+    <div class="tags">
+    {% for item in component.hardware %}
+      <span class="tag is-light">{{ item }}</span>
+    {% endfor %}
+    </div>
+  </a>
+  {% endfor %}
+</nav>

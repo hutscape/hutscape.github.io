@@ -4,13 +4,16 @@ title: Checklists
 permalink: /checklists/
 ---
 
-Good checklists!
+<h2 class="subtitle">Good checklists to go through!</h2>
 
-<ul>
-{% for checklist in site.checklists %}
-  <li>
-    <a href="{{ checklist.url }}">{{ checklist.title }}</a>
-      - {{ checklist.description }}
-  </li>
-{% endfor %}
-</ul>
+
+<nav class="panel">
+  {% for checklist in site.checklists %}
+  <a class="panel-block searchable" href="{{ checklist.url }}">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    {{ checklist.title }} - {{ checklist.description }}
+  </a>
+  {% endfor %}
+</nav>
