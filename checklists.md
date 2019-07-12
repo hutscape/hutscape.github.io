@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Checklists
-permalink: /checklists/
+permalink: /checklists
 ---
 
 <h2 class="subtitle">Good checklists to go through!</h2>
