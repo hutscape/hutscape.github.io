@@ -46,7 +46,7 @@ Use the nRF Connect iPhone app to view the UV Index values.
 
 <section class="section is-small">
   <div class="container">
-    <div class="columns is-multiline is-mobile">
+    <div class="columns is-multiline is-desktop">
       <div class="column is-half">
         <img src="/assets/images/components/ble-uvi-nrf-connect.jpg" alt="">
       </div>
