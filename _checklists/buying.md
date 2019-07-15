@@ -4,52 +4,48 @@ title: Buying
 description: Before buying a breakout board, component, etc
 checks:
   - title: Chips
-    list: [
-      Supported protocols,
-      Supported firmware,
-      Future use of the single component from the breakout board,
-      Type of packages available,
-      Example projects,
-      Mechanical dimensions,
-      Pitch size,
-      Number of pins,
-      Manufacturer part number,
-      Link to datasheet,
-      Supported firmware tools on macOSX
-    ]
+    list:
+      - name: Supported protocols
+      - name: Supported firmware
+      - name: Future use of the single component from the breakout board
+      - name: Type of packages available
+      - name: Example projects
+      - name: Mechanical dimensions
+      - name: Pitch size
+      - name: Number of pins
+      - name: Manufacturer part number
+      - name: Link to datasheets
+      - name: Supported firmware tools on macOSX
   - title: MCU
-    list: [
-      GPIO,
-      Pin protocols,
-      Power modes E.g. active, standby, deep sleep,
-      Power consumption,
-      Manufacturer,
-      Manufacturer part number,
-      Memory and RAM,
-      Resolution,
-      Package type,
-      Link to datasheet,
-      Example projects,
-      Mechanical dimensions
-    ]
+    list:
+      - name: GPIO
+      - name: Pin protocols
+      - name: Power modes E.g. active, standby, deep sleep
+      - name: Power consumption
+      - name: Manufacturer
+      - name: Manufacturer part number
+      - name: Memory and RAM
+      - name: Resolution
+      - name: Package type
+      - name: Link to datasheet
+      - name: Example projects
+      - name: Mechanical dimensions
   - title: Modules / breakout boards
-    list: [
-      Firmware,
-      Pinouts,
-      Main components,
-      Main component parts can be traced individually for future use,
-      Open schematic
-    ]
+    list:
+      - name: Firmware
+      - name: Pinouts
+      - name: Main components
+      - name: Main component parts can be traced individually for future use
+      - name: Open schematic
   - title: Online site
-    list: [
-      Ensure minimum quantity matches,
-      Ensure part is not "No Longer Manufactured",
-      Ensure part is not "No Longer Stocked",
-      Ensure the part is available,
-      Ensure RoHS Compliant,
-      Ensure package type E.g. SMD,
-      Ensure package size is selected E.g. <code>0805</code>,
-      Ensure number of pins are correct,
-      Ensure manufacturer part is correct
-    ]
+    list:
+      - name: Ensure minimum quantity matches
+      - name: Ensure part is not "No Longer Manufactured"
+      - name: Ensure part is not "No Longer Stocked"
+      - name: Ensure the part is available
+      - name: Ensure RoHS Compliant
+      - name: Ensure package type E.g. SMD
+      - name: Ensure package size is selected E.g. <code>0805</code>
+      - name: Ensure number of pins are correct
+      - name: Ensure manufacturer part is correct
 ---

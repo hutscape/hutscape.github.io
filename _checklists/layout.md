@@ -1,37 +1,34 @@
 ---
 layout: checklists
-title: Layout
+title: Footprint Layouts
 description: Before making the footprint layouts
 checks:
   - title: Before layout
-    list: [
-      Check manufacturer capabilities on via size and track width,
-      Round all sharp edges on the edge cuts layer
-    ]
+    list:
+      - name: Check manufacturer capabilities on via size and track width,
+      - name: Round all sharp edges on the edge cuts layer    
   - title: Silkscreen
-    list: [
-      "Adhere to <a href='/checklists/standards'>standard text size</a>",
-      Add project Name,
-      Add project Version,
-      Add project Year,
-      Add open source hardware logo,
-      Add get started URL,
-      Add <code>+</code> and <code>-</code> annotations to all power connectors,
-      Add voltage number to all power connectors,
-      Add notes beside all optional components
-    ]
+    list:
+      - name: "Adhere to <a href='/checklists/standards'>standard text size</a>"
+      - name: Add project Name
+      - name: Add project Version
+      - name: Add project Year
+      - name: Add open source hardware logo
+      - name: Add get started URL
+      - name: Add <code>+</code> and <code>-</code> annotations to all power connectors,
+      - name: Add voltage number to all power connectors
+      - name: Add notes beside all optional components    
   - title: After layout
-    list: [
-      Run <code>b</code> to refill all zones on all layers in KiCad,
-      Ensure ERC and DRC are passing,
-      Look through the 3D view,
-      Print individual layers and check them,
-      "Export layers <code>F.Cu</code>, <code>B.Cu</code>, <code>F.SilkS</code>, <code>B.SilkS</code>, <code>F.Mask</code>, <code>B.Mas</code>, <code>Edge.Cuts</code> in Gerber format",
-      "Export drill files <code>NPTH.drl</code>, <code>PTH.drl</code>",
-      Check Gerber format layer by layer,
-      Check Solder mask openings smaller than the solder pad,
-      Check no text on solder pads,
-    ]
+    list:
+      - name: Run <code>b</code> to refill all zones on all layers in KiCad
+      - name: Ensure ERC and DRC are passing
+      - name: Look through the 3D view
+      - name: Print individual layers and check them
+      - name: "Export layers <code>F.Cu</code>, <code>B.Cu</code>, <code>F.SilkS</code> <code>B.SilkS</code>, <code>F.Mask</code>, <code>B.Mas</code>, <code>Edge.Cuts</code> in Gerber format"
+      - name: "Export drill files <code>NPTH.drl</code>, <code>PTH.drl</code>"
+      - name: Check Gerber format layer by layer
+      - name: Check Solder mask openings smaller than the solder pad
+      - name: Check no text on solder pads   
 references:
   - name: OSHPark manufacturing guidelines
     url: https://docs.oshpark.com/submitting-orders/drill-specs/
