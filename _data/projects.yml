@@ -6,8 +6,9 @@
   mcu: nRF52
   sensor: UV
   power: LiPo
-  cogs: 48.44
-  bom: 14
+  cogs_usd: 50.56
+  cogs_sgd: 68.64
+  bom: 13
   duration: 3
   status: completed
   completion: July 2019
@@ -19,8 +20,9 @@
   mcu: ESP8266
   sensor: Humidity
   power: LiPo
-  cogs: 35.41
-  bom: 35
+  cogs_sgd: 35.41
+  cogs_usd: 26.00
+  bom: 36
   duration: 2
   status: completed
   completion: May 2019
