@@ -21,6 +21,7 @@ checks:
     list:
       - name: Create new components
       - name: Ensure DRC passes
+      - name:  Go through <a href="https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md">schematic checklist</a>
       - name: Create a BOM list
       - name: Ensure vendors have the stock
       - name: Ensure edge cuts can house all the components
@@ -30,13 +31,15 @@ checks:
       - name: Ensure ERC passes
       - name: Add version, name, year, logos on the silkscreen
       - name: Add mounting holes
+      - name: Go through <a href="https://github.com/azonenberg/pcb-checklist/blob/master/layout-checklist.md">layout checklist</a>
+      - name: Go through <a href="https://www.seeedstudio.com/blog/2019/04/05/11-do-it-yourself-pcb-design-for-manufacture-checks-anyone-can-do">PCB manufacturing checks</a>
   - title: Manufacturing
     list:
       - name: Order BOM parts online
       - name: Order PCB manufacturing online
       - name: Note the cost per unit
       - name: Note other charges
-  - title: System Integration
+  - title: Integration
     list:
       - name: Solder 1 unit
       - name: Ensure continuity check for all power pins
