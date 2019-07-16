@@ -34,29 +34,29 @@ layout: default
         <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <div class="tags has-addons">
-              <span class="tag is-dark">wireless</span>
-              <span class="tag is-info">{{project.wireless}}</span>
+              <span class="tag is-dark">power</span>
+              <span class="tag is-light">{{project.power}}</span>
             </div>
           </div>
 
           <div class="control">
             <div class="tags has-addons">
-              <span class="tag is-dark">mcu</span>
-              <span class="tag is-success">{{project.mcu}}</span>
+              <span class="tag is-dark">wireless</span>
+              <span class="tag is-light">{{project.wireless}}</span>
             </div>
           </div>
 
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-dark">sensor</span>
-              <span class="tag is-primary">{{project.sensor}}</span>
+              <span class="tag is-light">{{project.sensor}}</span>
             </div>
           </div>
 
           <div class="control">
             <div class="tags has-addons">
-              <span class="tag is-dark">power</span>
-              <span class="tag is-primary">{{project.power}}</span>
+              <span class="tag is-dark">mcu</span>
+              <span class="tag is-light">{{project.mcu}}</span>
             </div>
           </div>
         </div>
