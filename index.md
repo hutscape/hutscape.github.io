@@ -36,29 +36,49 @@ layout: default
             <div class="field is-grouped is-grouped-multiline">
               <div class="control">
                 <div class="tags has-addons">
-                  <span class="tag is-dark">power</span>
-                  <span class="tag is-light">{{project.power}}</span>
+                  <span class="tag is-medium is-dark">
+                    <span class="icon is-large">
+                      <i class="fas fa-battery-half"></i>
+                    </span>
+                    power
+                  </span>
+                  <span class="tag is-medium is-light">{{project.power}}</span>
                 </div>
               </div>
 
               <div class="control">
                 <div class="tags has-addons">
-                  <span class="tag is-dark">wireless</span>
-                  <span class="tag is-light">{{project.wireless}}</span>
+                  <span class="tag is-medium is-dark">
+                    <span class="icon is-large">
+                      <i class="fas fa-wifi"></i>
+                    </span>
+                    wireless
+                  </span>
+                  <span class="tag is-light is-medium">{{project.wireless}}</span>
                 </div>
               </div>
 
               <div class="control">
                 <div class="tags has-addons">
-                  <span class="tag is-dark">sensor</span>
-                  <span class="tag is-light">{{project.sensor}}</span>
+                  <span class="tag is-medium is-dark">
+                    <span class="icon is-large">
+                      <i class="fas fa-eye"></i>
+                    </span>
+                    sensor
+                  </span>
+                  <span class="tag is-light is-medium">{{project.sensor}}</span>
                 </div>
               </div>
 
               <div class="control">
                 <div class="tags has-addons">
-                  <span class="tag is-dark">mcu</span>
-                  <span class="tag is-light">{{project.mcu}}</span>
+                  <span class="tag is-medium is-dark">
+                    <span class="icon is-large">
+                      <i class="fas fa-microchip"></i>
+                    </span>
+                    mcu
+                  </span>
+                  <span class="tag is-light is-medium">{{project.mcu}}</span>
                 </div>
               </div>
             </div>
