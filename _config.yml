@@ -3,7 +3,7 @@ description: Exploring low power wireless sensor networks with practical everyda
 url: "https://hutscape.com"
 markdown: kramdown
 permalink: /:title
-google_analytics: UA-XXXXX-Y
+google_analytics: UA-144008567-1
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
 collections:
