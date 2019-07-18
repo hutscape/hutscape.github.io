@@ -11,21 +11,23 @@ layout: default
   </div>
 </section>
 
-<section class="section is-small">
+<section class="section is-medium">
   <div class="container">
     <h2 class="title is-1 has-text-centered"> Projects created </h2>
     <h4 class="subtitle has-text-centered"> with open source hardware and software </h4>
   </div>
 </section>
 
-<section class="section is-small">
-  <div class="container">
-    {% assign projects = site.data.projects | sort: 'sequence' %}
-    {% for project in projects reversed %}
+
+<div class="container">
+  {% assign projects = site.data.projects | sort: 'sequence' %}
+  {% for project in projects reversed %}
+  <section class="section is-small">
     <div class="columns">
       <div class="column is-3">
         <img src="https://hutscape.com/{{ project.name | downcase }}/images/prototype/front.jpg" alt="{{ project.name }} photo">
       </div>
+
 
       <div class="column is-9">
         <p class="title">{{ project.name }}</p>
@@ -114,6 +116,6 @@ layout: default
         <a class="button is-large is-fullwidth is-info" href="{{site.url}}{{ project.url }}">How to build it</a>
       </div>
     </div>
-    {% endfor %}
-  </div>
-</section>
+  </section>
+  {% endfor %}
+</div>
