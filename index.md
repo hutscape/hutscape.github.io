@@ -24,7 +24,7 @@ layout: default
     {% for project in projects reversed %}
     <div class="columns">
       <div class="column is-3">
-        <img src="/assets/images/projects/{{ project.name | downcase }}.jpg" alt="{{ project.name }} photo">
+        <img src="https://hutscape.com/{{ project.name | downcase }}/images/prototype/front.jpg" alt="{{ project.name }} photo">
       </div>
 
       <div class="column is-9">
