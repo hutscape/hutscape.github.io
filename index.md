@@ -29,63 +29,63 @@ layout: default
 
 
       <div class="column is-9">
-        <p class="title">{{ project.name }}</p>
-        <p class="subtitle">{{ project.description }}</p>
-
         <div class="level">
           <div class="level-left">
-            <div class="field is-grouped is-grouped-multiline">
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-medium is-dark">
-                    <span class="icon is-large">
-                      <i class="fas fa-battery-half"></i>
-                    </span>
-                    power
-                  </span>
-                  <span class="tag is-medium is-light">{{project.power}}</span>
-                </div>
-              </div>
-
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-medium is-dark">
-                    <span class="icon is-large">
-                      <i class="fas fa-wifi"></i>
-                    </span>
-                    wireless
-                  </span>
-                  <span class="tag is-light is-medium">{{project.wireless}}</span>
-                </div>
-              </div>
-
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-medium is-dark">
-                    <span class="icon is-large">
-                      <i class="fas fa-eye"></i>
-                    </span>
-                    sensor
-                  </span>
-                  <span class="tag is-light is-medium">{{project.sensor}}</span>
-                </div>
-              </div>
-
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag is-medium is-dark">
-                    <span class="icon is-large">
-                      <i class="fas fa-microchip"></i>
-                    </span>
-                    mcu
-                  </span>
-                  <span class="tag is-light is-medium">{{project.mcu}}</span>
-                </div>
-              </div>
-            </div>
+            <p class="title">{{ project.name }}</p>
           </div>
           <div class="level-right">
-            <span class="tag">{{ project.completion }}</span>
+            <p class="has-text-grey is-size-7">{{ project.completion }}</p>
+          </div>
+        </div>
+        <p class="subtitle">{{ project.description }}</p>
+
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-medium is-dark">
+                <span class="icon is-large">
+                  <i class="fas fa-battery-half"></i>
+                </span>
+                power
+              </span>
+              <span class="tag is-medium is-light">{{project.power}}</span>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-medium is-dark">
+                <span class="icon is-large">
+                  <i class="fas fa-wifi"></i>
+                </span>
+                wireless
+              </span>
+              <span class="tag is-light is-medium">{{project.wireless}}</span>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-medium is-dark">
+                <span class="icon is-large">
+                  <i class="fas fa-eye"></i>
+                </span>
+                sensor
+              </span>
+              <span class="tag is-light is-medium">{{project.sensor}}</span>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-medium is-dark">
+                <span class="icon is-large">
+                  <i class="fas fa-microchip"></i>
+                </span>
+                mcu
+              </span>
+              <span class="tag is-light is-medium">{{project.mcu}}</span>
+            </div>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ layout: default
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-light">bom cost</span>
-              <span class="tag is-medium is-white">USD ${{project.cogs_usd | money}}</span>
+              <span class="tag is-medium is-white">USD ${{ project.cogs_usd }}</span>
             </div>
           </div>
 
@@ -101,6 +101,13 @@ layout: default
             <div class="tags has-addons">
               <span class="tag is-medium is-light">bom items</span>
               <span class="tag is-medium is-white">{{project.bom}}</span>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-medium is-light">vendors</span>
+              <span class="tag is-medium is-white">{{project.vendors}}</span>
             </div>
           </div>
         </div>
