@@ -18,7 +18,6 @@ layout: default
   </div>
 </section>
 
-
 <div class="container">
   {% assign projects = site.data.projects | sort: 'sequence' %}
   {% for project in projects reversed %}
@@ -102,13 +101,6 @@ layout: default
             <div class="tags has-addons">
               <span class="tag is-medium is-light">bom items</span>
               <span class="tag is-medium is-white">{{project.bom}}</span>
-            </div>
-          </div>
-
-          <div class="control">
-            <div class="tags has-addons">
-              <span class="tag is-medium is-light">duration</span>
-              <span class="tag is-medium is-white">{{ project.duration }} months</span>
             </div>
           </div>
         </div>
