@@ -1,10 +1,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
-  <meta name="description" content="{{site.description}}">
+  {% if page.title %}
+  <title>{{ site.title }} | {{ page.title }}</title>
+  {% else %}
+  <title>{{ site.title }} | {{ site.description }}</title>
+  {% endif %}
+  <meta name="description" content="{{ site.title }} - {{site.description}}">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
   <style>
     .highlight { max-height: 500px; overflow: auto; }
     .level { margin-bottom: 0 !important; }
