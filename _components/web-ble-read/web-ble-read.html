@@ -1,0 +1,142 @@
+<style> code{ background: #eee; }</style>
+
+<h1>Web Bluetooth: Read Characteristic Value Changed</h1>
+
+<p>For BLE GATT Service <code><span id="ble-service">environmental_sensing</span></code> and BLE GATT Characteristic <code><span id="ble-characteristic">uv_index</span></code></p>
+
+<button id="read">Read UV Index</button>
+<button id="start" disabled>Start</button>
+<button id="stop" disabled>Stop</button>
+<button id="reset">Reset device</button>
+
+<script>
+  var bluetoothDevice;
+  var gattCharacteristic;
+  var bleService = document.getElementById("ble-service").innerText
+  var bleCharacteristic = document.getElementById("ble-characteristic").innerText
+
+  // User actions read, start, stop, reset
+  document.querySelector('#read').addEventListener('click', function() {
+    if (isWebBluetoothEnabled()) { read() }
+  })
+
+  document.querySelector('#start').addEventListener('click', function(event) {
+    if (isWebBluetoothEnabled()) { onStart() }
+  })
+
+  document.querySelector('#stop').addEventListener('click', function(event) {
+    if (isWebBluetoothEnabled()) { onStop() }
+  })
+
+  document.querySelector('#reset').addEventListener('click', function(event) {
+    if (isWebBluetoothEnabled()) { onReset() }
+  })
+
+  function isWebBluetoothEnabled() {
+    if (navigator.bluetooth) {
+      return true;
+    } else {
+      console.log('Web Bluetooth API is not available.')
+      console.log('Please make sure the "Experimental Web Platform features" flag is enabled.')
+      return false
+    }
+  }
+
+  function requestDevice() {
+    console.log('Requesting any Bluetooth Device...');
+    return navigator.bluetooth.requestDevice({
+        acceptAllDevices: true,
+        optionalServices: [bleService]})
+    .then(device => {
+      bluetoothDevice = device;
+      bluetoothDevice.addEventListener('gattserverdisconnected', onDisconnected);
+    });
+  }
+
+  function read() {
+    return (bluetoothDevice ? Promise.resolve() : requestDevice())
+    .then(connectGATT)
+    .then(_ => {
+      console.log('Reading UV Index...');
+      return gattCharacteristic.readValue();
+    })
+    .catch(error => {
+      console.log('[ERROR] Read on click: ' + error);
+    });
+  }
+
+  function connectGATT() {
+    if (bluetoothDevice.gatt.connected && gattCharacteristic) {
+      return Promise.resolve();
+    }
+
+    console.log('Connecting to GATT Server...');
+    return bluetoothDevice.gatt.connect()
+    .then(server => {
+      console.log('Getting GATT Service...');
+      return server.getPrimaryService(bleService);
+    })
+    .then(service => {
+      console.log('Getting GATT Characteristic...');
+      return service.getCharacteristic(bleCharacteristic);
+    })
+    .then(characteristic => {
+      gattCharacteristic = characteristic;
+      gattCharacteristic.addEventListener('characteristicvaluechanged',
+          handleChangedValue);
+      document.querySelector('#start').disabled = false;
+      document.querySelector('#stop').disabled = true;
+    });
+  }
+
+  function handleChangedValue(event) {
+    let value = event.target.value.getUint8(0);
+    var now = new Date()
+    console.log('> ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + ' UV Index is ' + value);
+  }
+
+  function onStart() {
+    console.log('Starting Notifications...');
+    gattCharacteristic.startNotifications()
+    .then(_ => {
+      console.log('> Notifications started');
+      document.querySelector('#start').disabled = true;
+      document.querySelector('#stop').disabled = false;
+    })
+    .catch(error => {
+      console.log('[ERROR] Start notifications: ' + error);
+    });
+  }
+
+  function onStop() {
+    console.log('Stopping Notifications...');
+    gattCharacteristic.stopNotifications()
+    .then(_ => {
+      console.log('> Notifications stopped');
+      document.querySelector('#start').disabled = false;
+      document.querySelector('#stop').disabled = true;
+    })
+    .catch(error => {
+      console.log('[ERROR] Stop notifications: ' + error);
+    });
+  }
+
+  function onReset() {
+    if (gattCharacteristic) {
+      gattCharacteristic.removeEventListener('characteristicvaluechanged',
+          handleChangedValue);
+      gattCharacteristic = null;
+    }
+
+    bluetoothDevice = null;
+    console.log('> Bluetooth Device reset');
+  }
+
+  function onDisconnected() {
+    console.log('> Bluetooth Device disconnected');
+    connectGATT()
+    .catch(error => {
+      console.log('[ERROR] on disconnected:  ' + error);
+    })
+  }
+</script>
