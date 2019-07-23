@@ -31,8 +31,14 @@ layout: default
 <section class="section is-small">
   <div class="container">
     <p class="title is-2">Code</p>
-    <p class="subtitle is-4"><a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}">Try the code</a> with <code>make flash</code> command.</p>
-    {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.ino %}{% endhighlight %}
+
+    {% if page.code == "html" %}
+      <p class="subtitle is-4"><a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}">Try the code</a> with <code>make serve</code> command.</p>
+      {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.html %}{% endhighlight %}
+    {% else %}
+      <p class="subtitle is-4"><a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}">Try the code</a> with <code>make flash</code> command.</p>
+      {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.ino %}{% endhighlight %}
+    {% endif %}
   </div>
 </section>
 
@@ -85,8 +91,13 @@ layout: default
 
             {% if image.path contains serial_image %}
             <div class="column is-half">
-              <p class="title is-2">Serial console</p>
-              <p class="subtitle is-4">Serial output from the firmware.</p>
+              {% if page.code == "html" %}
+                <p class="title is-2">Browser console</p>
+                <p class="subtitle is-4">Open the browser developer console.</p>
+              {% else %}
+                <p class="title is-2">Serial console</p>
+                <p class="subtitle is-4">Serial output from the firmware.</p>
+              {% endif %}
               <img src="{{ image.path }}" alt="{{ page.title | escape }} serial console">
             </div>
             {% endif %}
