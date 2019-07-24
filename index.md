@@ -32,6 +32,7 @@ layout: default
         <div class="level">
           <div class="level-left">
             <p class="title">{{ project.name }}</p>
+            <p class="handwriting has-text-grey">V{{project.version}}</p>
           </div>
           <div class="level-right">
             <p class="has-text-grey is-size-7">{{ project.completion }}</p>
@@ -108,6 +109,13 @@ layout: default
             <div class="tags has-addons">
               <span class="tag is-medium is-light">vendors</span>
               <span class="tag is-medium is-white">{{project.vendors}}</span>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-medium is-light">battery life</span>
+              <span class="tag is-medium is-white">{{project.battery_life}}</span>
             </div>
           </div>
         </div>
