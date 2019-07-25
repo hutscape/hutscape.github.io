@@ -2,6 +2,7 @@
 layout: page
 title: Checklists
 permalink: /checklists
+sequence: 1
 ---
 
 <h2 class="subtitle">Good checklists to go through!</h2>

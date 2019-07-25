@@ -1,6 +1,4 @@
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign page_paths = site.header_pages | default: default_paths -%}
-{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+{% assign pages = site.pages | sort: 'sequence' %}
 
 <nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -14,16 +12,13 @@
   </div>
 
   <div id="navMenu" class="navbar-menu">
-    {%- if titles_size > 0 -%}
     <div class="navbar-start">
-      {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
-        <a class="navbar-item" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      {%- for pg in pages -%}
+        {%- if pg.title -%}
+        <a class="navbar-item" href="{{ pg.url | relative_url }}">{{ pg.title | escape }}</a>
         {%- endif -%}
       {%- endfor -%}
     </div>
-    {%- endif -%}
 
     <div class="navbar-end">
       <div class="navbar-item">

@@ -2,6 +2,7 @@
 layout: page
 title: References
 permalink: /references
+sequence: 3
 ---
 
 <h2 class="subtitle">Links to pinouts, schematics, footprint layouts and datasheets of various ICs, chips and devices.</h2>

@@ -2,6 +2,7 @@
 layout: page
 title: Components
 permalink: /components
+sequence: 2
 ---
 
 <h2 class="subtitle">List of <a href="https://stackoverflow.com/help/mcve">reprex code</a> to flash into different devices.</h2>
