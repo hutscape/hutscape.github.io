@@ -1,3 +1,16 @@
+- name: Pine
+  sequence: 3
+  url: /pine
+  description: 🌲 Control aircon by monitoring temperature in other parts of the room 🎐
+  version: "1.0"
+
+  wireless: Infrared
+  mcu: EFM32
+  sensor: Temperature
+  power: AA
+
+  status: ongoing
+
 - name: Palm
   sequence: 2
   url: /palm

@@ -35,7 +35,11 @@ layout: default
             <p class="handwriting has-text-grey">V{{project.version}}</p>
           </div>
           <div class="level-right">
+            {% if project.completion %}
             <p class="has-text-grey is-size-7">{{ project.completion }}</p>
+            {% else %}
+            <span class="tag is-warning is-size-7">ongoing</span>
+            {% endif %}
           </div>
         </div>
         <p class="subtitle">{{ project.description }}</p>
@@ -91,33 +95,41 @@ layout: default
         </div>
 
         <div class="field is-grouped is-grouped-multiline">
+          {% if project.cogs_usd %}
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-light">bom cost</span>
               <span class="tag is-medium is-white">USD ${{ project.cogs_usd }}</span>
             </div>
           </div>
+          {% endif %}
 
+          {% if project.bom %}
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-light">bom items</span>
               <span class="tag is-medium is-white">{{project.bom}}</span>
             </div>
           </div>
+          {% endif %}
 
+          {% if project.vendors %}
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-light">vendors</span>
               <span class="tag is-medium is-white">{{project.vendors}}</span>
             </div>
           </div>
+          {% endif %}
 
+          {% if project.battery_life %}
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-light">battery life</span>
               <span class="tag is-medium is-white">{{project.battery_life}}</span>
             </div>
           </div>
+          {% endif %}
         </div>
 
         <a class="button is-large is-fullwidth is-info" href="{{site.url}}{{ project.url }}">How to build it</a>
