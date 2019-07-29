@@ -21,7 +21,7 @@
   mcu: nRF52
   sensor: UV Index
   power: 380mAh LiPo
-  battery_life: 15 hours
+  battery_life: 5 days
 
   cogs_usd: "50.56"
   cogs_sgd: "68.64"
