@@ -1,13 +1,26 @@
 <script>
 var searchStyle = document.getElementById('search_style');
 
+// Clear URL query params on reload
+if (document.getElementById('search').value == "") {
+  if (history.pushState) {
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.pushState({path:newurl},'',newurl);
+  }
+}
+
 document.getElementById('search').addEventListener('input', function() {
   if (!this.value) {
     searchStyle.innerHTML = "";
     return;
   }
-  // look ma, no indexOf!
+
   searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase() + "\"]) { display: none; }";
-  // beware of css injections!
+
+  // Change URL query params according to searchbar
+  if (history.pushState) {
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?search=' + this.value;
+      window.history.pushState({path:newurl},'',newurl);
+  }
 });
 </script>
