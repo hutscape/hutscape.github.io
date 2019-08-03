@@ -1,44 +1,43 @@
 <script>
-var searchStyle = document.getElementById('search_style');
+var searchStyle = document.getElementById('search_style')
+var urlParams = new URLSearchParams(window.location.search)
+var searchEl = document.getElementById('search')
+var searchParamValue = urlParams.get('search')
 
-var urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('search')) {
-  document.getElementById('search').value = urlParams.get('search')
-
-  searchStyle.innerHTML = ".searchable:not([data-index*=\"" + urlParams.get('search').toLowerCase() + "\"]) { display: none; }";
+  searchEl.value = searchParamValue
+  displayResults(searchParamValue)
 } else {
+  clearURLparams()
+}
+
+searchEl.addEventListener('input', function() {
+  if (!this.value) {
+    searchStyle.innerHTML = ""
+    clearURLparams()
+
+    return
+  }
+
+  displayResults(this.value)
+  this.value ? addURLParams(this.value) : clearURLparams()
+})
+
+function clearURLparams() {
   if (history.pushState) {
     var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname
-
-    window.history.pushState({path:newurl},'',newurl);
+    window.history.pushState({path:newurl},'',newurl)
   }
 }
 
-document.getElementById('search').addEventListener('input', function() {
-  if (!this.value) {
-    searchStyle.innerHTML = "";
-
-    if (history.pushState) {
-      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname
-      window.history.pushState({path:newurl},'',newurl);
-    }
-
-    return;
-  }
-
-  searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase() + "\"]) { display: none; }";
-
-  // Change URL query params according to searchbar
+function addURLParams(params) {
   if (history.pushState) {
-    var newurl;
-
-    if (this.value) {
-      newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?search=' + this.value
-    } else {
-      newurl = window.location.protocol + "//" + window.location.host + window.location.pathname
-    }
-
-    window.history.pushState({path:newurl},'',newurl);
+    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?search=' + params
+    window.history.pushState({path:newurl},'',newurl)
   }
-});
+}
+
+function displayResults(searchTerm) {
+  searchStyle.innerHTML = ".searchable:not([data-index*=\"" + searchTerm.toLowerCase() + "\"]) { display: none; }"
+}
 </script>
