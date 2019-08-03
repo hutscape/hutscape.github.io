@@ -1,17 +1,28 @@
 <script>
 var searchStyle = document.getElementById('search_style');
 
-// Clear URL query params on reload
-if (document.getElementById('search').value == "") {
+var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('search')) {
+  document.getElementById('search').value = urlParams.get('search')
+
+  searchStyle.innerHTML = ".searchable:not([data-index*=\"" + urlParams.get('search').toLowerCase() + "\"]) { display: none; }";
+} else {
   if (history.pushState) {
-      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-      window.history.pushState({path:newurl},'',newurl);
+    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname
+
+    window.history.pushState({path:newurl},'',newurl);
   }
 }
 
 document.getElementById('search').addEventListener('input', function() {
   if (!this.value) {
     searchStyle.innerHTML = "";
+
+    if (history.pushState) {
+      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname
+      window.history.pushState({path:newurl},'',newurl);
+    }
+
     return;
   }
 
@@ -19,8 +30,15 @@ document.getElementById('search').addEventListener('input', function() {
 
   // Change URL query params according to searchbar
   if (history.pushState) {
-      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?search=' + this.value;
-      window.history.pushState({path:newurl},'',newurl);
+    var newurl;
+
+    if (this.value) {
+      newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?search=' + this.value
+    } else {
+      newurl = window.location.protocol + "//" + window.location.host + window.location.pathname
+    }
+
+    window.history.pushState({path:newurl},'',newurl);
   }
 });
 </script>
