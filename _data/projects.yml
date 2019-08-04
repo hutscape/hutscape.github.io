@@ -5,7 +5,7 @@
   version: "1.0"
 
   wireless: Infrared
-  mcu: EFM32
+  mcu: Atmega328
   sensor: Temperature
   power: AA
 
