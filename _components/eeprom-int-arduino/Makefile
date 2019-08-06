@@ -1,15 +1,18 @@
-.PHONY: lint compile upload clean
+BOARD?=arduino:avr:uno
+PORT?=/dev/cu.usbmodem14101
 
-flash: lint compile upload clean
+.PHONY: default lint all flash clean
+
+default: lint all flash clean
 
 lint:
 	cpplint --extensions=ino --filter=-legal/copyright *.ino
 
-compile:
-	arduino-cli compile --fqbn arduino:avr:uno ./
+all:
+	arduino-cli compile --fqbn $(BOARD) ./
 
-upload:
-	arduino-cli upload -p /dev/cu.usbmodem14101 --fqbn arduino:avr:uno ./
+flash:
+	arduino-cli upload -p $(PORT) --fqbn $(BOARD) ./
 
 clean:
 	rm -f .*.hex
