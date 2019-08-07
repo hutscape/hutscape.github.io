@@ -5,7 +5,7 @@
   version: "1.0"
 
   wireless: Infrared
-  mcu: ATmega32U4
+  mcu: SAMD21
   sensor: Temperature
   power: AA
 
