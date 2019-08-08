@@ -3,12 +3,12 @@ void setup() {
   digitalWrite(LED_BUILTIN, LOW);
 
   Serial.begin(115200);
-  Serial.println("Hello!");
+  Serial.println("Start blinky");
 }
 
 void loop() {
   ledON();
-  delay(4000);
+  delay(1000);
 
   ledOFF();
   delay(1000);

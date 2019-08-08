@@ -16,7 +16,6 @@ flash:
 	adafruit-nrfutil dfu serial --package dfu-package.zip -p $(PORT) -b 115200
 
 clean:
-	rm -f .*.bin
 	rm -f .*.elf
 	rm -f .*.hex
 	rm -f *.zip
