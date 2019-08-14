@@ -15,7 +15,7 @@ layout: default
     {% if page.prerequisites %}
     <p class="title is-2">Pre-requisites</p>
 
-    <div class="content">
+    <div class="content is-medium">
       <ol>
         {% for pre in page.prerequisites %}
         <li><a href="{{ pre.url }}">{{ pre.name }}</a></li>
@@ -24,10 +24,13 @@ layout: default
     </div>
     {% endif %}
 
+    <div class="content is-medium">
     {{ content }}
+    </div>
   </div>
 </section>
 
+{% if page.has_code != false %}
 <section class="section is-small">
   <div class="container">
     <p class="title is-2">Code</p>
@@ -41,7 +44,7 @@ layout: default
     {% endif %}
   </div>
 </section>
-
+{% endif %}
 
 {% for image in site.static_files %}
   {% if image.path contains 'assets/images/components' %}
