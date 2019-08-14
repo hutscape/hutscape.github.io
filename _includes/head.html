@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.title %}
-  <title>{{ site.title }} | {{ page.title }}</title>
+  <title>{{ site.title }} | {% if page.collection %}{{ page.collection | capitalize }} -{% endif %} {{ page.title }}</title>
   {% else %}
   <title>{{ site.title }} | {{ site.description }}</title>
   {% endif %}
