@@ -3,3 +3,6 @@ serve: build
 
 build:
 	jekyll build
+
+query:
+	node scripts/query_projects.js
