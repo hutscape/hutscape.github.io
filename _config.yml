@@ -4,6 +4,7 @@ url: "https://hutscape.com"
 markdown: kramdown
 permalink: /:title
 google_analytics: UA-144008567-1
+youtube: https://www.youtube.com/user/sweska/videos
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
 collections:
