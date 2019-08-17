@@ -15,5 +15,4 @@ flash:
 	arduino-cli upload -p $(PORT) --fqbn $(BOARD) ./
 
 clean:
-	rm -f .*.hex
-	rm -f .*.elf
+	rm -f .*.bin

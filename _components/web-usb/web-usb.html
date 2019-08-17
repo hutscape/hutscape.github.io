@@ -1,0 +1,14 @@
+<a href="#" id="click">Click me to get USB info</a>
+
+<script>
+  click.onclick = function() {
+    // Check http://www.linux-usb.org/usb.ids
+    // Search for "Arduino Zero" which is 2a03
+    navigator.usb.requestDevice({ filters: [{ vendorId: 0x2a03 }] })
+    .then(device => {
+      console.log(device.productName)
+      console.log(device.manufacturerName)
+    })
+    .catch(error => { console.log(error) })
+  }
+</script>
