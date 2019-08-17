@@ -36,10 +36,10 @@ layout: default
     <p class="title is-2">Code</p>
 
     {% if page.code == "html" %}
-      <p class="subtitle is-4"><a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}">Try the code</a> with <code>make serve</code> command.</p>
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
       {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.html %}{% endhighlight %}
     {% else %}
-      <p class="subtitle is-4"><a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}">Try the code</a> with <code>make flash</code> command.</p>
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
       {% highlight c %}{% include_relative {{ page.path | remove: "_components/" | remove: ".md" }}/{{ page.path | remove: "_components/" | remove: ".md" }}.ino %}{% endhighlight %}
     {% endif %}
   </div>
