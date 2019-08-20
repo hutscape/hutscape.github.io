@@ -1,10 +1,12 @@
+#define LED 13 // Pin 13 is connected to an on-board Blue LED
+
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(LED, HIGH);
   delay(500);
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(LED, LOW);
   delay(500);
 }
