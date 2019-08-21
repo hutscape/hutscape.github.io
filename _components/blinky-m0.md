@@ -15,6 +15,8 @@ references:
     url: https://www.arduino.cc/reference/en/language/functions/communication/serial/
   - name: M0 serial println doesn't work, unlike programming
     url: https://forum.arduino.cc/index.php?topic=407713.0
+  - name: Using Serial Monitor with Native Port
+    url: https://forum.arduino.cc/index.php?topic=330588.0
 ---
 
 Create a blinky LED with RobotDyn's M0-Mini board which is compatible with Arduino firmware.
