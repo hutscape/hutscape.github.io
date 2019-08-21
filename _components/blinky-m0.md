@@ -17,4 +17,13 @@ references:
     url: https://forum.arduino.cc/index.php?topic=407713.0
 ---
 
-Create a blinky LED with RobotDyn's M0-Mini board which is compatible with Arduino firmware. `SerialUSB.println()` should be used instead of `Serial.println()`.
+Create a blinky LED with RobotDyn's M0-Mini board which is compatible with Arduino firmware.
+
+For serial printing, `SerialUSB.println()` should be used instead of `Serial.println()` because `SerialUSB` uses the Native Port, which is an emulated serial port (USB-CDC).
+
+The following code should be used for initialising the serial so that the print statements can be viewed in the `setup()`:
+
+```c
+SerialUSB.begin(9600);
+while (!SerialUSB) { }
+```
