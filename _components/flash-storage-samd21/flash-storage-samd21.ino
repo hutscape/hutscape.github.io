@@ -1,45 +1,28 @@
-#include <FlashAsEEPROM.h>
+#include <FlashStorage.h>
+
+FlashStorage(my_flash_store, int);
+String readString = "54";  // Change this number to store in flash
 
 void setup() {
-  SerialUSB.begin(115200);
+  SerialUSB.begin(9600);
+  while (!SerialUSB) { }
   delay(100);
+
+  int number;
+
+  SerialUSB.print("Number read from flash before storing: ");
+  number = my_flash_store.read();
+  SerialUSB.println(number);
+
+  SerialUSB.print("Number from user: ");
+  SerialUSB.println(readString);
+
+  SerialUSB.println("Number has been stored in flash!");
+  my_flash_store.write(readString.toInt());
+
+  SerialUSB.print("Number read from flash: ");
+  number = my_flash_store.read();
+  SerialUSB.println(number);
 }
 
-void loop() {
-  if (!EEPROM.isValid()) {
-    SerialUSB.println("EEPROM is empty, writing some example data:");
-
-    storeInFlash();
-    SerialUSB.print("");
-  } else {
-    SerialUSB.println("EEPROM has been written.");
-    SerialUSB.print("Total length of EEPROM is ");
-    SerialUSB.println(EEPROM.length());
-    SerialUSB.println("Here is the content of the first 20 bytes:");
-    SerialUSB.print("->");
-
-    readFromFlash();
-    SerialUSB.println("");
-  }
-
-  delay(5000);
-}
-
-void storeInFlash() {
-  for (int i = 0; i < 20; i++) {
-    EEPROM.write(i, 100+i);
-    SerialUSB.print(" ");
-    SerialUSB.print(100+i);
-  }
-
-  EEPROM.commit();
-}
-
-void readFromFlash() {
-  for (int i = 0; i < 20; i++) {
-    SerialUSB.print(" ");
-    SerialUSB.print(EEPROM.read(i));
-  }
-
-  SerialUSB.println();
-}
+void loop() {}
