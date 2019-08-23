@@ -1,5 +1,5 @@
 BOARD?=arduino:samd:mzero_bl
-PORT := $(shell ls /dev/cu.usbmodem141*)
+PORT := $(shell ls /dev/cu.usbmodem*)
 
 .PHONY: default lint all flash clean
 
