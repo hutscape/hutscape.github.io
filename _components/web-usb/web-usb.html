@@ -16,7 +16,11 @@
     navigator.usb.requestDevice({ filters: [
       { 'vendorId': vendorId }
     ] })
-    .then(device => { console.log(device) })
+    .then(device => {
+      console.log(device)
+      console.log("Product ID: " + device.productId.toString(16))
+      console.log("Vendor ID: " + device.vendorId.toString(16))
+    })
     .catch(error => { console.log(error) })
   }
 </script>
