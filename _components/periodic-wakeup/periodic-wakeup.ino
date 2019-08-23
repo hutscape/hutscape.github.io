@@ -1,35 +1,21 @@
 #include <ArduinoLowPower.h>
 
 void setup() {
-  SerialUSB.begin(9600);
-  while (!SerialUSB) { }
+  // Serial1 is used because the USB does not work after wakeup
+  Serial1.begin(9600);
+  while (!Serial1) { }
   delay(1000);
-  SerialUSB.println("Start!");
+  Serial1.println("Start!");
 
   pinMode(LED_BUILTIN, OUTPUT);
-
-  LowPower.attachInterruptWakeup(RTC_ALARM_WAKEUP, doSomething, CHANGE);
 }
 
 void loop() {
-  SerialUSB.begin(9600);
-  while (!SerialUSB) { }
-  delay(1000);
-
-  SerialUSB.println("In loop!");
-  blink(5);
-
-  SerialUSB.println("Going to sleep for 2 seconds...");
-  USBDevice.detach();
+  Serial1.println("Going to sleep for 10 seconds...");
   LowPower.sleep(10000);  // in milliseconds
-  USBDevice.attach();
 
-  SerialUSB.println("Awake");
+  Serial1.println("Awake");
   blink(10);
-}
-
-void doSomething() {
-  blink(20);
 }
 
 void blink(int times) {

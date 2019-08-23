@@ -26,4 +26,4 @@ references:
 
 Read and write a single number to the flash memory of a SAMD21 board (E.g. Arduino M0 or RobotDyn SAMD21 M0-Mini).
 
-Note that the [serial prints will not work after wakeup](https://github.com/arduino-libraries/ArduinoLowPower/issues/7)!
+Note that the [serial prints will not work after wakeup](https://github.com/arduino-libraries/ArduinoLowPower/issues/7). Hence use a USB to UART chip to get the `Serial1` prints.
