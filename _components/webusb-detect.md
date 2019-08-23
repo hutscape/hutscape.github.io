@@ -1,6 +1,6 @@
 ---
 layout: components
-title: Web USB
+title: Web USB detect device
 hardware:
   - M0
   - webusb
@@ -15,4 +15,4 @@ references:
     url: https://github.com/webusb/arduino#compatible-hardware
 ---
 
-Connect to a compatible USB device and detect it on the browser.
+Connect to a compatible USB device and detect it on the browser. Check `lsusb` on Linux or `system_profiler SPUSBDataType` on MacOSX for **Vendor ID** and **Product ID**.
