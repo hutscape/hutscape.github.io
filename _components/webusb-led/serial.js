@@ -25,13 +25,9 @@ var serial = {};
       { 'vendorId': 0x2341, 'productId': 0x8057 }, // Arduino NANO 33 IoT
       { 'vendorId': 0x239A, 'productId': 0x000E }, // Adafruit ItsyBitsy 32u4
       { 'vendorId': 0x239A, 'productId': 0x800D }, // Adafruit ItsyBitsy 32u4
-      { 'vendorId': 0x2A03 }, // Adafruit ZERO PRO
     ];
     return navigator.usb.requestDevice({ 'filters': filters }).then(
-      device => {
-        new serial.Port(device)
-        console.log(device)
-      }
+      device => new serial.Port(device)
     );
   }
 

@@ -2,7 +2,6 @@
 layout: components
 title: Web USB detect device
 hardware:
-  - M0
   - webusb
   - arduino
 code: html

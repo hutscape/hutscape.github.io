@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Console</title>
-</head>
-<body>
-<p>
-  <button id="connect">Connect to device</button>
-</p>
+<button id="connect">Connect to device</button>
+
 <p>
   <button id="on">LED ON</button>
   <button id="off">LED OFF</button>
@@ -14,8 +7,19 @@
 
 <script src="serial.js"></script>
 <script>
+serial.requestPort = function() {
+  const filters = [
+    { 'vendorId': 0x2341 },
+    { 'vendorId': 0x2a03 }
+  ];
+  return navigator.usb.requestDevice({ 'filters': filters }).then(
+    device => new serial.Port(device)
+  );
+}
+
 var port
-let textEncoder = new TextEncoder()
+let connectButton = document.querySelector('#connect')
+let textDecoder = new TextDecoder()
 
 document.querySelector('#on').addEventListener('click', function(event) {
   if (port !== undefined) {
@@ -37,50 +41,24 @@ document.querySelector('#off').addEventListener('click', function(event) {
   }
 })
 
-document.addEventListener('DOMContentLoaded', event => {
-  let connectButton = document.querySelector('#connect')
+connectButton.addEventListener('click', function() {
+  if (port) { // If port is already connected, disconnect it
+    connectButton.textContent = 'Connect'
+    port.disconnect()
+    port = null
+    console.log('Device is disconnected.')
+  } else { // If there is no port, then connect to a new port
+    serial.requestPort().then(selectedPort => {
+      port = selectedPort
+      port.connect().then(() => {
+        console.log('Device is connected to Product ID: ' + port.device_.productId.toString(16) + ' and Vendor ID: ' + port.device_.vendorId.toString(16))
 
-  function connect() {
-    console.log('Connecting to ' + port.device_.productName + '...')
-    port.connect().then(() => {
-      console.log(port)
-      console.log('Connected.')
-      connectButton.textContent = 'Disconnect'
-      port.onReceive = data => {
-        let textDecoder = new TextDecoder()
-        console.log(textDecoder.decode(data))
-      }
-      port.onReceiveError = error => {
-        console.log('Receive error: ' + error)
-      }
-    }, error => {
-      console.log('Connection error: ' + error)
-    })
+        connectButton.textContent = 'Disconnect'
+        port.onReceive = data => { console.log(textDecoder.decode(data))}
+        port.onReceiveError = error => { console.log('Receive error: ' + error)}
+      }, error => { console.log('Connection error: ' + error) })
+    }).catch(error => { console.log('Connection error: ' + error) })
   }
-
-  connectButton.addEventListener('click', function() {
-    if (port) {
-      port.disconnect()
-      connectButton.textContent = 'Connect'
-      port = null
-    } else {
-      serial.requestPort().then(selectedPort => {
-        port = selectedPort
-        connect()
-      }).catch(error => {
-        console.log('Connection error: ' + error)
-      })
-    }
-  })
-
-  serial.getPorts().then(ports => {
-    if (ports.length == 0) {
-      console.log('No devices found.')
-    } else {
-      port = ports[0]
-      connect()
-    }
-  })
 })
 </script>
 </body>

@@ -20,5 +20,5 @@ clean:
 	rm -f .*.hex
 
 server:
-	echo "Open Chrome browser at localhost:8000/webusb-send.html"
+	echo "Open Chrome browser at http://localhost:8000/webusb-send.html"
 	python -m SimpleHTTPServer 8000

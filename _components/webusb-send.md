@@ -1,6 +1,6 @@
 ---
 layout: components
-title: Web USB send
+title: Web USB send to browser
 hardware:
   - M0
   - webusb
@@ -13,6 +13,8 @@ references:
     url: http://www.linux-usb.org/usb.ids
   - name: List of compatible arduino hardware
     url: https://github.com/webusb/arduino#compatible-hardware
+  - name: Web USB demo
+    url: https://webusb.github.io/arduino/demos/console/
 prerequisites:
   - name: Web USB detect
     url: ./webusb-detect

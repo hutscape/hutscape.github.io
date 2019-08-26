@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>WebUSB</title>
-</head>
-<body>
 <button id="connect">Connect to device</button>
 <p>Open the browser console to see received messages from the MCU!</p>
 
@@ -13,42 +7,37 @@ Add 'vendorId': 0x2341 and 0x2a03 in line 27 and line 28
 -->
 <script src="serial.js"></script>
 <script>
-var port
-let connectButton = document.querySelector('#connect')
-
-function connect() {
-  console.log('Connecting to ' + port.device_.productName + '...')
-  port.connect().then(() => {
-    console.log('Connected.')
-    console.log("Product ID: " + port.device_.productId.toString(16))
-    console.log("Vendor ID: " + port.device_.vendorId.toString(16))
-    connectButton.textContent = 'Disconnect'
-    port.onReceive = data => {
-      let textDecoder = new TextDecoder()
-      console.log(textDecoder.decode(data))
-    }
-    port.onReceiveError = error => {
-      console.log('Receive error: ' + error)
-    }
-  }, error => {
-    console.log('Connection error: ' + error)
-  })
+serial.requestPort = function() {
+  const filters = [
+    { 'vendorId': 0x2341 },
+    { 'vendorId': 0x2a03 }
+  ];
+  return navigator.usb.requestDevice({ 'filters': filters }).then(
+    device => new serial.Port(device)
+  );
 }
 
+var port
+let connectButton = document.querySelector('#connect')
+let textDecoder = new TextDecoder()
+
 connectButton.addEventListener('click', function() {
-  if (port) {
-    port.disconnect()
+  if (port) { // If port is already connected, disconnect it
     connectButton.textContent = 'Connect'
+    port.disconnect()
     port = null
-  } else {
+    console.log('Device is disconnected.')
+  } else { // If there is no port, then connect to a new port
     serial.requestPort().then(selectedPort => {
       port = selectedPort
-      connect()
-    }).catch(error => {
-      console.log('Connection error: ' + error)
-    })
+      port.connect().then(() => {
+        console.log('Device is connected to Product ID: ' + port.device_.productId.toString(16) + ' and Vendor ID: ' + port.device_.vendorId.toString(16))
+
+        connectButton.textContent = 'Disconnect'
+        port.onReceive = data => { console.log(textDecoder.decode(data))}
+        port.onReceiveError = error => { console.log('Receive error: ' + error)}
+      }, error => { console.log('Connection error: ' + error) })
+    }).catch(error => { console.log('Connection error: ' + error) })
   }
 })
 </script>
-</body>
-</html>
