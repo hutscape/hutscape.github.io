@@ -5,7 +5,8 @@ var options = {
   host: 'hutscape.com'
 }
 
-projects.forEach(function(eachProject) {
+projects.forEach(function(eachProject, sequence) {
+  var index = sequence + 1
   options.path = '/' + eachProject + '/_data/project.json'
 
   var request = http.request(options, function (res) {
@@ -14,24 +15,12 @@ projects.forEach(function(eachProject) {
       data += chunk
     }).on('end', function () {
       var project = JSON.parse(data)
-      console.log('**********************')
-      console.log("name: " + project.name)
-      console.log("description: " + project.description)
-      console.log("version: " + project.version)
-      console.log("wireless: " + project.wireless)
-      console.log("mcu: " + project.mcu)
-      console.log("sensor: " + project.sensor)
-      console.log("power: " + project.power)
-      console.log("battery_life: " + project.battery_life)
-
-      console.log("cogs_sgd: " + project.cogs_sgd)
-      console.log("cogs_usd: " + project.cogs_usd)
-      console.log("bom: " + project.bom)
-      console.log("vendors: " + project.vendors)
-
-      console.log("schedule: " + project.schedule)
-      console.log("status: " + project.status)
-      console.log("completion: " + project.completion)
+      console.log('-------------------------')
+      for (var key in project) {
+        if (project.hasOwnProperty(key)) {
+          console.log(key + ': ' + project[key]);
+        }
+      }
     })
   }).on('error', function (e) {
     console.log(e.message)

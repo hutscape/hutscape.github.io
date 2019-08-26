@@ -4,5 +4,5 @@ serve: build
 build:
 	jekyll build
 
-query:
+projects:
 	node scripts/query_projects.js
