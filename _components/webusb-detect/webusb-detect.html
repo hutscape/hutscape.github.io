@@ -1,13 +1,7 @@
-<h1>Connect to USB device with Web USB</h1>
+<label for="vendorId">Vendor ID: 0x</label>
+<input type="text" name="vendorId" placeholder="vendorId" id="vendor" value="2a03">
 
-<p>
-  <label for="vendorId">Vendor ID: 0x</label>
-  <input type="text" name="vendorId" placeholder="vendorId" id="vendor" value="2a03">
-</p>
-
-<p>Check <code>lsusb</code> on Linux or <code>system_profiler SPUSBDataType</code> on MacOSX for <strong>Vendor ID</strong> and <strong>Product ID</strong>.</p>
-
-<a href="#" id="click">Click me to get USB info</a>
+<p><a href="#" id="click">Click me to get USB device info</a></p>
 
 <script>
   click.onclick = function() {
