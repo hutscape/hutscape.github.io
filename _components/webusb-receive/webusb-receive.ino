@@ -23,7 +23,6 @@ void setup() {
 void loop() {
   if (WebUSBSerial && WebUSBSerial.available()) {
     int byte = WebUSBSerial.read();
-    WebUSBSerial.write(byte);
 
     if (byte == 'H') {
       SerialUSB.println("LED ON");

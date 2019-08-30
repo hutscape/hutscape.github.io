@@ -20,6 +20,7 @@ serial.requestPort = function() {
 var port
 let connectButton = document.querySelector('#connect')
 let textDecoder = new TextDecoder()
+let textEncoder = new TextEncoder()
 
 document.querySelector('#on').addEventListener('click', function(event) {
   if (port !== undefined) {
