@@ -6,13 +6,16 @@ void setup() {
   while (!Serial1) { }
   delay(1000);
   Serial1.println("Start!");
+  blink(5);
 
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  Serial1.println("Going to sleep for 10 seconds...");
-  LowPower.sleep(10000);  // in milliseconds
+  Serial1.println("Going to sleep for 30 minutes...");
+
+  // 30*60 = 1800 seconds = 30 minutes
+  LowPower.sleep(1800000);  // in milliseconds
 
   Serial1.println("Awake");
   blink(10);
