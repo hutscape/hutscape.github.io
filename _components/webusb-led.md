@@ -12,6 +12,8 @@ references:
     url: https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
   - name: List of compatible arduino hardware
     url: https://github.com/webusb/arduino#compatible-hardware
+  - name: Web USB serial.js
+    url: https://github.com/webusb/arduino/blob/gh-pages/demos/serial.js
 prerequisites:
   - name: Web USB detect
     url: ./webusb-detect

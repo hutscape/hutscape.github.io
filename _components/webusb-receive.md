@@ -15,6 +15,8 @@ references:
     url: https://github.com/webusb/arduino#compatible-hardware
   - name: Web USB demo
     url: https://webusb.github.io/arduino/demos/console/
+  - name: Web USB serial.js
+    url: https://github.com/webusb/arduino/blob/gh-pages/demos/serial.js
 prerequisites:
   - name: Web USB detect
     url: ./webusb-detect
