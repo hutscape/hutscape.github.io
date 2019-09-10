@@ -12,6 +12,7 @@ void setup() {
 }
 
 void loop() {
+  blink(10);
   Serial1.println("Going to sleep for 30 minutes...");
 
   // 30*60 = 1800 seconds = 30 minutes

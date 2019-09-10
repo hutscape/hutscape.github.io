@@ -22,8 +22,12 @@ references:
     url: https://github.com/arduino-libraries/RTCZero
   - name: Serial not working after wakeup
     url: https://github.com/arduino-libraries/ArduinoLowPower/issues/7
+  - name: RobotDyn SAMD21 M0 mini board
+    url: https://robotdyn.com/samd21-m0-mini.html
 ---
 
-Read and write a single number to the flash memory of a SAMD21 board (E.g. Arduino M0 or RobotDyn SAMD21 M0-Mini).
+Sleep for 30 minutes and wakeup to make 10 LED blinks before going back to sleep again for another 30 minutes.
 
-Note that the [serial prints will not work after wakeup](https://github.com/arduino-libraries/ArduinoLowPower/issues/7). Hence use a USB to UART chip to get the `Serial1` prints.
+Note that the [serial prints will not work after wakeup](https://github.com/arduino-libraries/ArduinoLowPower/issues/7). Hence use a USB to UART chip to get the `Serial1` prints. This is because during sleep, the entire USB peripheral also sleeps along with the MCU, except for the RTC.
+
+During sleep, only power indicator green LED `ON` will be lighted on the [RobotDyn dev board](https://robotdyn.com/samd21-m0-mini.html).
