@@ -1,33 +1,37 @@
 #include <ArduinoLowPower.h>
 
 void setup() {
-  // Serial1 is used because the USB does not work after wakeup
+  // Serial1 UART is used because the USB does not work after wakeup
   Serial1.begin(9600);
-  while (!Serial1) { }
+  while (!Serial1) {}
   delay(1000);
-  Serial1.println("Start!");
-  blink(5);
+
+  Serial1.println("Start of program");
+  blink(10, 200);
 
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  blink(10);
-  Serial1.println("Going to sleep for 30 minutes...");
+  Serial1.println("Blink 10 times");
+  blink(10, 1000);
 
-  // 30*60 = 1800 seconds = 30 minutes
-  LowPower.sleep(1800000);  // in milliseconds
+  Serial1.println("Going to sleep for 10 seconds...");
 
-  Serial1.println("Awake");
-  blink(10);
+  LowPower.sleep(10000);  // in milliseconds
+
+  Serial1.println("\n\nAwake");
+
+  Serial1.println("Blink 5 times");
+  blink(5, 1000);
 }
 
-void blink(int times) {
+void blink(int times, int duration) {
   for (int i = 0; i < times; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
-    delay(500);
+    delay(duration);
 
     digitalWrite(LED_BUILTIN, LOW);
-    delay(500);
+    delay(duration);
   }
 }
