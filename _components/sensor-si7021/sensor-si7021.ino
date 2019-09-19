@@ -8,8 +8,7 @@ void setup() {
 
   if (!sensor.begin()) {
     Serial.println("Did not find Si7021 sensor!");
-    while (true)
-      ;
+    while (true) {}
   }
 }
 
