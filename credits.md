@@ -3,7 +3,7 @@ layout: page
 title: Credits
 subtitle: Many tools are used to create the projects!
 permalink: /credits
-sequence: 4
+sequence: 3
 
 credits:
   - topic: Open source hardware
