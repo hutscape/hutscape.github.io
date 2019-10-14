@@ -7,6 +7,20 @@ google_analytics: UA-144008567-1
 youtube: https://www.youtube.com/user/sweska/videos
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
+exclude: [
+  _components/*.h,
+  # _components/*.html, # used for html demo code page
+  _components/*.ino,
+  # _components/*.js, # used for html demo code page
+  _components/*.json,
+  _components/*Makefile,
+  CNAME,
+  Gemfile,
+  Gemfile.lock,
+  LICENSE.md,
+  Makefile,
+  README.md
+]
 collections:
   components:
     output: true
