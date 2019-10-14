@@ -1,0 +1,43 @@
+<form>
+  <button>Connect with BLE device</button>
+</form>
+
+<script>
+  var deviceName = 'Palm'
+
+  function isWebBluetoothEnabled() {
+    if (!navigator.bluetooth) {
+      console.log('Web Bluetooth API is not available in this browser!')
+      return false
+    }
+
+    return true
+  }
+
+  function onButtonClick() {
+    let options = {
+      "filters": [
+        { "name": deviceName }
+      ]
+    }
+
+    console.log('Requesting Bluetooth Device...')
+    navigator.bluetooth.requestDevice(options).then(device => {
+      console.log(device)
+      console.log('> Name:             ' + device.name);
+      console.log('> Id:               ' + device.id);
+      console.log('> Connected:        ' + device.gatt.connected);
+    }).catch(error => {
+      console.log('Argh! ' + error)
+    });
+  }
+
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.stopPropagation()
+    event.preventDefault()
+
+    if (isWebBluetoothEnabled()) {
+      onButtonClick()
+    }
+  })
+</script>
