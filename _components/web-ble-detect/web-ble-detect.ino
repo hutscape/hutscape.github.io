@@ -3,7 +3,6 @@
 void setup() {
   Serial.begin(115200);
   delay(500);
-
   Serial.println("Start!");
 
   Bluefruit.begin();
@@ -12,10 +11,7 @@ void setup() {
   startAdv();
 }
 
-void loop() {
-  digitalToggle(LED_RED);
-  delay(1000);
-}
+void loop() { }
 
 void startAdv(void) {
   Bluefruit.Advertising.addFlags(BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE);

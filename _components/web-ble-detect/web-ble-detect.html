@@ -14,8 +14,9 @@
     return true
   }
 
-  function onButtonClick() {
+  function getDeviceInfo() {
     let options = {
+      // acceptAllDevices: true // Option to accept all devices
       "filters": [
         { "name": deviceName }
       ]
@@ -23,13 +24,10 @@
 
     console.log('Requesting Bluetooth Device...')
     navigator.bluetooth.requestDevice(options).then(device => {
-      console.log(device)
-      console.log('> Name:             ' + device.name);
-      console.log('> Id:               ' + device.id);
-      console.log('> Connected:        ' + device.gatt.connected);
+      console.log('> Name: ' + device.name)
     }).catch(error => {
       console.log('Argh! ' + error)
-    });
+    })
   }
 
   document.querySelector('form').addEventListener('submit', function(event) {
@@ -37,7 +35,7 @@
     event.preventDefault()
 
     if (isWebBluetoothEnabled()) {
-      onButtonClick()
+      getDeviceInfo()
     }
   })
 </script>
