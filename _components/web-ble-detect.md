@@ -31,8 +31,6 @@ prerequisites:
 
 Connect to a BLE device with a given device name and display some device info in the Chrome browser console.
 
-![](/assets/images/components/web-ble-detect-browser.png)
-
 Ensure the browser side of the code is also implemented with `web-ble-detect.html`.
 
 <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a> <a href="{{ site.url }}/{{ page.path | remove: '_components/' | replace:'.md','' }}" class="button is-primary">View demo</a>

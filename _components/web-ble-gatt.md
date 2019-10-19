@@ -42,8 +42,6 @@ prerequisites:
 
 Connect to a BLE device with BLE GATT Service of **Environmental Sensing** and BLE GATT Characteristic of **UV Index** and read the values from the Chrome browser console when the readings are updated.
 
-![](/assets/images/components/web-ble-gatt-browser.png)
-
 Ensure the browser side of the code is also implemented with `web-ble-gatt.html`.
 
 <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a> <a href="{{ site.url }}/{{ page.path | remove: '_components/' | replace:'.md','' }}" class="button is-primary">View demo</a>

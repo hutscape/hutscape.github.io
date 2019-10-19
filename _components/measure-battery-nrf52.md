@@ -1,6 +1,6 @@
 ---
 layout: components
-title: Measure battery voltage
+title: Measure battery voltage nRF52
 hardware:
   - nrf52
   - voltage
