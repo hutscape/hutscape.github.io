@@ -24,6 +24,10 @@ layout: default
           </li>
           {% endfor %}
         </ul>
+
+        {%- if check.image -%}
+        <img src="/assets/images/checklists/{{ check.image }}">
+        {% endif %}
       </div>
     {% endfor %}
 

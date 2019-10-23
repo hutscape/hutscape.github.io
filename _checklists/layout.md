@@ -3,17 +3,21 @@ layout: checklists
 title: Footprint Layouts
 description: Before making the footprint layouts
 checks:
-  - title: Before layout
+  - title: Before routing
     list:
-      - name: Check manufacturer capabilities on via size and track width,
-      - name: Round all sharp edges on the edge cuts layer    
+      - name: Check manufacturer capabilities on via size and track width
+      - name: Define Net Classes
+      - name: Draw the edge cuts layer to contain all components
+      - name: Round all sharp edges on the edge cuts layer with grid <code>25 mils</code>
+      - name: Place components for mechanical considerations with grid <code>25 mils</code>
+    image: net-class.png
   - title: Silkscreen
     list:
       - name: "Adhere to <a href='/checklists/standards'>standard text size</a>"
       - name: Add project Name
       - name: Add project Version
       - name: Add project Year
-      - name: Add open source hardware logo
+      - name: Add <a href="https://github.com/KiCad/kicad-footprints/blob/master/Symbol.pretty/OSHW-Logo2_9.8x8mm_SilkScreen.kicad_mod">open source hardware logo</a> <code>9.8x8mm</code>
       - name: Add get started URL
       - name: Add <code>+</code> and <code>-</code> annotations to all power connectors,
       - name: Add voltage number to all power connectors
