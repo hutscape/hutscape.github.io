@@ -5,7 +5,7 @@ permalink: /components
 sequence: 2
 ---
 
-<h2 class="subtitle">List of <a href="https://stackoverflow.com/help/mcve">reprex code</a> to flash into different devices.</h2>
+<p class="subtitle">List of <a href="https://stackoverflow.com/help/mcve">reprex code</a> to flash into different devices.</p>
 
 <style id="search_style"></style>
 

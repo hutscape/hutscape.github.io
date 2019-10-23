@@ -10,10 +10,13 @@
 <!-- Scripts -->
 {%- include menu-mobile.html -%}
 
-<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
 
 {% if page.url == "/components" or page.url == "/references" %}
   {%- include search.html -%}

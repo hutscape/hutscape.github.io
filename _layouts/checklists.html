@@ -5,10 +5,10 @@ layout: default
 <section class="section is-small">
   <div class="container">
     <h1 class="title is-1">{{ page.title | escape }}</h1>
-    <h2 class="subtitle">{{ page.description | escape }}</h2>
+    <p class="subtitle">{{ page.description | escape }}</p>
     <hr>
     {% for check in page.checks %}
-      <p class="title is-2">{{check.title}}</p>
+      <h2 class="title is-2">{{check.title}}</h2>
       {%- if check.subtitle -%}
       <p class="subtitle is-4">{{check.subtitle}}:</p>
       {% endif %}
@@ -33,7 +33,7 @@ layout: default
 
     {%- if page.references -%}
     <hr>
-    <p class="title is-2">References</p>
+    <h2 class="title is-2">References</h2>
 
     <div class="content">
       <ul>

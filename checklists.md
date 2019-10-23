@@ -5,7 +5,7 @@ permalink: /checklists
 sequence: 1
 ---
 
-<h2 class="subtitle">Good checklists to go through!</h2>
+<p class="subtitle">Good checklists to go through!</p>
 
 <nav class="panel">
   {% for checklist in site.checklists %}

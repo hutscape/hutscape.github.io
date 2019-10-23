@@ -36,7 +36,7 @@ credits:
         url: https://github.com/bryanbraun/anchorjs
 ---
 
-<h2 class="subtitle">{{page.subtitle}}</h2>
+<p class="subtitle">{{page.subtitle}}</p>
 
 {% for credit in page.credits %}
 <section class="section is-small">
