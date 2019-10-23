@@ -1,10 +1,11 @@
 ---
 layout: checklists
-title: Footprint Layouts
-description: Before making the footprint layouts
+title: Layouts
+description: Making layouts
 checks:
-  - title: Before routing
+  - title: Component placement
     list:
+      - name: Ensure Bill of Materials with vendor links and datasheets are ready
       - name: Check manufacturer capabilities on via size and track width
       - name: Define Net Classes
       - name: Draw the edge cuts layer to contain all components
@@ -13,12 +14,10 @@ checks:
     image: net-class.png
   - title: Silkscreen
     list:
-      - name: "Adhere to <a href='/checklists/standards'>standard text size</a>"
-      - name: Add project Name
-      - name: Add project Version
-      - name: Add project Year
+      - name: "Adhere to <a href='/checklists/standards#text-size'>standard text size</a>"
+      - name: Add project name, version and year
       - name: Add <a href="https://github.com/KiCad/kicad-footprints/blob/master/Symbol.pretty/OSHW-Logo2_9.8x8mm_SilkScreen.kicad_mod">open source hardware logo</a> <code>9.8x8mm</code>
-      - name: Add get started URL
+      - name: Add getting started URL
       - name: Add <code>+</code> and <code>-</code> annotations to all power connectors,
       - name: Add voltage number to all power connectors
       - name: Add notes beside all optional components    
