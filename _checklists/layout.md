@@ -10,8 +10,17 @@ checks:
       - name: Define Net Classes
       - name: Draw the edge cuts layer to contain all components
       - name: Round all sharp edges on the edge cuts layer with grid <code>25 mils</code>
+      - name: Place components into functional building blocks where possible
       - name: Place components for mechanical considerations with grid <code>25 mils</code>
     image: net-class.png
+  - title: Routing
+    list:
+      - name: Lay down power and ground planes first
+      - name: Connect all the power and ground tracks to the planes
+      - name: Layout critical tracks and route them first E.g. differential pairs
+      - name: Place decoupling capacitors physically and electrically close to the desired components
+      - name: Snake tracks around the board
+      - name: Use standard grid size <code>10 mils</code> for routing traces
   - title: Silkscreen
     list:
       - name: "Adhere to <a href='/checklists/standards#text-size'>standard text size</a>"
