@@ -5,7 +5,7 @@ layout: default
 <section class="hero is-medium is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="subtitle is-1"> {{ site.description }} </h2>
+      <p class="subtitle is-1">{{ site.description }}</p>
       <p class="subtitle is-1 is-spaced">🍶 🗝 🎐 🧺 👜 🔋 📦 📃 🚪 💡 🏡</p>
     </div>
   </div>
@@ -31,7 +31,7 @@ layout: default
       <div class="column is-9">
         <div class="level">
           <div class="level-left">
-            <p class="title">{{ project.name }}</p>
+            <h3 class="title">{{ project.name }}</h3>
             <p class="handwriting has-text-grey">V{{project.version}}</p>
           </div>
           <div class="level-right">
