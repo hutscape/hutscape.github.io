@@ -13,8 +13,8 @@ layout: default
 
 <section class="section is-medium">
   <div class="container">
-    <h2 class="title is-1 has-text-centered"> Projects created </h2>
-    <h4 class="subtitle has-text-centered"> with open source hardware and software </h4>
+    <p class="title is-1 has-text-centered"> Projects created </p>
+    <p class="subtitle has-text-centered"> with open source hardware and software</p>
   </div>
 </section>
 
