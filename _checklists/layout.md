@@ -8,6 +8,7 @@ checks:
       - name: Ensure Bill of Materials with vendor links and datasheets are ready
       - name: Check manufacturer capabilities on via size and track width
       - name: Define Net Classes
+      - name: Select mostly SMD components with size <code>0805</code>
       - name: Draw the edge cuts layer to contain all components
       - name: Round all sharp edges on the edge cuts layer with grid <code>25 mils</code>
       - name: Place components into functional building blocks where possible
@@ -24,11 +25,11 @@ checks:
   - title: Silkscreen
     list:
       - name: "Adhere to <a href='/checklists/standards#text-size'>standard text size</a>"
-      - name: Add project name, version and year
+      - name: Add project name, version, month and year
       - name: Add <a href="https://github.com/KiCad/kicad-footprints/blob/master/Symbol.pretty/OSHW-Logo2_9.8x8mm_SilkScreen.kicad_mod">open source hardware logo</a> <code>9.8x8mm</code>
       - name: Add getting started URL
-      - name: Add <code>+</code> and <code>-</code> annotations to all power connectors,
-      - name: Add voltage number to all power connectors
+      - name: Add <code>+</code> and <code>-</code> annotations to all power connectors
+      - name: Add voltage values to all power connectors
       - name: Add notes beside all optional components    
   - title: After layout
     list:
@@ -46,4 +47,6 @@ references:
     url: https://docs.oshpark.com/submitting-orders/drill-specs/
   - name: JLCPCB manufacturing capabilities
     url: https://jlcpcb.com/capabilities/Capabilities
+  - name: PCB Design Tutorial
+    url: https://alternatezone.com/electronics/files/PCBDesignTutorialRevA.pdf
 ---
