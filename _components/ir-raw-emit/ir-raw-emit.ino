@@ -6,7 +6,6 @@ IRsendRaw mySender;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Press 0 or 1 to Turn ON / OFF the Aircon");
 }
 
 void loop() {
