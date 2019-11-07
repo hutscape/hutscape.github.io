@@ -10,13 +10,13 @@ void setup() {
 }
 
 void loop() {
-  char input = Serial.read();
+  delay(5000);
+  Serial.println("Sending ON");
+  mySender.send(rawDataON, RAW_DATA_LEN, 38);
+  Serial.println("Sent Turn ON Aircon");
 
-  if (Serial.read() == '1') {
-    mySender.send(rawDataON, RAW_DATA_LEN, 36);
-    Serial.println("Sent Turn ON Aircon");
-  } else if (Serial.read() == '0') {
-    mySender.send(rawDataOFF, RAW_DATA_LEN, 36);
-    Serial.println("Sent Turn OFF Aircon");
-  }
+  delay(5000);
+  Serial.println("Sending OFF");
+  mySender.send(rawDataOFF, RAW_DATA_LEN, 38);
+  Serial.println("Sent Turn OFF Aircon");
 }
