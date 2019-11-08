@@ -7,7 +7,7 @@ compile:
 	arduino-cli compile --fqbn arduino:avr:uno ./
 
 upload:
-	arduino-cli upload -p /dev/cu.usbmodem14101 --fqbn arduino:avr:uno ./
+	arduino-cli upload -p /dev/cu.usbmodem14* --fqbn arduino:avr:uno ./
 
 clean:
 	rm -f .*.hex

@@ -1,5 +1,5 @@
 BOARD?=arduino:avr:uno
-PORT?=/dev/cu.usbmodem14101
+PORT?=/dev/cu.usbmodem14*
 
 .PHONY: default lint all flash clean
 
