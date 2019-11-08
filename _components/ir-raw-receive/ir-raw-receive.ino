@@ -17,7 +17,7 @@ void loop() {
 
     Serial.print(F("\n#define RAW_DATA_LEN "));
     Serial.println(recvGlobal.recvLength, DEC);
-    
+
     Serial.print(F("uint16_t rawData[RAW_DATA_LEN]={\n"));
     for (bufIndex_t i = 1; i < recvGlobal.recvLength; i++) {
       Serial.print(recvGlobal.recvBuffer[i], DEC);
