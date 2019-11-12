@@ -5,9 +5,14 @@
   version: "1.0"
 
   wireless: Infrared
-  mcu: SAMD21
+  mcu: SAMD21G
   sensor: Temperature
   power: AA
+
+  cogs_usd: "9.71"
+  cogs_sgd: "13.20"
+  bom: 49
+  vendors: 2
 
   status: ongoing
 
