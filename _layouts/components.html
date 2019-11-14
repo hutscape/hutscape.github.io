@@ -47,21 +47,21 @@ layout: default
 </section>
 {% endif %}
 
-{% for image in site.static_files %}
-  {% if image.path contains 'assets/images/components' %}
-    {% assign image_base = page.path | remove: "_components/" | remove: ".md" | remove: ".jpg" | remove: ".png" | downcase %}
-    {% if image.path contains image_base %}
-      {% assign arduino_settings_image = image_base | append: '-arduino-setting' %}
-      {% assign schematic_image = image_base | append: '-schematic' %}
-      {% assign wiring_image = image_base | append: '-wiring' %}
-      {% assign prototype_image = image_base | append: '-prototype' %}
-      {% assign console_image = image_base | append: '-console' %}
-      {% assign browser_image = image_base | append: '-browser' %}
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+    {% for image in site.static_files %}
+      {% if image.path contains 'assets/images/components' %}
+        {% assign image_base = page.path | remove: "_components/" | remove: ".md" | remove: ".jpg" | remove: ".png" | downcase %}
+        {% if image.path contains image_base %}
+          {% assign arduino_settings_image = image_base | append: '-arduino-setting' %}
+          {% assign schematic_image = image_base | append: '-schematic' %}
+          {% assign wiring_image = image_base | append: '-wiring' %}
+          {% assign prototype_image = image_base | append: '-prototype' %}
+          {% assign console_image = image_base | append: '-console' %}
+          {% assign browser_image = image_base | append: '-browser' %}
 
-      {% if image.path contains arduino_settings_image or image.path contains schematic_image or image.path contains schematic_image or image.path contains wiring_image or image.path contains prototype_image or image.path contains console_image or image.path contains browser_image %}
-      <section class="section is-small">
-        <div class="container">
-          <div class="columns is-multiline is-desktop">
+          {% if image.path contains arduino_settings_image or image.path contains schematic_image or image.path contains schematic_image or image.path contains wiring_image or image.path contains prototype_image or image.path contains console_image or image.path contains browser_image %}
 
             {% if image.path contains arduino_settings_image %}
             <div class="column is-half">
@@ -109,14 +109,14 @@ layout: default
               <img src="{{ image.path }}" alt="{{ page.title | escape }} serial console">
             </div>
             {% endif %}
-          </div>
-        </div>
-      </section>
-      {% endif %}
 
-    {% endif %}
-  {% endif %}
-{% endfor %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>
 
 <section class="section is-small">
   <div class="container">
