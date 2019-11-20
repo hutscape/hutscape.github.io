@@ -1,10 +1,10 @@
 ---
 layout: components
-title: LoraWAN Duplex B
+title: LoRa Duplex A
 hardware:
   - arduino
   - uno
-  - lorawan
+  - lora
   - duplex
 references:
   - name: Arduino LoRa firmware
@@ -17,9 +17,9 @@ references:
     url: https://www.adafruit.com/product/3072
 ---
 
-Send and receive at the same time from another node! Use this code with [duplex a](lorawan-duplex-a).
+Send and receive at the same time from another node! Use this code with [duplex b](lora-duplex-b).
 
 ```c
-byte localAddress = 0xFF;
-byte destination = 0xBB;
+byte localAddress = 0xBB;
+byte destination = 0xFF;
 ```

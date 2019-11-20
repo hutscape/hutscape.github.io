@@ -1,10 +1,10 @@
 ---
 layout: components
-title: LoraWAN RX
+title: LoRa RX
 hardware:
   - arduino
   - uno
-  - lorawan
+  - lora
   - rx
 references:
   - name: Arduino LoRa firmware
@@ -17,4 +17,4 @@ references:
     url: https://www.adafruit.com/product/3072
 ---
 
-Receive `hello` from a LoraWAN point with `433 MHz`. Use this with [transmitting from a LoRaWAN point](lorawan-tx).
+Receive `hello` from a LoRa point with `433 MHz`. Use this with [transmitting from a LoRa point](lora-tx).
