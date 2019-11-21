@@ -5,10 +5,8 @@ const int csPin = 7;
 const int resetPin = 6;
 const int irqPin = 1;
 
-String outgoing;
-
 byte localAddress = 0xAA;
-byte destination = 0xBB;
+byte destinationAddress = 0xBB;
 long lastSendTime = 0;
 int interval = 2000;
 
@@ -32,7 +30,7 @@ void loop() {
 
     Serial.print("Sending data " + sensorData);
     Serial.print(" from 0x" + String(localAddress, HEX));
-    Serial.println(" to 0x" + String(destination, HEX));
+    Serial.println(" to 0x" + String(destinationAddress, HEX));
 
     lastSendTime = millis();
     interval = random(2000) + 1000;
@@ -43,7 +41,7 @@ void loop() {
 
 void sendMessage(String outgoing) {
   LoRa.beginPacket();
-  LoRa.write(destination);
+  LoRa.write(destinationAddress);
   LoRa.write(localAddress);
   LoRa.write(outgoing.length());
   LoRa.print(outgoing);
@@ -64,12 +62,12 @@ void receiveMessage(int packetSize) {
   }
 
   if (incomingLength != incoming.length()) {
-    Serial.println("error: message length does not match length");
+    Serial.println("Error: Message length does not match length");
     return;
   }
 
   if (recipient != localAddress) {
-    Serial.println("This message is not for me.");
+    Serial.println("Error: Recipient address does not match local address");
     return;
   }
 
