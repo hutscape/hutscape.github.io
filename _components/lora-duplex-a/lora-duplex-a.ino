@@ -9,10 +9,10 @@ byte localAddress = 0xAA;
 byte destinationAddress = 0xBB;
 long lastSendTime = 0;
 int interval = 2000;
+int count = 0;
 
 void setup() {
   Serial.begin(9600);
-  while (!Serial) {}
   Serial.println("Start LoRa duplex");
 
   LoRa.setPins(csPin, resetPin, irqPin);
@@ -25,7 +25,7 @@ void setup() {
 
 void loop() {
   if (millis() - lastSendTime > interval) {
-    String sensorData = String(random(0, 500));
+    String sensorData = String(count++);
     sendMessage(sensorData);
 
     Serial.print("Sending data " + sensorData);
