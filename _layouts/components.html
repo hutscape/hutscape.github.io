@@ -59,12 +59,16 @@ layout: default
         {% if image.path contains image_base %}
           {% assign arduino_settings_image = image_base | append: '-arduino-setting' %}
           {% assign schematic_image = image_base | append: '-schematic' %}
-          {% assign wiring_image = image_base | append: '-wiring' %}
           {% assign prototype_image = image_base | append: '-prototype' %}
           {% assign console_image = image_base | append: '-console' %}
           {% assign browser_image = image_base | append: '-browser' %}
 
-          {% if image.path contains arduino_settings_image or image.path contains schematic_image or image.path contains schematic_image or image.path contains wiring_image or image.path contains prototype_image or image.path contains console_image or image.path contains browser_image %}
+          {% if image.path contains arduino_settings_image
+            or image.path contains schematic_image
+            or image.path contains schematic_image
+            or image.path contains prototype_image
+            or image.path contains console_image
+            or image.path contains browser_image %}
 
             {% if image.path contains arduino_settings_image %}
             <div class="column is-half">
@@ -79,13 +83,6 @@ layout: default
               <h2 class="title is-2">Schematic</h2>
               <p class="subtitle is-4">Wire up the hardware accordingly</p>
               <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} schematic"></a>
-            </div>
-            {% endif %}
-
-            {% if image.path contains wiring_image %}
-            <div class="column is-half">
-              <h2 class="title is-2">Wiring</h2>
-              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} wiring"></a>
             </div>
             {% endif %}
 
