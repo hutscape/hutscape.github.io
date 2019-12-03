@@ -1,0 +1,134 @@
+---
+layout: default
+---
+
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1">{{ page.title | escape }}</h1>
+    <div class="tags">
+      {% for tag in page.hardware %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    <hr>
+
+    {% if page.prerequisites %}
+    <h2 class="title is-2">Pre-requisites</h2>
+
+    <div class="content is-medium">
+      <ol>
+        {% for pre in page.prerequisites %}
+        <li><a href="{{ pre.url }}">{{ pre.name }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endif %}
+
+    <div class="content is-medium">
+    {{ content }}
+    </div>
+  </div>
+</section>
+
+{% if page.has_code != false %}
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+
+    {% if page.code == "html" %}
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
+      <a href="{{ site.url }}/{{ page.path | remove: '_tutorials/' | replace:'.md','' }}" class="button is-primary">View demo</a>
+      {% highlight html %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.html %}{% endhighlight %}
+    {% elsif page.code == "shell" %}
+      <a href="{{ site.url }}/{{ page.path | remove: '_tutorials/' | replace:'.md','' }}" class="button is-primary">View command line code</a>
+      {% highlight shell %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.sh %}{% endhighlight %}
+    {% else %}
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
+      {% highlight c %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.ino %}{% endhighlight %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+    {% for image in site.static_files %}
+      {% if image.path contains 'assets/images/tutorials' %}
+        {% assign image_base = page.path | remove: "_tutorials/" | remove: ".md" | remove: ".jpg" | remove: ".png" | downcase %}
+        {% if image.path contains image_base %}
+          {% assign arduino_settings_image = image_base | append: '-arduino-setting' %}
+          {% assign schematic_image = image_base | append: '-schematic' %}
+          {% assign prototype_image = image_base | append: '-prototype' %}
+          {% assign console_image = image_base | append: '-console' %}
+          {% assign browser_image = image_base | append: '-browser' %}
+
+          {% if image.path contains arduino_settings_image
+            or image.path contains schematic_image
+            or image.path contains schematic_image
+            or image.path contains prototype_image
+            or image.path contains console_image
+            or image.path contains browser_image %}
+
+            {% if image.path contains arduino_settings_image %}
+            <div class="column is-half">
+              <h2 class="title is-2">Arduino IDE settings</h2>
+              <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
+              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} Arduino IDE settings"></a>
+            </div>
+            {% endif %}
+
+            {% if image.path contains schematic_image %}
+            <div class="column is-half">
+              <h2 class="title is-2">Schematic</h2>
+              <p class="subtitle is-4">Wire up the hardware accordingly</p>
+              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} schematic"></a>
+            </div>
+            {% endif %}
+
+            {% if image.path contains prototype_image %}
+            <div class="column is-half">
+              <h2 class="title is-2">Prototype</h2>
+              <p class="subtitle is-4">A photo of the actual setup.</p>
+              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} prototype"></a>
+            </div>
+            {% endif %}
+
+            {% if image.path contains browser_image %}
+            <div class="column is-half">
+              <h2 class="title is-2">Browser console</h2>
+              <p class="subtitle is-4">Open the browser developer console.</p>
+              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} browser"></a>
+            </div>
+            {% endif %}
+
+            {% if image.path contains console_image %}
+            <div class="column is-half">
+              <h2 class="title is-2">Serial console</h2>
+              <p class="subtitle is-4">Serial output from the firmware.</p>
+              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} serial console"></a>
+            </div>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    {% if page.references %}
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        {% for ref in page.references %}
+          <li><a href="{{ref.url}}">{{ ref.name }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endif %}
+  </div>
+</section>

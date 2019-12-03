@@ -8,12 +8,12 @@ youtube: https://www.youtube.com/user/sweska/videos
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
 exclude: [
-  _components/*.h,
-  # _components/*.html, # used for html demo code page
-  _components/*.ino,
-  # _components/*.js, # used for html demo code page
-  _components/*.json,
-  _components/*Makefile,
+  _tutorials/*.h,
+  # _tutorials/*.html, # used for html demo code page
+  _tutorials/*.ino,
+  # _tutorials/*.js, # used for html demo code page
+  _tutorials/*.json,
+  _tutorials/*Makefile,
   CNAME,
   Gemfile,
   Gemfile.lock,
@@ -22,9 +22,9 @@ exclude: [
   README.md
 ]
 collections:
-  components:
+  tutorials:
     output: true
-    permalink: /components/:name
+    permalink: /tutorials/:name
   checklists:
     output: true
     permalink: /checklists/:name
