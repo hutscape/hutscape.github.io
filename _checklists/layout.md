@@ -13,6 +13,9 @@ checks:
       - name: Round all sharp edges on the edge cuts layer with grid <code>25 mils</code>
       - name: Place components into functional building blocks where possible
       - name: Place components for mechanical considerations with grid <code>25 mils</code>
+      - name:  Adjust components for less congested routing and space signal traces far apart
+      - name: Add multiple LED indictors to show power on each rail and some digital functioning
+      - name: Add isolation jumpers to isolate power from some circuits for  debugging
     image: net-class.png
   - title: Routing
     list:
@@ -22,6 +25,7 @@ checks:
       - name: Place decoupling capacitors physically and electrically close to the desired components
       - name: Snake tracks around the board
       - name: Use standard grid size <code>10 mils</code> for routing traces
+      - name: Route components, signals and power paths on layer 1 and ground return on layer 2
   - title: Silkscreen
     list:
       - name: "Adhere to <a href='/checklists/standards#text-size'>standard text size</a>"
@@ -30,7 +34,9 @@ checks:
       - name: Add getting started URL
       - name: Add <code>+</code> and <code>-</code> annotations to all power connectors
       - name: Add voltage values to all power connectors
-      - name: Add notes beside all optional components    
+      - name: Add notes beside all optional components   
+      - name: Add placement marks for components
+      - name: Add any info on assembly, test and bringing up the board
   - title: After layout
     list:
       - name: Run <code>b</code> to refill all zones on all layers in KiCad
@@ -49,4 +55,6 @@ references:
     url: https://jlcpcb.com/capabilities/Capabilities
   - name: PCB Design Tutorial
     url: https://alternatezone.com/electronics/files/PCBDesignTutorialRevA.pdf
+  - name: Seven Habits of Successful 2-Layer Board Designers
+    url: https://www.signalintegrityjournal.com/blogs/12-fundamentals/post/1207-seven-habits-of-successful-2-layer-board-designers#comments
 ---
