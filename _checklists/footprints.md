@@ -1,32 +1,21 @@
 ---
 layout: checklists
-title: Layouts
-description: Making layouts
+title: Footprints
+description: Create component footprints from scratch
 checks:
-  - title: Component placement
+  - title: Mechanical
     list:
-      - name: Ensure Bill of Materials with vendor links and datasheets are ready
       - name: Refer to the correct datasheet version number
-      - name: Check manufacturer capabilities on via size and track width
-      - name: Define Net Classes
-      - name: Select mostly SMD components with size <code>0805</code>
-      - name: Draw the edge cuts layer to contain all components
-      - name: Round all sharp edges on the edge cuts layer with grid <code>25 mils</code>
-      - name: Place components into functional building blocks where possible
-      - name: Place components for mechanical considerations with grid <code>25 mils</code>
-      - name:  Adjust components for less congested routing and space signal traces far apart
-      - name: Add multiple LED indictors to show power on each rail and some digital functioning
-      - name: Add isolation jumpers to isolate power from some circuits for  debugging
-    image: net-class.png
-  - title: Routing
+      - name: Ensure the correct unit of measurement is used
+        
+  - title: Silkscreen
     list:
-      - name: Lay down power and ground planes first
-      - name: Connect all the power and ground tracks to the planes
-      - name: Layout critical tracks and route them first E.g. differential pairs
-      - name: Place decoupling capacitors physically and electrically close to the desired components
-      - name: Snake tracks around the board
-      - name: Use standard grid size <code>10 mils</code> for routing traces
-      - name: Route components, signals and power paths on layer 1 and ground return on layer 2
+      - name: Label all power pins at the minimum
+      - name: Number all pins
+      - name: Match chip placement on PCB with the physical package to indicate <code>o</code> or <code>◖</code> on the silkscreen
+      - name: Add bounding boxes for the components
+      - name: Ensure copper pads are not covered by Silkscreen
+
   - title: Silkscreen
     list:
       - name: "Adhere to <a href='/checklists/standards#text-size'>standard text size</a>"

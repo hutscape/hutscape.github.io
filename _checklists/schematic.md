@@ -5,6 +5,7 @@ description: Good schematics checklist
 checks:
   - title: Good schematic checklist
     list:
+      - name: Refer to the correct datasheet version number
       - name: Separate double wire junctions
       - name: Use dots for wire junctions, not crosses
       - name: Make symbols for similar devices consistent E.g. resistors
