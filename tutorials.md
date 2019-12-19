@@ -5,7 +5,7 @@ permalink: /tutorials
 sequence: 2
 ---
 
-<p class="subtitle">List of <a href="https://stackoverflow.com/help/mcve">reprex code</a> to flash into different devices.</p>
+<p class="subtitle">List of getting started tutorials with <a href="https://stackoverflow.com/help/mcve">minimal, reproducible, complete code</a> where applicable.</p>
 
 <style id="search_style"></style>
 
