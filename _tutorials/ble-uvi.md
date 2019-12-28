@@ -48,19 +48,19 @@ Use the nRF Connect iPhone app to view the UV Index values.
   <div class="container">
     <div class="columns is-multiline is-desktop">
       <div class="column is-half">
-        <img src="/assets/images/tutorials/ble-uvi-nrf-connect.jpg" alt="">
+        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect.jpg" alt="">
       </div>
 
       <div class="column is-half">
-        <img src="/assets/images/tutorials/ble-uvi-nrf-connect-services.jpg" alt="">
+        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-services.jpg" alt="">
       </div>
 
       <div class="column is-half">
-        <img src="/assets/images/tutorials/ble-uvi-nrf-connect-char.jpg" alt="">
+        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-char.jpg" alt="">
       </div>
 
       <div class="column is-half">
-        <img src="/assets/images/tutorials/ble-uvi-nrf-connect-char-read.jpg" alt="">
+        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-char-read.jpg" alt="">
       </div>
     </div>
   </div>

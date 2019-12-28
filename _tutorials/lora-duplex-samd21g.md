@@ -15,6 +15,8 @@ references:
     url: https://github.com/sandeepmistry/arduino-LoRa
   - name: Ardino LoRa Duplex example code
     url: https://github.com/sandeepmistry/arduino-LoRa/blob/master/examples/LoRaDuplex/LoRaDuplex.ino
+  - name: Notes on using the Chinese "SAMD21-M0-Mini" board
+    url: https://github.com/BLavery/SAMD21-M0-Mini#hardware
 prerequisites:
   - name: LoRa duplex A
     url: ./lora-duplex-a
@@ -23,3 +25,19 @@ prerequisites:
 ---
 
 Send and receive at the same time from another node! Use this code with [duplex b](lora-duplex-b).
+
+## Troubleshooting
+
+Take [note of the actual SPI pins used on SAMD21G](https://github.com/arduino/ArduinoCore-samd/blob/master/variants/arduino_mzero/variant.cpp#L141).
+
+```c
+{ PORTA, 12, PIO_SERCOM_ALT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_12 }, // MISO: SERCOM4/PAD[0] PA12
+{ PORTB, 11, PIO_SERCOM_ALT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11 }, // SCK: SERCOM4/PAD[3] PB11
+{ PORTB, 10, PIO_SERCOM_ALT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10 }, // MOSI: SERCOM4/PAD[2] PB10
+```
+
+<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="">
+
+As noted in the [error of the RobotDyn M0 mini board](https://github.com/BLavery/SAMD21-M0-Mini#hardware):
+
+> There is a "ICSP" header, with pin assignments that look wrong on the schematic. I suspect the MISO pin on the header is really PA12, not D12. More to explore.
