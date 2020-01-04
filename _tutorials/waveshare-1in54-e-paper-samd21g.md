@@ -1,17 +1,18 @@
 ---
 layout: tutorials
-title: Waveshare 1.54 inch
+title: Waveshare 1.54 inch with SAMD21G
 hardware:
   - arduino
-  - uno
+  - m0
+  - samd21g
   - waveshare
   - e-paper
   - e-ink
 references:
   - name: Waveshare 1.54 inch e-paper module
     url: https://www.waveshare.com/product/modules/oleds-lcds/e-paper/1.54inch-e-paper-module.htm
-  - name: E-Ink Arduino library from Wavesgare
-    url: https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54
+  - name: E-Ink Arduino library
+    url: https://github.com/soonuse/epd-library-arduino
   - name: Code example for 1.54 inch e-paper
     url: https://github.com/waveshare/e-Paper/blob/master/Arduino%20UNO/epd1in54/epd1in54.ino
   - name: Arduino SPI
@@ -27,10 +28,11 @@ The 4 non-SPI pins are defined in `epdif.h` file:
 #define BUSY_PIN        7
 ```
 
-The 2 [SPI pins for Arduino UNO](https://www.arduino.cc/en/reference/SPI) are defined as:
+The SPI pins for Arduino M0 / SAMD21G are defined as following:
 
-```c
-MOSI  11
-MISO  12  
-SCK   13
-```
+| SAMD21G Pin | I/O Pin | SERCOM-ALT | Name |
+| ------ | ------ | ------ | ------ |
+| `19` | `PB10` | `SERCOM4/PAD[2]` | MOSI |
+| `20` | `PB11` | `SERCOM4/PAD[3]` | SCK |
+
+<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="">
