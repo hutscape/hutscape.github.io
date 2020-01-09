@@ -15,7 +15,7 @@ references:
   - name: E-Ink Arduino library
     url: https://github.com/soonuse/epd-library-arduino
   - name: Code example for 1.54 inch e-paper
-    url: https://github.com/waveshare/e-Paper/blob/master/Arduino%20UNO/epd1in54/epd1in54.ino
+    url: https://github.com/waveshare/e-Paper/blob/master/Arduino/epd1in54/epd1in54.ino
   - name: Arduino SPI
     url: https://www.arduino.cc/en/reference/SPI
   - name: Adafruit nRF52 Feather pinout

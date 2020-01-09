@@ -15,7 +15,7 @@ references:
   - name: E-Ink Arduino library from Wavesgare
     url: https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54
   - name: Code example for 1.54 inch e-paper
-    url: https://github.com/waveshare/e-Paper/blob/master/Arduino%20UNO/epd1in54/epd1in54.ino
+    url: https://github.com/waveshare/e-Paper/blob/master/Arduino/epd1in54/epd1in54.ino
   - name: Arduino SPI
     url: https://www.arduino.cc/en/reference/SPI
 ---
