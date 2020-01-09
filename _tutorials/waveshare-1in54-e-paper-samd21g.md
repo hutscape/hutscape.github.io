@@ -10,7 +10,9 @@ hardware:
   - e-ink
 references:
   - name: Waveshare 1.54 inch e-paper module
-    url: https://www.waveshare.com/product/modules/oleds-lcds/e-paper/1.54inch-e-paper-module.htm
+    url: https://www.waveshare.com/product/1.54inch-e-Paper-Module.htm
+  - name: Waveshare 1.54 inch e-paper schematic
+    url: https://www.waveshare.com/w/upload/5/5b/1.54inch_e-Paper_Schematic.pdf
   - name: E-Ink Arduino library
     url: https://github.com/soonuse/epd-library-arduino
   - name: Code example for 1.54 inch e-paper

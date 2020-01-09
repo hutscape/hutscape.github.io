@@ -30,7 +30,7 @@ void setup() {
   epd.SetFrameMemory(paint.GetImage(), 0, 10, paint.GetWidth(), paint.GetHeight());
 
   paint.Clear(UNCOLORED);
-  paint.DrawStringAt(30, 4, "e-Paper+SAMD21G", &Font16, COLORED);
+  paint.DrawStringAt(30, 4, "e-Paper+nRF52", &Font16, COLORED);
   epd.SetFrameMemory(paint.GetImage(), 0, 30, paint.GetWidth(), paint.GetHeight());
 
   epd.DisplayFrame();
