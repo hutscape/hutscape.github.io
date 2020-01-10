@@ -25,12 +25,12 @@ void setup() {
   paint.SetWidth(200);
   paint.SetHeight(24);
 
-  paint.Clear(COLORED);
-  paint.DrawStringAt(30, 4, "Hello world!", &Font16, UNCOLORED);
+  paint.Clear(UNCOLORED);
+  paint.DrawStringAt(10, 4, "Hello world!", &Font16, COLORED);
   epd.SetFrameMemory(paint.GetImage(), 0, 10, paint.GetWidth(), paint.GetHeight());
 
   paint.Clear(UNCOLORED);
-  paint.DrawStringAt(30, 4, "e-Paper Demo", &Font16, COLORED);
+  paint.DrawStringAt(10, 4, "e-Paper+UNO", &Font16, COLORED);
   epd.SetFrameMemory(paint.GetImage(), 0, 30, paint.GetWidth(), paint.GetHeight());
 
   epd.DisplayFrame();
