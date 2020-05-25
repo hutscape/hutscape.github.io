@@ -27,3 +27,7 @@ references:
 ---
 
 Flash the Arduino bootloader on a bare `SAMD21G` micro-controller via the SWD programming.
+
+Steps:
+
+1. Download [J-Link Software and Documentation Pack](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack) for the chosen OS

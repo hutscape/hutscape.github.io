@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: GPS PA1010D with UART
+title: GPS PA1010D with M0
 hardware:
   - GPS
   - PA1010D
