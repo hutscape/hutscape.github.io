@@ -12,6 +12,8 @@ references:
     url: https://www.adafruit.com/product/4415
   - name: Adafruit_GPS
     url: https://github.com/adafruit/Adafruit_GPS
+  - name: Adafruit GPS Hardware serial echo test
+    url: https://github.com/adafruit/Adafruit_GPS/blob/master/examples/GPS_HardwareSerial_EchoTest/GPS_HardwareSerial_EchoTest.ino
 ---
 
-Use GPS module PA1010D with Arduino M0 (SAMD21G) to parse and get the GPS data.
+Use GPS module PA1010D with Arduino M0 (SAMD21G) to display GPS data.
