@@ -15,6 +15,8 @@ references:
     url: https://github.com/adafruit/Adafruit_GPS
   - name: Adafruit GPS Hardware serial parsing
     url: https://github.com/adafruit/Adafruit_GPS/blob/master/examples/GPS_HardwareSerial_Parsing/GPS_HardwareSerial_Parsing.ino
+  - name: Adafruit GPD Hardware serial timing information
+    url: https://github.com/adafruit/Adafruit_GPS/blob/master/examples/GPS_HardwareSerial_Timing/GPS_HardwareSerial_Timing.ino
   - name: Lat long conversion from degrees to decimal
     url: https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees
 prerequisites:

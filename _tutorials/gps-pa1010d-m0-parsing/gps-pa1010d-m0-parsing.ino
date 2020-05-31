@@ -53,6 +53,12 @@ void loop() {
     SerialUSB.print("Fix: ");
     SerialUSB.print((int)GPS.fix);
     SerialUSB.print(" quality: "); SerialUSB.println((int)GPS.fixquality);
+    SerialUSB.print("Time [s] since last fix: ");
+    SerialUSB.println(GPS.secondsSinceFix(), 3);
+    SerialUSB.print("    since last GPS time: ");
+    SerialUSB.println(GPS.secondsSinceTime(), 3);
+    SerialUSB.print("    since last GPS date: ");
+    SerialUSB.println(GPS.secondsSinceDate(), 3);
     if (GPS.fix) {
       SerialUSB.print("Location: ");
       SerialUSB.print(GPS.latitude, 4); SerialUSB.print(GPS.lat);
