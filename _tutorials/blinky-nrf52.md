@@ -19,3 +19,5 @@ To use command line [arduino-cli](https://github.com/arduino/arduino-cli), insta
 ```
 pip3 install --user adafruit-nrfutil
 ```
+
+<img src="{{ site.url }}/assets/images/tutorials/blinky-nrf52-arduino-settings.png" alt="nRF52 settings on Arduino IDE">

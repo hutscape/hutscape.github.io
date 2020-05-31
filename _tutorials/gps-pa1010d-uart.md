@@ -14,3 +14,5 @@ has_code: false
 ---
 
 Use GPS module PA1010D to display information.
+
+<img src="{{ site.url }}/assets/images/tutorials/gps-pa1010d-uart-logic-analyzer.png" alt="GPS Data with logic analyzer">

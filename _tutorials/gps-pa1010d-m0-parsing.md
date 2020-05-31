@@ -23,3 +23,12 @@ prerequisites:
 ---
 
 Use GPS module PA1010D with Arduino M0 (SAMD21G) to display parsed GPS data with latitude and longitude in degrees.
+
+### Using Google maps to view lat,long
+
+1. Right click the spot on Google maps
+1. Click "What's here?"
+1. Click the lat,long in the card at the bottom
+1. View the lat,long data in degrees and decimal at the left sidebar
+
+<img src="{{ site.url }}/assets/images/tutorials/gps-pa1010d-m0-parsing-gmaps.jpg" alt="Google Maps with Lat Long information">
