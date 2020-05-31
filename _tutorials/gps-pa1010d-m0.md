@@ -5,6 +5,7 @@ hardware:
   - GPS
   - PA1010D
   - UART
+  - M0
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
     url: https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view
