@@ -20,7 +20,7 @@ references:
   - name: Lat long conversion from degrees to decimal
     url: https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees
 prerequisites:
-  - name: GPS PA10101 with Arduino M0
+  - name: GPS PA1010D with Arduino M0
     url: ./gps-pa1010d-m0
 ---
 
