@@ -1,7 +1,7 @@
 #define GPSSerial Serial1
 
 void setup() {
-  while (!Serial) {}
+  while (!SerialUSB) {}
   SerialUSB.begin(115200);
   GPSSerial.begin(9600);
 
