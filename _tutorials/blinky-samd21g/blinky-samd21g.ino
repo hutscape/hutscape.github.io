@@ -1,11 +1,9 @@
-#define LED 13  // Pin 13 is connected to an on-board Blue LED
+#define LED 13
 
 void setup() {
   pinMode(LED, OUTPUT);
 
   SerialUSB.begin(9600);
-  // Blinky will not start unless serial prints are enabled
-  // while (!SerialUSB) { }
   delay(100);
 
   SerialUSB.println("Start!");
