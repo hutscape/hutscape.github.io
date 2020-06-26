@@ -58,6 +58,8 @@ A custom PCB with SAMD21G and PWD pins are required to upload the Arduino bootlo
 
 1. Download and open [SEGGER J-Flash Lite](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
 1. Connect the J-Link SEGGER with PWD pins to the PCB
+    <img src="{{ site.url }}/assets/images/tutorials/arduino-bootloader-samd21g-pinout.png" alt="J-Link pinout mapping to SWD pins">
+    <img src="{{ site.url }}/assets/images/tutorials/arduino-bootloader-samd21g-ribbon.JPG" alt="Connecting the J-Link SEGGER via the ribbon cable to the pogo pins">
 1. Choose the created bootloader data file `samd21_sam_ba.bin`
 1. Click `Program Device`
     <img src="{{ site.url }}/assets/images/tutorials/arduino-bootloader-samd21g-jflash.png" alt="">
