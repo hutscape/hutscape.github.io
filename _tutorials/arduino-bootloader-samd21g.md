@@ -13,7 +13,7 @@ references:
     url: https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack
   - name: Tips and Tricks – Jumping from the Bootloader to the Application Code Cleanly
     url: https://www.beningo.com/tips-and-tricks-jumping-from-the-bootloader-to-the-application-code-cleanly/
-    - name: LCSC part for SAMD21G
+  - name: LCSC part for SAMD21G
     url: https://lcsc.com/product-detail/ATMEL-AVR_Microchip-Tech-ATSAMD21G18A-AU_C78624.html
   - name: How to burn Arduino Zero bootloader to an Atmel ATSAMD21G18-based custom dev board
     url: https://www.youtube.com/watch?v=VQWhjzLoHB8  
