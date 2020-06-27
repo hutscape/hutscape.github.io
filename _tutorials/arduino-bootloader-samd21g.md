@@ -27,6 +27,12 @@ references:
     url: https://www.st.com/en/development-tools/st-link-v2.html
   - name: Pogo pin connector
     url: https://www.instructables.com/id/Pogo-Pin-Programming-Connector/
+  - name: How to Program SAMD Bootloaders by Adafruit
+    url: https://learn.adafruit.com/how-to-program-samd-bootloaders?view=all#programming-the-bootloader-with-atmel-studio
+  - name: ARM Programming by SparkFun
+    url: https://learn.sparkfun.com/tutorials/arm-programming
+  - name: J-Link model overview
+    url: https://www.segger.com/products/debug-probes/j-link/models/model-overview/
 prerequisites:
   - name: SAMD21G Blinky
     url: ./blinky-samd21g
