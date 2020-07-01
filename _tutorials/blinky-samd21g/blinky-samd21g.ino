@@ -5,7 +5,7 @@ void setup() {
 
   SerialUSB.begin(9600);
   while (!SerialUSB) {}
-  delay(100);
+  delay(1000);
 
   SerialUSB.println("Start!");
 }
