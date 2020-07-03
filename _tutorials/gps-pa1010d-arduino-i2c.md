@@ -1,10 +1,11 @@
 ---
 layout: tutorials
-title: GPS parsing with PA1010D and M0 with I2C
+title: GPS parsing with PA1010D and Arduino UNO with I2C
 hardware:
   - GPS
   - PA1010D
-  - M0
+  - Arduino
+  - UNO
   - I2C
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
@@ -22,4 +23,4 @@ prerequisites:
     url: ./gps-pa1010d-m0
 ---
 
-Use Adafruit GPS module PA1010D with Arduino M0 (with micro-controller SAMD21G) to display parsed GPS data via the I2C protocol.
+Use Adafruit GPS module PA1010D with Arduino UNO  to display parsed GPS data via the I2C protocol.
