@@ -18,9 +18,6 @@ references:
     url: https://raw.githubusercontent.com/adafruit/Adafruit_GPS/master/examples/GPS_I2C_EchoTest/GPS_I2C_EchoTest.ino
   - name: Adafruit Mini GPS PA1010D schematic
     url: https://cdn-learn.adafruit.com/assets/assets/000/084/182/original/adafruit_products_Mini_GPS_PA1010D_SCh.png?1573765781
-prerequisites:
-  - name: GPS PA1010D with Arduino M0
-    url: ./gps-pa1010d-m0
 ---
 
-Use Adafruit GPS module PA1010D with Arduino UNO  to display parsed GPS data via the I2C protocol.
+Use Adafruit GPS module PA1010D with Arduino UNO raw NMEA sentences via the I2C protocol.
