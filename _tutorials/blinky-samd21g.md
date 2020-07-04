@@ -14,8 +14,8 @@ references:
     url: https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/sparkfun-samd21-pro-breakout-v10.pdf
 ---
 
-Create a blinky LED with SAMD21G micro-controller. This is possible on a custom PCB with the SAMD21G18 chip and other components. Check the schematic for the details of the circuit with SAMD21G18, LEDs, USB port and SWD pinouts on the PCB.
-cd
+Create a blinky LED with SAMD21G micro-controller. This is possible on a custom PCB (crystalless option) with the SAMD21G18 chip and other components. Check the schematic for the details of the circuit with SAMD21G18, LEDs, USB port and SWD pinouts on the PCB.
+
 For serial printing, `SerialUSB.println()` should be used instead of `Serial.println()` because `SerialUSB` uses the Native Port, which is an emulated serial port (USB-CDC).
 
 Steps to upload the blinky firmware:
