@@ -13,8 +13,8 @@ references:
     url: https://www.adafruit.com/product/4415
   - name: Adafruit_GPS
     url: https://github.com/adafruit/Adafruit_GPS
-  - name: Adafruit GPS Hardware serial LOCUS dump
-    url: https://github.com/adafruit/Adafruit_GPS/blob/master/examples/GPS_HardwareSerial_LOCUS_DumpBasic/GPS_HardwareSerial_LOCUS_DumpBasic.ino
+  - name: Adafruit GPS Hardware serial LOCUS start
+    url: https://github.com/adafruit/Adafruit_GPS/blob/master/examples/GPS_HardwareSerial_LOCUS_Start/GPS_HardwareSerial_LOCUS_Start.ino
 prerequisites:
   - name: GPS PA1010D with Arduino M0
     url: ./gps-pa1010d-m0
