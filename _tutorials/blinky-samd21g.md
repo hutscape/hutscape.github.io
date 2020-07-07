@@ -10,8 +10,11 @@ references:
     url: http://www.armlearning.com/hardware/robotdyn-samd21-m0-mini-quick-look.php
   - name: Arduino Serial
     url: https://www.arduino.cc/reference/en/language/functions/communication/serial/
-  - name: SAMD21G SparkFun breakout board schematic
+  - name: (Schematic) SAMD21G SparkFun breakout board
     url: https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/sparkfun-samd21-pro-breakout-v10.pdf
+prerequisites:
+  - name: Burning Arduino bootloader on MCU SAMD21G
+    url: ./arduino-bootloader-samd21g
 ---
 
 ### Crystalless option
@@ -32,9 +35,8 @@ arduino-cli compile --fqbn arduino:samd:arduino_zero_native ./ --verbose
 
 For serial printing, `SerialUSB.println()` should be used instead of `Serial.println()` because `SerialUSB` uses the Native Port, which is an emulated serial port (USB-CDC).
 
-
 ### Upload firmware
-
+ 
 Steps to upload the blinky firmware:
 
 1. Press the reset button twice to go into the bootloader mode

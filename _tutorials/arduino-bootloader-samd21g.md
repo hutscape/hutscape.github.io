@@ -33,19 +33,16 @@ references:
     url: https://learn.sparkfun.com/tutorials/arm-programming
   - name: J-Link model overview
     url: https://www.segger.com/products/debug-probes/j-link/models/model-overview/
-prerequisites:
-  - name: SAMD21G Blinky
-    url: ./blinky-samd21g
 has_code: false
 ---
 
-A custom PCB with SAMD21G and PWD pins are required to upload the Arduino bootloader in the bare micro-controller.
+A custom **crystalless** PCB with SAMD21G and PWD pins are required to upload the Arduino bootloader in the bare micro-controller.
 
 ## Create the bootloader file
 
 1. Clone [ArduinoCore-samd](https://github.com/arduino/ArduinoCore-samd)
 1. Go to `/bootloaders/zero`
-1. Edit `Makefile` line `66` to make it crystal-less
+1. (Option) Edit `Makefile` line `66` for **crystalless** board
     ```c
     CFLAGS_EXTRA=-D__SAMD21G18A__ -DBOARD_ID_$(BOARD_ID) -D$(SAM_BA_INTERFACES) -DCRYSTALLESS
     ```
@@ -76,4 +73,4 @@ A custom PCB with SAMD21G and PWD pins are required to upload the Arduino bootlo
   ```
   /dev/cu.usbmodem14101           Serial Port (USB) Arduino Zero (Native USB Port) arduino:samd:arduino_zero_native arduino:samd
   ```
-1. Flash the [blinky LED program](./blinky-samd21g)
+1. Flash the [blinky LED program](./blinky-samd21g) with **crystalless** option
