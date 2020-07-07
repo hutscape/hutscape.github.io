@@ -1,4 +1,3 @@
-// https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino
 #include "Adafruit_Si7021.h"
 
 Adafruit_Si7021 sensor = Adafruit_Si7021();
