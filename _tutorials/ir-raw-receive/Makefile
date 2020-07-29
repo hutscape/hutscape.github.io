@@ -6,14 +6,13 @@ PORT?=/dev/cu.usbmodem14*
 default: lint all flash clean
 
 lint:
-	cpplint --extensions=ino --filter=-legal/copyright *.ino
+	cpplint --extensions=ino --filter=-legal/copyright,-whitespace/line_length *.ino
 
 all:
 	arduino-cli compile --fqbn $(BOARD) ./
 
 flash:
-	arduino-cli upload -p $(PORT) --fqbn $(BOARD) ./
+	arduino-cli upload -p $(PORT) --fqbn $(BOARD)
 
 clean:
-	rm -f .*.hex
-	rm -f .*.elf
+	rm -r build
