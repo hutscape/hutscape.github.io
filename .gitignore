@@ -11,4 +11,5 @@ ideas
 _site
 .sass-cache
 .jekyll-metadata
+build
 node_modules
