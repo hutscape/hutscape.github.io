@@ -12,8 +12,7 @@ all:
 	arduino-cli compile --fqbn $(BOARD) ./
 
 flash:
-	arduino-cli upload -p $(PORT) --fqbn $(BOARD) ./
+	arduino-cli upload --fqbn $(BOARD) --port $(PORT)
 
 clean:
-	rm -f .*.hex
-	rm -f .*.elf
+	rm -r build
