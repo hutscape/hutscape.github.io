@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Arduino tracing for debugging
+title: Arduino debugging and tracing
 hardware:
   - arduino
   - m0
@@ -10,11 +10,13 @@ hardware:
 references:
   - name: ArduinoTrace library
     url: https://github.com/bblanchon/ArduinoTrace
-  - name: How to debug an Arduino program with the "tracing" technique
-    url: https://www.youtube.com/watch?v=JHMpszgzWSg
   - name: Toggling Debug Code
     url: https://forum.arduino.cc/index.php?topic=46900.msg338645#msg338645
-
+prerequisites:
+  - name: Arduino debugging
+    url: ./arduino-debug
+  - name: Arduino trace
+    url: ./arduino-trace
 ---
 
-Tracing and dumping information with ArduinoTrace library when debugging Arduino code.
+Combing `#ifdef` with a header file and `ArduinoTrace` library to setup toggling on and off for debugging Arduino code.
