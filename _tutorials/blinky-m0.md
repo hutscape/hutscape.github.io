@@ -31,3 +31,8 @@ The following code should be used for initialising the serial so that the print 
 SerialUSB.begin(9600);
 while (!SerialUSB) { }
 ```
+
+## Some errors on RobotDyn M0 mini board
+
+- Pins D2 (PA14) and D4 (PA08) are swapped
+- Pin D12 / MISO on ICSP header is PA12
