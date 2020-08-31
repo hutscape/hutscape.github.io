@@ -1,10 +1,5 @@
-#define DEBUG  // Comment to turn off debug statements
-
-#ifdef DEBUG
-  #define DEBUG_PRINT(x) SerialUSB.println(x)
-#else
-  #define DEBUG_PRINT(x)
-#endif
+// #define DEBUG  // Comment to turn off debug statements
+#include "DebugUtils.h"
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -19,11 +14,11 @@ void setup() {
 }
 
 void loop() {
-  DEBUG_PRINT("HIGH")
+  DEBUG_PRINT("HIGH");
   digitalWrite(LED_BUILTIN, HIGH);
   delay(500);
 
-  DEBUG_PRINT("LOW")
+  DEBUG_PRINT("LOW");
   digitalWrite(LED_BUILTIN, LOW);
   delay(500);
 }
