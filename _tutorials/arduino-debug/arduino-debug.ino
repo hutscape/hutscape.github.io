@@ -1,4 +1,4 @@
-// #define DEBUG  // Comment to turn off debug statements
+#define DEBUG  // Comment to turn off debug statements
 #include "DebugUtils.h"
 
 void setup() {
