@@ -3,19 +3,19 @@
 void setup() {
   pinMode(LED, OUTPUT);
 
-  SerialUSB.begin(9600);
-  while (!SerialUSB) {}
-  delay(1000);
+  // SerialUSB.begin(9600);
+  // while (!SerialUSB) {}
+  // delay(1000);
 
-  SerialUSB.println("Start!");
+  // SerialUSB.println("Start!");
 }
 
 void loop() {
-  SerialUSB.println("HIGH");
+  // SerialUSB.println("HIGH");
   digitalWrite(LED, HIGH);
   delay(200);
 
-  SerialUSB.println("LOW");
+  // SerialUSB.println("LOW");
   digitalWrite(LED, LOW);
   delay(200);
 }

@@ -16,7 +16,7 @@ references:
   - name: LCSC part for SAMD21G
     url: https://lcsc.com/product-detail/ATMEL-AVR_Microchip-Tech-ATSAMD21G18A-AU_C78624.html
   - name: How to burn Arduino Zero bootloader to an Atmel ATSAMD21G18-based custom dev board
-    url: https://www.youtube.com/watch?v=VQWhjzLoHB8  
+    url: https://www.youtube.com/watch?v=VQWhjzLoHB8
   - name: SAMD21 Mini/Dev Breakout Hookup Guide
     url: https://learn.sparkfun.com/tutorials/samd21-minidev-breakout-hookup-guide/all
   - name: Adafruit Adalink
@@ -41,16 +41,16 @@ A custom **crystalless** PCB with SAMD21G and PWD pins are required to upload th
 ## Create the bootloader file
 
 1. Clone [ArduinoCore-samd](https://github.com/arduino/ArduinoCore-samd)
-1. Go to `/bootloaders/zero`
+1. Go to folder `/bootloaders/zero`
 1. (Option) Edit `Makefile` line `66` for **crystalless** board
     ```c
     CFLAGS_EXTRA=-D__SAMD21G18A__ -DBOARD_ID_$(BOARD_ID) -D$(SAM_BA_INTERFACES) -DCRYSTALLESS
     ```
-1. (Optional) Edit `board_definitions_arduino_zero.h` to change product name
+1. (Optional) Edit `board_definitions_arduino_zero.h` line `26` to change product name
     ```c
     #define STRING_PRODUCT "Pine"
     ```
-1. (Optional) Edit `sam_ba_usb.c` to change manufacturer name
+1. (Optional) Edit `sam_ba_usb.c` line `156` to change manufacturer name
     ```c
     #define STRING_MANUFACTURER "Hutscape"
     ```
