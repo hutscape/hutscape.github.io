@@ -27,8 +27,7 @@ To ensure the blinky works with the crytalless option, you have to:
 1. Ensure compiled code has the cyrstalless option in `build.extra_flags` in `~/Library/Arduino15/packages/arduino/hardware/samd/1.8.6/boards.txt` on macOS or as part of options in the `arduino-cli` command
 
 ```
-arduino-cli compile --fqbn arduino:samd:arduino_zero_native --build-properties build.extra_flags="-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}" ./ --verbose
-arduino-cli compile --fqbn arduino:samd:arduino_zero_native ./ --verbose
+arduino-cli compile --fqbn arduino:samd:arduino_zero_native --build-properties build.extra_flags="-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}" ./
 ```
 
 ### Serial
