@@ -1,3 +1,16 @@
+- name: Oak
+  sequence: 4
+  url: /oak
+  description: 🌳 Measure outdoor distance between 2 keychain holders 🔑
+  version: "1.0"
+
+  wireless: LoRa
+  mcu: SAMD21E
+  sensor: GPS
+  power: LiPo
+
+  status: ongoing
+
 - name: Pine
   sequence: 3
   url: /pine
