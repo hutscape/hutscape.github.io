@@ -5,7 +5,7 @@
   version: "1.0"
 
   wireless: Infrared
-  mcu: SAMD21G
+  mcu: SAMD21G18
   sensor: Temperature
   power: AA
 
@@ -14,7 +14,8 @@
   bom: 49
   vendors: 2
 
-  status: ongoing
+  status: completed
+  completion: September 2020
 
 - name: Palm
   sequence: 2
