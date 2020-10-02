@@ -6,6 +6,7 @@ hardware:
   - WeMos
   - LiPo
   - battery
+  - voltage
 references:
   - name: Monitoring LiPo battery voltage with Wemos D1 mini battery shield and Thingspeak
     url: https://arduinodiy.wordpress.com/2016/12/25/monitoring-lipo-battery-voltage-with-wemos-d1-minibattery-shield-and-thingspeak

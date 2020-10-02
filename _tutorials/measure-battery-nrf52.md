@@ -6,6 +6,7 @@ hardware:
   - voltage
   - LiPo
   - battery
+  - voltage
   - adafruit
   - feather
   - bluefruit
