@@ -1,5 +1,5 @@
 BOARD?=arduino:avr:uno
-PORT?=/dev/cu.usbmodem14201
+PORT?=/dev/cu.usbmodem14*
 
 .PHONY: default lint all flash clean
 
@@ -12,8 +12,7 @@ all:
 	arduino-cli compile --fqbn $(BOARD) ./
 
 flash:
-	arduino-cli upload -p $(PORT) --fqbn $(BOARD) ./
+	arduino-cli upload -p $(PORT) --fqbn $(BOARD)
 
 clean:
-	rm -f .*.hex
-	rm -f .*.elf
+	rm -r build

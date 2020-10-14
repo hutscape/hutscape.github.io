@@ -14,6 +14,10 @@ int count = 0;
 void setup() {
   Serial.begin(9600);
   Serial.println("Start LoRa duplex");
+  Serial.print("Local address: ");
+  Serial.println(String(localAddress, HEX));
+  Serial.print("Destination address: ");
+  Serial.print(String(destinationAddress, HEX));
 
   LoRa.setPins(csPin, resetPin, irqPin);
 
@@ -29,8 +33,8 @@ void loop() {
     sendMessage(sensorData);
 
     Serial.print("Sending data " + sensorData);
-    Serial.print(" from 0x" + String(localAddress, HEX));
-    Serial.println(" to 0x" + String(destinationAddress, HEX));
+    Serial.print(" from source 0x" + String(localAddress, HEX));
+    Serial.println(" to destination 0x" + String(destinationAddress, HEX));
 
     lastSendTime = millis();
     interval = random(2000) + 1000;
