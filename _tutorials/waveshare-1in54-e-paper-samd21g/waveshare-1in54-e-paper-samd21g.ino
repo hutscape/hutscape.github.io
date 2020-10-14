@@ -9,7 +9,7 @@ unsigned char image[1024];
 Paint paint(image, 0, 0);
 Epd epd;
 int count = 0;
-char count_string[] = {'1', '2', '3'};
+char count_string[] = {'0', '0', '0', '\0'};
 
 void setup() {
   SerialUSB.begin(9600);
@@ -18,12 +18,7 @@ void setup() {
 }
 
 void loop() {
-  count++;
-
-  count_string[2] = count % 10 + '0';
-  count_string[1] = count / 10 % 10 + '0';
-  count_string[0] = count / 100 + '0';
-
+  sprintf(count_string, "%d", ++count);
   SerialUSB.println(count_string);
 
   if (epd.Init(lut_full_update) != 0) {
