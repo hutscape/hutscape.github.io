@@ -26,7 +26,9 @@ prerequisites:
 
 Send and receive at the same time from another node! Use this code with [duplex b](lora-duplex-b).
 
-## Troubleshooting
+## SPI
+
+### SPI pins used
 
 Take [note of the actual SPI pins used on SAMD21G](https://github.com/arduino/ArduinoCore-samd/blob/master/variants/arduino_mzero/variant.cpp#L141).
 
@@ -36,7 +38,13 @@ Take [note of the actual SPI pins used on SAMD21G](https://github.com/arduino/Ar
 { PORTB, 10, PIO_SERCOM_ALT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10 }, // MOSI: SERCOM4/PAD[2] PB10
 ```
 
-<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="">
+<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="Datasheet pin information">
+
+### Logic Analyzer capture
+
+<a href="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-signals.png"><img src="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-signals.png" alt="Saleae Logic Analyzer capture"></a>
+
+## RobotDyn board errors
 
 As noted in the [error of the RobotDyn M0 mini board](https://github.com/BLavery/SAMD21-M0-Mini#hardware):
 
