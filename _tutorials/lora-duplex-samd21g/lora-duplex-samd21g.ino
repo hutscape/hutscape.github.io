@@ -1,7 +1,7 @@
 #include <SPI.h>
 #include <LoRa.h>
 
-const int csPin = 7;
+const int csPin = 5;
 const int resetPin = 6;
 const int irqPin = 1;
 
@@ -16,6 +16,10 @@ void setup() {
   while (!SerialUSB) { }
   delay(100);
   SerialUSB.println("Start LoRa duplex");
+  SerialUSB.print("Local address:");
+  SerialUSB.println(String(localAddress, HEX));
+  SerialUSB.print("Destination address:");
+  SerialUSB.println(String(destinationAddress, HEX));
 
   LoRa.setPins(csPin, resetPin, irqPin);
 
