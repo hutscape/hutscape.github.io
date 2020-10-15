@@ -5,15 +5,15 @@ description: Good schematics checklist
 checks:
   - title: Good schematic checklist
     list:
-      - name: Refer to the correct datasheet version number
+      - name: Refer to the correct datasheet version number and the last updated date for the component
       - name: Separate double wire junctions
       - name: Use dots for wire junctions, not crosses
       - name: Make symbols for similar devices consistent E.g. resistors
       - name: Name every part with a unique designator
       - name: Align wires and components horizontally or vertically
-      - name: "Label pin numbers on the outside of a symbol, signal names on the inside"
-      - name: "Place text orientation consistently E.g. horizontal"
-      - name: Place components from left to right with a local flow
+      - name: Label pin numbers on the outside of a symbol, signal names on the inside
+      - name: Place text orientation consistently E.g. horizontal
+      - name: Place components from left to right with a logical flow
       - name: Put higher voltage towards the top
       - name: Put positive voltages <code>Vcc</code> up and negative voltages <code>GND</code> down
       - name: Separate schematic into logical blocks
@@ -28,6 +28,8 @@ checks:
       - name: Include date of creation
       - name: Include page of the schematic
       - name: Include revision number
+      - name: Include Author or Team name
+      - name: (Optional) Include website for more information about the project
 references:
   - name: The Top 10 Tips to Draw Your Next Schematic Design Like a Pro
     url: https://www.autodesk.com/products/eagle/blog/top-10-tips-draw-next-schematic-design-like-pro/
