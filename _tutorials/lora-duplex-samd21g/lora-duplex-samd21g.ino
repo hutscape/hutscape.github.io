@@ -15,6 +15,7 @@ void setup() {
   SerialUSB.begin(9600);
   while (!SerialUSB) { }
   delay(100);
+
   SerialUSB.println("Start LoRa duplex");
   SerialUSB.print("Local address:");
   SerialUSB.println(String(localAddress, HEX));
