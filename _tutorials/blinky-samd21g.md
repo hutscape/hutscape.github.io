@@ -1,10 +1,11 @@
 ---
 layout: tutorials
-title: Blinky SAMD21G micro-controller
+title: Blinky Arduino Zero
 hardware:
   - samd21g
   - arduino
   - blinky
+  - zero
 references:
   - name: RobotDyn SAMD21 M0-Mini a quick look
     url: http://www.armlearning.com/hardware/robotdyn-samd21-m0-mini-quick-look.php

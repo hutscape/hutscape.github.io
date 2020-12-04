@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky
+title: Blinky ESP8266
 hardware:
   - esp8266
 ---

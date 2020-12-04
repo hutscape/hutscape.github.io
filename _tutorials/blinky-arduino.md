@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky Arduino
+title: Blinky Arduino UNO
 hardware:
   - arduino
   - uno

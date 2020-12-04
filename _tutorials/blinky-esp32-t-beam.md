@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky for ESP32 T-Beam
+title: Blinky for ESP32 LilyGO T-Beam
 hardware:
   - esp32
   - t-beam
