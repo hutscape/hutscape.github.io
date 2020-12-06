@@ -1,5 +1,5 @@
 BOARD?=esp32:esp32:t-beam
-PORT?=/dev/cu.SLAB_USBtoUART
+PORT?=/dev/cu.SLAB_USBtoUART3
 
 .PHONY: default lint all flash clean
 

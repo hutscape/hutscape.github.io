@@ -5,8 +5,8 @@
 #define RADIO_DI0_PIN 26
 #define RADIO_RST_PIN 23
 
-byte localAddress = 0xAA;
-byte destinationAddress = 0xBB;
+byte localAddress = 0xBB;
+byte destinationAddress = 0xAA;
 long lastSendTime = 0;
 int interval = 2000;
 int count = 0;

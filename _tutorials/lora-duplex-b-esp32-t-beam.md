@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: LoRa Duplex A with ESP32 T-Beam
+title: LoRa Duplex B with ESP32 T-Beam
 hardware:
   - arduino
   - esp32
@@ -20,9 +20,9 @@ references:
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam/blob/master/examples/ArduinoLoRa/LoRaSender/LoRaSender.ino
 ---
 
-Send and receive at the same time from another node! Use this code with [duplex b](lora-duplex-b-esp32-t-beam).
+Send and receive at the same time from another node! Use this code with [duplex a](lora-duplex-a-esp32-t-beam).
 
 ```c
-byte localAddress = 0xAA;
-byte destination = 0xBB;
+byte localAddress = 0xBB;
+byte destination = 0xAA;
 ```
