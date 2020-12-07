@@ -1,29 +1,30 @@
-#include <HardwareSerial.h>
-#include <TinyGPS++.h>
+#include "src/gps/gps.h"
 
-#define GPS_SERIAL_NUM 1
-#define GPS_RX_PIN 34
-#define GPS_TX_PIN 12
-static const uint32_t GPSBaud = 9600;
-
-HardwareSerial GPSSerial(GPS_SERIAL_NUM);
-TinyGPSPlus gps;
+int interval = 2000;
+long lastSendTime = 0;
+LatLong latlong = {0.0, 0.0};
 
 void setup() {
-  Serial.begin(115200);
-  GPSSerial.begin(9600, SERIAL_8N1, GPS_RX_PIN, GPS_TX_PIN);
+  initGPS();
 
+  Serial.begin(115200);
   Serial.println("Hello GPS");
 }
 
 void loop() {
-  while (GPSSerial.available() > 0) {
-    gps.encode(GPSSerial.read());
-    if (gps.location.isUpdated()){
-      Serial.print("Latitude= ");
-      Serial.print(gps.location.lat(), 6);  // double TinyGPSLocation::lat()
-      Serial.print(" Longitude= ");
-      Serial.println(gps.location.lng(), 6);  // double TinyGPSLocation::lng()
-    }
+  // Get GPS data as soon as it is available,
+  // But display it on the serial monitor only every 2 seconds
+  while (isGPSAvailable()) {
+    getLatLong(&latlong);
+  }
+
+  if (millis() - lastSendTime > interval) {
+    Serial.print(millis());
+    Serial.print(" Lat-Long: ");
+    Serial.print(latlong.latitude, 7);
+    Serial.print(", ");
+    Serial.println(latlong.longitude, 7);
+
+    lastSendTime = millis();
   }
 }
