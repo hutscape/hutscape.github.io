@@ -2,8 +2,8 @@
 #include <HardwareSerial.h>
 #include <TinyGPS++.h>
 
-#define I2C_SDA                     21
-#define I2C_SCL                     22
+#define I2C_SDA 21
+#define I2C_SCL 22
 #define GPS_SERIAL_NUM 1
 #define GPS_RX_PIN 34
 #define GPS_TX_PIN 12
