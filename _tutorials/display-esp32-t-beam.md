@@ -11,8 +11,6 @@ hardware:
 references:
   - name: Code example from LilyGO T-Beam with OLED SSD1306
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam/blob/master/examples/OLED/SSD1306SimpleDemo/SSD1306SimpleDemo.ino
-  - name: Arduino library AXP202X
-    url: https://github.com/lewisxhe/AXP202X_Library
   - name: Arduino library ESP8266 and ESP32 OLED driver for SSD1306 displays
     url: https://github.com/ThingPulse/esp8266-oled-ssd1306
 ---
@@ -24,10 +22,6 @@ This example contains the code to display a bunch of `Hello world` on the OLED d
     ```sh
     arduino-cli lib install "ESP8266 and ESP32 OLED driver for SSD1306 displays"
     ```
-1. Install Arduino library for `AXP202`, Single Cell Li-Battery PWM Charger and Power System Management IC
-
-    ```sh
-    cd ~/Documents/Arduino/libraries
-    git clone git@github.com:lewisxhe/AXP202X_Library.git
-    ```
+1. Run `make` to compile and upload the code
+1. Connect to the serial monitor
 
