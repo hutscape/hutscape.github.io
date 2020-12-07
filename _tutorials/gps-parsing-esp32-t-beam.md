@@ -9,7 +9,7 @@ hardware:
   - ublox
   - uart
   - neo-6m
-  -parsing
+  - parsing
 references:
   - name: TinyGPSPlus
     url: https://github.com/mikalhart/TinyGPSPlus
