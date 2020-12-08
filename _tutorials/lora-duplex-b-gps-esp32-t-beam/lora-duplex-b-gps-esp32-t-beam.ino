@@ -9,6 +9,7 @@ bool hasNewGPS = false;
 
 long lastSendTime = 0;
 int interval = 2000;
+long haversine_distance = 0.0;
 
 LatLong localLatlong = {0.0, 0.0};
 LatLong destinationLatlong = {0.0, 0.0};
@@ -20,6 +21,8 @@ void setup() {
   initGPS();
   initOLED();
   initLora();
+
+  displayInitOLED();
 }
 
 void loop() {
@@ -33,16 +36,23 @@ void loop() {
   }
 
   if (millis() - lastSendTime > interval && hasNewGPS) {
-    displayOLED(localLatlong.latitude, localLatlong.longitude);
+    if (isGPSValid(&localLatlong)) {
+      String latlongData = String(localLatlong.latitude, 6) + "," + String(localLatlong.longitude, 6);
+      sendLora(latlongData, localAddress, destinationAddress);
 
-    String latlongData = String(localLatlong.latitude, 6) + "," + String(localLatlong.longitude, 6);
-    sendLora(latlongData, localAddress, destinationAddress);
+      haversine_distance = distance(localLatlong.latitude, localLatlong.longitude, destinationLatlong.latitude, destinationLatlong.longitude);
 
-    printStatus("Sent", &localLatlong, localAddress, destinationAddress);
+      Serial.print("Distance between 2 nodes: ");
+      Serial.print(haversine_distance, 3);
+      Serial.println("m");
 
-    lastSendTime = millis();
-    interval = random(2000) + 1000;
-    hasNewGPS = false;
+      displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance);
+      printStatus("Sent", &localLatlong, localAddress, destinationAddress);
+
+      lastSendTime = millis();
+      interval = random(2000) + 1000;
+      hasNewGPS = false;
+    }
   }
 }
 
@@ -55,3 +65,10 @@ void printStatus(String status, struct LatLong *ll, byte addressA, byte addressB
   Serial.println(" to 0x" + String(addressB, HEX));
 }
 
+bool isGPSValid(LatLong *localLatlong) {
+  if (localLatlong->latitude == 0.000 || localLatlong->longitude == 0.000) {
+    return false;
+  }
+
+  return true;
+}
