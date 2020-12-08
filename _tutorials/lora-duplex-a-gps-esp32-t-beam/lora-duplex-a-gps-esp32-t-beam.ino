@@ -2,6 +2,8 @@
 #include "src/oled/oled.h"
 #include "src/lorap2p/lorap2p.h"
 
+#define GPS_ACCURACY 7
+
 byte localAddress = 0xAA;
 byte destinationAddress = 0xBB;
 
@@ -37,7 +39,7 @@ void loop() {
 
   if (millis() - lastSendTime > interval && hasNewGPS) {
     if (isGPSValid(&localLatlong)) {
-      String latlongData = String(localLatlong.latitude, 6) + "," + String(localLatlong.longitude, 6);
+      String latlongData = String(localLatlong.latitude, GPS_ACCURACY) + "," + String(localLatlong.longitude, GPS_ACCURACY);
       sendLora(latlongData, localAddress, destinationAddress);
 
       haversine_distance = distance(localLatlong.latitude, localLatlong.longitude, destinationLatlong.latitude, destinationLatlong.longitude);
@@ -58,9 +60,9 @@ void loop() {
 
 void printStatus(String status, struct LatLong *ll, byte addressA, byte addressB) {
   Serial.print(status + " latlong ");
-  Serial.print(ll->latitude, 6);
+  Serial.print(ll->latitude, GPS_ACCURACY);
   Serial.print(",");
-  Serial.print(ll->longitude, 6);
+  Serial.print(ll->longitude, GPS_ACCURACY);
   Serial.print(" from 0x" + String(addressA, HEX));
   Serial.println(" to 0x" + String(addressB, HEX));
 }
