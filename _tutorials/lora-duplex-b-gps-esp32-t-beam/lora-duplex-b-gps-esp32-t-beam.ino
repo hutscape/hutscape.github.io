@@ -43,7 +43,7 @@ void loop() {
       haversine_distance = distance(localLatlong.latitude, localLatlong.longitude, destinationLatlong.latitude, destinationLatlong.longitude);
 
       Serial.print("Distance between 2 nodes: ");
-      Serial.print(haversine_distance, 3);
+      Serial.print(haversine_distance);
       Serial.println("m");
 
       displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance);
