@@ -5,7 +5,6 @@
 #define GPS_SERIAL_NUM 1
 #define GPS_RX_PIN 34
 #define GPS_TX_PIN 12
-static const uint32_t GPSBaud = 9600;
 
 HardwareSerial GPSSerial(GPS_SERIAL_NUM);
 TinyGPSPlus gps;
