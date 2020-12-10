@@ -34,6 +34,7 @@ void loop() {
   }
 
   if (receiveLora(localAddress, &destinationLatlong.latitude, &destinationLatlong.longitude)) {
+    // TODO: Takes note of the millis() when other node lat-long is received
     printStatus("Received", &destinationLatlong, destinationAddress, localAddress);
   }
 
@@ -48,6 +49,7 @@ void loop() {
       Serial.print(haversine_distance);
       Serial.println("m");
 
+      // TODO: display how long ago the other node distance was received instead of just millis()
       displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance);
       printStatus("Sent", &localLatlong, localAddress, destinationAddress);
 
