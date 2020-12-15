@@ -2,4 +2,4 @@
 
 void initOLED();
 void displayInitOLED();
-void displayOLED(double, double, double);
+void displayOLED(double, double, double, String);
