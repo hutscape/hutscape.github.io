@@ -5,7 +5,7 @@
 #define GPS_ACCURACY 7
 
 byte localAddress = 0xAA;
-byte destinationAddress = 0xBB;
+byte peerAddress = 0xBB;
 
 bool hasNewGPS = false;
 
@@ -35,13 +35,13 @@ void loop() {
 
   if (receiveLora(localAddress, &destinationLatlong.latitude, &destinationLatlong.longitude)) {
     // TODO: Takes note of the millis() when other node lat-long is received
-    printStatus("Received", &destinationLatlong, destinationAddress, localAddress);
+    printStatus("Received", &destinationLatlong, peerAddress, localAddress);
   }
 
   if (millis() - lastSendTime > interval && hasNewGPS) {
     if (isGPSValid(&localLatlong)) {
       String latlongData = String(localLatlong.latitude, GPS_ACCURACY) + "," + String(localLatlong.longitude, GPS_ACCURACY);
-      sendLora(latlongData, localAddress, destinationAddress);
+      sendLora(latlongData, localAddress, peerAddress);
 
       haversine_distance = distance(localLatlong.latitude, localLatlong.longitude, destinationLatlong.latitude, destinationLatlong.longitude);
 
@@ -51,7 +51,7 @@ void loop() {
 
       // TODO: display how long ago the other node distance was received instead of just millis()
       displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance);
-      printStatus("Sent", &localLatlong, localAddress, destinationAddress);
+      printStatus("Sent", &localLatlong, localAddress, peerAddress);
 
       lastSendTime = millis();
       interval = random(2000) + 1000;
