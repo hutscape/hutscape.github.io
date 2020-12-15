@@ -51,6 +51,23 @@ bool isGPSsameAsLastKnown(struct LatLong *lastKnown, struct LatLong *currentKnow
   return false;
 }
 
+// Calcutaing haversine distance based on 2 Lat-Longs only makes sense
+// if both the Lat-Longs were received around the same time
+bool doesBothPeerHaveGPSAtSimilarTime(long localMillis, long peerMillis) {
+  long seconds = (localMillis - peerMillis)/1000;
+
+  if (seconds < 0) {
+    seconds *= -1;
+  }
+
+  // Similar times = ~5 seconds
+  if (seconds < 5.0) {
+    return true;
+  }
+
+  return false;
+
+}
 // https://rosettacode.org/wiki/Haversine_formula#C
 // Find the distance between 2 lat-long pairs and return the distance in metres, data type double
 double distance(double lat1, double lng1, double lat2, double lng2) {

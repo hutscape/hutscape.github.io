@@ -24,7 +24,7 @@ void displayInitOLED() {
   display.display();
 }
 
-void displayOLED(double latitude, double longitude, String localMillisStr) {
+void displayOLED(double latitude, double longitude, String localMillisStr, double distance, String receivedMillisStr) {
   display.clear();
 
   display.setTextAlignment(TEXT_ALIGN_LEFT);
@@ -34,6 +34,8 @@ void displayOLED(double latitude, double longitude, String localMillisStr) {
   display.drawString(0, 16, String(longitude, 7));
   display.setFont(ArialMT_Plain_10);
   display.drawString(0, 34, localMillisStr + " ago");
+
+  display.drawString(0, 46, String(distance) + "m. away " + receivedMillisStr + " ago");
 
   display.display();
 }

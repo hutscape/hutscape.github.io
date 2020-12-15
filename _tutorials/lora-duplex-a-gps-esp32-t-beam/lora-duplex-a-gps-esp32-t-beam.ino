@@ -9,6 +9,8 @@ byte localAddress = 0xAA;
 byte peerAddress = 0xBB;
 
 unsigned long localGPSFixMillis;
+unsigned long receivedGPSFixMillis;
+unsigned long lastKnownHaversineDistanceMillis;
 
 long lastSendTime = 0;
 int interval = PERIOD;
@@ -35,7 +37,7 @@ void loop() {
   }
 
   if (receiveLora(localAddress, &destinationLatlong.latitude, &destinationLatlong.longitude)) {
-    // TODO: Takes note of the millis() when other node lat-long is received
+    receivedGPSFixMillis = millis();
     printStatus("Received", &destinationLatlong, peerAddress, localAddress);
   }
 
@@ -69,7 +71,20 @@ void loop() {
       Serial.print(localMillisStr);
       Serial.println(" ago");
 
-      displayOLED(localLatlong.latitude, localLatlong.longitude, localMillisStr);
+      if (doesBothPeerHaveGPSAtSimilarTime(localGPSFixMillis, receivedGPSFixMillis)) {
+        haversine_distance = distance(localLatlong.latitude, localLatlong.longitude, destinationLatlong.latitude, destinationLatlong.longitude);
+        Serial.print("Haversine distance: ");
+        Serial.print(haversine_distance);
+        Serial.println("m.");
+
+        lastKnownHaversineDistanceMillis = millis();
+      }
+
+      String peerMillisStr;
+      getReadableTime(lastKnownHaversineDistanceMillis, peerMillisStr);
+
+      displayOLED(localLatlong.latitude, localLatlong.longitude, localMillisStr, haversine_distance, peerMillisStr);
+
 
       lastSendTime = millis();
       interval = random(1000) + PERIOD;
