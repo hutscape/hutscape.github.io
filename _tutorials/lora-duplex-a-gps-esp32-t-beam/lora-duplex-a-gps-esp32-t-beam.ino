@@ -3,14 +3,15 @@
 #include "src/lorap2p/lorap2p.h"
 
 #define GPS_ACCURACY 7
+#define PERIOD 2000
 
 byte localAddress = 0xAA;
 byte peerAddress = 0xBB;
 
-bool hasNewGPS = false;
+unsigned long localGPSFixMillis;
 
 long lastSendTime = 0;
-int interval = 2000;
+int interval = PERIOD;
 long haversine_distance = 0.0;
 
 LatLong localLatlong = {0.0, 0.0};
@@ -30,7 +31,7 @@ void setup() {
 void loop() {
   while (isGPSAvailable()) {
     getLatLong(&localLatlong);
-    hasNewGPS = true;
+    localGPSFixMillis = millis();
   }
 
   if (receiveLora(localAddress, &destinationLatlong.latitude, &destinationLatlong.longitude)) {
@@ -38,7 +39,7 @@ void loop() {
     printStatus("Received", &destinationLatlong, peerAddress, localAddress);
   }
 
-  if (millis() - lastSendTime > interval && hasNewGPS) {
+  if (millis() - lastSendTime > interval) {
     if (isGPSValid(&localLatlong)) {
       String latlongData = String(localLatlong.latitude, GPS_ACCURACY) + "," + String(localLatlong.longitude, GPS_ACCURACY);
       sendLora(latlongData, localAddress, peerAddress);
@@ -49,13 +50,14 @@ void loop() {
       Serial.print(haversine_distance);
       Serial.println("m");
 
-      // TODO: display how long ago the other node distance was received instead of just millis()
-      displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance);
+      String localMillisStr;
+      getReadableTime(localGPSFixMillis, localMillisStr);
+
+      displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance, localMillisStr);
       printStatus("Sent", &localLatlong, localAddress, peerAddress);
 
       lastSendTime = millis();
-      interval = random(2000) + 1000;
-      hasNewGPS = false;
+      interval = random(1000) + PERIOD;
     }
   }
 }
@@ -75,4 +77,38 @@ bool isGPSValid(LatLong *localLatlong) {
   }
 
   return true;
+}
+
+void getReadableTime(long millisTime, String &readableTime) {
+  unsigned long seconds;
+  unsigned long minutes;
+  unsigned long hours;
+  unsigned long days;
+
+  seconds = millisTime / 1000;
+  minutes = seconds / 60;
+  hours = minutes / 60;
+  days = hours / 24;
+  millisTime %= 1000;
+  seconds %= 60;
+  minutes %= 60;
+  hours %= 24;
+
+  if (days > 0) {
+    readableTime = String(days) + " ";
+  }
+
+  if (hours > 0) {
+    readableTime += String(hours) + ":";
+  }
+
+  if (minutes < 10) {
+    readableTime += "0";
+  }
+  readableTime += String(minutes) + ":";
+
+  if (seconds < 10) {
+    readableTime += "0";
+  }
+  readableTime += String(seconds) + " ago";
 }

@@ -24,7 +24,7 @@ void displayInitOLED() {
   display.display();
 }
 
-void displayOLED(double latitude, double longitude, double distance) {
+void displayOLED(double latitude, double longitude, double distance, String localMillisStr) {
   display.clear();
 
   display.setTextAlignment(TEXT_ALIGN_LEFT);
@@ -32,6 +32,8 @@ void displayOLED(double latitude, double longitude, double distance) {
   display.setFont(ArialMT_Plain_16);
   display.drawString(0, 0, String(latitude, 7));
   display.drawString(0, 16, String(longitude, 7));
+  display.setFont(ArialMT_Plain_10);
+  display.drawString(0, 34, localMillisStr + " ago");
 
   display.setFont(ArialMT_Plain_10);
   display.drawString(0, 34, String(distance, 3) + "m. between 2 nodes");
