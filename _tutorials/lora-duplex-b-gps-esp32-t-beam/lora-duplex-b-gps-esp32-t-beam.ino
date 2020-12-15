@@ -15,6 +15,7 @@ int interval = PERIOD;
 long haversine_distance = 0.0;
 
 LatLong localLatlong = {0.0, 0.0};
+LatLong lastKnownLocalLatlong = {0.0, 0.0};
 LatLong destinationLatlong = {0.0, 0.0};
 
 void setup() {
@@ -31,7 +32,6 @@ void setup() {
 void loop() {
   while (isGPSAvailable()) {
     getLatLong(&localLatlong);
-    localGPSFixMillis = millis();
   }
 
   if (receiveLora(localAddress, &destinationLatlong.latitude, &destinationLatlong.longitude)) {
@@ -41,20 +41,35 @@ void loop() {
 
   if (millis() - lastSendTime > interval) {
     if (isGPSValid(&localLatlong)) {
-      String latlongData = String(localLatlong.latitude, GPS_ACCURACY) + "," + String(localLatlong.longitude, GPS_ACCURACY);
-      sendLora(latlongData, localAddress, peerAddress);
 
-      haversine_distance = distance(localLatlong.latitude, localLatlong.longitude, destinationLatlong.latitude, destinationLatlong.longitude);
+      // If new GPS lat-long is received
+      // Then update timestamp
+      // Then send to peer LoRa node
+      if (!isGPSsameAsLastKnown(&lastKnownLocalLatlong, &localLatlong)) {
+        localGPSFixMillis = millis();
 
-      Serial.print("Distance between 2 nodes: ");
-      Serial.print(haversine_distance);
-      Serial.println("m");
+        String latlongData = String(localLatlong.latitude, GPS_ACCURACY) + "," + String(localLatlong.longitude, GPS_ACCURACY);
+        sendLora(latlongData, localAddress, peerAddress);
 
+        lastKnownLocalLatlong.latitude = localLatlong.latitude;
+        lastKnownLocalLatlong.longitude = localLatlong.longitude;
+      }
+
+      // Always display on the OLED with relative time ago
       String localMillisStr;
       getReadableTime(localGPSFixMillis, localMillisStr);
 
-      displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance, localMillisStr);
-      printStatus("Sent", &localLatlong, localAddress, peerAddress);
+      Serial.print("Lat-Long: ");
+      Serial.print(localLatlong.latitude, 7);
+      Serial.print(",");
+      Serial.print(localLatlong.longitude, 7);
+      Serial.print(" at ");
+      Serial.print(localGPSFixMillis);
+      Serial.print("ms. ");
+      Serial.print(localMillisStr);
+      Serial.println(" ago");
+
+      displayOLED(localLatlong.latitude, localLatlong.longitude, localMillisStr);
 
       lastSendTime = millis();
       interval = random(1000) + PERIOD;
@@ -80,15 +95,10 @@ bool isGPSValid(LatLong *localLatlong) {
 }
 
 void getReadableTime(long millisTime, String &readableTime) {
-  unsigned long seconds;
-  unsigned long minutes;
-  unsigned long hours;
-  unsigned long days;
-
-  seconds = millisTime / 1000;
-  minutes = seconds / 60;
-  hours = minutes / 60;
-  days = hours / 24;
+  unsigned long seconds = (millis() - millisTime) / 1000;
+  unsigned long minutes = seconds / 60;
+  unsigned long hours = minutes / 60;
+  unsigned long days = hours / 24;
   millisTime %= 1000;
   seconds %= 60;
   minutes %= 60;
@@ -110,5 +120,5 @@ void getReadableTime(long millisTime, String &readableTime) {
   if (seconds < 10) {
     readableTime += "0";
   }
-  readableTime += String(seconds) + " ago";
+  readableTime += String(seconds);
 }

@@ -33,6 +33,16 @@ void getLatLong(struct LatLong *ll) {
   }
 }
 
+bool isGPSsameAsLastKnown(struct LatLong *lastKnown, struct LatLong *currentKnown) {
+  if (lastKnown->latitude == currentKnown->latitude) {
+    if (lastKnown->longitude == currentKnown->longitude) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 // https://rosettacode.org/wiki/Haversine_formula#C
 // Find the distance between 2 lat-long pairs and return the distance in metres, data type double
 double distance(double lat1, double lng1, double lat2, double lng2) {
