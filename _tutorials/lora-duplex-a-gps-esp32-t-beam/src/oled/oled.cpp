@@ -21,14 +21,6 @@ void displayInitOLED() {
   display.drawString(0, 0, "Waiting for...");
   display.drawString(0, 18, "GPS fix + LoRa");
 
-  display.setFont(ArialMT_Plain_10);
-  display.drawString(0, 36, "?? m. between 2 nodes");
-
-  display.setFont(ArialMT_Plain_10);
-  // TODO: Display how long ago the haversine distance was calculated / received
-  // instead of just millis() which is not useful
-  display.drawString(0, 48, "at " + String(millis()) + " sec");
-
   display.display();
 }
 
