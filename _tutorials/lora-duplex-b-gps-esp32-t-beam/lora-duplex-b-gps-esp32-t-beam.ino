@@ -86,14 +86,6 @@ void printStatus(String status, struct LatLong *ll, byte addressA, byte addressB
   Serial.println(" to 0x" + String(addressB, HEX));
 }
 
-bool isGPSValid(LatLong *localLatlong) {
-  if (localLatlong->latitude == 0.000 || localLatlong->longitude == 0.000) {
-    return false;
-  }
-
-  return true;
-}
-
 void getReadableTime(long millisTime, String &readableTime) {
   unsigned long seconds = (millis() - millisTime) / 1000;
   unsigned long minutes = seconds / 60;

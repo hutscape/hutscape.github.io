@@ -25,6 +25,14 @@ bool isGPSAvailable() {
   return false;
 }
 
+bool isGPSValid(LatLong *localLatlong) {
+  if (localLatlong->latitude == 0.000 || localLatlong->longitude == 0.000) {
+    return false;
+  }
+
+  return true;
+}
+
 void getLatLong(struct LatLong *ll) {
   gps.encode(GPSSerial.read());
   if (gps.location.isUpdated()){
