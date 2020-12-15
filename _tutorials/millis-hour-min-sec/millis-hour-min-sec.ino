@@ -1,9 +1,3 @@
-unsigned long currentMillis;
-unsigned long seconds;
-unsigned long minutes;
-unsigned long hours;
-unsigned long days;
-
 void setup() {
   Serial.begin(9600);
   while (!Serial) { }
@@ -11,6 +5,20 @@ void setup() {
 }
 
 void loop() {
+  String readableTime;
+  getReadableTime(readableTime);
+
+  Serial.println(readableTime);
+  delay(5000);
+}
+
+void getReadableTime(String &readableTime) {
+  unsigned long currentMillis;
+  unsigned long seconds;
+  unsigned long minutes;
+  unsigned long hours;
+  unsigned long days;
+
   currentMillis = millis();
   seconds = currentMillis / 1000;
   minutes = seconds / 60;
@@ -22,26 +30,20 @@ void loop() {
   hours %= 24;
 
   if (days > 0) {
-    Serial.print(days);
-    Serial.print(' ');
+    readableTime = String(days) + " ";
   }
 
   if (hours > 0) {
-    Serial.print(hours);
-    Serial.print(":");
+    readableTime += String(hours) + ":";
   }
 
   if (minutes < 10) {
-    Serial.print('0');
+    readableTime += "0";
   }
-  Serial.print(minutes);
-  Serial.print(":");
+  readableTime += String(minutes) + ":";
 
   if (seconds < 10) {
-    Serial.print('0');
+    readableTime += "0";
   }
-  Serial.print(seconds);
-  Serial.println(" ago");
-
-  delay(5000);
+  readableTime += String(seconds) + " ago";
 }
