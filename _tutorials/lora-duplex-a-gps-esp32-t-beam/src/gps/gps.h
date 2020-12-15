@@ -7,5 +7,6 @@ struct LatLong {
 
 void initGPS();
 bool isGPSAvailable();
+bool isGPSsameAsLastKnown(struct LatLong *, struct LatLong *);
 void getLatLong(struct LatLong *);
 double distance(double lat1, double lng1, double lat2, double lng2);
