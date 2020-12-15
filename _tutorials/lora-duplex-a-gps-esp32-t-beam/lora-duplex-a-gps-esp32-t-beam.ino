@@ -53,7 +53,7 @@ void loop() {
       String localMillisStr;
       getReadableTime(localGPSFixMillis, localMillisStr);
 
-      displayOLED(localLatlong.latitude, localLatlong.longitude, haversine_distance, localMillisStr);
+      displayOLED(localLatlong.latitude, localLatlong.longitude, localMillisStr);
       printStatus("Sent", &localLatlong, localAddress, peerAddress);
 
       lastSendTime = millis();
@@ -80,15 +80,10 @@ bool isGPSValid(LatLong *localLatlong) {
 }
 
 void getReadableTime(long millisTime, String &readableTime) {
-  unsigned long seconds;
-  unsigned long minutes;
-  unsigned long hours;
-  unsigned long days;
-
-  seconds = millisTime / 1000;
-  minutes = seconds / 60;
-  hours = minutes / 60;
-  days = hours / 24;
+  unsigned long seconds = (millis() - millisTime) / 1000;
+  unsigned long minutes = seconds / 60;
+  unsigned long hours = minutes / 60;
+  unsigned long days = hours / 24;
   millisTime %= 1000;
   seconds %= 60;
   minutes %= 60;
@@ -110,5 +105,5 @@ void getReadableTime(long millisTime, String &readableTime) {
   if (seconds < 10) {
     readableTime += "0";
   }
-  readableTime += String(seconds) + " ago";
+  readableTime += String(seconds);
 }
