@@ -27,3 +27,12 @@ Use this code with [duplex a](lora-duplex-a-gps-esp32-t-beam).
 byte localAddress = 0xBB;
 byte destination = 0xAA;
 ```
+
+4 types of information are shown on the OLED display:
+
+1. Local node's latitude, longitude pair
+1. Last time since the local node had a GPS fix
+1. Haversine distance with the peer node
+1. Last time since both the local and peer node could get GPS fix around the same time enough to get a valid Haversine distance
+
+<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-gps-esp32-t-beam-info.jpg" alt="Information displayed on the OLED">
