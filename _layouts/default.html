@@ -21,9 +21,5 @@
 {% if page.url == "/tutorials" or page.url == "/references" %}
   {%- include search.html -%}
 {%- endif -%}
-
-{%- if jekyll.environment == 'production' and site.google_analytics -%}
-  {%- include google-analytics.html -%}
-{%- endif -%}
 </body>
 </html>
