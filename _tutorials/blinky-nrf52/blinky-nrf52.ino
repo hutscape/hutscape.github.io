@@ -1,13 +1,16 @@
 void setup() {
+  Serial.begin(9600);
+  while (!Serial) {}
+
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  // turn the LED ON (HIGH is the voltage level)
+  Serial.println("HIGH");
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
 
-  // turn the LED off by making the voltage LOW
+  Serial.println("LOW");
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
 }
