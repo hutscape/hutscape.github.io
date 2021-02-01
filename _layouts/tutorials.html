@@ -45,6 +45,9 @@ layout: default
     {% else %}
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
       {% highlight c %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.ino %}{% endhighlight %}
+
+      <h2 class="title is-2">Makefile</h2>
+      {% highlight make %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/Makefile %}{% endhighlight %}
     {% endif %}
   </div>
 </section>
