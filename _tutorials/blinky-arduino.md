@@ -9,4 +9,4 @@ references:
     url: https://www.arduino.cc/en/Tutorial/Blink
 ---
 
-Create a blinky LED with Arduino board.
+Create a blinky LED with Arduino UNO board with `ATmega328p` microcontroller.
