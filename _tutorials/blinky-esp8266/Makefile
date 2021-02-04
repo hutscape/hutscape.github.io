@@ -1,7 +1,6 @@
-BOARD?=esp8266com:esp8266:d1_mini
-PORT?=/dev/cu.wchusbserial1410
+BOARD?=esp8266:esp8266:d1_mini
+PORT?=/dev/cu.usbserial-14*
 BUILD=build
-# Arduino CLI version 0.14.0 is used.
 
 .PHONY: default lint all flash clean
 
