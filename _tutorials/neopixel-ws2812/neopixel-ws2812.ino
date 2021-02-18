@@ -4,7 +4,7 @@
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(
     NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-// 60 pixels * 200 ms = 12 seconds to display the entire ring
+// 10 pixels * 200 ms = 2 seconds to display 10 pixels
 #define DELAYVAL 200
 
 void setup() {
@@ -21,16 +21,18 @@ void loop() {
   pixels.clear();
 
   Serial.print("Pixel #1 at ");
-  Serial.print(String(millis()));
-  Serial.println("ms");
+  Serial.print(String(millis()/1000));
+  Serial.println("s");
 
-  for (int i = 0; i < NUMPIXELS; i++) {
+  for (int i = 0; i < 10; i++) {
     pixels.setPixelColor(i, pixels.Color(0, 150, 0));
     pixels.show();
     delay(DELAYVAL);
   }
 
-  Serial.print("Pixel #60 at ");
-  Serial.print(String(millis()));
-  Serial.println("ms");
+  Serial.print("Pixel #10 at ");
+  Serial.print(String(millis()/1000));
+  Serial.println("s");
+
+  delay(2000);
 }

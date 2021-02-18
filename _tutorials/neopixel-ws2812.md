@@ -21,3 +21,15 @@ Install Neopixel library:
 ```sh
 arduino-cli lib install "Adafruit NeoPixel"
 ```
+
+The signals were captured with the Saleae Logic Analyser.
+
+<a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}/WS2818_Arduino_UNO.sal" class="button is-primary">Download Saleae Analyser File</a>
+
+Zoomed out signals:
+
+<img src="{{ site.url }}/assets/images/tutorials/neopixel-ws2812-signal-zoomed-out.png" alt="WS2818 signal captured with 10 pixels">
+
+Magnified signal at a closer look:
+
+<img src="{{ site.url }}/assets/images/tutorials/neopixel-ws2812-signal-zoomed-in.png" alt="WS2818 signal captured with 10 pixels">
