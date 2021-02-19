@@ -1,0 +1,40 @@
+---
+layout: tutorials
+title: Blinky with RaspberryPI Pico
+hardware:
+  - raspberrypi
+  - rpi
+  - pico
+  - rp2040
+references:
+  - name: Pico examples blinky C code
+    url: https://github.com/raspberrypi/pico-examples/tree/master/blink
+  - name: Getting started with RPi pico - installing toolchains and hello world
+    url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
+  - name: Chapter 7 - Creating your own Project, Getting started with Raspberry Pi Pico
+    url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
+code: c
+---
+
+Create a blinky LED with RaspberryPI Pico board with `RP2040` microcontroller using the native C/C++ SDK.
+
+## Install the toolchain on macOS
+
+Refer [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf) PDF document for Linux or Windows.
+
+```sh
+cd CHOOSE_YOUR_PICO_SDK_PATH
+git clone git@github.com:raspberrypi/pico-sdk.git
+
+brew install cmake
+brew tap ArmMbed/homebrew-formulae
+brew install arm-none-eabi-gcc
+
+# vs code extensions
+code --install-extension marus25.cortex-debug
+code --install-extension ms-vscode.cmake-tools
+code --install-extension ms-vscode.cpptools
+
+# environment variable for the pico-sdk installation apth
+export PICO_SDK_PATH=~/PATH/TO/pico-sdk
+```
