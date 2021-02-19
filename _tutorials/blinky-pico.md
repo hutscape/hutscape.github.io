@@ -6,6 +6,7 @@ hardware:
   - rpi
   - pico
   - rp2040
+  - c/c++
 references:
   - name: Pico examples blinky C code
     url: https://github.com/raspberrypi/pico-examples/tree/master/blink
@@ -13,6 +14,8 @@ references:
     url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
   - name: Chapter 7 - Creating your own Project, Getting started with Raspberry Pi Pico
     url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
+  - name: Raspberry Pi Pico SDK
+    url: https://raspberrypi.github.io/pico-sdk-doxygen/
 code: c
 ---
 

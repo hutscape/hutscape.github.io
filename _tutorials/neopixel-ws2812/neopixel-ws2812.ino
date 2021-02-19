@@ -26,6 +26,7 @@ void loop() {
 
   for (int i = 0; i < 10; i++) {
     pixels.setPixelColor(i, pixels.Color(0, 150, 0));
+    // TODO show all pixels at one go after the for loop without a delay
     pixels.show();
     delay(DELAYVAL);
   }
