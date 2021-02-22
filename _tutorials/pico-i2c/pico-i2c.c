@@ -19,7 +19,7 @@ int main() {
   while (true) {
     int addrfound;
 
-    printf("\nI2C Bus Scan for VEML6075\n");
+    printf("\nI2C Bus Scan for Si7021\n");
     printf("   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
 
     for (int addr = 0; addr < (1 << 7); ++addr) {
