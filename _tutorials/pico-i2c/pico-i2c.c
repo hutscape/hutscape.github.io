@@ -9,7 +9,7 @@ bool reserved_addr(uint8_t addr) {
 int main() {
   stdio_init_all();
 
-  // This example will use I2C0 on GPIO4 (SDA) and GPIO5 (SCL)
+  // This example will use I2C0 on GPIO4 (SDA) and GPIO5 (SCL) running at 100kHz
   i2c_init(i2c0, 100 * 1000);
   gpio_set_function(4, GPIO_FUNC_I2C);
   gpio_set_function(5, GPIO_FUNC_I2C);
@@ -19,7 +19,7 @@ int main() {
   while (true) {
     int addrfound;
 
-    printf("\nI2C Bus Scan for Si7021\n");
+    printf("\nI2C Bus Scan for VEML6075\n");
     printf("   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
 
     for (int addr = 0; addr < (1 << 7); ++addr) {
@@ -45,6 +45,6 @@ int main() {
     }
 
     printf("I2C0 bus scan address is at 0x%02x\n", addrfound);
-    sleep_ms(5000);
+    sleep_ms(2000);
   }
 }
