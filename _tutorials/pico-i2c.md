@@ -32,4 +32,4 @@ The I2C address for `Si7021` is `0x40`.
 <img src="{{ site.url }}/assets/images/tutorials/pico-i2c-datasheet-si7021.png" alt="Si7021 datasheet note on the I2C address">
 
 The I2C address for `VCNL4000` is `0x13`.
-<img src="{{ site.url }}/assets/images/tutorials/pico-i2c-datasheet-vcnl4000.png" alt="VCNL4000 datasheet note on the I2C address">
+<img src="{{ site.url }}/assets/images/tutorials/pico-i2c-datasheet-VCNL4000.png" alt="VCNL4000 datasheet note on the I2C address">
