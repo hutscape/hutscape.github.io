@@ -22,7 +22,7 @@ int main() {
   while (true) {
     int addrfound;
 
-    printf("\nI2C Bus Scan for Si7021\n");
+    printf("\nI2C Bus Scan for Si7021 and VCNL4000\n");
     printf("   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
 
     for (int addr = 0; addr < (1 << 7); ++addr) {
@@ -47,7 +47,6 @@ int main() {
       printf(addr % 16 == 15 ? "\n" : "  ");
     }
 
-    printf("I2C0 bus scan address is at 0x%02x\n", addrfound);
     sleep_ms(2000);
   }
 }
