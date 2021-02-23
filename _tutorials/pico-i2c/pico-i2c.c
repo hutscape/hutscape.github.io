@@ -20,8 +20,6 @@ int main() {
   gpio_pull_up(PIN_SCL);
 
   while (true) {
-    int addrfound;
-
     printf("\nI2C Bus Scan for Si7021 and VCNL4000\n");
     printf("   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
 
@@ -41,7 +39,6 @@ int main() {
         printf(".");
       } else {
         printf("@");
-        addrfound = addr;
       }
 
       printf(addr % 16 == 15 ? "\n" : "  ");
