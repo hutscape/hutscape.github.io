@@ -9,6 +9,7 @@ hardware:
   - c/c++
   - i2c
   - Si7021
+  - VCNL4000
 references:
   - name: Pico I2C Bus Scan example code
     url: https://github.com/raspberrypi/pico-examples/blob/master/i2c/bus_scan/bus_scan.c
