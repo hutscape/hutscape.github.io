@@ -17,7 +17,7 @@ references:
   - name: Si70721 Temperature / Humidity datasheet
     url: https://www.silabs.com/documents/public/data-sheets/Si7021-A20.pdf
   - name: Adafruit VCNL4000 proximity sensor dev board
-    url:
+    url: https://www.adafruit.com/product/466
   - name: VCNL4000 datasheet
     url: https://cdn.sparkfun.com/datasheets/BreakoutBoards/vcnl4000.pdf
 code: c
