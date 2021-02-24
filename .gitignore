@@ -14,5 +14,3 @@ _site
 .jekyll-metadata
 build
 node_modules
-
-pico-n*
