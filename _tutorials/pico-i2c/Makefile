@@ -14,6 +14,8 @@ all: clean build
 
 flash:
 	cp build/*.uf2 /Volumes/RPI-RP2
+	sleep 2
+	ls -al /dev/cu.usb*
 
 clean:
 	rm -rf build
