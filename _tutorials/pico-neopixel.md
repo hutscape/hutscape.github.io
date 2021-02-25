@@ -14,6 +14,8 @@ references:
     url: https://github.com/raspberrypi/pico-examples/blob/master/pio/ws2812/ws2812.c
   - name: WS2812 Datasheet
     url: https://cdn-shop.adafruit.com/datasheets/WS2812.pdf
+  - name: Adafruit NeoPixel Überguide
+    url: https://learn.adafruit.com/adafruit-neopixel-uberguide
   - name: Level shifting with Neopixel
     url: https://learn.adafruit.com/neopixel-levelshifter
 code: c
