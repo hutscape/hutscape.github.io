@@ -35,9 +35,9 @@ int main() {
     // OPTION B: comment sleep_ms(500) and view the pixels cascading colors
     put_pixel(urgb_u32(0xff, 0, 0));  // Red
     sleep_ms(500);
-    put_pixel(urgb_u32(0, 0xff, 0));  // Blue
+    put_pixel(urgb_u32(0, 0xff, 0));  // Green
     sleep_ms(500);
-    put_pixel(urgb_u32(0, 0, 0xff));  // Green
+    put_pixel(urgb_u32(0, 0, 0xff));  // Blue
     sleep_ms(500);
     put_pixel(urgb_u32(0xff, 0xff, 0));  // Purple
     sleep_ms(500);
