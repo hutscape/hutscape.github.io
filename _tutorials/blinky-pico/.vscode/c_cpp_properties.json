@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "name": "Mac",
+      "includePath": [
+        "~/Documents/pico/pico-sdk"
+      ],
+      "browse": {
+        "path": [
+          "~/Documents/pico/pico-sdk"
+        ]
+      }
+    }
+  ],
+  "version": 4
+}

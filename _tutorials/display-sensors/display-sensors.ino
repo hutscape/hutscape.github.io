@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SharpMem.h>
 #include <Wire.h>
@@ -12,16 +13,23 @@ Adafruit_Si7021 sensor = Adafruit_Si7021();
 #define SHARP_SS   7
 
 #define VBAT_PIN          (A7)
-#define VBAT_MV_PER_LSB   (0.73242188F)   // 3.0V ADC range and 12-bit ADC resolution = 3000mV/4096
-#define VBAT_DIVIDER      (0.71275837F)   // 2M + 0.806M voltage divider on VBAT = (2M / (0.806M + 2M))
-#define VBAT_DIVIDER_COMP (1.403F)        // Compensation factor for the VBAT divider
+
+// 3.0V ADC range and 12-bit ADC resolution = 3000mV/4096
+#define VBAT_MV_PER_LSB   (0.73242188F)
+
+// 2M + 0.806M voltage divider on VBAT = (2M / (0.806M + 2M))
+#define VBAT_DIVIDER      (0.71275837F)
+
+// Compensation factor for the VBAT divider
+#define VBAT_DIVIDER_COMP (1.403F)
 
 Adafruit_SharpMem display(SHARP_SCK, SHARP_MOSI, SHARP_SS, 144, 168);
 
 #define BLACK 0
 #define WHITE 1
 
-bool debug = false; // toggle true or false to enable serial console debug messages
+// toggle true or false to enable serial console debug messages
+bool debug = false;
 
 struct SensorValues {
   int vbat_raw;
@@ -71,7 +79,7 @@ void initDisplay(void) {
 }
 
 void initUVSensor(void) {
-  if (! uv.begin() && debug) {
+  if (!uv.begin() && debug) {
     Serial.println("Failed to communicate with VEML6075 sensor, check wiring?");
   }
   if (debug) {
@@ -90,7 +98,7 @@ void initTempHumiditySensor(void) {
 
 void initBatt(void) {
   analogReference(AR_INTERNAL_3_0);
-  analogReadResolution(12); // Can be 8, 10, 12 or 14
+  analogReadResolution(12);  // Can be 8, 10, 12 or 14
   delay(1);
 }
 
@@ -98,22 +106,17 @@ uint8_t mvToPercent(float mvolts) {
     uint8_t battery_level;
 
     if (mvolts >= 3000) {
-        battery_level = 100;
-    }
-    else if (mvolts > 2900) {
-        battery_level = 100 - ((3000 - mvolts) * 58) / 100;
-    }
-    else if (mvolts > 2740) {
-        battery_level = 42 - ((2900 - mvolts) * 24) / 160;
-    }
-    else if (mvolts > 2440) {
-        battery_level = 18 - ((2740 - mvolts) * 12) / 300;
-    }
-    else if (mvolts > 2100) {
-        battery_level = 6 - ((2440 - mvolts) * 6) / 340;
-    }
-    else {
-        battery_level = 0;
+      battery_level = 100;
+    } else if (mvolts > 2900) {
+      battery_level = 100 - ((3000 - mvolts) * 58) / 100;
+    } else if (mvolts > 2740) {
+      battery_level = 42 - ((2900 - mvolts) * 24) / 160;
+    } else if (mvolts > 2440) {
+      battery_level = 18 - ((2740 - mvolts) * 12) / 300;
+    } else if (mvolts > 2100) {
+      battery_level = 6 - ((2440 - mvolts) * 6) / 340;
+    } else {
+      battery_level = 0;
     }
 
     return battery_level;
@@ -144,16 +147,16 @@ void displayUV(float uvindex, float uva, float uvb) {
     Serial.print(uvb, 2);
   }
 
-  display.setCursor(10,10);
+  display.setCursor(10, 10);
   display.println("UV index");
-  display.setCursor(10,30);
+  display.setCursor(10, 30);
   display.println(uvindex, 0);
 
-  display.setCursor(10,65);
+  display.setCursor(10, 65);
   display.print("UVA ");
   display.println(uva, 0);
 
-  display.setCursor(10,85);
+  display.setCursor(10, 85);
   display.print("UVB ");
   display.println(uvb, 0);
 }
@@ -167,12 +170,12 @@ void displayTempHumidity(float temperature, float humidity) {
     Serial.println(" RH%");
   }
 
-  display.setCursor(10,120);
+  display.setCursor(10, 120);
   display.print("Temp ");
   display.print(temperature, 0);
   display.println(" C");
 
-  display.setCursor(10,140);
+  display.setCursor(10, 140);
   display.print("Hum ");
   display.print(humidity, 0);
   display.println(" RH%");

@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <SPI.h>
 #include "epd1in54.h"
 #include "epdpaint.h"

@@ -4,9 +4,6 @@
 *.DS_Store
 *.hex
 
-# IDE
-.vscode
-
 ideas
 _site
 .sass-cache

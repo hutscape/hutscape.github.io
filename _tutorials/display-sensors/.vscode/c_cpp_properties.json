@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "name": "Mac",
+      // "includePath": [
+      //   "~/Documents/Arduino/libraries"
+      // ],
+      // "browse": {
+      //   "path": [
+      //     "~/Documents/Arduino/libraries"
+      //   ]
+      // }
+    }
+  ],
+  "version": 4
+}
