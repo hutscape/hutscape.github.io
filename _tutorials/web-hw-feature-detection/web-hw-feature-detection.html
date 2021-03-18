@@ -1,0 +1,21 @@
+<p>Please open the browser dev console to view whether geolocation, web ble and web usb are available in this browser.</p>
+
+<script>
+  if (navigator.geolocation) {
+    console.log('%c Geolocation API is available in this browser!', 'color: #006400')
+  } else {
+    console.log('%c Geolocation API is not available in this browser.', 'color: #8b0000')
+  }
+
+  if (navigator.bluetooth) {
+    console.log('%c Web Bluetooth API is available in this browser!', 'color: #006400')
+  } else {
+    console.log('%c Web Bluetooth API is not available in this browser.', 'color: #8b0000')
+  }
+
+  if (navigator.usb) {
+    console.log('%c Web USB API is available in this browser!', 'color: #006400')
+  } else {
+    console.log('%c Web USB API is not available in this browser.', 'color: #8b0000')
+  }
+</script>
