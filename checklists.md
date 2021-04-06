@@ -13,7 +13,7 @@ sequence: 1
     <span class="panel-icon">
       <i class="fas fa-book" aria-hidden="true"></i>
     </span>
-    <strong>{{ checklist.title }}</strong> - {{ checklist.description }}
+    <strong>{{ checklist.title }}</strong> : {{ checklist.description }}
   </a>
   {% endfor %}
 </nav>
