@@ -17,9 +17,9 @@ checks:
   - title: 📝 Capabilities
     subtitle: Check with the online PCB manufacturer's capabilities page. Approximate safe numbers are in brackets, but always better to check the capabilities page again!
     list:
+      - name: Maximum and minimum dimension of a PCB
       - name: Number of layers (2)
       - name: Material (FR-4)
-      - name: Maximum and minimum dimension of a PCB
       - name: Board thickness (1.6mm)
       - name: Minimum trace
       - name: Minimum spacing

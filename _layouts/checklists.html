@@ -2,38 +2,45 @@
 layout: default
 ---
 
-<section class="section is-small">
+<section class="section is-medium">
   <div class="container">
     <h1 class="title is-1 has-background-info-light">{{ page.title | escape }}</h1>
     <p class="subtitle">{{ page.description | escape }}</p>
-    <hr>
-    {% for check in page.checks %}
-      <h2 class="title is-2 has-background-warning-light">{{check.title}}</h2>
-      {%- if check.subtitle -%}
-      <p class="subtitle is-4">{{check.subtitle}}</p>
+  </div>
+</section>
+
+{% for check in page.checks %}
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">{{check.title}}</h2>
+    {%- if check.subtitle -%}
+    <p class="subtitle is-4">{{check.subtitle}}</p>
+    {% endif %}
+
+    <div class="content is-medium">
+      <ul>
+        {% for li in check.list %}
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            {{ li.name }}
+          </label>
+        </li>
+        {% endfor %}
+      </ul>
+
+      {%- if check.image -%}
+      <img src="/assets/images/checklists/{{ check.image }}">
       {% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}
 
-      <div class="content is-medium">
-        <ul>
-          {% for li in check.list %}
-          <li>
-            <label class="checkbox">
-              <input type="checkbox">
-              {{ li.name }}
-            </label>
-          </li>
-          {% endfor %}
-        </ul>
-
-        {%- if check.image -%}
-        <img src="/assets/images/checklists/{{ check.image }}">
-        {% endif %}
-      </div>
-    {% endfor %}
-
+<section class="section">
+  <div class="container">
     {%- if page.references -%}
-    <hr>
-    <h2 class="title is-2">References</h2>
+    <h2 class="title is-2">📚 References</h2>
 
     <div class="content">
       <ul>
