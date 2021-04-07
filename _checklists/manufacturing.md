@@ -1,9 +1,9 @@
 ---
 layout: checklists
-title: PCB Manufacturing
+title: 🏭 PCB Manufacturing
 description: Check with PCB manufacturer's capabilities and specifications
 checks:
-  - title: Constrains
+  - title: ⏹ Constraints
     subtitle: Checks for a simple prototype PCB
     list:
       - name: <strong>2 Layer board</strong>, not multi-layered board
@@ -11,10 +11,10 @@ checks:
       - name: <strong>Low voltage of 3.3V / 5V</strong>, not high voltage
       - name: <strong>Direct Current</strong>, not Alternating Current
       - name: <strong>Low speed signals</strong>, not high speed signals (50MHz to 3GHz)
-      - name: PCB not used in industrial, aerospace, millitary, medical and any other restricted industry
       - name: <strong>5 or lesser number of boards</strong>, not above 100
+      - name: PCB not used in industrial, aerospace, millitary, medical and any other restricted industry
 
-  - title: Capabilities
+  - title: 📝 Capabilities
     subtitle: Check with the online PCB manufacturer's capabilities page. Approximate safe numbers are in brackets, but always better to check the capabilities page again!
     list:
       - name: Number of layers (2)
@@ -28,7 +28,7 @@ checks:
       - name: Minimum width of annular ring
       - name: Minimum character / text height
 
-  - title: Specifications
+  - title: 📄 Specifications
     subtitle: Online order page options. Most common options for affordability are in brackets, but always check with the ordering page!
     list:
       - name: Dimensions
