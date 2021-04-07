@@ -4,16 +4,16 @@ layout: default
 
 <section class="section is-small">
   <div class="container">
-    <h1 class="title is-1">{{ page.title | escape }}</h1>
+    <h1 class="title is-1 has-background-info-light">{{ page.title | escape }}</h1>
     <p class="subtitle">{{ page.description | escape }}</p>
     <hr>
     {% for check in page.checks %}
-      <h2 class="title is-2">{{check.title}}</h2>
+      <h2 class="title is-2 has-background-warning-light">{{check.title}}</h2>
       {%- if check.subtitle -%}
-      <p class="subtitle is-4">{{check.subtitle}}:</p>
+      <p class="subtitle is-4">{{check.subtitle}}</p>
       {% endif %}
 
-      <div class="content">
+      <div class="content is-medium">
         <ul>
           {% for li in check.list %}
           <li>
