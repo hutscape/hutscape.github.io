@@ -3,7 +3,7 @@
 
 const int csPin = 5;
 const int resetPin = 6;
-const int irqPin = 1;
+const int irqPin = 1; // alternate pin: D11
 
 byte localAddress = 0xAA;
 byte destinationAddress = 0xBB;
