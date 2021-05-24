@@ -3,26 +3,28 @@ layout: checklists
 title: 🔂 Layouts
 description: Making layouts
 checks:
+  - title: Extra footprints to include apart from the netlist
+      - name: Mounting holes
+      - name: OSHW Logo
   - title: 🕹 Component placement
     list:
       - name: Ensure Bill of Materials with vendor links and datasheets are ready
       - name: Refer to the correct datasheet version number
       - name: Check manufacturer capabilities on via size and track width
-      - name: Define Net Classes
+      - name: Define Net Classes E.g. `VBAT`, `VBUS`, `3V3` are power
       - name: Select mostly SMD components with size <code>0805</code>
       - name: Draw the edge cuts layer to contain all components with grid size <code>1.000mm</code>
       - name: Round all sharp edges on the edge cuts layer with grid size <code>25 mils</code>
-      - name: Place components into functional building blocks where possible
-      - name: Place connectors, LEDs, switches, buttons and antennas for mechanical considerations with grid <code>25 mils</code>
-      - name:  Adjust components for less congested routing and space signal traces far apart
-      - name: Add multiple LED indictors to show power on each rail and some digital functioning
-      - name: Add isolation jumpers to isolate power from some circuits for  debugging
+      - name: Group components into functional building blocks where possible
+      - name: Place connectors, battery holders, LEDs, switches, buttons and antennas for mechanical considerations with grid <code>25 mils</code>
+      - name: Lock footprint for big components
+      - name: Adjust components for less congested routing and space signal traces far apart
     image: net-class.png
   - title: Routing
     list:
       - name: Lay down power and ground planes first
       - name: Connect all the power and ground tracks to the planes
-      - name: Layout critical tracks and route them first E.g. differential pairs
+      - name: Layout critical tracks and route them first E.g. uUSB differential pairs
       - name: Place decoupling capacitors physically and electrically close to the desired components
       - name: Snake tracks around the board
       - name: Use standard grid size <code>10 mils</code> for routing traces
@@ -35,7 +37,7 @@ checks:
       - name: Add getting started URL
       - name: Add <code>+</code> and <code>-</code> annotations to all power connectors
       - name: Add voltage values to all power connectors
-      - name: Add notes beside all optional components
+      - name: Add notes beside all optional components E.g. `DNP`
       - name: Add placement marks for components
       - name: Add any info on assembly, test and bringing up the board
   - title: After layout
@@ -47,8 +49,9 @@ checks:
       - name: "Export layers <code>F.Cu</code>, <code>B.Cu</code>, <code>F.SilkS</code> <code>B.SilkS</code>, <code>F.Mask</code>, <code>B.Mas</code>, <code>Edge.Cuts</code> in Gerber format"
       - name: "Export drill files <code>NPTH.drl</code>, <code>PTH.drl</code>"
       - name: Check Gerber format layer by layer
-      - name: Check Solder mask openings smaller than the solder pad
+      - name: Check Solder mask openings smaller than the solder pad for stencils
       - name: Check no text on solder pads
+      - name: Generate Drill map table and import as a graphic in the layout
 references:
   - name: OSHPark manufacturing guidelines
     url: https://docs.oshpark.com/submitting-orders/drill-specs/

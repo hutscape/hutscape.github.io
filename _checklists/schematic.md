@@ -21,6 +21,17 @@ checks:
       - name: Place decoupling capacitors next to their devices
       - name: Keep names reasonably short
       - name: Use uppercase symbol names
+  - title: Extra things to include in a schematic
+      - name: URL references
+      - name: Pin mappings
+      - name: Notes
+      - name: Power LED
+      - name: Battery measurement circuit
+      - name: Microcontroller bootloader circuit E.g. SWD JTAG
+      - name: TX/RX LED
+      - name: Test points
+      - name: Multiple LED indictors to show power on each rail and some digital functioning
+      - name: Isolation jumpers to isolate power from some circuits for debugging
   - title: Title blocks
     list:
       - name: Include name of the circuit

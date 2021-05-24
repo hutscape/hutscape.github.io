@@ -9,7 +9,7 @@ checks:
       - name: Element14
       - name: Mouser
       - name: DigiKey
-  - title: Spreadsheet column titles
+  - title: BOM exported from KiCad
     list:
       - name: Designator
       - name: Value
@@ -23,7 +23,15 @@ checks:
       - name: Vendor name
       - name: Link to Vendor item
       - name: Unit Cost
-      - name: "Total Cost <code>( Max(Quantity, Minimum Order) * Unit Cost)</code>"
+      - name: Total Cost
       - name: Minimum Order Quantity
       - name: Description
+  - title: Extra BOM items to add after exporting from KiCad
+    list:
+      - name: Antenna
+      - name: Battery
+      - name: Screw
+      - name: Nuts
+      - name: spacers
+      - name: standoffs
 ---
