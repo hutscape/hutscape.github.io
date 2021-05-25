@@ -7,7 +7,7 @@ checks:
     list:
       - name: Refer to the correct datasheet version number
       - name: Ensure the correct unit of measurement is used
-        
+
   - title: Silkscreen
     list:
       - name: Label all power pins at the minimum
@@ -24,7 +24,7 @@ checks:
       - name: Add getting started URL
       - name: Add <code>+</code> and <code>-</code> annotations to all power connectors
       - name: Add voltage values to all power connectors
-      - name: Add notes beside all optional components   
+      - name: Add notes beside all optional components
       - name: Add placement marks for components
       - name: Add any info on assembly, test and bringing up the board
   - title: After layout
@@ -37,7 +37,7 @@ checks:
       - name: "Export drill files <code>NPTH.drl</code>, <code>PTH.drl</code>"
       - name: Check Gerber format layer by layer
       - name: Check Solder mask openings smaller than the solder pad
-      - name: Check no text on solder pads   
+      - name: Check no text on solder pads
 references:
   - name: OSHPark manufacturing guidelines
     url: https://docs.oshpark.com/submitting-orders/drill-specs/

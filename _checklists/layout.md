@@ -1,9 +1,10 @@
 ---
 layout: checklists
-title: 🔂 Layouts
+title: Layouts
 description: Making layouts
 checks:
   - title: Extra footprints to include apart from the netlist
+    list:
       - name: Mounting holes
       - name: OSHW Logo
   - title: 🕹 Component placement
@@ -11,12 +12,12 @@ checks:
       - name: Ensure Bill of Materials with vendor links and datasheets are ready
       - name: Refer to the correct datasheet version number
       - name: Check manufacturer capabilities on via size and track width
-      - name: Define Net Classes E.g. `VBAT`, `VBUS`, `3V3` are power
+      - name: Define Net Classes E.g. <code>VBAT</code>, <code>VBUS</code>, <code>3V3</code> are power
       - name: Select mostly SMD components with size <code>0805</code>
       - name: Draw the edge cuts layer to contain all components with grid size <code>1.000mm</code>
-      - name: Round all sharp edges on the edge cuts layer with grid size <code>25 mils</code>
-      - name: Group components into functional building blocks where possible
-      - name: Place connectors, battery holders, LEDs, switches, buttons and antennas for mechanical considerations with grid <code>25 mils</code>
+      - name: Round all sharp edges on the edge cuts layer
+      - name: Group components into functional building blocks where possible with grid <code>25 mils</code>
+      - name: Place connectors, battery holders, LEDs, switches, buttons and antennas for mechanical considerations  with grid <code>25 mils</code>
       - name: Lock footprint for big components
       - name: Adjust components for less congested routing and space signal traces far apart
     image: net-class.png
@@ -37,7 +38,7 @@ checks:
       - name: Add getting started URL
       - name: Add <code>+</code> and <code>-</code> annotations to all power connectors
       - name: Add voltage values to all power connectors
-      - name: Add notes beside all optional components E.g. `DNP`
+      - name: Add notes beside all optional components E.g. <code>DNP</code>
       - name: Add placement marks for components
       - name: Add any info on assembly, test and bringing up the board
   - title: After layout
@@ -52,11 +53,15 @@ checks:
       - name: Check Solder mask openings smaller than the solder pad for stencils
       - name: Check no text on solder pads
       - name: Generate Drill map table and import as a graphic in the layout
+      - name: Git tag the gerber compressed folder and create a release <code>git tag -a V1.0 -m "V1.0" && git push --tags</code>
+      - name: Edit the release tag to <a href="https://github.com/hutscape/oak/releases/tag/V1.0">add the gerber zip folder</a>
 references:
   - name: OSHPark manufacturing guidelines
     url: https://docs.oshpark.com/submitting-orders/drill-specs/
   - name: JLCPCB manufacturing capabilities
     url: https://jlcpcb.com/capabilities/Capabilities
+  - name: PCBWay manufacturing capabilities
+    url: https://www.pcbway.com/capabilities.html
   - name: PCB Design Tutorial
     url: https://alternatezone.com/electronics/files/PCBDesignTutorialRevA.pdf
   - name: Seven Habits of Successful 2-Layer Board Designers

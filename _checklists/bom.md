@@ -26,6 +26,7 @@ checks:
       - name: Total Cost
       - name: Minimum Order Quantity
       - name: Description
+      - name: DNP
   - title: Extra BOM items to add after exporting from KiCad
     list:
       - name: Antenna

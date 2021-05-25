@@ -22,6 +22,7 @@ checks:
       - name: Keep names reasonably short
       - name: Use uppercase symbol names
   - title: Extra things to include in a schematic
+    list:
       - name: URL references
       - name: Pin mappings
       - name: Notes
