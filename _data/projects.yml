@@ -5,9 +5,14 @@
   version: "1.0"
 
   wireless: LoRa
-  mcu: SAMD21E
+  mcu: SAMD21G18
   sensor: GPS
-  power: LiPo
+  power: 18650
+
+  cogs_usd: "78.93"
+  cogs_sgd: "105.70"
+  bom: 82
+  vendors: 6
 
   status: ongoing
 

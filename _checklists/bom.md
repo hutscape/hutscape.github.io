@@ -35,4 +35,5 @@ checks:
       - name: Nuts
       - name: spacers
       - name: standoffs
+      - name: Manufacturing and Assembly
 ---
