@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Standards
+title: © Standards
 description: Standard parts and processes to use across projects
 checks:
   - title: Parts

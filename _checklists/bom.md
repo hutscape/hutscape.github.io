@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: BOM
+title: 📝 BOM
 description: Bill of Materials for electrical, mechanical and power
 checks:
   - title: Online E-commerce

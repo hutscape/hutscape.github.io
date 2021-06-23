@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Schematic
+title: 📑 Schematic
 description: Good schematics checklist
 checks:
   - title: Good schematic checklist

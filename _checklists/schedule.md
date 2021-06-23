@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Schedule
+title: 📆 Schedule
 description: Checklist for various activities for each phase of the schedule
 checks:
   - title: Concept

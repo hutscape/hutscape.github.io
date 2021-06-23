@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Buying
+title: 💰 Buying
 description: Before buying a breakout board, component, etc
 checks:
   - title: Chips

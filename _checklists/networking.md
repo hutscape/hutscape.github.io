@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Computer Networking
+title: 🕸 Computer Networking
 description: Things to check for WiFi connectivity to the devices
 checks:
   - title: WiFi

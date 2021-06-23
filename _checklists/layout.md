@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Layouts
+title: 🔀 Layouts
 description: Making complete PCB layouts
 checks:
   - title: Optional footprints to include apart from the netlist

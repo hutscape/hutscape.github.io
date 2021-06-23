@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Datasheets
+title: 📄 Datasheets
 description: Good practices to incorporate in a datasheet
 checks:
   - title: Datasheets

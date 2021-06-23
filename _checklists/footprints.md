@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Footprints
+title: 🎛 Footprints
 description: Create component footprints from scratch
 checks:
   - title: Mechanical

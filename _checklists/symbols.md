@@ -1,6 +1,6 @@
 ---
 layout: checklists
-title: Symbols
+title: Ω Symbols
 description: Creating symbols in an ECAD software
 checks:
   - title: New
