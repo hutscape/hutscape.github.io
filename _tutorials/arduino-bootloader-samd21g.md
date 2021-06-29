@@ -1,11 +1,14 @@
 ---
 layout: tutorials
-title: Burning Arduino bootloader on MCU SAMD21G
+title: Burning Arduino bootloader on MCU SAMD21G with J-Link Segger
 hardware:
   - samd21g
   - arduino
   - bootloader
   - swd
+  - j-link
+  - segger
+has_code: false
 references:
   - name: Arduino Core for SAMD21G to make the bootloader file
     url: https://github.com/arduino/ArduinoCore-samd
@@ -33,10 +36,9 @@ references:
     url: https://learn.sparkfun.com/tutorials/arm-programming
   - name: J-Link model overview
     url: https://www.segger.com/products/debug-probes/j-link/models/model-overview/
-has_code: false
 ---
 
-A custom **crystalless** PCB with SAMD21G and PWD pins are required to upload the Arduino bootloader in the bare micro-controller.
+A custom **crystalless** PCB with SAMD21G and SWD pins are required to upload the Arduino bootloader in the bare micro-controller. This method uses the J-Link Segger
 
 ## Create the bootloader file
 
