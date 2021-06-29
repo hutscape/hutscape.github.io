@@ -44,7 +44,7 @@ A custom **crystalless** PCB with SAMD21G and SWD pins are required to upload th
 
 1. Clone [ArduinoCore-samd](https://github.com/arduino/ArduinoCore-samd)
 1. Go to folder `/bootloaders/zero`
-1. (Option) Edit `Makefile` line `66` for **crystalless** board
+1. (Option) Append `Makefile` line `66` for **crystalless** board with `-DCRYSTALLESS`
     ```c
     CFLAGS_EXTRA=-D__SAMD21G18A__ -DBOARD_ID_$(BOARD_ID) -D$(SAM_BA_INTERFACES) -DCRYSTALLESS
     ```
@@ -62,7 +62,7 @@ A custom **crystalless** PCB with SAMD21G and SWD pins are required to upload th
 ## Burn the bootloader
 
 1. Download and open [SEGGER J-Flash Lite](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
-1. Connect the J-Link SEGGER with PWD pins to the PCB
+1. Connect the J-Link SEGGER with SWD pins to the PCB
     <img src="{{ site.url }}/assets/images/tutorials/arduino-bootloader-samd21g-pinout.png" alt="J-Link pinout mapping to SWD pins">
     <img src="{{ site.url }}/assets/images/tutorials/arduino-bootloader-samd21g-ribbon.JPG" alt="Connecting the J-Link SEGGER via the ribbon cable to the pogo pins">
 1. Choose the created bootloader data file `samd21_sam_ba.bin`
