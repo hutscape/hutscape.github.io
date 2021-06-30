@@ -1,6 +1,8 @@
 # hutscape
 
-> Exploring low power wireless sensor networks with practical everyday things
+> Everyday practical home automation projects
+
+**Made with open source hardware and software**
 
 🍶 🗝 🎐 🧺 👜 🔋 📦 📃 🚪 💡 🏡
 
