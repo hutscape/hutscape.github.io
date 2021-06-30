@@ -1,7 +1,7 @@
 - name: Oak
   sequence: 4
   url: /oak
-  description: 🌳 Measure outdoor distance between 2 keychain holders 🔑
+  description: 🌳 Outdoor LoRa-GPS tracker with E-Ink display 🔑
   version: "1.0"
 
   wireless: LoRa
@@ -19,7 +19,7 @@
 - name: Pine
   sequence: 3
   url: /pine
-  description: 🌲 Control aircon by monitoring temperature in other parts of the room 🎐
+  description: 🌲 Indoor Infrared receiver and transmitter with temperature sensor 🎐
   version: "1.0"
 
   wireless: Infrared
@@ -38,7 +38,7 @@
 - name: Palm
   sequence: 2
   url: /palm
-  description: 🌴 Get alerted on excessive UV radiation with a backpack keychain 🗝
+  description: 🌴 Outdoor BLE-connected UV sensor keychain 🗝
   version: "1.0"
 
   wireless: BLE
@@ -59,7 +59,7 @@
 - name: Cactus
   sequence: 1
   url: /cactus
-  description: 🌵 Measure humidity in kitchen cupboards to keep food fresh 🍶
+  description: 🌵 Indoor WiFi-connected temperature and humidity sensor 🍶
   version: "1.0"
 
   wireless: WiFi
