@@ -36,7 +36,7 @@ layout: default
           </div>
           <div class="level-right">
             {% if project.completion %}
-            <p class="has-text-grey is-size-7">{{ project.completion }}</p>
+            <p class="has-text-grey is-size-7">Completed in {{ project.completion }}</p>
             {% else %}
             <span class="tag is-warning is-size-7">ongoing</span>
             {% endif %}
