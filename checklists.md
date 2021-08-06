@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Checklists
+subtitle: Good checklists to go through!
 permalink: /checklists
 sequence: 1
+type: header
 ---
-
-<p class="subtitle">Good checklists to go through!</p>
 
 <nav class="panel">
   {% for checklist in site.checklists %}

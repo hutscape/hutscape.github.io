@@ -1,6 +1,6 @@
-{% assign pages = site.pages | sort: 'sequence' %}
+{% assign pages = site.pages | sort: 'sequence' | where: 'type', 'header' %}
 
-<nav class="navbar is-spaced has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ "/" | relative_url }}"> {{ site.title | escape }} </a>
 

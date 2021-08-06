@@ -3,6 +3,7 @@ layout: page
 title: Tutorials
 permalink: /tutorials
 sequence: 2
+type: header
 ---
 
 <p class="subtitle">List of getting started tutorials with <a href="https://stackoverflow.com/help/mcve">minimal, reproducible, complete code</a> where applicable.</p>
