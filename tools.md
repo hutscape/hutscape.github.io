@@ -2,11 +2,11 @@
 layout: page
 title: Tools
 subtitle: Stuff we use and we love!
-permalink: /shop
+permalink: /tools
 sequence: 3
 type: header
 
-shops:
+tools:
   - topic: Hardware lab
     list:
       - name: Hot air gun
@@ -82,13 +82,13 @@ shops:
   </div>
 </div>
 
-{% for shop in page.shops %}
+{% for tool in page.tools %}
 <div class="block">
   <div class="container">
-    <h2 class="title is-2">{{ shop.topic }}</h2>
+    <h2 class="title is-2">{{ tool.topic }}</h2>
     <div class="content is-medium">
       <ul>
-        {% for li in shop.list %}
+        {% for li in tool.list %}
           <li>
             {{ li.name }}
               {% for url in li.urls %}
