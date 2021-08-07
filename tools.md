@@ -25,6 +25,10 @@ tools:
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_AS3uzg
+      - name: Flux
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_Amhmyw
       - name: Pin headers
         urls:
           - website: Amazon
@@ -39,10 +43,10 @@ tools:
         urls:
           - website: KiCad
             url: https://www.kicad.org/
-      - name: Parts zip-lock bags
+      - name: Resealable clear plastic zip-lock bags
         urls:
           - website: AliExpress
-            url: https://s.click.aliexpress.com/e/_A1eCVK
+            url: https://s.click.aliexpress.com/e/_9v8jvY
       - name: Stackable storage boxes
         urls:
           - website: IKEA
@@ -73,6 +77,10 @@ tools:
         urls:
           - website: Uppbeat
             url: https://uppbeat.io?referral=sayanee-8wzr3
+      - name: Scripting
+        urls:
+          - website: Grammarly
+            url: https://www.grammarly.com/
 
 ---
 
