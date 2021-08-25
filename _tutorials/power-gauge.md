@@ -1,9 +1,9 @@
 ---
 layout: tutorials
 title: Power gauge
-hardware:
-  - arduino
-  - uno
+dev_board: Arduino UNO
+tool: USB Power gauge
+features:
   - usb
   - power
   - gauge

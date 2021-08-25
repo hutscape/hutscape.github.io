@@ -1,9 +1,10 @@
 ---
 layout: tutorials
 title: Maximum deep sleep
-hardware:
-  - esp8266
-  - WeMos
+dev_board: WeMos D1 mini
+chips:
+  - ESP8266
+features:
   - sleep
   - wakeup
 references:

@@ -1,12 +1,26 @@
 ---
 layout: tutorials
 title: Sharp display
-hardware:
+
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit nRF52 nrfutil
+    url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
+  - name: Adafruit SHARP memory display firmware
+    url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display
+
+dev_board: Adafruit Feather Bluefruit
+chips:
   - nRF52
-  - bluefruit
-  - adafruit
+features:
   - sharp
   - display
+
+prerequisites:
+  - name: Blinky nRF52
+    url: ./blinky-nrf52
+
 references:
   - name: Adafruit SHARP memory display firmware
     url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino

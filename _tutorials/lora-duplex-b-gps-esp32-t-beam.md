@@ -1,13 +1,26 @@
 ---
 layout: tutorials
 title: LoRa GPS Duplex B with ESP32 T-Beam
-hardware:
-  - arduino
-  - esp32
-  - t-beam
-  - lora
+
+dependancies:
+  - name: Arduino LoRa firmware
+    url: https://github.com/sandeepmistry/arduino-LoRa
+prerequisites:
+  - name: Haversine
+    url: ./haversine
+  - name: LoRa Duplex A with ESP32 T-Beam
+    url: ./lora-duplex-a-esp32-t-beam
+  - name: LoRa GPS Duplex A with ESP32 T-Beam
+    url: ./lora-duplex-a-gps-esp32-t-beam
+dev_board: LilyGO T-Beam
+chips:
+  - ESP32
+features:
+  - LoRa
   - duplex
+sensors:
   - gps
+
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa

@@ -1,8 +1,8 @@
 ---
 layout: tutorials
 title: Send command via serial monitor
-hardware:
-  - arduino
+dev_board: Arduino UNO
+features:
   - serial
 ---
 

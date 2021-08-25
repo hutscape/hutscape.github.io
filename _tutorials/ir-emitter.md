@@ -1,12 +1,18 @@
 ---
 layout: tutorials
 title: IR Emitter
-hardware:
-  - arduino
-  - uno
+dependancies:
+  - name: IRLib2
+    url: https://github.com/cyborg5/IRLib2
+dev_board: Arduino UNO
+chips:
+  - ATmega328p
+features:
   - infrared
   - IR
   - emitter
+sensors:
+  - infrared
 prerequisites:
   - name: IR Receiver
     url: ./ir-receiver

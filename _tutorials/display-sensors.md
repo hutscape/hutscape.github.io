@@ -1,16 +1,23 @@
 ---
 layout: tutorials
 title: Display sensor values
-hardware:
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit Si7021
+    url: https://github.com/adafruit/Adafruit_Si7021
+  - name: Adafruit VEML6075
+    url: https://github.com/adafruit/Adafruit_VEML6075
+chips:
   - nRF52
-  - bluefruit
-  - adafruit
+  - VEML6075
+  - Si7021
+dev_board: Adafruit Feather Bluefruit
+features:
   - LiPo
-  - uv
+  - UV
   - temperature
   - humidity
-  - veml6075
-  - si7021
 references:
   - name: Adafruit Si7021 firmware
     url: https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino

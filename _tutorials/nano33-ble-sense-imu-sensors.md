@@ -1,12 +1,17 @@
 ---
 layout: tutorials
 title: Seperate files into header and c++ files
-hardware:
-  - arduino
-  - nano
-  - 33
-  - ble
-  - sense
+dependancies:
+  - name: Arduino MBed OS Nano Boards
+    url: https://www.arduino.cc/en/Guide/NANO33BLESense
+  - name: Simple Accelerometer LSM9DS1
+    url: https://github.com/arduino-libraries/Arduino_LSM9DS1
+  - name: Temperature and Humidity sensor HTS221
+    url: https://github.com/arduino-libraries/Arduino_HTS221
+firmware:
+  - Arduino
+dev_board: Arduino Nano 33 BLE Sense
+features:
   - imu
   - header
   - cpp

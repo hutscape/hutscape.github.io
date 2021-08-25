@@ -1,9 +1,20 @@
 ---
 layout: tutorials
 title: RTC Memory
-hardware:
-  - esp8266
-  - rtc
+
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+chips:
+  - ESP8266
+dev_board: WeMos D1 Mini
+
+features:
+  - RTC
+
+prerequisites:
+  - name: Blinky ESP8266
+    url: ./blinky-esp8266
 references:
   - name: How to use the RTC Memory in ESP8266 and reduce power consumption
     url: https://www.youtube.com/watch?v=r-hEOL007nw

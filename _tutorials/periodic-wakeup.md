@@ -1,11 +1,14 @@
 ---
 layout: tutorials
 title: Periodic wakeup with SAMD21
-hardware:
-  - arduino
-  - m0
-  - samd21
-  - robotdyn
+
+dependancies:
+  - name: Arduino Low Power
+    url: https://github.com/arduino-libraries/ArduinoLowPower
+dev_board: RobotDyn M0 Mini
+chips:
+  - SAMD21
+features:
   - wakeup
   - sleep
   - periodic

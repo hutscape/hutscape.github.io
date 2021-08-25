@@ -1,11 +1,15 @@
 ---
 layout: tutorials
 title: Blinky nRF52
-hardware:
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit nRF52 nrfutil
+    url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
+chips:
   - nRF52
-  - bluefruit
-  - adafruit
-  - feather
+dev_board: Adafruit Feather Bluefruit
+
 references:
   - name: Get started now with our most powerful Bluefruit board yet
     url: https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/introduction

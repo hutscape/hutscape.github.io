@@ -1,9 +1,13 @@
 ---
 layout: tutorials
 title: Long deep sleep
-hardware:
-  - esp8266
-  - WeMos
+dev_board: WeMos D1 Mini
+prerequisites:
+  - name: Wakeup after long sleep or button press
+    url: ./long-sleep-or-button-press
+chips:
+  - ESP8266
+features:
   - sleep
   - EEPROM
   - wakeup

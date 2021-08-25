@@ -1,15 +1,27 @@
 ---
 layout: tutorials
 title: PIO I2C Bus Scan for Sensors Si7021 and VCNL4000 with RPi pico
-hardware:
-  - raspberrypi
-  - rpi
-  - pico
-  - rp2040
-  - c/c++
-  - i2c
+
+dependancies:
+  - name: Pico toolchain
+    url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
+dev_board: RaspberryPI Pico
+chips:
+  - RP2040
   - Si7021
   - VCNL4000
+firmware:
+  - C
+  - C++
+feature:
+  - I2C
+  - PIO
+
+prerequisites:
+  - name: Blinky Pico
+    url: ./blinky-pico
+  - name: I2C Bus Scan with RPi pico
+    url: ./pico-i2c
 references:
   - name: PIO Pico I2C Bus Scan example code
     url: https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c

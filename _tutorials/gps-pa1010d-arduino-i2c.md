@@ -1,11 +1,15 @@
 ---
 layout: tutorials
-title: GPS parsing with PA1010D and Arduino UNO with I2C
-hardware:
-  - GPS
+title: GPS parsing via I2C
+dependancies:
+  - name: Adafruit_GPS
+    url: https://github.com/adafruit/Adafruit_GPS
+dev_board: Arduino UNO
+chips:
   - PA1010D
-  - Arduino
-  - UNO
+sensors:
+  - GPS
+features:
   - I2C
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
@@ -20,4 +24,4 @@ references:
     url: https://cdn-learn.adafruit.com/assets/assets/000/084/182/original/adafruit_products_Mini_GPS_PA1010D_SCh.png?1573765781
 ---
 
-Use Adafruit GPS module PA1010D with Arduino UNO raw NMEA sentences via the I2C protocol.
+Use Adafruit GPS module `PA1010D` with Arduino UNO raw NMEA sentences via the I2C protocol.

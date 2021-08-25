@@ -1,11 +1,22 @@
 ---
 layout: tutorials
 title: GPS parsing with PA1010D and M0
-hardware:
+
+dependancies:
+  - name: Arduino Core for SAMD
+    url: https://github.com/arduino/ArduinoCore-samd
+  - name: Adafruit_GPS
+    url: https://github.com/adafruit/Adafruit_GPS
+
+dev_board: RobotDyn M0 Mini
+sensors:
   - GPS
+chips:
   - PA1010D
+features:
   - UART
-  - M0
+  - Google Maps
+
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
     url: https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view
@@ -19,7 +30,10 @@ references:
     url: https://github.com/adafruit/Adafruit_GPS/blob/master/examples/GPS_HardwareSerial_Timing/GPS_HardwareSerial_Timing.ino
   - name: Lat long conversion from degrees to decimal
     url: https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees
+
 prerequisites:
+  - name: Blinky Arduino M0
+    url: ./blinky-m0
   - name: GPS PA1010D with Arduino M0
     url: ./gps-pa1010d-m0
 ---

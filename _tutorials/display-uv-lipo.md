@@ -1,12 +1,20 @@
 ---
 layout: tutorials
 title: Display UV and LiPo values
-hardware:
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit VEML6075
+    url: https://github.com/adafruit/Adafruit_VEML6075
+  - name: Adafruit SHARP Memory display
+    url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display
+chips:
   - nRF52
-  - adafruit
-  - bluefruit
-  - uv
-  - veml6075
+  - VEML6075
+dev_board: Adafruit Feather Bluefruit
+sensors:
+  - UV Index
+features:
   - lipo
   - display
 references:

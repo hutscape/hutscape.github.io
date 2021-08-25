@@ -1,15 +1,22 @@
 ---
 layout: tutorials
 title: Sensor Si7021 with ESP8266
-hardware:
-  - esp8266
+
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+  - name: Adafruit Si7021
+    url: https://github.com/adafruit/Adafruit_Si7021
+dev_board: WeMos D1 Mini
+chips:
+  - ESP8266
   - Si7021
-  - sensor
+sensors:
   - temperature
   - humidity
 references:
   - name: Si7021 example code
-    url: https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.inoq
+    url: https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino
 ---
 
 Display humidity and temperature values with sensor `Si7021` and ESP8266.

@@ -1,14 +1,14 @@
 ---
 layout: tutorials
 title: LoRa Duplex A
-hardware:
-  - arduino
-  - uno
+dev_board: Arduino UNO
+dependancies:
+  - name: Arduino LoRa firmware
+    url: https://github.com/sandeepmistry/arduino-LoRa
+features:
   - lora
   - duplex
 references:
-  - name: Arduino LoRa firmware
-    url: https://github.com/sandeepmistry/arduino-LoRa
   - name: Arduino LoRa firmware duplex example
     url: https://github.com/sandeepmistry/arduino-LoRa/blob/master/examples/LoRaDuplex/LoRaDuplex.ino
   - name: SEMTech SX1276/77/78/79 datasheet

@@ -1,15 +1,25 @@
 ---
 layout: tutorials
 title: GPS parsing for ESP32 T-Beam
-hardware:
-  - esp32
-  - t-beam
-  - lilygo
-  - gps
-  - ublox
-  - uart
-  - neo-6m
+
+dependancies:
+  - name: Arduino ESP32
+    url: https://github.com/espressif/arduino-esp32
+  - name: TinyGPSPlus
+    url: https://github.com/mikalhart/TinyGPSPlus
+  - name: SiLabs CP210x USB to UART Bridge VCP Drivers
+    url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
+
+dev_board: LilyGO T-Beam
+chips:
+  - ESP32
+  - NEO-6M
+features:
+  - UART
   - parsing
+sensors:
+  - GPS
+
 references:
   - name: TinyGPSPlus
     url: https://github.com/mikalhart/TinyGPSPlus
@@ -19,6 +29,7 @@ references:
     url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
   - name: Arduino ESP32 Boards URL
     url: https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md
+
 prerequisites:
   - name: Blinky for ESP32 LilyGO T-Beam
     url: ./blinky-esp32-t-beam

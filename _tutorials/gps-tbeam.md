@@ -1,14 +1,20 @@
 ---
 layout: tutorials
 title: GPS for ESP32 T-Beam
-hardware:
-  - esp32
-  - t-beam
-  - lilygo
+dependancies:
+  - name: ESP32 Arduino
+    url: https://github.com/espressif/arduino-esp32
+  - name: SiLabs CP210x USB to UART Bridge VCP Drivers
+    url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
+chips:
+  - ESP32
+  - NEO-6M
+dev_board: LilyGO T-Beam
+sensors:
   - gps
-  - ublox
+features:
   - uart
-  - neo-6m
+
 references:
   - name: Code repo and schematic for T-Beam
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam

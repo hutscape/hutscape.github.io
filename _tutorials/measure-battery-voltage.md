@@ -1,12 +1,21 @@
 ---
 layout: tutorials
 title: Measure battery voltage ESP8266
-hardware:
+
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+  - name: ESP8266 WiFi
+    url: https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
+
+dev_board: WeMos D1 Mini
+chips:
   - esp8266
-  - WeMos
+features:
   - LiPo
   - battery
   - voltage
+
 references:
   - name: Monitoring LiPo battery voltage with Wemos D1 mini battery shield and Thingspeak
     url: https://arduinodiy.wordpress.com/2016/12/25/monitoring-lipo-battery-voltage-with-wemos-d1-minibattery-shield-and-thingspeak

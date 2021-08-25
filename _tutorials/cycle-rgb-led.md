@@ -1,12 +1,15 @@
 ---
 layout: tutorials
 title: Cycling RGB LED
-hardware:
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+chips:
   - nRF52
-  - bluefruit
-  - adafruit
-  - RGB
+features:
   - LED
+dev_board: Adafruit Feather Bluefruit
+
 prerequisites:
   - name: RGB LED nRF52
     url: ./rgb-led-nrf52

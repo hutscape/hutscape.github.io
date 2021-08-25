@@ -1,16 +1,22 @@
 ---
 layout: tutorials
-title: Display Lat Long on ESP32 LilyGO T-Beam
-hardware:
-  - esp32
-  - t-beam
-  - lilygo
+title: Display Lat Long on T-Beam
+dependancies:
+  - name: ESP32 Arduino
+    url: https://github.com/espressif/arduino-esp32
+  - name: TinyGPSPlus
+    url: https://github.com/mikalhart/TinyGPSPlus
+  - name: OLED SSD1306 for ESP8266
+    url: https://github.com/ThingPulse/esp8266-oled-ssd1306
+chips:
+  - ESP32
+  - SSD1306
+  - NEO-6M
+dev_board: LilyGO T-Beam
+features:
   - display
   - oled
-  - ssd1306
   - gps
-  - ublox
-  - neo-6m
   - parsed
 references:
   - name: Code example from LilyGO T-Beam with OLED SSD1306
@@ -34,4 +40,3 @@ This example contains the code to display latitude/longitude information on OLED
     ```
 1. Run `make` to compile and flash the code
 1. Ensure, after a while, when there is a GPS fix, the latitude-longitude information is displayed on the OLED.
-

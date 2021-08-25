@@ -1,4 +1,4 @@
-#inlcude <Arduino.h>
+#include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 #define PIN 6
 #define NUMPIXELS 60

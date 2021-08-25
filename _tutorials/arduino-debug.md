@@ -1,10 +1,12 @@
 ---
 layout: tutorials
 title: Arduino debug with ifdef
-hardware:
-  - arduino
-  - m0
-  - samd21
+firmware:
+  - Arduino
+dev_board: Arduino M0
+chips:
+  - SAMD21
+features:
   - debug
 references:
   - name: ifdef DEBUG
@@ -13,7 +15,6 @@ references:
     url: https://forum.arduino.cc/index.php?topic=46900.msg338645#msg338645
   - name: Example with Debug Utils
     url: https://github.com/SensorsIot/Pre-Compiler-Directives
-
 ---
 
 Some patterns for toggling on and off debugging in Arduino firmware.

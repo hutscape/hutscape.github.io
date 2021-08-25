@@ -1,12 +1,21 @@
 ---
 layout: tutorials
 title: Display UV values
-hardware:
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit VEML6075
+    url: https://github.com/adafruit/Adafruit_VEML6075
+  - name: Adafruit SHARP Memory display
+    url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display
+chips:
   - nRF52
-  - veml6075
-  - uv
-  - bluefruit
-  - adafruit
+  - VEML6075
+sensors:
+  - UV Index
+features:
+  - display
+dev_board: Adafruit Feather Bluefruit
 references:
   - name: Adafruit SHARP memory display firmware
     url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino

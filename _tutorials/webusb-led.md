@@ -1,11 +1,21 @@
 ---
 layout: tutorials
 title: Web USB LED
-hardware:
-  - M0
-  - webusb
-  - arduino
-  - samd21
+
+dependancies:
+  - name: WebUSB Compatible Arduino hardware
+    url: https://github.com/webusb/arduino#compatible-hardware
+  - name: Web USB receive
+    url: ./webusb-receive
+firmware:
+  - Arduino
+chips:
+  - SAMD21
+dev_board: RobotDyn M0 mini
+
+features:
+  - WebUSB
+
 code: html
 references:
   - name: Access USB Devices on the Web

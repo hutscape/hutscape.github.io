@@ -1,9 +1,13 @@
 ---
 layout: tutorials
 title: IR Receiver raw codes
-hardware:
-  - arduino
-  - zero
+dev_board: RobotDyn M0 mini
+dependancies:
+  - name: IRLib2
+    url: https://github.com/cyborg5/IRLib2
+sensors:
+  - infrared
+features:
   - infrared
   - IR
   - receive
@@ -22,4 +26,4 @@ references:
     url: https://github.com/cyborg5/IRLib2/blob/master/IRLib2/examples/rawRecv/rawRecv.ino
 ---
 
-This code dumps the raw IR code length when detected. 
+This code dumps the raw IR code length when detected.

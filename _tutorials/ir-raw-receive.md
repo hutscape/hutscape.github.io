@@ -1,9 +1,15 @@
 ---
 layout: tutorials
-title: IR Receiver raw codes
-hardware:
-  - arduino
-  - uno
+title: IR Receive raw codes
+
+dependancies:
+  - name: IRLib2
+    url: https://github.com/cyborg5/IRLib2
+
+dev_board: Arduino UNO
+sensors:
+  - infrared
+features:
   - infrared
   - IR
   - receive

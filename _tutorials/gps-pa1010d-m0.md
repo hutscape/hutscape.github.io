@@ -1,11 +1,21 @@
 ---
 layout: tutorials
 title: GPS PA1010D with M0
-hardware:
+
+dependancies:
+  - name: Arduino Core for SAMD
+    url: https://github.com/arduino/ArduinoCore-samd
+  - name: Adafruit_GPS
+    url: https://github.com/adafruit/Adafruit_GPS
+
+dev_board: RobotDyn M0 Mini
+sensors:
   - GPS
+chips:
   - PA1010D
+features:
   - UART
-  - M0
+
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
     url: https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view

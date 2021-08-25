@@ -1,11 +1,19 @@
 ---
 layout: tutorials
 title: Web BLE Read changing GATT values
-hardware:
+
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit nRF52 nrfutil
+    url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
+chips:
   - nRF52
-  - bluefruit
-  - adafruit
+dev_board: Adafruit Feather Bluefruit
+features:
   - BLE
+  - GATT
+
 references:
   - name: Chrome Web Bluetooth / Device Info Sample
     url: https://googlechrome.github.io/samples/web-bluetooth/device-info.html

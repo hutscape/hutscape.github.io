@@ -5,27 +5,129 @@ layout: default
 <section class="section is-small">
   <div class="container">
     <h1 class="title is-1 has-background-info-light">{{ page.title | escape }}</h1>
-    <div class="tags">
-      {% for tag in page.hardware %}
-      <span class="tag">{{ tag }}</span>
+    <div class="field is-grouped is-grouped-multiline">
+      {% if page.dev_board %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">{{ page.dev_board }}</span>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.firmware %}
+      {% for firmware in page.firmware %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">{{ firmware }}</span>
+        </div>
+      </div>
       {% endfor %}
+      {% endif %}
+
+      {% if page.chips %}
+      {% for chip in page.chips %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">{{ chip }}</span>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      {% if page.tool %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">tool</span>
+          <span class="tag is-light">{{ page.tool }}</span>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.sensors %}
+      {% for sensor in page.sensors %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">sensor</span>
+          <span class="tag is-light">{{ sensor }}</span>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      {% if page.features %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          {% for feat in page.features %}
+          <span class="tag is-light">{{ feat }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.hardware %}
+      {% for item in page.hardware %}
+      <span class="tag is-light">{{ item }}</span>
+      {% endfor %}
+      REMOVE ME!
+      {% endif %}
     </div>
     <hr>
 
-    {% if page.prerequisites %}
-    <h2 class="title is-2">Pre-requisites</h2>
-
-    <div class="content is-medium">
-      <ol>
-        {% for pre in page.prerequisites %}
-        <li><a href="{{ pre.url }}">{{ pre.name }}</a></li>
-        {% endfor %}
-      </ol>
-    </div>
+    {% if page.dependancies or page.prerequisites %}
+    <h2 class="title is-2">Before starting...</h2>
     {% endif %}
 
+    <div class="columns is-desktop">
+      {% if page.dependancies %}
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following requirements are available:</div>
+            <div class="content">
+              <ul>
+                {% for dep in page.dependancies %}
+                <li><a href="{{ dep.url }}">{{ dep.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.prerequisites %}
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler examples:</div>
+            <div class="content">
+              <ol>
+                {% for pre in page.prerequisites %}
+                <li><a href="{{ pre.url }}">{{ pre.name }}</a></li>
+                {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
     <div class="content is-medium">
-    {{ content }}
+      <h2 class="title is-2">Description</h2>
+      {{ content }}
     </div>
   </div>
 </section>
@@ -86,43 +188,43 @@ layout: default
             or image.path contains browser_image %}
 
             {% if image.path contains arduino_settings_image %}
-            <div class="column is-half">
-              <h2 class="title is-2">Arduino IDE settings</h2>
-              <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
-              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} Arduino IDE settings"></a>
-            </div>
+              <div class="column is-half">
+                <h2 class="title is-2">Arduino IDE settings</h2>
+                <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
+                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} Arduino IDE settings"></a>
+              </div>
             {% endif %}
 
             {% if image.path contains schematic_image %}
-            <div class="column is-half">
-              <h2 class="title is-2">Schematic</h2>
-              <p class="subtitle is-4">Wire up the hardware accordingly</p>
-              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} schematic"></a>
-            </div>
+              <div class="column is-half">
+                <h2 class="title is-2">Schematic</h2>
+                <p class="subtitle is-4">Wire up the hardware accordingly</p>
+                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} schematic"></a>
+              </div>
             {% endif %}
 
             {% if image.path contains prototype_image %}
-            <div class="column is-half">
-              <h2 class="title is-2">Prototype</h2>
-              <p class="subtitle is-4">A photo of the actual setup.</p>
-              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} prototype"></a>
-            </div>
+              <div class="column is-half">
+                <h2 class="title is-2">Prototype</h2>
+                <p class="subtitle is-4">A photo of the actual setup.</p>
+                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} prototype"></a>
+              </div>
             {% endif %}
 
             {% if image.path contains browser_image %}
-            <div class="column is-half">
-              <h2 class="title is-2">Browser console</h2>
-              <p class="subtitle is-4">Open the browser developer console.</p>
-              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} browser"></a>
-            </div>
+              <div class="column is-half">
+                <h2 class="title is-2">Browser console</h2>
+                <p class="subtitle is-4">Open the browser developer console.</p>
+                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} browser"></a>
+              </div>
             {% endif %}
 
             {% if image.path contains console_image %}
-            <div class="column is-half">
-              <h2 class="title is-2">Serial console</h2>
-              <p class="subtitle is-4">Serial output from the firmware.</p>
-              <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} serial console"></a>
-            </div>
+              <div class="column is-half">
+                <h2 class="title is-2">Serial console</h2>
+                <p class="subtitle is-4">Serial output from the firmware.</p>
+                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} serial console"></a>
+              </div>
             {% endif %}
           {% endif %}
         {% endif %}
@@ -132,9 +234,9 @@ layout: default
   </div>
 </section>
 
+{% if page.references %}
 <section class="section is-small">
   <div class="container">
-    {% if page.references %}
     <h2 class="title is-2">References</h2>
 
     <div class="content">
@@ -144,6 +246,6 @@ layout: default
         {% endfor %}
       </ol>
     </div>
-    {% endif %}
   </div>
 </section>
+{% endif %}

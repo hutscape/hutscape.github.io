@@ -100,6 +100,11 @@ tools:
         urls:
           - website: Grammarly
             url: https://www.grammarly.com/
+      - name: Screencasting
+        image: quicktime.jpg
+        urls:
+          - website: QuickTime
+            url: https://support.apple.com/downloads/quicktime
 
 ---
 

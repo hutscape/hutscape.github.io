@@ -1,15 +1,22 @@
 ---
 layout: tutorials
 title: Measure battery voltage nRF52
-hardware:
-  - nrf52
+
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit nRF utils
+    url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
+
+dev_board: Adafruit Feather Bluefruit
+chips:
+  - nRF52
+features:
   - voltage
   - LiPo
   - battery
   - voltage
-  - adafruit
-  - feather
-  - bluefruit
+
 references:
   - name: nRF52 ADC
     url: https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/nrf52-adc

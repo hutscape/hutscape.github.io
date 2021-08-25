@@ -1,12 +1,15 @@
 ---
 layout: tutorials
 title: Blinky with RaspberryPI Pico
-hardware:
-  - raspberrypi
-  - rpi
-  - pico
-  - rp2040
-  - c/c++
+dependancies:
+  - name: Pico toolchain
+    url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
+dev_board: RaspberryPI Pico
+chips:
+  - RP2040
+firmware:
+  - C
+  - C++
 references:
   - name: Pico examples blinky C code
     url: https://github.com/raspberrypi/pico-examples/tree/master/blink

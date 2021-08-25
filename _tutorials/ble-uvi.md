@@ -1,14 +1,18 @@
 ---
 layout: tutorials
 title: BLE publish UV Index
-hardware:
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+chips:
+  - VEML6075
   - nRF52
-  - bluefruit
-  - adafruit
-  - ble
-  - gatt
-  - uv index
-  - veml6075
+dev_board: Adafruit Feather Bluefruit
+features:
+  - BLE
+  - GATT
+sensors:
+  - UV Index
 references:
   - name: Code reference
     url: https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/master/libraries/Bluefruit52Lib/examples/Peripheral/custom_htm/custom_htm.ino

@@ -1,11 +1,18 @@
 ---
 layout: tutorials
 title: LoRa TX
-hardware:
-  - arduino
-  - uno
-  - lora
-  - tx
+
+dependancies:
+  - name: Arduino LoRa firmware
+    url: https://github.com/sandeepmistry/arduino-LoRa
+prerequisites:
+  - name: LoRa RX
+    url: ./lora-rx
+dev_board: Arduino UNO
+features:
+  - LoRa
+  - TX
+
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa

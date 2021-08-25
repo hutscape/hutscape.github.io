@@ -1,10 +1,12 @@
 ---
 layout: tutorials
 title: Blinky for ESP32 LilyGO T-Beam
-hardware:
-  - esp32
-  - t-beam
-  - lilygo
+dependancies:
+  - name: Arduino ESP32
+    url: https://github.com/espressif/arduino-esp32
+chips:
+  - ESP32
+dev_board: LilyGO T-Beam
 references:
   - name: Code repo and schematic for T-Beam
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam

@@ -1,6 +1,18 @@
 ---
 layout: tutorials
 title: Web USB send to browser
+
+dependancies:
+  - name: WebUSB Compatible Arduino hardware
+    url: https://github.com/webusb/arduino#compatible-hardware
+firmware:
+  - Arduino
+chips:
+  - SAMD21
+dev_board: RobotDyn M0 mini
+features:
+  - WebUSB
+
 hardware:
   - M0
   - webusb

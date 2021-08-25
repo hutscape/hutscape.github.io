@@ -1,12 +1,17 @@
 ---
 layout: tutorials
 title: DHT22 sensor
-hardware:
-  - esp8266
-  - WeMos
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+chips:
+  - ESP8266
   - DHT22
+sensors:
   - temperature
   - humidity
+dev_board: WeMos D1 Mini
+
 references:
   - name: DHT sensor library
     url: https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino

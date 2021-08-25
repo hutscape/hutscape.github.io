@@ -1,14 +1,17 @@
 ---
 layout: tutorials
 title: Analyzing I2C signals
-hardware:
-  - arduino
-  - uno
-  - I2C
-  - logic
-  - analyzer
-  - saleae
+dependancies:
+  - name: Adafruit Si7021 library
+    url: https://github.com/adafruit/Adafruit_Si7021
+dev_board: Arduino UNO
+chips:
   - Si7021
+tool: Saleae Logic Analyser
+features:
+  - I2C
+  - logic analyser
+
 references:
   - name: Adafruit Si7021 Temperature & Humidity Sensor Breakout Board
     url: https://www.adafruit.com/product/3251

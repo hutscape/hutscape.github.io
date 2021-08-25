@@ -1,13 +1,23 @@
 ---
 layout: tutorials
 title: UV Sensor VEML6075
-hardware:
-  - uv
-  - sensor
-  - nrf52
-  - veml6075
-  - bluefruit
-  - adafruit
+
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit nRF52 nrfutil
+    url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
+
+dev_board: Adafruit Feather Bluefruit
+sensor:
+  - UV Index
+chips:
+  - nRF52
+  - VEML6075
+
+prerequisites:
+  - name: Blinky nRF52
+    url: ./blinky-nrf52
 ---
 
 Read the UV sensor values with Adafruit nRF52 Feather and Adafruit VEML6075 breakout board.

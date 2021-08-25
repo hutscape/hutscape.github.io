@@ -1,13 +1,18 @@
 ---
 layout: tutorials
 title: Display humidity with bar LED
-hardware:
-  - esp8266
-  - WeMos
-  - bar LED
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+chips:
+  - ESP8266
   - 74HC595
-  - shift register
   - Si7021
+dev_board: WeMos D1 Mini
+features:
+  - bar LED
+  - shift register
+sensors:
   - humidity
 references:
   - name: DHT-sensor-library

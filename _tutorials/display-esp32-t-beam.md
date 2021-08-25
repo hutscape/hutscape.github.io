@@ -1,13 +1,18 @@
 ---
 layout: tutorials
 title: Display OLED SSD1306 with LilyGO T-Beam
-hardware:
-  - esp32
-  - t-beam
-  - lilygo
+dependancies:
+  - name: ESP32 Arduino
+    url: https://github.com/espressif/arduino-esp32
+  - name: OLED SSD1306 for ESP8266
+    url: https://github.com/ThingPulse/esp8266-oled-ssd1306
+chips:
+  - ESP32
+  - SSD1306
+dev_board: LilyGO T-Beam
+features:
   - display
   - oled
-  - ssd1306
 references:
   - name: Code example from LilyGO T-Beam with OLED SSD1306
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam/blob/master/examples/OLED/SSD1306SimpleDemo/SSD1306SimpleDemo.ino
@@ -24,4 +29,3 @@ This example contains the code to display a bunch of `Hello world` on the OLED d
     ```
 1. Run `make` to compile and upload the code
 1. Connect to the serial monitor
-

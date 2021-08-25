@@ -1,11 +1,18 @@
 ---
 layout: tutorials
 title: mDNS in AP mode
-hardware:
-  - esp8266
-  - WeMos
-  - mdns
-  - ap
+
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+  - name: ESP8266 Arduino libraries
+    url: https://github.com/esp8266/Arduino/tree/master/libraries
+dev_board: WeMos D1 Mini
+chips:
+  - ESP8266
+features:
+  - mDNS
+  - Access point
 ---
 
 Create an mDNS `http://cactus.local` in the Access Point to visit a created web page instead of `https://192.168.4.1` for easy user experience.

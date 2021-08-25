@@ -1,9 +1,11 @@
 ---
 layout: tutorials
 title: Blinky Arduino UNO
-hardware:
-  - arduino
-  - uno
+dev_board: Arduino UNO
+firmware:
+  - Arduino
+chips:
+  - ATmega328P
 references:
   - name: Blink Arduino tutorial
     url: https://www.arduino.cc/en/Tutorial/Blink

@@ -1,13 +1,9 @@
 ---
 layout: tutorials
 title: Analyzing UART signals
-hardware:
-  - arduino
-  - uno
-  - uart
-  - logic
-  - analyzer
-  - saleae
+dev_board: Arduino UNO
+feature:
+tool: Saleae Logic Analyzer
 references:
   - name: Saleae decoding UART
     url: https://support.saleae.com/protocol-analyzers/analyzer-user-guides/decode-uart

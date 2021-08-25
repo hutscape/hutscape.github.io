@@ -1,13 +1,15 @@
 ---
 layout: tutorials
 title: Convert millis() to readable time
-hardware:
+dev_board: LilyGO T-Beam
+features:
   - millis
   - time
   - hours
   - seconds
   - minutes
   - days
+firmware:
   - arduino
 references:
   - name: Sketch to Convert Milliseconds to Hours, Minutes and Seconds - HH:MM:SS

@@ -1,11 +1,15 @@
 ---
 layout: tutorials
 title: Blinky Arduino M0
-hardware:
-  - arduino
-  - m0
-  - samd21
-  - robotdyn
+dependancies:
+  - name: Arduino core for SAMD
+    url: https://github.com/arduino/ArduinoCore-samd
+firmware:
+  - Arduino
+chips:
+  - SAMD21
+dev_board: RobotDyn M0 mini
+
 references:
   - name: RobotDyn SAMD21 M0-Mini a quick look
     url: http://www.armlearning.com/hardware/robotdyn-samd21-m0-mini-quick-look.php

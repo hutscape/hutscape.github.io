@@ -1,9 +1,12 @@
 ---
 layout: tutorials
 title: Blinky ESP8266
-hardware:
-  - esp8266
-  - blinky
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+chips:
+  - ESP8266
+dev_board: WeMos D1 Mini
 ---
 
 `LED_BUILTIN` can be referred as the pin for the on-board LED. It has a reverse logic.

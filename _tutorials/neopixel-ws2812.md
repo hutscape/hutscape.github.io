@@ -1,12 +1,16 @@
 ---
 layout: tutorials
 title: Neopixel with Arduino UNO
-hardware:
-  - arduino
-  - uno
-  - neopixel
+
+dev_board: Arduino UNO
+dependancies:
+  - name: Adafruit Neopixel
+    url: https://github.com/adafruit/Adafruit_NeoPixel
+chips:
   - WS2812
-  - adafruit
+features:
+  - neopixel
+
 references:
   - name: WS2812 Datasheet
     url: https://cdn-shop.adafruit.com/datasheets/WS2812.pdf

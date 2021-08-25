@@ -1,14 +1,20 @@
 ---
 layout: tutorials
 title: Neopixel with RaspberryPI Pico
-hardware:
-  - raspberrypi
-  - rpi
-  - pico
-  - rp2040
+
+dependancies:
+  - name: Pico toolchain
+    url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
+dev_board: RaspberryPI Pico
+chips:
+  - RP2040
+  - WS2812
+features:
   - neopixel
-  - ws2812
-  - c/c++
+firmware:
+  - C
+  - C++
+
 references:
   - name: Raspberry Pi Pico example with WS2812
     url: https://github.com/raspberrypi/pico-examples/blob/master/pio/ws2812/ws2812.c
@@ -22,6 +28,8 @@ code: c
 prerequisites:
   - name: Blinky with RaspberryPI Pico
     url: ./blinky-pico
+  - name: Level shifter
+    url: ./level-shifter-4channel
 ---
 
 This code example creates a simple colored blinky with RaspberryPI Pico board with `RP2040` microcontroller using the native C/C++ SDK. It shows how the first pixel is lighted with different colors with option A where a delay of `500ms` is placed in between lighting each color. With Option B, where `500ms` delay is removed, the cascading of pixel is shown.

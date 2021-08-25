@@ -1,12 +1,21 @@
 ---
 layout: tutorials
 title: Waveshare 1.54 inch
-hardware:
-  - arduino
-  - uno
-  - waveshare
+
+dependancies:
+  - name: Waveshare e-paper
+    url: https://github.com/waveshare/e-Paper
+
+dev_board: Arduino UNO
+firmware:
+  - Arduino
+chips:
+  - ATmega328P
+  - Waveshare
+features:
   - e-paper
   - e-ink
+
 references:
   - name: Waveshare 1.54 inch e-paper module
     url: https://www.waveshare.com/product/1.54inch-e-Paper-Module.htm
@@ -33,6 +42,6 @@ The 2 [SPI pins for Arduino UNO](https://www.arduino.cc/en/reference/SPI) are de
 
 ```c
 MOSI  11
-MISO  12  
+MISO  12
 SCK   13
 ```

@@ -1,11 +1,15 @@
 ---
 layout: tutorials
 title: EEPROM Emulation with Arduino API
-hardware:
-  - arduino
-  - m0
-  - samd21
-  - robotdyn
+dependancies:
+  - name: Arduino SAMD core
+    url: https://github.com/arduino/ArduinoCore-samd
+  - name: Arduino Flash storage for SAMD boards
+    url: https://github.com/cmaglie/FlashStorage
+firmware:
+  - Arduino
+dev_board: RobotDyn M0 Mini
+features:
   - eeprom
   - flash
 references:

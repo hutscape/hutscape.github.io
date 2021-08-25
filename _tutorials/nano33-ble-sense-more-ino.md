@@ -1,14 +1,21 @@
 ---
 layout: tutorials
 title: Split up code into more ino files
-hardware:
-  - arduino
-  - nano
-  - 33
-  - ble
-  - sense
-  - imu
-  - sensors
+dependancies:
+  - name: Arduino MBed OS Nano Boards
+    url: https://www.arduino.cc/en/Guide/NANO33BLESense
+  - name: Simple Accelerometer LSM9DS1
+    url: https://github.com/arduino-libraries/Arduino_LSM9DS1
+  - name: Temperature and Humidity sensor HTS221
+    url: https://github.com/arduino-libraries/Arduino_HTS221
+firmware:
+  - Arduino
+dev_board: Arduino Nano 33 BLE Sense
+sensors:
+  - IMU
+  - temperature
+  - humidity
+chips:
   - LSM9DS1
   - HTS221
 references:

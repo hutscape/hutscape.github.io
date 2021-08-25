@@ -1,14 +1,21 @@
 ---
 layout: tutorials
 title: Display IMU data with LSM9DS1
-hardware:
-  - arduino
-  - nano
-  - 33
-  - ble
-  - sense
-  - imu
+
+dependancies:
+  - name: Arduino MBed OS Nano Boards
+    url: https://www.arduino.cc/en/Guide/NANO33BLESense
+  - name: Simple Accelerometer LSM9DS1
+    url: https://github.com/arduino-libraries/Arduino_LSM9DS1
+
+firmware:
+  - Arduino
+dev_board: Arduino Nano 33 BLE Sense
+chips:
   - LSM9DS1
+sensors:
+  - IMU
+
 references:
   - name: Arduino Nano 33 BLE Sense
     url: https://store.arduino.cc/usa/nano-33-ble-sense

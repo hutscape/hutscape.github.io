@@ -1,11 +1,14 @@
 ---
 layout: tutorials
 title: LoRa Duplex B
-hardware:
-  - arduino
-  - uno
+dev_board: Arduino UNO
+dependancies:
+  - name: Arduino LoRa firmware
+    url: https://github.com/sandeepmistry/arduino-LoRa
+features:
   - lora
   - duplex
+
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa

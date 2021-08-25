@@ -1,9 +1,13 @@
 ---
 layout: tutorials
 title: EEPROM read and write string
-hardware:
-  - esp8266
-  - WeMos
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+chips:
+  - ESP8266
+dev_board: WeMos D1 Mini
+features:
   - EEPROM
   - read
   - write

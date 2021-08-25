@@ -1,8 +1,14 @@
 ---
 layout: tutorials
 title: Send command via serial monitor
-hardware:
-  - esp8266
+
+dev_board: WeMos D1 Mini
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+chips:
+  - ESP8266
+features:
   - serial
 ---
 

@@ -1,12 +1,20 @@
 ---
 layout: tutorials
 title: LoRa Duplex B with ESP32 T-Beam
-hardware:
-  - arduino
-  - esp32
-  - t-beam
-  - lora
+
+dependancies:
+  - name: Arduino LoRa firmware
+    url: https://github.com/sandeepmistry/arduino-LoRa
+prerequisites:
+  - name: LoRa Duplex A with ESP32 T-Beam
+    url: ./lora-duplex-a-esp32-t-beam
+dev_board: LilyGO T-Beam
+chips:
+  - ESP32
+features:
+  - LoRa
   - duplex
+
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa

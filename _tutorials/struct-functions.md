@@ -1,14 +1,17 @@
 ---
 layout: tutorials
 title: Arduino struct with functions in seperate folder
-hardware:
+dev_board: LilyGO T-Beam
+features:
   - struct
   - function
-  - arduino
   - files
   - header
   - cpp
   - pointer
+firmware:
+  - Arduino
+
 prerequisites:
   - name: Adding header and cpp files to Arduino folder
     url: ./more-files

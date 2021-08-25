@@ -1,10 +1,14 @@
 ---
 layout: tutorials
 title: Sensor Si7021 with Arduino
-hardware:
-  - arduino
+
+dependancies:
+  - name: Adafruit Si7021
+    url: https://github.com/adafruit/Adafruit_Si7021
+dev_board: Arduino UNO
+chips:
   - Si7021
-  - sensor
+sensor:
   - temperature
   - humidity
 references:

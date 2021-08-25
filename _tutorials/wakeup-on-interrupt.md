@@ -1,10 +1,12 @@
 ---
 layout: tutorials
 title: Wakeup on interrupt
-hardware:
-  - arduino
-  - uno
+dev_board: Arduino UNO
+firmware:
+  - Arduino
+chips:
   - ATmega328P
+features:
   - wakeup
   - interrupt
 ---

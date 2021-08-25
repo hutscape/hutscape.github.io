@@ -1,10 +1,10 @@
 ---
 layout: tutorials
 title: Level shifter
-hardware:
-  - arduino
-  - uno
+dev_board: Arduino UNO
+chips:
   - BSS138
+features:
   - logic
   - level
   - shift

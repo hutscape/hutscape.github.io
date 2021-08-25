@@ -1,14 +1,19 @@
 ---
 layout: tutorials
 title: Analyzing non-standard signals
-hardware:
-  - arduino
-  - uno
-  - logic
-  - analyzer
-  - saleae
+dependancies:
+  - name: Adafruit DHT sensor
+    url: https://github.com/adafruit/DHT-sensor-library
+dev_board: Arduino UNO
+chips:
   - DHT11
+tool: Saleae Logic Analyser
+sensors:
   - temperature
+features:
+  - I2C
+  - logic analyser
+
 references:
   - name: Adafruit DHT sensor library
     url: https://github.com/adafruit/DHT-sensor-library

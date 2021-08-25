@@ -1,15 +1,21 @@
 ---
 layout: tutorials
 title: Display temperature and humidity data with HTS221
-hardware:
-  - arduino
-  - nano
-  - 33
-  - ble
-  - sense
+
+dependancies:
+  - name: Arduino MBed OS Nano Boards
+    url: https://www.arduino.cc/en/Guide/NANO33BLESense
+  - name: Temperature and Humidity sensor HTS221
+    url: https://github.com/arduino-libraries/Arduino_HTS221
+firmware:
+  - Arduino
+dev_board: Arduino Nano 33 BLE Sense
+sensors:
   - temperature
   - humidity
+chips:
   - HTS221
+
 references:
   - name: Arduino Nano 33 BLE Sense
     url: https://store.arduino.cc/usa/nano-33-ble-sense

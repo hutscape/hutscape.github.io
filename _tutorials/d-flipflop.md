@@ -1,9 +1,10 @@
 ---
 layout: tutorials
 title: D-Flip-Flop
-hardware:
-  - Arduino
+chips:
   - SN74HC174
+dev_board: Arduino UNO
+features:
   - D-Flip-Flop
 ---
 

@@ -1,10 +1,12 @@
 ---
 layout: tutorials
 title: EEPROM read and write numbers
-hardware:
-  - arduino
-  - uno
+firmware:
+  - Arduino
+dev_board: Arduino UNO
+chips:
   - ATmega328P
+features:
   - EEPROM
   - read
   - write

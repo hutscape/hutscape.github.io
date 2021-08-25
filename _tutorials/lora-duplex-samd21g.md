@@ -1,9 +1,14 @@
 ---
 layout: tutorials
 title: LoRa Duplex SAMD21G
-hardware:
-  - samd21g
-  - m0
+
+dependancies:
+  - name: Arduino LoRa firmware
+    url: https://github.com/sandeepmistry/arduino-LoRa
+dev_board: RobotDyn M0 Mini
+chips:
+  - SAMD21G
+features:
   - lora
   - duplex
 references:
@@ -11,8 +16,6 @@ references:
     url: https://robotdyn.com/pub/media/0G-00005516==SAMD21-MINI/DOCS/PINOUT==0G-00005516==SAMD21-MINI.jpg
   - name: RobotDyn M0 schematic
     url: https://robotdyn.com/pub/media/0G-00005516==SAMD21-MINI/DOCS/Schematic==0G-00005516==SAMD21-MINI.pdf
-  - name: Arduino LoRa firmware
-    url: https://github.com/sandeepmistry/arduino-LoRa
   - name: Ardino LoRa Duplex example code
     url: https://github.com/sandeepmistry/arduino-LoRa/blob/master/examples/LoRaDuplex/LoRaDuplex.ino
   - name: Notes on using the Chinese "SAMD21-M0-Mini" board

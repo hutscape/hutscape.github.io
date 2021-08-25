@@ -1,10 +1,17 @@
 ---
 layout: tutorials
-title: GPS parsing with PA1010D and M0 with I2C
-hardware:
+title: GPS parsing with Arduino M0
+dependancies:
+  - name: Arduino Core for SAMD
+    url: https://github.com/arduino/ArduinoCore-samd
+  - name: Adafruit_GPS
+    url: https://github.com/adafruit/Adafruit_GPS
+dev_board: RobotDyn M0 Mini
+sensors:
   - GPS
+chips:
   - PA1010D
-  - M0
+features:
   - I2C
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
@@ -18,8 +25,11 @@ references:
   - name: Adafruit Mini GPS PA1010D schematic
     url: https://cdn-learn.adafruit.com/assets/assets/000/084/182/original/adafruit_products_Mini_GPS_PA1010D_SCh.png?1573765781
 prerequisites:
+  - name: Blinky Arduino M0
+    url: ./blinky-m0
   - name: GPS PA1010D with Arduino M0
     url: ./gps-pa1010d-m0
+
 ---
 
 Use Adafruit GPS module PA1010D with Arduino M0 (with micro-controller SAMD21G) to display parsed GPS data via the I2C protocol.

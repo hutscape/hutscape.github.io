@@ -1,10 +1,15 @@
 ---
 layout: tutorials
 title: Arduino tracing for debugging
-hardware:
-  - arduino
-  - m0
-  - samd21
+dependancies:
+  - name: ArduinoTrace
+    url: https://github.com/bblanchon/ArduinoTrace
+firmware:
+  - Arduino
+dev_board: Arduino M0
+chips:
+  - SAMD21
+features:
   - debug
   - trace
 references:
@@ -17,4 +22,4 @@ references:
 
 ---
 
-Tracing and dumping information with ArduinoTrace library when debugging Arduino code.
+Tracing and dumping information when debugging Arduino code.

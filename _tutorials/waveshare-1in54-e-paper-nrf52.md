@@ -1,10 +1,19 @@
 ---
 layout: tutorials
 title: Waveshare 1.54 inch with nRF52
-hardware:
-  - arduino
+
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit nRF52 nrfutil
+    url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
+  - name: Waveshare e-paper
+    url: https://github.com/waveshare/e-Paper
+chips:
   - nRF52
-  - waveshare
+  - Waveshare
+dev_board: Adafruit Feather Bluefruit
+features:
   - e-paper
   - e-ink
 references:

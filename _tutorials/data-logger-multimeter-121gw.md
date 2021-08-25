@@ -1,12 +1,11 @@
 ---
 layout: tutorials
-title: Using multimeter as a data logger with 121GW
-hardware:
+title: Using 121GW multimeter as a data logger
+tool: 121GW EEVBlog Multimeter
+features:
   - multimeter
   - data
   - logger
-  - 121GW
-  - eevblog
 has_code: false
 references:
   - name: User Manual for 121GW Multimeter

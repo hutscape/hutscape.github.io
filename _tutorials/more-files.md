@@ -1,9 +1,8 @@
 ---
 layout: tutorials
 title: Adding header and cpp files to Arduino folder
-hardware:
-  - arduino
-  - m0
+dev_board: Arduino Zero
+features:
   - files
   - header
   - cpp

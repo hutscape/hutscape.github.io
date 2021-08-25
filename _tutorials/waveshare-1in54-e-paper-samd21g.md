@@ -1,13 +1,23 @@
 ---
 layout: tutorials
 title: Waveshare 1.54 inch with SAMD21G
-hardware:
-  - arduino
-  - m0
-  - samd21g
-  - waveshare
+
+dependancies:
+  - name: Arduino core for SAMD
+    url: https://github.com/arduino/ArduinoCore-samd
+  - name: Waveshare e-paper
+    url: https://github.com/waveshare/e-Paper
+firmware:
+  - Arduino
+chips:
+  - SAMD21
+  - Waveshare
+dev_board: RobotDyn M0 mini
+
+features:
   - e-paper
   - e-ink
+
 references:
   - name: Waveshare 1.54 inch e-paper module
     url: https://www.waveshare.com/product/1.54inch-e-Paper-Module.htm

@@ -1,12 +1,20 @@
 ---
 layout: tutorials
 title: Read and Write to the flash memory
-hardware:
-  - arduino
-  - m0
-  - samd21
-  - robotdyn
+dependancies:
+  - name: Arduino SAMD core
+    url: https://github.com/arduino/ArduinoCore-samd
+  - name: Arduino Flash storage for SAMD boards
+    url: https://github.com/cmaglie/FlashStorage
+firmware:
+  - Arduino
+dev_board: RobotDyn M0 Mini
+chips:
+  - SAMD21
+features:
   - flash
+  - read
+  - write
 references:
   - name: Store name and surname code example
     url: https://github.com/cmaglie/FlashStorage/blob/master/examples/StoreNameAndSurname/StoreNameAndSurname.ino

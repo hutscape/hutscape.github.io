@@ -1,8 +1,17 @@
 ---
 layout: tutorials
 title: Wakeup with no radio
-hardware:
-  - esp8266
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+  - name: ESP8266 WiFi
+    url: https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
+chips:
+  - ESP8266
+dev_board: WeMos D1 Mini
+features:
+  - wakeup
+  - no radio
 references:
   - name: Power usage options
     url: https://www.esp8266.com/wiki/doku.php?id=esp8266_power_usage

@@ -1,9 +1,21 @@
 ---
 layout: tutorials
 title: POST request to IFTTT
-hardware:
-  - esp8266
-  - WeMos
+dependancies:
+  - name: ESP8266 Arduino
+    url: https://github.com/esp8266/Arduino
+  - name: ESP8266 WiFi
+    url: https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
+
+prerequisites:
+  - name: Blinky with ESP8266
+    url: ./blinky-esp8266
+  - name: GET request to IFTTT
+    url: ./ifttt-get
+chips:
+  - ESP8266
+dev_board: WeMos D1 Mini
+features:
   - IFTTT
 ---
 

@@ -1,13 +1,17 @@
 ---
 layout: tutorials
 title: IR emit raw codes
-hardware:
-  - arduino
-  - uno
+dev_board: Arduino UNO
+dependancies:
+  - name: IRLib2
+    url: https://github.com/cyborg5/IRLib2
+features:
   - infrared
   - IR
   - emit
   - raw
+sensors:
+  - infrared
 prerequisites:
   - name: IR Receiver
     url: ./ir-receiver

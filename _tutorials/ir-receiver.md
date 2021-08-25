@@ -1,9 +1,16 @@
 ---
 layout: tutorials
 title: IR Receiver
-hardware:
-  - arduino
-  - uno
+
+dependancies:
+  - name: IRLib2
+    url: https://github.com/cyborg5/IRLib2
+dev_board: Arduino UNO
+chips:
+  - TSOP4838
+sensors:
+  - infrared
+features:
   - infrared
   - IR
   - receiver

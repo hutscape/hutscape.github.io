@@ -1,12 +1,13 @@
 ---
 layout: tutorials
 title: Hardware Web API feature detection
-hardware:
+tool: Chrome web browser
+features:
   - hardware
-  - web
+  - Web
   - geolocation
-  - ble
-  - webusb
+  - BLE
+  - WebUSB
 code: html
 references:
   - name: Geolocation Web API specification

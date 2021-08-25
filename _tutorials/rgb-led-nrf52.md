@@ -1,12 +1,24 @@
 ---
 layout: tutorials
 title: RGB LED nRF52
-hardware:
+
+dependancies:
+  - name: Adafruit nRF52 Arduino
+    url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: Adafruit nRF52 nrfutil
+    url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
+chips:
   - nRF52
-  - bluefruit
-  - adafruit
+dev_board: Adafruit Feather Bluefruit
+
+features:
   - RGB
   - LED
+
+prerequisites:
+  - name: Blinky nRF52
+    url: ./blinky-nrf52
+
 references:
   - name: Fading on-board LED with PWM
     url: https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/master/libraries/Bluefruit52Lib/examples/Hardware/Fading/Fading.ino
