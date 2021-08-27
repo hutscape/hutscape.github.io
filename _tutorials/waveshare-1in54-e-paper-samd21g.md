@@ -17,7 +17,10 @@ dev_board: RobotDyn M0 mini
 features:
   - e-paper
   - e-ink
-
+images:
+  console: waveshare-1in54-e-paper-samd21g-console.png
+  prototype: waveshare-1in54-e-paper-samd21g-prototype.JPG
+  schematic: waveshare-1in54-e-paper-samd21g-schematic.png
 references:
   - name: Waveshare 1.54 inch e-paper module
     url: https://www.waveshare.com/product/1.54inch-e-Paper-Module.htm

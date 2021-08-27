@@ -3,7 +3,7 @@ layout: tutorials
 title: IR Receive raw codes
 
 dependancies:
-  - name: IRLib2
+  - name: IRLib2 and compatible hardware
     url: https://github.com/cyborg5/IRLib2
 
 dev_board: Arduino UNO
@@ -14,6 +14,10 @@ features:
   - IR
   - receive
   - raw
+images:
+  console: ir-raw-receive-console.png
+  prototype: ir-raw-receive-prototype.jpg
+  schematic: ir-raw-receive-schematic.png
 prerequisites:
   - name: IR Receiver
     url: ./ir-receiver

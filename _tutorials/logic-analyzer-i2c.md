@@ -11,7 +11,10 @@ tool: Saleae Logic Analyser
 features:
   - I2C
   - logic analyser
-
+images:
+  console: logic-analyzer-i2c-console.png
+  prototype: logic-analyzer-i2c-prototype.JPG
+  schematic: logic-analyzer-i2c-schematic.png
 references:
   - name: Adafruit Si7021 Temperature & Humidity Sensor Breakout Board
     url: https://www.adafruit.com/product/3251

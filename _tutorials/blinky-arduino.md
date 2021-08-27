@@ -6,6 +6,9 @@ firmware:
   - Arduino
 chips:
   - ATmega328P
+images:
+  console: blinky-arduino-console.png
+  prototype: blinky-arduino-prototype.jpg
 references:
   - name: Blink Arduino tutorial
     url: https://www.arduino.cc/en/Tutorial/Blink

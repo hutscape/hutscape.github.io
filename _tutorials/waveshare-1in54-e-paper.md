@@ -15,6 +15,9 @@ chips:
 features:
   - e-paper
   - e-ink
+images:
+  prototype: waveshare-1in54-e-paper-prototype.JPG
+  schematic: waveshare-1in54-e-paper-schematic.png
 
 references:
   - name: Waveshare 1.54 inch e-paper module

@@ -11,6 +11,11 @@ chips:
 features:
   - lora
   - duplex
+
+images:
+  console: lora-duplex-samd21g-console.png
+  prototype: lora-duplex-samd21g-prototype.JPG
+  schematic: lora-duplex-samd21g-schematic.png
 references:
   - name: RobotDyn M0 pinout diagram
     url: https://robotdyn.com/pub/media/0G-00005516==SAMD21-MINI/DOCS/PINOUT==0G-00005516==SAMD21-MINI.jpg

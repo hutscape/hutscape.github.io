@@ -7,6 +7,9 @@ features:
   - usb
   - power
   - gauge
+images:
+  console: power-gauge-console.png
+  prototype: power-gauge-prototype.jpg
 references:
   - name: Adafruit USB Power Gauge Mini-Kit
     url: https://www.adafruit.com/product/1549

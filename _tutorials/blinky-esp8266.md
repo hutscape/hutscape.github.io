@@ -7,6 +7,9 @@ dependancies:
 chips:
   - ESP8266
 dev_board: WeMos D1 Mini
+images:
+  console: blinky-esp8266-console.png
+  prototype: blinky-esp8266-prototype.jpg
 ---
 
 `LED_BUILTIN` can be referred as the pin for the on-board LED. It has a reverse logic.

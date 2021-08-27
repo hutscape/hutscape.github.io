@@ -16,7 +16,8 @@ chips:
 features:
   - UART
   - Google Maps
-
+images:
+  console: gps-pa1010d-m0-parsing-console.jpg
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
     url: https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view

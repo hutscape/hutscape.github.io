@@ -8,7 +8,10 @@ dependancies:
 features:
   - lora
   - duplex
-
+images:
+  console: lora-duplex-b-console.png
+  prototype: lora-duplex-b-prototype.jpg
+  schematic: lora-duplex-b-schematic.png
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa

@@ -15,7 +15,8 @@ chips:
   - LSM9DS1
 sensors:
   - IMU
-
+images:
+  console: blinky-nano33-ble-sense-imu-console.png
 references:
   - name: Arduino Nano 33 BLE Sense
     url: https://store.arduino.cc/usa/nano-33-ble-sense

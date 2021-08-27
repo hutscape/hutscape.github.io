@@ -10,6 +10,9 @@ chips:
 firmware:
   - C
   - C++
+images:
+  console: blinky-pico-console.png
+  prototype: blinky-pico-prototype.jpg
 references:
   - name: Pico examples blinky C code
     url: https://github.com/raspberrypi/pico-examples/tree/master/blink

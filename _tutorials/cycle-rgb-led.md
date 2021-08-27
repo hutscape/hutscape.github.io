@@ -9,7 +9,8 @@ chips:
 features:
   - LED
 dev_board: Adafruit Feather Bluefruit
-
+images:
+  schematic: cycle-rgb-led-schematic.png
 prerequisites:
   - name: RGB LED nRF52
     url: ./rgb-led-nrf52

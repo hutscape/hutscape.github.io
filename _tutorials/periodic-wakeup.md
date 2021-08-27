@@ -12,6 +12,9 @@ features:
   - wakeup
   - sleep
   - periodic
+images:
+  prototype: periodic-wakeup-prototype.jpg
+  schematic: periodic-wakeup-schematic.png
 references:
   - name: External Wakeup
     url: https://www.arduino.cc/en/Tutorial/LowPowerTimedWakeup

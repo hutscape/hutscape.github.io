@@ -16,6 +16,9 @@ dev_board: Adafruit Feather Bluefruit
 features:
   - e-paper
   - e-ink
+images:
+  prototype: waveshare-1in54-e-paper-nrf52-prototype.JPG
+  schematic: waveshare-1in54-e-paper-nrf52-schematic.png
 references:
   - name: Waveshare 1.54 inch e-paper module
     url: https://www.waveshare.com/product/1.54inch-e-Paper-Module.htm

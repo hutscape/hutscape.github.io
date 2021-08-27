@@ -15,7 +15,10 @@ firmware:
   - C++
 feature:
   - I2C
-
+images:
+  console: pico-i2c-console.png
+  prototype: pico-i2c-prototype.jpg
+  schematic: pico-i2c-schematic.png
 prerequisites:
   - name: Blinky Pico
     url: ./blinky-pico

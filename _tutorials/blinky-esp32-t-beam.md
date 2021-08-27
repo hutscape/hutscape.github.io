@@ -7,6 +7,9 @@ dependancies:
 chips:
   - ESP32
 dev_board: LilyGO T-Beam
+images:
+  console: blinky-esp32-t-beam-console.png
+  prototype: blinky-esp32-t-beam-prototype.JPG
 references:
   - name: Code repo and schematic for T-Beam
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam

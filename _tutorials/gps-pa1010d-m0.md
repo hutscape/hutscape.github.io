@@ -15,7 +15,10 @@ chips:
   - PA1010D
 features:
   - UART
-
+images:
+  console: gps-pa1010d-m0-console.png
+  prototype: gps-pa1010d-m0-prototype.JPG
+  schematic: gps-pa1010d-m0-schematic.png
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
     url: https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view

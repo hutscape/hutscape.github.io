@@ -15,7 +15,8 @@ dev_board: RobotDyn M0 mini
 
 features:
   - WebUSB
-
+images:
+  browser: webusb-led-browser.png
 code: html
 references:
   - name: Access USB Devices on the Web

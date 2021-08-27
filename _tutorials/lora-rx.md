@@ -12,7 +12,10 @@ dev_board: Arduino UNO
 features:
   - LoRa
   - RX
-
+images:
+  console: lora-rx-console.png
+  prototype: lora-rx-prototype.jpg
+  schematic: lora-rx-schematic.png
 references:
   - name: Arduino LoRa firmware sender example
     url: https://github.com/sandeepmistry/arduino-LoRa/blob/master/examples/LoRaReceiver/LoRaReceiver.ino

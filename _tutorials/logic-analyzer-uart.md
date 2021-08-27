@@ -4,6 +4,8 @@ title: Analyzing UART signals
 dev_board: Arduino UNO
 feature:
 tool: Saleae Logic Analyzer
+images:
+  schematic: logic-analyzer-uart-schematic.png
 references:
   - name: Saleae decoding UART
     url: https://support.saleae.com/protocol-analyzers/analyzer-user-guides/decode-uart

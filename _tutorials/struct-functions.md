@@ -11,7 +11,8 @@ features:
   - pointer
 firmware:
   - Arduino
-
+images:
+  console: struct-functions-console.png
 prerequisites:
   - name: Adding header and cpp files to Arduino folder
     url: ./more-files

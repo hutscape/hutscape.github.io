@@ -14,7 +14,9 @@ sensor:
 chips:
   - nRF52
   - VEML6075
-
+images:
+  console: sensor-uv-console.png
+  schematic: sensor-uv-schematic.png
 prerequisites:
   - name: Blinky nRF52
     url: ./blinky-nrf52

@@ -10,6 +10,10 @@ chips:
   - SAMD21
 dev_board: RobotDyn M0 mini
 
+images:
+  arduino: blinky-m0-arduino-setting.png
+  console: blinky-m0-console.png
+  prototype: blinky-m0-prototype.jpg
 references:
   - name: RobotDyn SAMD21 M0-Mini a quick look
     url: http://www.armlearning.com/hardware/robotdyn-samd21-m0-mini-quick-look.php

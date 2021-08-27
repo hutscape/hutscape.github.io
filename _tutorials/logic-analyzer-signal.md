@@ -13,7 +13,10 @@ sensors:
 features:
   - I2C
   - logic analyser
-
+images:
+  console: logic-analyzer-signal-console.png
+  prototype: logic-analyzer-signal-prototype.JPG
+  schematic: logic-analyzer-signal-schematic.png
 references:
   - name: Adafruit DHT sensor library
     url: https://github.com/adafruit/DHT-sensor-library

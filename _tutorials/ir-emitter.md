@@ -2,7 +2,7 @@
 layout: tutorials
 title: IR Emitter
 dependancies:
-  - name: IRLib2
+  - name: IRLib2 and compatible hardware
     url: https://github.com/cyborg5/IRLib2
 dev_board: Arduino UNO
 chips:
@@ -13,6 +13,9 @@ features:
   - emitter
 sensors:
   - infrared
+images:
+  console: ir-emitter-console.png
+  schematic: ir-emitter-schematic.png
 prerequisites:
   - name: IR Receiver
     url: ./ir-receiver

@@ -16,7 +16,8 @@ chips:
 features:
   - sharp
   - display
-
+images:
+  schematic: sharp-display-schematic.png
 prerequisites:
   - name: Blinky nRF52
     url: ./blinky-nrf52

@@ -14,7 +14,11 @@ chips:
 features:
   - sleep
   - wakeup
-
+images:
+  arduino: periodic-wakeup-interrupt-arduino-settings.png
+  console: periodic-wakeup-interrupt-console.png
+  schematic: periodic-wakeup-interrupt-schematic.jpg
+  prototype: periodic-wakeup-interrupt-prototype.jpg
 references:
   - name: Synchro Clock config pin schematic
     url: https://raw.githubusercontent.com/liebman/AnalogClock/master/images/SynchroClock.png

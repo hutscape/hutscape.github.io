@@ -12,7 +12,8 @@ chips:
 features:
   - shift register
   - bar led
-
+images:
+  schematic: shift-register-schematic.png
 prerequisites:
   - name: Blinky ESP8266
     url: ./blinky-esp8266

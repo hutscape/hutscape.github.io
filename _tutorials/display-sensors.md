@@ -18,6 +18,10 @@ features:
   - UV
   - temperature
   - humidity
+images:
+  console: display-sensors-console.png
+  prototype: display-sensors-prototype.jpg
+  schematic: display-sensors-schematic.png
 references:
   - name: Adafruit Si7021 firmware
     url: https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino

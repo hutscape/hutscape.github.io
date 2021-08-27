@@ -11,6 +11,8 @@ features:
   - read
   - write
   - string
+images:
+  console: eeprom-string-arduino-console.png
 references:
   - name: EEPROM Write tutorial
     url: https://www.arduino.cc/en/Tutorial/EEPROMWrite

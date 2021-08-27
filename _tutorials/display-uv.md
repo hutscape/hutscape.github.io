@@ -16,6 +16,9 @@ sensors:
 features:
   - display
 dev_board: Adafruit Feather Bluefruit
+images:
+  prototype: display-uv-prototype.jpg
+  schematic: display-uv-schematic.png
 references:
   - name: Adafruit SHARP memory display firmware
     url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino

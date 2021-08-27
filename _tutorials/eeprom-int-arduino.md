@@ -10,6 +10,8 @@ features:
   - EEPROM
   - read
   - write
+images:
+  console: eeprom-int-arduino-console.png
 references:
   - name: EEPROM Write tutorial
     url: https://www.arduino.cc/en/Tutorial/EEPROMWrite

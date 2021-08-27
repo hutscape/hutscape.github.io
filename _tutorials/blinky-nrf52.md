@@ -9,7 +9,10 @@ dependancies:
 chips:
   - nRF52
 dev_board: Adafruit Feather Bluefruit
-
+images:
+  arduino: blinky-nrf52-arduino-settings.png
+  console: blinky-nrf52-console.png
+  prototype: blinky-nrf52-prototype.jpg
 references:
   - name: Get started now with our most powerful Bluefruit board yet
     url: https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/introduction
@@ -30,5 +33,3 @@ To use command line [arduino-cli](https://github.com/arduino/arduino-cli), insta
 ```
 pip3 install --user adafruit-nrfutil
 ```
-
-<img src="{{ site.url }}/assets/images/tutorials/blinky-nrf52-arduino-settings.png" alt="nRF52 settings on Arduino IDE">

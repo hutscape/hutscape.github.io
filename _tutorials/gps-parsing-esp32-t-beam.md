@@ -19,7 +19,9 @@ features:
   - parsing
 sensors:
   - GPS
-
+images:
+  console: gps-parsing-esp32-t-beam-console.jpg
+  prototype: gps-parsing-esp32-t-beam-prototype.jpg
 references:
   - name: TinyGPSPlus
     url: https://github.com/mikalhart/TinyGPSPlus

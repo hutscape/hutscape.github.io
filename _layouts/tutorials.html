@@ -167,72 +167,55 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.images %}
 <section class="section is-small">
   <div class="container">
     <div class="columns is-multiline is-desktop">
-    {% for image in site.static_files %}
-      {% if image.path contains 'assets/images/tutorials' %}
-        {% assign image_base = page.path | remove: "_tutorials/" | remove: ".md" | remove: ".jpg" | remove: ".png" | downcase %}
-        {% if image.path contains image_base %}
-          {% assign arduino_settings_image = image_base | append: '-arduino-setting' %}
-          {% assign schematic_image = image_base | append: '-schematic' %}
-          {% assign prototype_image = image_base | append: '-prototype' %}
-          {% assign console_image = image_base | append: '-console' %}
-          {% assign browser_image = image_base | append: '-browser' %}
-
-          {% if image.path contains arduino_settings_image
-            or image.path contains schematic_image
-            or image.path contains schematic_image
-            or image.path contains prototype_image
-            or image.path contains console_image
-            or image.path contains browser_image %}
-
-            {% if image.path contains arduino_settings_image %}
-              <div class="column is-half">
-                <h2 class="title is-2">Arduino IDE settings</h2>
-                <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
-                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} Arduino IDE settings"></a>
-              </div>
-            {% endif %}
-
-            {% if image.path contains schematic_image %}
-              <div class="column is-half">
-                <h2 class="title is-2">Schematic</h2>
-                <p class="subtitle is-4">Wire up the hardware accordingly</p>
-                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} schematic"></a>
-              </div>
-            {% endif %}
-
-            {% if image.path contains prototype_image %}
-              <div class="column is-half">
-                <h2 class="title is-2">Prototype</h2>
-                <p class="subtitle is-4">A photo of the actual setup.</p>
-                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} prototype"></a>
-              </div>
-            {% endif %}
-
-            {% if image.path contains browser_image %}
-              <div class="column is-half">
-                <h2 class="title is-2">Browser console</h2>
-                <p class="subtitle is-4">Open the browser developer console.</p>
-                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} browser"></a>
-              </div>
-            {% endif %}
-
-            {% if image.path contains console_image %}
-              <div class="column is-half">
-                <h2 class="title is-2">Serial console</h2>
-                <p class="subtitle is-4">Serial output from the firmware.</p>
-                <a href="{{ image.path }}"><img src="{{ image.path }}" alt="{{ page.title | escape }} serial console"></a>
-              </div>
-            {% endif %}
-          {% endif %}
-        {% endif %}
+      {% if page.images.console %}
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/{{ page.images.console }}"><img
+            src="/assets/images/tutorials/{{ page.images.console }}" alt="{{ page.title | escape }} serial console"></a>
+      </div>
       {% endif %}
-    {% endfor %}
+
+      {% if page.images.schematic %}
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/{{ page.images.schematic }}"><img
+            src="/assets/images/tutorials/{{ page.images.schematic }}" alt="{{ page.title | escape }} schematic"></a>
+      </div>
+      {% endif %}
+
+      {% if page.images.arduino %}
+      <div class="column is-half">
+        <h2 class="title is-2">Arduino IDE settings</h2>
+        <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
+        <a href="/assets/images/tutorials/{{ page.images.arduino }}"><img src="/assets/images/tutorials/{{ page.images.arduino }}" alt="{{ page.title | escape }} Arduino IDE settings"></a>
+      </div>
+      {% endif %}
+
+      {% if page.images.prototype %}
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/{{ page.images.prototype }}"><img src="/assets/images/tutorials/{{ page.images.prototype }}" alt="{{ page.title | escape }} prototype"></a>
+      </div>
+      {% endif %}
+
+      {% if page.images.browser %}
+      <div class="column is-half">
+        <h2 class="title is-2">Browser console</h2>
+        <p class="subtitle is-4">Open the browser developer console.</p>
+        <a href="/assets/images/tutorials/{{ page.images.browser }}"><img src="/assets/images/tutorials/{{ page.images.browser }}" alt="{{ page.title | escape }} browser"></a>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
+{% endif %}
 
 {% if page.references %}
 <section class="section is-small">

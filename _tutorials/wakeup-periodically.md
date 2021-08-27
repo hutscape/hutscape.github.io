@@ -10,6 +10,8 @@ dev_board: WeMos D1 Mini
 features:
   - wakeup
   - periodic
+images:
+  arduino: wakeup-periodically-arduino-settings.png
 prerequisites:
   - name: Blinky ESP8266
     url: ./blinky-esp8266

@@ -14,6 +14,8 @@ features:
   - shift register
 sensors:
   - humidity
+images:
+  schematic: display-humidity-bar-led-schematic.png
 references:
   - name: DHT-sensor-library
     url: https://github.com/adafruit/DHT-sensor-library/blob/master/examples/DHTtester/DHTtester.ino

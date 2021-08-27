@@ -8,7 +8,8 @@ dependancies:
 chips:
   - ESP32
 dev_board: LilyGO T-Beam
-
+images:
+  console: haversine-console.png
 
 references:
   - name: Rosetta code Haversine formula

@@ -20,6 +20,9 @@ features:
   - duplex
 sensors:
   - gps
+images:
+  console: lora-duplex-a-gps-esp32-t-beam-console.jpg
+  prototype: lora-duplex-a-gps-esp32-t-beam-prototype.JPG
 
 references:
   - name: Arduino LoRa firmware

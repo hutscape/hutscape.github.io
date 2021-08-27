@@ -8,6 +8,8 @@ features:
   - cpp
   - src
   - folder
+images:
+  console: more-files-console.png
 references:
   - name: How do I add cpp file to an arduino project?
     url: https://stackoverflow.com/questions/55684371/how-do-i-add-cpp-file-to-an-arduino-project

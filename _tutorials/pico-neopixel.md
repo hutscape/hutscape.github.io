@@ -14,7 +14,9 @@ features:
 firmware:
   - C
   - C++
-
+images:
+  prototype: pico-neopixel-prototype.png
+  schematic: pico-neopixel-schematic.png
 references:
   - name: Raspberry Pi Pico example with WS2812
     url: https://github.com/raspberrypi/pico-examples/blob/master/pio/ws2812/ws2812.c

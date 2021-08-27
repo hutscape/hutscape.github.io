@@ -15,6 +15,8 @@ features:
   - flash
   - read
   - write
+images:
+  console: flash-storage-samd21-console.png
 references:
   - name: Store name and surname code example
     url: https://github.com/cmaglie/FlashStorage/blob/master/examples/StoreNameAndSurname/StoreNameAndSurname.ino

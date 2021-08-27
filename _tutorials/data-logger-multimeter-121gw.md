@@ -7,6 +7,9 @@ features:
   - data
   - logger
 has_code: false
+images:
+  prototype: data-logger-multimeter-121gw-prototype.png
+  schematic: data-logger-multimeter-121gw-schematic.png
 references:
   - name: User Manual for 121GW Multimeter
     url: https://www.eevblog.com/files/EEVblog-121GW-Manual.pdf

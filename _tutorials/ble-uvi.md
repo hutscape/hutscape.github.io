@@ -13,6 +13,9 @@ features:
   - GATT
 sensors:
   - UV Index
+images:
+  console: ble-uvi-console.jpg
+  schematic: ble-uvi-schematic.png
 references:
   - name: Code reference
     url: https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/master/libraries/Bluefruit52Lib/examples/Peripheral/custom_htm/custom_htm.ino

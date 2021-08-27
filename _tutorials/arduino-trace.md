@@ -12,6 +12,8 @@ chips:
 features:
   - debug
   - trace
+images:
+  console: arduino-trace-console.png
 references:
   - name: ArduinoTrace library
     url: https://github.com/bblanchon/ArduinoTrace

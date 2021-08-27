@@ -17,6 +17,8 @@ sensors:
 features:
   - lipo
   - display
+images:
+  schematic: display-uv-lipo-schematic.png
 references:
   - name: Adafruit SHARP memory display firmware
     url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino

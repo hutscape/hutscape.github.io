@@ -10,6 +10,8 @@ features:
   - button
   - sleep
   - wakeup
+images:
+  schematic: long-sleep-or-button-press-schematic.png
 prerequisites:
   - name: Blinky ESP8266
     url: ./blinky-esp8266

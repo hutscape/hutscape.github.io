@@ -12,7 +12,9 @@ chips:
 dev_board: Adafruit Feather Bluefruit
 features:
   - BLE
-
+images:
+  browser: web-ble-detect-browser.png
+  console: web-ble-detect-console.png
 references:
   - name: Chrome Web Bluetooth / Device Info Sample
     url: https://googlechrome.github.io/samples/web-bluetooth/device-info.html

@@ -11,6 +11,8 @@ features:
   - EEPROM
   - read
   - write
+images:
+  console: eeprom-esp8266-console.png
 references:
   - name: Null-terminated string
     url: https://en.wikipedia.org/wiki/Null-terminated_string

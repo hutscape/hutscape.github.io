@@ -10,7 +10,10 @@ chips:
   - WS2812
 features:
   - neopixel
-
+images:
+  console: neopixel-ws2812-console.png
+  prototype: neopixel-ws2812-prototype.jpg
+  schematic: neopixel-ws2812-schematic.png
 references:
   - name: WS2812 Datasheet
     url: https://cdn-shop.adafruit.com/datasheets/WS2812.pdf

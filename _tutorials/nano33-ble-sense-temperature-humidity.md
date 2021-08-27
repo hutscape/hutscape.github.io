@@ -15,7 +15,8 @@ sensors:
   - humidity
 chips:
   - HTS221
-
+images:
+  console: nano33-ble-sense-temperature-humidity-console.png
 references:
   - name: Arduino Nano 33 BLE Sense
     url: https://store.arduino.cc/usa/nano-33-ble-sense

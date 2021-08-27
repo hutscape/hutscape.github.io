@@ -8,6 +8,8 @@ tool: Chrome web browser
 features:
   - WebUSB
 code: html
+images:
+  browser: webusb-detect-browser.png
 references:
   - name: Access USB Devices on the Web
     url: https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web

@@ -7,7 +7,8 @@ dependancies:
 firmware:
   - Arduino
 dev_board: Arduino Nano 33 BLE Sense
-
+images:
+  console: blinky-nano33-ble-sense-console.png
 references:
   - name: Arduino Nano 33 BLE Sense
     url: https://store.arduino.cc/usa/nano-33-ble-sense

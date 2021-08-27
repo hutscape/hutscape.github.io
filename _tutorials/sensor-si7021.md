@@ -14,6 +14,8 @@ chips:
 sensors:
   - temperature
   - humidity
+images:
+  schematic: sensor-si7021-schematic.png
 references:
   - name: Si7021 example code
     url: https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino

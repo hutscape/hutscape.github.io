@@ -14,7 +14,8 @@ dev_board: Adafruit Feather Bluefruit
 features:
   - RGB
   - LED
-
+images:
+  schematic: rgb-led-nrf52-schematic.png
 prerequisites:
   - name: Blinky nRF52
     url: ./blinky-nrf52

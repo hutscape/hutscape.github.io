@@ -17,6 +17,8 @@ features:
   - cpp
   - files
   - folders
+images:
+  console: nano33-ble-sense-imu-sensors-console.png
 references:
   - name: Arduino Nano 33 BLE Sense
     url: https://store.arduino.cc/usa/nano-33-ble-sense

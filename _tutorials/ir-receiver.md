@@ -3,7 +3,7 @@ layout: tutorials
 title: IR Receiver
 
 dependancies:
-  - name: IRLib2
+  - name: IRLib2 and compatible hardware
     url: https://github.com/cyborg5/IRLib2
 dev_board: Arduino UNO
 chips:
@@ -14,6 +14,9 @@ features:
   - infrared
   - IR
   - receiver
+images:
+  console: ir-receiver-console.jpg
+  schematic: ir-receiver-schematic.png
 references:
   - name: Use Arduino AVR Board version 1.6.21
     url: https://forum.arduino.cc/index.php?topic=574020.0

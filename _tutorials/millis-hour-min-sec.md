@@ -11,6 +11,8 @@ features:
   - days
 firmware:
   - arduino
+images:
+  console: millis-hour-min-sec-console.png
 references:
   - name: Sketch to Convert Milliseconds to Hours, Minutes and Seconds - HH:MM:SS
     url: https://forum.arduino.cc/index.php?topic=664362.0

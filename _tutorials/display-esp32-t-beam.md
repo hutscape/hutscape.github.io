@@ -13,6 +13,9 @@ dev_board: LilyGO T-Beam
 features:
   - display
   - oled
+images:
+  console: display-esp32-t-beam-console.png
+  prototype: display-esp32-t-beam-prototype.JPG
 references:
   - name: Code example from LilyGO T-Beam with OLED SSD1306
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam/blob/master/examples/OLED/SSD1306SimpleDemo/SSD1306SimpleDemo.ino

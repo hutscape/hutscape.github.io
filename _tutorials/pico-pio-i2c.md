@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: PIO I2C Bus Scan for Sensors Si7021 and VCNL4000 with RPi pico
+title: PIO I2C Bus Scan with Pico
 
 dependancies:
   - name: Pico toolchain
@@ -16,7 +16,10 @@ firmware:
 feature:
   - I2C
   - PIO
-
+images:
+  console: pico-pio-i2c-console.png
+  prototype: pico-pio-i2c-prototype.png
+  schematic: pico-pio-i2c-schematic.png
 prerequisites:
   - name: Blinky Pico
     url: ./blinky-pico

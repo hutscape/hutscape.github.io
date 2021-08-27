@@ -7,10 +7,11 @@ chips:
 features:
   - sleep
   - wakeup
+images:
+  console: max-deep-sleep-console.png
 references:
   - name: Max deep sleep for ESP8266
     url: https://thingpulse.com/max-deep-sleep-for-esp8266/
-
 ---
 
 How long can ESP8266 sleep? This firmware code will test it out.

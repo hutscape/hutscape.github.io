@@ -12,7 +12,10 @@ dev_board: Arduino UNO
 features:
   - LoRa
   - TX
-
+images:
+  console: lora-tx-console.png
+  prototype: lora-tx-prototype.jpg
+  schematic: lora-tx-schematic.png
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa
