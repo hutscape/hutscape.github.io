@@ -4,6 +4,8 @@ title: BLE publish UV Index
 dependancies:
   - name: Adafruit nRF52 Arduino
     url: https://github.com/adafruit/Adafruit_nRF52_Arduino
+  - name: nRF Connect iPhone app
+    url: https://apps.apple.com/sg/app/nrf-connect/id1054362403
 chips:
   - VEML6075
   - nRF52
@@ -13,6 +15,9 @@ features:
   - GATT
 sensors:
   - UV Index
+components:
+  - name: Adafruit Feather Bluefruit nRF52
+    url: https://amzn.to/39WpHw8
 images:
   console: ble-uvi-console.jpg
   schematic: ble-uvi-schematic.png

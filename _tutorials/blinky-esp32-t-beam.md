@@ -4,6 +4,11 @@ title: Blinky for ESP32 LilyGO T-Beam
 dependancies:
   - name: Arduino ESP32
     url: https://github.com/espressif/arduino-esp32
+  - name: SiLabs CP210x USB to UART Bridge VCP Drivers
+    url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
+components:
+  - name: TTGO LilyGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
 chips:
   - ESP32
 dev_board: LilyGO T-Beam
@@ -15,8 +20,6 @@ references:
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam
   - name: Link to USB to UART driver for ESP32 on macOS
     url: https://github.com/espressif/arduino-esp32/issues/1084#issuecomment-363294312
-  - name: SiLabs CP210x USB to UART Bridge VCP Drivers
-    url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
   - name: Arduino ESP32 Boards URL
     url: https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md
 ---

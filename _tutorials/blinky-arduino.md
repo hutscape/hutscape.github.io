@@ -6,6 +6,9 @@ firmware:
   - Arduino
 chips:
   - ATmega328P
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
 images:
   console: blinky-arduino-console.png
   prototype: blinky-arduino-prototype.jpg

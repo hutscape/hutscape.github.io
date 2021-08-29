@@ -7,6 +7,9 @@ dependancies:
 chips:
   - ESP8266
 dev_board: WeMos D1 Mini
+components:
+  - name: WeMos D1 Mini
+    url: https://s.click.aliexpress.com/e/_AqH5EC
 images:
   console: blinky-esp8266-console.png
   prototype: blinky-esp8266-prototype.jpg
