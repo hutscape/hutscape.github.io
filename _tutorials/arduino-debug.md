@@ -8,6 +8,10 @@ chips:
   - SAMD21
 features:
   - debug
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
+video: 7kRlQDxGR9A
 references:
   - name: ifdef DEBUG
     url: https://www.youtube.com/watch?v=kBTM0dLzNXk

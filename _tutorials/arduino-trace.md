@@ -12,6 +12,10 @@ chips:
 features:
   - debug
   - trace
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
+video: 7kRlQDxGR9A
 images:
   console: arduino-trace-console.png
 references:
