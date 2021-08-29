@@ -78,7 +78,7 @@ layout: default
     <hr>
 
     {% if page.dependancies or page.prerequisites %}
-    <h2 class="title is-2">Before starting...</h2>
+    <h2 class="title is-2">Before starting</h2>
     {% endif %}
 
     <div class="columns is-desktop">
@@ -116,6 +116,26 @@ layout: default
               <ol>
                 {% for pre in page.prerequisites %}
                 <li><a href="{{ pre.url }}">{{ pre.name }}</a></li>
+                {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.components %}
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                {% for comp in page.components %}
+                <li><a href="{{ comp.url }}">{{ comp.name }}</a></li>
                 {% endfor %}
               </ol>
             </div>
@@ -228,6 +248,19 @@ layout: default
           <li><a href="{{ref.url}}">{{ ref.name }}</a></li>
         {% endfor %}
       </ol>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.video %}
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Watch</h2>
+    <div class="video-container">
+      <iframe class="v" src="https://www.youtube-nocookie.com/embed/{{ page.video }}" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
   </div>
 </section>

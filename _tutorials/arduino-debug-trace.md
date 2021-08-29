@@ -4,6 +4,10 @@ title: Arduino debugging and tracing
 dependancies:
   - name: ArduinoTrace
     url: https://github.com/bblanchon/ArduinoTrace
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
+video: 7kRlQDxGR9A
 firmware:
   - Arduino
 dev_board: Arduino M0
