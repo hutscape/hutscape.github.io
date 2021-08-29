@@ -20,37 +20,45 @@ type: header
     </p>
   </div>
 
-  {% for component in site.tutorials %}
-  <a class="panel-block searchable" data-index="{{ component.title | downcase }} {% for item in component.features %}{{ item | downcase }} {% endfor %} {% for item in component.sensors %}{{ item | downcase }} {% endfor %} {% for item in component.chips %}{{ item | downcase }} {% endfor %} {% if component.dev_board %} {{component.dev_board | downcase }} {% endif %} " href="{{ component.url }}">
+  {% for tut in site.tutorials %}
+  <a class="panel-block searchable" data-index="{{ tut.title | downcase }} {% for item in tut.features %}{{ item | downcase }} {% endfor %} {% for item in tut.sensors %}{{ item | downcase }} {% endfor %} {% for item in tut.chips %}{{ item | downcase }} {% endfor %} {% if tut.dev_board %} {{tut.dev_board | downcase }} {% endif %} " href="{{ tut.url }}">
     <span class="panel-icon">
       <i class="fas fa-book" aria-hidden="true"></i>
     </span>
-    {{ component.title }}
+    {{ tut.title }}
     <div class="tags">
-      {% if component.dev_board %}
-        <span class="tag is-light is-danger">{{ component.dev_board }}</span>
+      {% if tut.dev_board %}
+        <span class="tag is-light is-danger">{{ tut.dev_board }}</span>
       {% endif %}
 
-      {% if component.firmware %}
-        {% for firmware in component.firmware %}
+      {% if tut.firmware %}
+        {% for firmware in tut.firmware %}
           <span class="tag is-light is-info">{{ firmware }}</span>
         {% endfor %}
       {% endif %}
 
-      {% if component.chips %}
-        {% for chip in component.chips %}
+      {% if tut.chips %}
+        {% for chip in tut.chips %}
           <span class="tag is-light is-warning">{{ chip }}</span>
         {% endfor %}
       {% endif %}
 
-      {% if component.tool %}
-        <span class="tag is-light is-danger">{{ component.tool }}</span>
+      {% if tut.tool %}
+        <span class="tag is-light is-danger">{{ tut.tool }}</span>
       {% endif %}
 
-      {% if component.sensors %}
-        {% for sensor in component.sensors %}
+      {% if tut.sensors %}
+        {% for sensor in tut.sensors %}
         <span class="tag is-light is-primary">{{ sensor }}</span>
         {% endfor %}
+      {% endif %}
+
+      <!-- TODO -->
+      {% if jekyll.environment == "development" %}
+        {% if tut.components %}
+        {% else %}
+        <span class="tag is-danger">TODO COMPONENTS & VIDEO</span>
+        {% endif %}
       {% endif %}
     </div>
   </a>
