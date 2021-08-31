@@ -11,6 +11,10 @@ features:
   - EEPROM
   - read
   - write
+components:
+  - name: WeMos D1 Mini
+    url: https://s.click.aliexpress.com/e/_ADRrXP
+
 images:
   console: eeprom-esp8266-console.png
 references:

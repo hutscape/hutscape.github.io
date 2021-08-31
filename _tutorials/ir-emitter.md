@@ -5,6 +5,9 @@ dependancies:
   - name: IRLib2 and compatible hardware
     url: https://github.com/cyborg5/IRLib2
 dev_board: Arduino UNO
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
 chips:
   - ATmega328p
 features:
@@ -16,6 +19,7 @@ sensors:
 images:
   console: ir-emitter-console.png
   schematic: ir-emitter-schematic.png
+  prototype: ir-raw-emit-prototype.jpg
 prerequisites:
   - name: IR Receiver
     url: ./ir-receiver

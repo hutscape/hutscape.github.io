@@ -11,6 +11,9 @@ features:
   - read
   - write
   - string
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
 images:
   console: eeprom-string-arduino-console.png
 references:

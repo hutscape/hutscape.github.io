@@ -21,6 +21,10 @@ features:
 images:
   console: display-parsed-gps-esp32-t-beam-console.jpg
   prototype: display-parsed-gps-esp32-t-beam-prototype.jpg
+components:
+  - name: TTGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
+
 references:
   - name: Code example from LilyGO T-Beam with OLED SSD1306
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam/blob/master/examples/OLED/SSD1306SimpleDemo/SSD1306SimpleDemo.ino

@@ -10,6 +10,10 @@ features:
   - EEPROM
   - read
   - write
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+
 images:
   console: eeprom-int-arduino-console.png
 references:

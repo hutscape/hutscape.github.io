@@ -17,6 +17,11 @@ features:
 images:
   console: ir-receiver-console.jpg
   schematic: ir-receiver-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: IR receiver TSOP4838
+    url: https://amzn.to/3jsfkp0
 references:
   - name: Use Arduino AVR Board version 1.6.21
     url: https://forum.arduino.cc/index.php?topic=574020.0

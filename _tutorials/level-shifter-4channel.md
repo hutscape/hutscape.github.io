@@ -11,6 +11,13 @@ features:
   - 5V
   - 3.3V
   - bidirectional
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: Level shifter 4 channel
+    url: https://s.click.aliexpress.com/e/_9jA6rS
+  - name: Solderless breadboard
+    url: https://amzn.to/3gNRp1x
 references:
   - name: Bi-Directional Logic Level Converter Hookup Guide
     url: https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all

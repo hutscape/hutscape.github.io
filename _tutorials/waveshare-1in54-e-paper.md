@@ -18,6 +18,11 @@ features:
 images:
   prototype: waveshare-1in54-e-paper-prototype.JPG
   schematic: waveshare-1in54-e-paper-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: WaveShare 1.54in E-Ink module
+    url: https://amzn.to/3n7gLtk
 
 references:
   - name: Waveshare 1.54 inch e-paper module

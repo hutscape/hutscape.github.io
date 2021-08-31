@@ -14,7 +14,9 @@ sensors:
   - gps
 features:
   - uart
-
+components:
+  - name: TTGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
 references:
   - name: Code repo and schematic for T-Beam
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam

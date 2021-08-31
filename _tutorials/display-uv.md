@@ -19,6 +19,15 @@ dev_board: Adafruit Feather Bluefruit
 images:
   prototype: display-uv-prototype.jpg
   schematic: display-uv-schematic.png
+components:
+  - name: Solderless breadboard
+    url: https://amzn.to/3gNRp1x
+  - name: Adafruit Bluefruit nRF52
+    url: https://amzn.to/39WpHw8
+  - name: Adafruit SHARP Memory Monochrome Display Breakout 168x144 pixels
+    url: https://www.adafruit.com/product/3502
+  - name: Adafruit UV sensor breakout board
+    url: https://www.adafruit.com/product/3964
 references:
   - name: Adafruit SHARP memory display firmware
     url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino
@@ -30,9 +39,3 @@ prerequisites:
   - name: SHARP display
     url: ./sharp-display
 ---
-
-Hardware used:
-
-- Adafruit Bluefruit nRF52 breakout board
-- Adafruit SHARP Memory Monochrome Display Breakout 168x144 pixels
-- Adafruit UV sensor breakout board

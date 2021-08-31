@@ -15,6 +15,9 @@ images:
   console: gps-pa1010d-arduino-i2c-console.png
   prototype: gps-pa1010d-arduino-i2c-prototype.JPG
   schematic: gps-pa1010d-arduino-i2c-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
     url: https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view

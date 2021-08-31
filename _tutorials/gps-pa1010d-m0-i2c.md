@@ -17,6 +17,9 @@ images:
   console: gps-pa1010d-m0-i2c-console.png
   prototype: gps-pa1010d-m0-i2c-prototype.jpg
   schematic: gps-pa1010d-m0-i2c-schematic.png
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
 references:
   - name: CDTop PA1010D GNSS patch antenna module Datasheet V.03
     url: https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view

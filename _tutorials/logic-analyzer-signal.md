@@ -17,6 +17,16 @@ images:
   console: logic-analyzer-signal-console.png
   prototype: logic-analyzer-signal-prototype.JPG
   schematic: logic-analyzer-signal-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: DHT22 Temperature / humidity sensor
+    url: https://amzn.to/3t1R6oT
+  - name: Small breadboard
+    url: https://amzn.to/3gKy0hW
+  - name: Saleae 8-Channel Logic Analyzer
+    url: https://amzn.to/39SJ8px
+video: jocVpFqlpOo
 references:
   - name: Adafruit DHT sensor library
     url: https://github.com/adafruit/DHT-sensor-library

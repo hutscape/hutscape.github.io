@@ -9,7 +9,9 @@ dependancies:
     url: https://github.com/mikalhart/TinyGPSPlus
   - name: SiLabs CP210x USB to UART Bridge VCP Drivers
     url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
-
+components:
+  - name: TTGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
 dev_board: LilyGO T-Beam
 chips:
   - ESP32

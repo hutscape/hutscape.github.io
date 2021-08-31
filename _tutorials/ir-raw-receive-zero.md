@@ -12,6 +12,9 @@ features:
   - IR
   - receive
   - raw
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
 prerequisites:
   - name: IR Receiver
     url: ./ir-receiver

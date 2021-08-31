@@ -15,6 +15,14 @@ images:
   console: logic-analyzer-i2c-console.png
   prototype: logic-analyzer-i2c-prototype.JPG
   schematic: logic-analyzer-i2c-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: Adafruit Si7021 breakout board
+    url: https://amzn.to/3juZr1l
+  - name: Saleae 8-Channel Logic Analyzer
+    url: https://amzn.to/39SJ8px
+video: jocVpFqlpOo
 references:
   - name: Adafruit Si7021 Temperature & Humidity Sensor Breakout Board
     url: https://www.adafruit.com/product/3251

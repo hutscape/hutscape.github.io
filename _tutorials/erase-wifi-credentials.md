@@ -11,6 +11,10 @@ chips:
 firmware:
   - Arduino
 dev_board: WeMos D1 Mini
+components:
+  - name: WeMos D1 Mini
+    url: https://s.click.aliexpress.com/e/_ADRrXP
+
 feature:
   - WiFi
 ---

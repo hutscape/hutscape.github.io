@@ -14,6 +14,10 @@ features:
   - flash
 images:
   console: eeprom-emulation-samd21-console.png
+components:
+  - name: RobotDyn SAMD21 M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
+
 references:
   - name: RobotDyn SAMD21 M0-Mini a quick look
     url: http://www.armlearning.com/hardware/robotdyn-samd21-m0-mini-quick-look.php

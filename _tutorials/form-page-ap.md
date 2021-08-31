@@ -13,6 +13,9 @@ features:
   - WiFi
   - access point
   - form
+components:
+  - name: WeMos D1 Mini
+    url: https://s.click.aliexpress.com/e/_ADRrXP
 ---
 
 Fill up a form accessible only in AP (access point) mode, and get redirected to a success page.

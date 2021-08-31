@@ -10,7 +10,9 @@ chips:
 dev_board: LilyGO T-Beam
 images:
   console: haversine-console.png
-
+components:
+  - name: TTGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
 references:
   - name: Rosetta code Haversine formula
     url: https://rosettacode.org/wiki/Haversine_formula#C

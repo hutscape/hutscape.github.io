@@ -5,7 +5,9 @@ title: IR Receive raw codes
 dependancies:
   - name: IRLib2 and compatible hardware
     url: https://github.com/cyborg5/IRLib2
-
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
 dev_board: Arduino UNO
 sensors:
   - infrared

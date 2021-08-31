@@ -7,7 +7,9 @@ dependancies:
     url: https://github.com/arduino/ArduinoCore-samd
   - name: Adafruit_GPS
     url: https://github.com/adafruit/Adafruit_GPS
-
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
 dev_board: RobotDyn M0 Mini
 sensors:
   - GPS

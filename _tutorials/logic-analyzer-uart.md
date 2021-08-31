@@ -6,6 +6,12 @@ feature:
 tool: Saleae Logic Analyzer
 images:
   schematic: logic-analyzer-uart-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: Saleae 8-Channel Logic Analyzer
+    url: https://amzn.to/39SJ8px
+video: jocVpFqlpOo
 references:
   - name: Saleae decoding UART
     url: https://support.saleae.com/protocol-analyzers/analyzer-user-guides/decode-uart

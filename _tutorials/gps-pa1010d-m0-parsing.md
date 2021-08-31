@@ -1,16 +1,17 @@
 ---
 layout: tutorials
 title: GPS parsing with PA1010D and M0
-
 dependancies:
   - name: Arduino Core for SAMD
     url: https://github.com/arduino/ArduinoCore-samd
   - name: Adafruit_GPS
     url: https://github.com/adafruit/Adafruit_GPS
-
 dev_board: RobotDyn M0 Mini
 sensors:
   - GPS
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
 chips:
   - PA1010D
 features:

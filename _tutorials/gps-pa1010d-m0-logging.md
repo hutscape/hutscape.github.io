@@ -9,6 +9,9 @@ dependancies:
     url: https://github.com/adafruit/Adafruit_GPS
 
 dev_board: RobotDyn M0 Mini
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
 sensors:
   - GPS
 chips:

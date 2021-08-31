@@ -10,6 +10,9 @@ features:
   - IR
   - emit
   - raw
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
 sensors:
   - infrared
 images:

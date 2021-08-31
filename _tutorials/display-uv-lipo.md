@@ -24,6 +24,13 @@ references:
     url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino
   - name: Display LiPo battery voltage firmware
     url: https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/master/libraries/Bluefruit52Lib/examples/Hardware/adc_vbat/adc_vbat.ino
+components:
+  - name: Solderless breadboard
+    url: https://amzn.to/3gNRp1x
+  - name: Adafruit Feather nRF52 Bluefruit LE
+    url: https://amzn.to/3ndsBlF
+  - name: Adafruit SHARP Memory Monochrome Display Breakout 168x144 pixels
+    url: https://www.adafruit.com/product/3502
 prerequisites:
   - name: Blinky nRF52
     url: ./blinky-nrf52

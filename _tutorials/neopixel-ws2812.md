@@ -14,6 +14,11 @@ images:
   console: neopixel-ws2812-console.png
   prototype: neopixel-ws2812-prototype.jpg
   schematic: neopixel-ws2812-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: Adafruit Neopixel 60 LED Ring
+    url: https://amzn.to/3yAAPYZ
 references:
   - name: WS2812 Datasheet
     url: https://cdn-shop.adafruit.com/datasheets/WS2812.pdf

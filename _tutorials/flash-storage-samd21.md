@@ -15,6 +15,9 @@ features:
   - flash
   - read
   - write
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
 images:
   console: flash-storage-samd21-console.png
 references:

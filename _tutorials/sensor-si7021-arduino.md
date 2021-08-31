@@ -14,6 +14,11 @@ sensor:
 images:
   console: sensor-si7021-arduino-console.png
   schematic: sensor-si7021-arduino-schematic.png
+components:
+  - name: Arduino UNO R3
+    url: https://amzn.to/3xbq53W
+  - name: Adafruit Si7021 board
+    url: https://amzn.to/3t47EvE
 references:
   - name: Adafruit Si7021 code reference
     url: https://github.com/adafruit/Adafruit_Si7021/blob/master/examples/si7021/si7021.ino
