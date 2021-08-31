@@ -10,6 +10,13 @@ chips:
 sensors:
   - temperature
   - humidity
+components:
+  - name: WeMos D1 Mini
+    url: https://s.click.aliexpress.com/e/_ADRrXP
+  - name: DHT22 Temperature / humidity sensor
+    url: https://amzn.to/3t1R6oT
+  - name: 10ohm Through-Hole resistor
+    url: https://amzn.to/3ypS8fz
 dev_board: WeMos D1 Mini
 images:
   schematic: dht22-sensor-schematic.png

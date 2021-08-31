@@ -10,6 +10,10 @@ chips:
 firmware:
   - C
   - C++
+components:
+  - name: RaspberyPI Pico
+    url: https://amzn.to/3gLC95r
+video: zteyBpARo1A
 images:
   console: blinky-pico-console.png
   prototype: blinky-pico-prototype.jpg

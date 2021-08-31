@@ -60,7 +60,7 @@ type: header
         <span class="tag is-danger">TODO COMPONENTS & VIDEO</span>
         {% endif %}
 
-        {% if tut.images %}
+        {% if tut.images.prototype %}
         {% else %}
         <span class="tag is-success">TODO images</span>
         {% endif %}

@@ -10,6 +10,10 @@ has_code: false
 images:
   prototype: data-logger-multimeter-121gw-prototype.png
   schematic: data-logger-multimeter-121gw-schematic.png
+components:
+  - name: 121GW EEVBlog Multimeter
+    url: https://www.eevblog.com/product/121gw/
+video: gwlWutQANIc
 references:
   - name: User Manual for 121GW Multimeter
     url: https://www.eevblog.com/files/EEVblog-121GW-Manual.pdf

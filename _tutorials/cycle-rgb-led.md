@@ -8,6 +8,9 @@ chips:
   - nRF52
 features:
   - LED
+components:
+  - name: Adafruit Feather nRF52 Bluefruit LE
+    url: https://amzn.to/39WpHw8
 dev_board: Adafruit Feather Bluefruit
 images:
   schematic: cycle-rgb-led-schematic.png
