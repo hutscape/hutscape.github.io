@@ -9,6 +9,7 @@ firmware:
 chips:
   - SAMD21
 dev_board: RobotDyn M0 mini
+video: xV1l5SdE8sk
 components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU

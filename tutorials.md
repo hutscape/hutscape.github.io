@@ -55,9 +55,9 @@ type: header
 
       <!-- TODO -->
       {% if jekyll.environment == "development" %}
-        {% if tut.components %}
+        {% if tut.video %}
         {% else %}
-        <span class="tag is-danger">TODO COMPONENTS & VIDEO</span>
+        <span class="tag is-danger">TODO VIDEO</span>
         {% endif %}
 
         {% if tut.images.prototype %}

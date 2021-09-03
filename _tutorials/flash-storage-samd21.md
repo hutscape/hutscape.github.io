@@ -15,6 +15,7 @@ features:
   - flash
   - read
   - write
+video: xV1l5SdE8sk
 components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU

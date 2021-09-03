@@ -17,7 +17,7 @@ images:
 components:
   - name: RobotDyn SAMD21 M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU
-
+video: xV1l5SdE8sk
 references:
   - name: RobotDyn SAMD21 M0-Mini a quick look
     url: http://www.armlearning.com/hardware/robotdyn-samd21-m0-mini-quick-look.php

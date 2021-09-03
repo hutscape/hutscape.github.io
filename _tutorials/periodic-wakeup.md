@@ -12,6 +12,7 @@ features:
   - wakeup
   - sleep
   - periodic
+video: xV1l5SdE8sk
 images:
   prototype: periodic-wakeup-prototype.jpg
   schematic: periodic-wakeup-schematic.png

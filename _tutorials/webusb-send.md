@@ -12,7 +12,7 @@ chips:
 dev_board: RobotDyn M0 mini
 features:
   - WebUSB
-
+video: xV1l5SdE8sk
 hardware:
   - M0
   - webusb

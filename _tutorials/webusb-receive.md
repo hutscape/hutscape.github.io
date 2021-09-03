@@ -12,7 +12,7 @@ firmware:
 chips:
   - SAMD21
 dev_board: RobotDyn M0 mini
-
+video: xV1l5SdE8sk
 features:
   - WebUSB
 
