@@ -8,6 +8,11 @@ dependancies:
   - name: Adafruit Si7021
     url: https://github.com/adafruit/Adafruit_Si7021
 dev_board: WeMos D1 Mini
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
+  - name: Adafruit Si7021 board
+    url: https://amzn.to/3t47EvE
 chips:
   - ESP8266
   - Si7021

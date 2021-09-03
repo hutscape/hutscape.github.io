@@ -10,6 +10,9 @@ features:
   - button
   - sleep
   - wakeup
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
 images:
   schematic: long-sleep-or-button-press-schematic.png
 prerequisites:

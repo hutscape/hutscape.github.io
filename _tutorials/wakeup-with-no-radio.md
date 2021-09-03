@@ -9,6 +9,9 @@ dependancies:
 chips:
   - ESP8266
 dev_board: WeMos D1 Mini
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
 features:
   - wakeup
   - no radio

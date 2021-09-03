@@ -19,6 +19,9 @@ images:
   console: periodic-wakeup-interrupt-console.png
   schematic: periodic-wakeup-interrupt-schematic.jpg
   prototype: periodic-wakeup-interrupt-prototype.jpg
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
 references:
   - name: Synchro Clock config pin schematic
     url: https://raw.githubusercontent.com/liebman/AnalogClock/master/images/SynchroClock.png

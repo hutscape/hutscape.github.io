@@ -9,6 +9,9 @@ features:
   - wakeup
 images:
   console: max-deep-sleep-console.png
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
 references:
   - name: Max deep sleep for ESP8266
     url: https://thingpulse.com/max-deep-sleep-for-esp8266/

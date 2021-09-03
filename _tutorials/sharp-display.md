@@ -9,7 +9,9 @@ dependancies:
     url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
   - name: Adafruit SHARP memory display firmware
     url: https://github.com/adafruit/Adafruit_SHARP_Memory_Display
-
+components:
+  - name: Adafruit Feather Bluefruit
+    url: https://amzn.to/3ndsBlF
 dev_board: Adafruit Feather Bluefruit
 chips:
   - nRF52

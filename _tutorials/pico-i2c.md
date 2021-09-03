@@ -6,6 +6,9 @@ dependancies:
   - name: Pico toolchain
     url: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
 dev_board: RaspberryPI Pico
+components:
+  - name: Raspberry PI Pico
+    url: https://amzn.to/3sKa5Cv
 chips:
   - RP2040
   - Si7021

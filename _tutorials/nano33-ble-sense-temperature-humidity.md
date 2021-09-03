@@ -10,6 +10,9 @@ dependancies:
 firmware:
   - Arduino
 dev_board: Arduino Nano 33 BLE Sense
+components:
+  - name: Arduino Nano 33 BLE Sense
+    url: https://amzn.to/3kCFSmK
 sensors:
   - temperature
   - humidity

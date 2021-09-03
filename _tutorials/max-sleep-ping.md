@@ -7,7 +7,9 @@ dependancies:
     url: https://github.com/esp8266/Arduino
   - name: ESP8266 WiFi
     url: https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
-
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
 dev_board: WeMos D1 Mini
 chips:
   - ESP8266

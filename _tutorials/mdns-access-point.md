@@ -8,6 +8,9 @@ dependancies:
   - name: ESP8266 Arduino libraries
     url: https://github.com/esp8266/Arduino/tree/master/libraries
 dev_board: WeMos D1 Mini
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
 chips:
   - ESP8266
 features:

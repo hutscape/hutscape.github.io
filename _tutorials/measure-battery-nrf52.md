@@ -9,6 +9,9 @@ dependancies:
     url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
 
 dev_board: Adafruit Feather Bluefruit
+components:
+  - name: Adafruit Feather Bluefruit
+    url: https://amzn.to/3ndsBlF
 chips:
   - nRF52
 features:

@@ -9,6 +9,9 @@ prerequisites:
   - name: LoRa Duplex A with ESP32 T-Beam
     url: ./lora-duplex-a-esp32-t-beam
 dev_board: LilyGO T-Beam
+components:
+  - name: TTGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
 chips:
   - ESP32
 features:

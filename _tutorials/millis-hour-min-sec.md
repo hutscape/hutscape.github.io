@@ -2,6 +2,9 @@
 layout: tutorials
 title: Convert millis() to readable time
 dev_board: LilyGO T-Beam
+components:
+  - name: TTGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
 features:
   - millis
   - time

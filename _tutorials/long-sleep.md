@@ -11,6 +11,9 @@ features:
   - sleep
   - EEPROM
   - wakeup
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
 references:
   - name: ESP8266 maximum deep sleep
     url: https://thingpulse.com/max-deep-sleep-for-esp8266

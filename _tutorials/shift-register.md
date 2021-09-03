@@ -6,9 +6,14 @@ dependancies:
   - name: ESP8266 Arduino
     url: https://github.com/esp8266/Arduino
 dev_board: WeMos D1 Mini
+components:
+  - name: WeMos D1 Mini
+    url: https://amzn.to/2WKRWe6
+  - name: 74HC595 8-Bit Shift Register DIP-16 IC
+    url: https://amzn.to/3DATGHs
 chips:
   - ESP8266
-  - 74HC959
+  - 74HC595
 features:
   - shift register
   - bar led

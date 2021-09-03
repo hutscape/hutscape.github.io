@@ -2,6 +2,9 @@
 layout: tutorials
 title: Arduino struct with functions in seperate folder
 dev_board: LilyGO T-Beam
+components:
+  - name: TTGO T-Beam
+    url: https://s.click.aliexpress.com/e/_9ggvh6
 features:
   - struct
   - function
