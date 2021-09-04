@@ -8,6 +8,7 @@ dependancies:
     url: https://github.com/adafruit/Adafruit_nRF52_nrfutil
 chips:
   - nRF52
+video: Os5sGlw3PV0
 dev_board: Adafruit Feather Bluefruit
 images:
   arduino: blinky-nrf52-arduino-settings.png

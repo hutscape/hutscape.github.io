@@ -9,7 +9,7 @@ chips:
 components:
   - name: Arduino UNO R3
     url: https://amzn.to/3xbq53W
-video: xV1l5SdE8sk
+video: Os5sGlw3PV0
 images:
   console: blinky-arduino-console.png
   prototype: blinky-arduino-prototype.jpg

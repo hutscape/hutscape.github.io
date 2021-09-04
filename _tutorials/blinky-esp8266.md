@@ -7,6 +7,7 @@ dependancies:
 chips:
   - ESP8266
 dev_board: WeMos D1 Mini
+video: Os5sGlw3PV0
 components:
   - name: WeMos D1 Mini
     url: https://s.click.aliexpress.com/e/_AqH5EC
