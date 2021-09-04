@@ -17,6 +17,7 @@ dev_board: RobotDyn M0 mini
 features:
   - e-paper
   - e-ink
+  - SPI
 images:
   console: waveshare-1in54-e-paper-samd21g-console.png
   prototype: waveshare-1in54-e-paper-samd21g-prototype.JPG

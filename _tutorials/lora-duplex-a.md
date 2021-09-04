@@ -8,6 +8,7 @@ dependancies:
 features:
   - lora
   - duplex
+  - SPI
 images:
   console: lora-duplex-a-console.png
   prototype: lora-duplex-a-prototype.jpg

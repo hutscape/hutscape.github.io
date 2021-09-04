@@ -17,6 +17,7 @@ chips:
 features:
   - LoRa
   - duplex
+  - SPI
 references:
   - name: Arduino LoRa firmware duplex example
     url: https://github.com/sandeepmistry/arduino-LoRa/blob/master/examples/LoRaDuplex/LoRaDuplex.ino

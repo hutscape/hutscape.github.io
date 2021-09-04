@@ -17,6 +17,7 @@ chips:
 features:
   - LoRa
   - duplex
+  - SPI
 
 references:
   - name: Arduino LoRa firmware

@@ -15,6 +15,7 @@ chips:
 features:
   - e-paper
   - e-ink
+  - SPI
 images:
   prototype: waveshare-1in54-e-paper-prototype.JPG
   schematic: waveshare-1in54-e-paper-schematic.png

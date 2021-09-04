@@ -12,6 +12,7 @@ dev_board: Arduino UNO
 features:
   - LoRa
   - TX
+  - SPI
 images:
   console: lora-tx-console.png
   prototype: lora-tx-prototype.jpg

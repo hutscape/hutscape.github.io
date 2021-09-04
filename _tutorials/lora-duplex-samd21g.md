@@ -11,7 +11,7 @@ chips:
 features:
   - lora
   - duplex
-
+  - SPI
 images:
   console: lora-duplex-samd21g-console.png
   prototype: lora-duplex-samd21g-prototype.JPG
