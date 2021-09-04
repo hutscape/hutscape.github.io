@@ -9,6 +9,7 @@ dependancies:
     url: https://github.com/waveshare/e-Paper
 firmware:
   - Arduino
+video: yMfmGHV5mbg
 chips:
   - SAMD21
   - Waveshare
