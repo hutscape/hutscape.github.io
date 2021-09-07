@@ -49,6 +49,16 @@ tools:
         urls:
           - website: IKEA
             url: https://www.ikea.com/us/en/cat/samla-series-12553/
+      - name: Flux cleaning solvent
+        image: flu.jpg
+        urls:
+          - website: Electrolube
+            url: https://electrolube.com/product/flu-fluxclene-flux-cleaning-solvent/
+      - name: Anti-static dust-free wipes
+        image: wipes.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_A6JUEI
 
   - topic: Books
     list:
