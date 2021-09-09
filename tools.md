@@ -24,6 +24,16 @@ tools:
         urls:
           - website: Amazon
             url: https://amzn.to/3jasNAq
+      - name: PCB Vise
+        image: vise.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_AaN4Hy
+      - name: Inventory Management
+        image: inventory_management.jpg
+        urls:
+          - website: PartsBox
+            url: https://partsbox.com
       - name: Solder paste
         image: solder_paste.jpg
         urls:
@@ -34,11 +44,6 @@ tools:
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_Amhmyw
-      - name: Inventory Management
-        image: inventory_management.jpg
-        urls:
-          - website: PartsBox
-            url: https://partsbox.com
       - name: Clear plastic zip-lock bags
         image: bags.jpg
         urls:
