@@ -78,7 +78,7 @@ tools:
           - website: Amazon
             url: https://amzn.to/3eqlXED
 
-  - topic: Photography & Videography
+  - topic: Photography and Videography
     list:
       - name: Phone holder
         image: phone_holder.jpg
@@ -120,7 +120,33 @@ tools:
         urls:
           - website: QuickTime
             url: https://support.apple.com/downloads/quicktime
-
+  - topic: Programming and coding
+    list:
+      - name: Editor
+        image: editor.jpg
+        urls:
+          - website: Visual Studio
+            url: https://code.visualstudio.com/
+      - name: Serial port
+        image: serial.jpg
+        urls:
+          - website: Roger Meier's Freeware
+            url: https://freeware.the-meiers.org/
+      - name: Terminal
+        image: terminal.jpg
+        urls:
+          - website: iTerm2
+            url: https://iterm2.com/
+      - name: dotfiles
+        image: code.jpg
+        urls:
+          - website: GitHub
+            url: https://github.com/sayanee/dotfiles
+      - name: Shell
+        image: shell.jpg
+        urls:
+          - website: Oh My ZSH
+            url: https://ohmyz.sh/
 ---
 
 <div class="block">
