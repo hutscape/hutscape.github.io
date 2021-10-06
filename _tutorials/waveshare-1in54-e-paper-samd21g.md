@@ -7,6 +7,11 @@ dependancies:
     url: https://github.com/arduino/ArduinoCore-samd
   - name: Waveshare e-paper
     url: https://github.com/waveshare/e-Paper
+components:
+  - name: RobotDyn M0 Mini
+    url: https://s.click.aliexpress.com/e/_AZG8aU
+  - name: WaveShare 1.54in E-Ink module
+    url: https://amzn.to/3n7gLtk
 firmware:
   - Arduino
 video: yMfmGHV5mbg
@@ -14,7 +19,7 @@ chips:
   - SAMD21
   - Waveshare
 dev_board: RobotDyn M0 mini
-
+video: enfliRlCYbc
 features:
   - e-paper
   - e-ink

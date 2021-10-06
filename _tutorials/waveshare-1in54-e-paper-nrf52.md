@@ -17,6 +17,7 @@ features:
   - e-paper
   - e-ink
   - SPI
+video: enfliRlCYbc
 images:
   prototype: waveshare-1in54-e-paper-nrf52-prototype.JPG
   schematic: waveshare-1in54-e-paper-nrf52-schematic.png
