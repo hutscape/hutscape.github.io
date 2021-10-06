@@ -38,7 +38,8 @@ void loop() {
 
   paint.Clear(UNCOLORED);
   paint.DrawStringAt(10, 4, count_string, &Font16, COLORED);
-  epd.SetFrameMemory(paint.GetImage(), 0, 50, paint.GetWidth(), paint.GetHeight());
+  epd.SetFrameMemory(
+    paint.GetImage(), 0, 50, paint.GetWidth(), paint.GetHeight());
 
   epd.DisplayFrame();
 

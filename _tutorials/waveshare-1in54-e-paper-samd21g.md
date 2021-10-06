@@ -5,8 +5,8 @@ title: Waveshare 1.54 inch with SAMD21G
 dependancies:
   - name: Arduino core for SAMD
     url: https://github.com/arduino/ArduinoCore-samd
-  - name: Waveshare e-paper
-    url: https://github.com/waveshare/e-Paper
+  - name: Waveshare e-paper for epd1in54
+    url: https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54
 components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU
