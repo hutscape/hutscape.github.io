@@ -23,7 +23,7 @@ void loop() {
   SerialUSB.println(count_string);
 
   if (epd.Init(lut_full_update) != 0) {
-    Serial.print("e-Paper init failed");
+    SerialUSB.print("e-Paper init failed");
     return;
   }
 
