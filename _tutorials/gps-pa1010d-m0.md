@@ -1,7 +1,6 @@
 ---
 layout: tutorials
-title: GPS PA1010D with M0
-
+title: GPS PA1010D with M0 UART
 dependancies:
   - name: Arduino Core for SAMD
     url: https://github.com/arduino/ArduinoCore-samd

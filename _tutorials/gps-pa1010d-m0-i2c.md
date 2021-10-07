@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: GPS parsing with Arduino M0
+title: GPS parsing with M0 I2C
 dependancies:
   - name: Arduino Core for SAMD
     url: https://github.com/arduino/ArduinoCore-samd
