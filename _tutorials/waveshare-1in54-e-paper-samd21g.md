@@ -5,12 +5,14 @@ title: Waveshare 1.54 inch with SAMD21G
 dependancies:
   - name: Arduino core for SAMD
     url: https://github.com/arduino/ArduinoCore-samd
-  - name: Waveshare e-paper for epd1in54
+  - name: Waveshare e-paper for epd1in54 V1
     url: https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54
+  - name: Waveshare e-paper for epd1in54 V2
+    url: https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54_V2
 components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU
-  - name: WaveShare 1.54in E-Ink module
+  - name: WaveShare 1.54in E-Ink module V1
     url: https://amzn.to/3n7gLtk
 firmware:
   - Arduino
@@ -40,6 +42,12 @@ references:
   - name: Arduino SPI
     url: https://www.arduino.cc/en/reference/SPI
 ---
+
+## Version
+
+Check the version of the Waveshare module and use the example code for [version 1](https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54) and [version 2](https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54_V2) accordingly.
+
+## SPI
 
 The 4 non-SPI pins are defined in `epdif.h` file:
 
