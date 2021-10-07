@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Waveshare 1.54 inch with Arduino Zero
+title: Waveshare 1.54 inch V2.1 with Arduino Zero
 
 dependancies:
   - name: Arduino core for SAMD
@@ -12,8 +12,8 @@ dependancies:
 components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU
-  - name: WaveShare 1.54in E-Ink module V1
-    url: https://amzn.to/3n7gLtk
+  - name: WaveShare 1.54in E-Ink module V2.1
+    url: https://www.waveshare.com/wiki/1.54inch_e-Paper_Module
 firmware:
   - Arduino
 video: yMfmGHV5mbg
@@ -27,8 +27,8 @@ features:
   - e-ink
   - SPI
 images:
-  console: waveshare-1in54-e-paper-samd21g-console.png
-  prototype: waveshare-1in54-e-paper-samd21g-prototype.JPG
+  console: waveshare-1in54-v2-e-paper-samd21g-console.png
+  prototype: waveshare-1in54-v2-e-paper-samd21g-prototype.jpg
   schematic: waveshare-1in54-e-paper-samd21g-schematic.png
 references:
   - name: Waveshare 1.54 inch e-paper module
@@ -41,9 +41,11 @@ references:
     url: https://github.com/waveshare/e-Paper/blob/master/Arduino/epd1in54/epd1in54.ino
   - name: Arduino SPI
     url: https://www.arduino.cc/en/reference/SPI
+  - name: RobotDyn M0 mini pinout
+    url: https://robotdyn.com/pub/media/0G-00005516==SAMD21-MINI/DOCS/PINOUT==0G-00005516==SAMD21-MINI.pdf
 prerequisites:
-  - name: Waveshare 1.54 inch V2.1 with Arduino Zero
-    url: ./waveshare-1in54-v2-e-paper-samd21g
+  - name: Waveshare 1.54 inch with Arduino Zero
+    url: ./waveshare-1in54-e-paper-samd21g
 ---
 
 ## Version
