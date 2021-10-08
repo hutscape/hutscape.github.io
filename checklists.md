@@ -3,7 +3,7 @@ layout: page
 title: Checklists
 subtitle: Good checklists to go through!
 permalink: /checklists
-sequence: 1
+sequence: 2
 type: header
 ---
 

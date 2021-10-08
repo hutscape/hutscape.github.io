@@ -2,7 +2,7 @@
 layout: page
 title: Tutorials
 permalink: /tutorials
-sequence: 2
+sequence: 1
 type: header
 ---
 

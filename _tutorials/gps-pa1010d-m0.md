@@ -14,6 +14,7 @@ sensors:
   - GPS
 chips:
   - PA1010D
+video: S1ASB8kQ5Is
 features:
   - UART
 images:

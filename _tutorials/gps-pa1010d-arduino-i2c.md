@@ -11,6 +11,7 @@ sensors:
   - GPS
 features:
   - I2C
+video: S1ASB8kQ5Is
 images:
   console: gps-pa1010d-arduino-i2c-console.png
   prototype: gps-pa1010d-arduino-i2c-prototype.JPG
