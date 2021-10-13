@@ -109,6 +109,11 @@ tools:
         urls:
           - website: Amazon
             url: https://amzn.to/3eqlXED
+      - name: Designing Electronics that Work
+        image: designing-electronics.jpg
+        urls:
+          - website: Homepage
+            url: https://designingelectronics.com/
 
   - topic: Photography and Videography
     list:
