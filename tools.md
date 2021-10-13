@@ -64,6 +64,11 @@ tools:
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_A6JUEI
+      - name: Soldering and repair mat
+        image: mat.jpg
+        urls:
+          - website: AliExpress
+            url: https://www.aliexpress.com/item/32921860796.html
 
   - topic: Programming and coding
     list:
