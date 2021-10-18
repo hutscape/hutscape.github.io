@@ -68,7 +68,7 @@ tools:
         image: mat.jpg
         urls:
           - website: AliExpress
-            url: https://www.aliexpress.com/item/32921860796.html
+            url: https://s.click.aliexpress.com/e/_Abi3LH
 
   - topic: Programming and coding
     list:
