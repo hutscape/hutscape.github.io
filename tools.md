@@ -69,6 +69,11 @@ tools:
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_Abi3LH
+      - name: Kapton tape
+        image: kapton.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_A0p00j
 
   - topic: Programming and coding
     list:
