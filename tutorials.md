@@ -26,7 +26,7 @@ type: header
       <i class="fas fa-book" aria-hidden="true"></i>
     </span>
     {{ tut.title }}
-    <div class="tags">
+    <div class="tags" style="margin-left:5px">
       {% if tut.dev_board %}
         <span class="tag is-light is-danger">{{ tut.dev_board }}</span>
       {% endif %}
