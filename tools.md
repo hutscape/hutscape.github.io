@@ -137,6 +137,16 @@ tools:
         urls:
           - website: Amazon
             url: https://amzn.to/3xzKZZu
+      - name: Photography background
+        image: pvc-paper.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_AbFLyM
+      - name: Light reflectors
+        image: reflectors.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_AKmzVA
       - name: Design
         image: canva.jpg
         urls:
@@ -162,6 +172,16 @@ tools:
         urls:
           - website: QuickTime
             url: https://support.apple.com/downloads/quicktime
+      - name: Highlight mouse and clicks
+        image: presentation-assistant.jpeg
+        urls:
+          - website: Mac App store
+            url: https://apps.apple.com/us/app/presentation-assistant/id1324964512?mt=12
+      - name: Keystroke visualiser
+        image: keys.jpeg
+        urls:
+          - website: GitHub
+            url: https://github.com/keycastr/keycastr
 ---
 
 <div class="block">
