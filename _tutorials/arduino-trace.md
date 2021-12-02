@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Arduino tracing for debugging
+title: Print dump and trace with a library
 dependancies:
   - name: ArduinoTrace
     url: https://github.com/bblanchon/ArduinoTrace
@@ -12,12 +12,16 @@ chips:
 features:
   - debug
   - trace
+  - print
+  - dump
+  - library
 components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU
 video: 7kRlQDxGR9A
 images:
   console: arduino-trace-console.png
+  prototype: blinky-m0-prototype.jpg
 references:
   - name: ArduinoTrace library
     url: https://github.com/bblanchon/ArduinoTrace

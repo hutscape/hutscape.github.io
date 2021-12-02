@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Arduino debugging and tracing
+title: Print debug and trace info with a libary, header file and ifdef
 dependancies:
   - name: ArduinoTrace
     url: https://github.com/bblanchon/ArduinoTrace
@@ -11,11 +11,18 @@ video: 7kRlQDxGR9A
 firmware:
   - Arduino
 dev_board: Arduino M0
+images:
+  prototype: blinky-m0-prototype.jpg
 chips:
   - SAMD21
 features:
   - debug
   - trace
+  - print
+  - dump
+  - library
+  - ifdef
+  - header
 references:
   - name: ArduinoTrace library
     url: https://github.com/bblanchon/ArduinoTrace

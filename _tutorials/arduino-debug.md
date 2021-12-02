@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Arduino debug with ifdef
+title: Debug print with ifdef and a header file
 firmware:
   - Arduino
 dev_board: Arduino M0
@@ -8,9 +8,15 @@ chips:
   - SAMD21
 features:
   - debug
+  - ifdef
+  - print
+  - header
 components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU
+images:
+  prototype: blinky-m0-prototype.jpg
+  console: arduino-debug-console.png
 video: 7kRlQDxGR9A
 references:
   - name: ifdef DEBUG
@@ -21,4 +27,4 @@ references:
     url: https://github.com/SensorsIot/Pre-Compiler-Directives
 ---
 
-Some patterns for toggling on and off debugging in Arduino firmware.
+Some patterns for toggling on and off debug print messages in Arduino firmware with `#ifdef` and a header file `DebugUtils.h`.
