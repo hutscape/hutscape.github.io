@@ -1,8 +1,12 @@
 String sample;
+String animal = "lion";
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("String functions");
+  Serial.println("String functions...");
+
+  Serial.print("string.length(): ");
+  Serial.println(animal.length());
 }
 
 void loop() {
