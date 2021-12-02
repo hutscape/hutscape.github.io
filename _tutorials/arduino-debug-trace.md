@@ -13,6 +13,7 @@ firmware:
 dev_board: Arduino M0
 images:
   prototype: blinky-m0-prototype.jpg
+  console: arduino-debug-trace-console.png
 chips:
   - SAMD21
 features:
