@@ -13,11 +13,6 @@ dev_board: RobotDyn M0 mini
 features:
   - WebUSB
 video: xV1l5SdE8sk
-hardware:
-  - M0
-  - webusb
-  - arduino
-  - samd21
 references:
   - name: Access USB Devices on the Web
     url: https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
