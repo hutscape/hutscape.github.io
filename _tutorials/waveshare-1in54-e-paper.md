@@ -16,6 +16,9 @@ features:
   - e-paper
   - e-ink
   - SPI
+versions:
+  - name: e-paper
+    version: 1
 images:
   prototype: waveshare-1in54-e-paper-prototype.JPG
   schematic: waveshare-1in54-e-paper-schematic.png

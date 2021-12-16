@@ -26,6 +26,9 @@ features:
   - e-paper
   - e-ink
   - SPI
+versions:
+  - name: e-paper
+    version: 1
 images:
   console: waveshare-1in54-e-paper-samd21g-console.png
   prototype: waveshare-1in54-e-paper-samd21g-prototype.JPG

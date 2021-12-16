@@ -53,6 +53,12 @@ type: header
         {% endfor %}
       {% endif %}
 
+      {% if tut.versions %}
+        {% for v in tut.versions %}
+          <span class="tag is-light is-link">{{ v.name }} v{{v.version}}</span>
+        {% endfor %}
+      {% endif %}
+
       <!-- TODO -->
       {% if jekyll.environment == "development" %}
         {% if tut.video %}

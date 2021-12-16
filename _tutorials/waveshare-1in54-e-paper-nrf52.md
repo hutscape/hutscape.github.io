@@ -17,6 +17,9 @@ features:
   - e-paper
   - e-ink
   - SPI
+versions:
+  - name: e-paper
+    version: 1
 video: enfliRlCYbc
 images:
   prototype: waveshare-1in54-e-paper-nrf52-prototype.JPG
