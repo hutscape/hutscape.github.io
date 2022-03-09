@@ -196,13 +196,13 @@ tools:
     <h2 class="title is-2">{{ tool.topic }}</h2>
     <div class="content is-medium">
     {% for li in tool.list %}
-    {% assign remainder = forloop.index | modulo: 4 %}
+    {% assign remainder = forloop.index | modulo: 3 %}
 
     {% if remainder == 1 %}
       <div class="columns is-multiline is-mobile has-text-centered">
     {% endif %}
 
-    <div class="column is-3-tablet is-6-mobile tool">
+    <div class="column is-4-tablet is-12-mobile tool">
       <a style="width: 100%" target="_blank" href="{{ li.urls.first.url }}" align="center">
         <img src="/assets/images/tools/{{ li.image }}"/>
         <p>{{ li.name }}</p>
