@@ -24,11 +24,11 @@ tools:
         urls:
           - website: Amazon
             url: https://amzn.to/3jasNAq
-      - name: PCB Vise
-        image: vise.jpg
+      - name: Battery charger
+        image: charger.png
         urls:
-          - website: AliExpress
-            url: https://s.click.aliexpress.com/e/_AaN4Hy
+          - website: Amazon
+            url: https://amzn.to/37f6TKd
       - name: Inventory Management
         image: inventory_management.jpg
         urls:
