@@ -10,46 +10,55 @@ tools:
   - topic: Hardware lab
     list:
       - name: Hot air gun
+        description: Simple to use. Versatile for soldering, desoldering and heat shrinking. Use it with the bent nozzle!
         image: hot_air_gun.jpg
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_Am4hDi
       - name: Multimeter
         image: multimeter.jpg
+        description: Love the built-in data logger feature with CSV. Sturdy, stable, reliable measurements.
         urls:
           - website: EEVBlog
             url: https://www.eevblog.com/product/121gw/
       - name: Logic Analyser
+        description: Love the accompanied software. The hardware is of well-built quality that is totally worth the price!
         image: logic_analyser.jpg
         urls:
           - website: Amazon
             url: https://amzn.to/3jasNAq
       - name: Battery charger
+        description: Versatile charger for rechargeable batteries. I use it for both household and electronics projects.
         image: charger.png
         urls:
           - website: Amazon
             url: https://amzn.to/37f6TKd
       - name: Inventory Management
+        description: Moved my inventory list from spreadsheet to this! Integrates with project BOM and fast search.
         image: inventory_management.jpg
         urls:
           - website: PartsBox
             url: https://partsbox.com
       - name: Solder paste
+        description: Reliable, good quality with syringe for easy use.
         image: solder_paste.jpg
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_AS3uzg
       - name: Flux
+        description: My only flux!
         image: flux.jpg
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_Amhmyw
       - name: Clear plastic zip-lock bags
+        description: Standardised transparent zip lock bags for storing my parts list.
         image: bags.jpg
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_9v8jvY
       - name: Stackable storage boxes
+        description: Versatile, strong build quality. Saves space too!
         image: stackable_boxes.jpg
         urls:
           - website: IKEA
@@ -60,16 +69,19 @@ tools:
           - website: Electrolube
             url: https://electrolube.com/product/flu-fluxclene-flux-cleaning-solvent/
       - name: Anti-static dust-free wipes
+        description: Lint-free and strong unlike paper. So it leaves no residue after cleaning flu and flux.
         image: wipes.jpg
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_A6JUEI
       - name: Soldering and repair mat
+        description: Versatile, heat-resistant and cleans well after solder residues.
         image: mat.jpg
         urls:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_Abi3LH
       - name: Kapton tape
+        description: Heat resistant. I use it to tape down bodge wires too. Versatile.
         image: kapton.jpg
         urls:
           - website: AliExpress
@@ -197,18 +209,16 @@ tools:
     <div class="content is-medium">
     {% for li in tool.list %}
     {% assign remainder = forloop.index | modulo: 3 %}
-
     {% if remainder == 1 %}
-      <div class="columns is-multiline is-mobile has-text-centered">
+      <div class="columns is-multiline is-mobile">
     {% endif %}
-
     <div class="column is-4-tablet is-12-mobile tool">
-      <a style="width: 100%" target="_blank" href="{{ li.urls.first.url }}" align="center">
+      <a style="width: 100%" target="_blank" href="{{ li.urls.first.url }}">
         <img src="/assets/images/tools/{{ li.image }}"/>
-        <p>{{ li.name }}</p>
+        <p class="title is-3">{{ li.name }}</p>
+        <p class="subtitle is-5">{{ li.description }}</p>
       </a>
     </div>
-
     {% if remainder == 0 %}
       </div>
     {% endif %}
