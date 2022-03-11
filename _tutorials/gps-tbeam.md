@@ -17,6 +17,7 @@ features:
 components:
   - name: TTGO T-Beam
     url: https://s.click.aliexpress.com/e/_9ggvh6
+video: Kgxx7jivSes
 references:
   - name: Code repo and schematic for T-Beam
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam

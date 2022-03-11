@@ -24,7 +24,7 @@ images:
 components:
   - name: TTGO T-Beam
     url: https://s.click.aliexpress.com/e/_9ggvh6
-
+video: Kgxx7jivSes
 references:
   - name: Code example from LilyGO T-Beam with OLED SSD1306
     url: https://github.com/Xinyuan-LilyGO/LilyGO-T-Beam/blob/master/examples/OLED/SSD1306SimpleDemo/SSD1306SimpleDemo.ino

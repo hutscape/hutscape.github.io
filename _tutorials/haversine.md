@@ -16,6 +16,7 @@ components:
 references:
   - name: Rosetta code Haversine formula
     url: https://rosettacode.org/wiki/Haversine_formula#C
+video: Kgxx7jivSes
 prerequisites:
   - name: Blinky for ESP32 LilyGO T-Beam
     url: ./blinky-esp32-t-beam

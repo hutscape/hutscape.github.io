@@ -33,7 +33,7 @@ references:
     url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
   - name: Arduino ESP32 Boards URL
     url: https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md
-
+video: Kgxx7jivSes
 prerequisites:
   - name: Blinky for ESP32 LilyGO T-Beam
     url: ./blinky-esp32-t-beam

@@ -18,7 +18,7 @@ features:
   - LoRa
   - duplex
   - SPI
-
+video: Kgxx7jivSes
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa

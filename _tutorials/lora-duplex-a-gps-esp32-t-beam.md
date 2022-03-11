@@ -26,7 +26,7 @@ sensors:
 images:
   console: lora-duplex-a-gps-esp32-t-beam-console.jpg
   prototype: lora-duplex-a-gps-esp32-t-beam-prototype.JPG
-
+video: Kgxx7jivSes
 references:
   - name: Arduino LoRa firmware
     url: https://github.com/sandeepmistry/arduino-LoRa
