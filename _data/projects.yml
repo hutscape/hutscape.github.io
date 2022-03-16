@@ -14,7 +14,8 @@
   bom: 82
   vendors: 6
 
-  status: ongoing
+  status: completed
+  completion: February 2022
 
 - name: Pine
   sequence: 3
