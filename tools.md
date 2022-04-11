@@ -87,54 +87,16 @@ tools:
           - website: AliExpress
             url: https://s.click.aliexpress.com/e/_A0p00j
 
-  - topic: Programming and coding
-    list:
-      - name: Editor
-        image: editor.jpg
-        urls:
-          - website: Visual Studio
-            url: https://code.visualstudio.com/
-      - name: Serial port
-        image: serial.jpg
-        urls:
-          - website: Roger Meier's Freeware
-            url: https://freeware.the-meiers.org/
-      - name: Terminal
-        image: terminal.jpg
-        urls:
-          - website: iTerm2
-            url: https://iterm2.com/
-      - name: dotfiles
-        image: code.jpg
-        urls:
-          - website: GitHub
-            url: https://github.com/sayanee/dotfiles
-      - name: Shell
-        image: shell.jpg
-        urls:
-          - website: Oh My ZSH
-            url: https://ohmyz.sh/
-  - topic: Books
-    list:
-      - name: Getting Things Done
-        image: getting_things_done.jpg
-        urls:
-          - website: Amazon
-            url: https://amzn.to/3nc51WB
-      - name: Checklist Manifesto
-        image: checklist_manifesto.jpg
-        urls:
-          - website: Amazon
-            url: https://amzn.to/3eqlXED
-      - name: Designing Electronics that Work
-        image: designing-electronics.jpg
-        urls:
-          - website: Homepage
-            url: https://designingelectronics.com/
-
   - topic: Photography and Videography
     list:
+      - name: External hard disk
+        image: hd.jpg
+        description: Fast speed and tiny! I use this to store and edit my videos. Saves space on my working laptop.
+        urls:
+          - website: Amazon
+            url: https://amzn.to/3jqgUaf
       - name: Phone holder
+        description: I never liked the spring-loaded holders that seem to put pressure on my phones. I love this one as it snuggly secures my iPhone with a screw for adjustable tightness.
         image: phone_holder.jpg
         urls:
           - website: AliExpress
@@ -194,6 +156,52 @@ tools:
         urls:
           - website: GitHub
             url: https://github.com/keycastr/keycastr
+
+  - topic: Programming and coding
+    list:
+      - name: Editor
+        image: editor.jpg
+        urls:
+          - website: Visual Studio
+            url: https://code.visualstudio.com/
+      - name: Serial port
+        image: serial.jpg
+        urls:
+          - website: Roger Meier's Freeware
+            url: https://freeware.the-meiers.org/
+      - name: Terminal
+        image: terminal.jpg
+        urls:
+          - website: iTerm2
+            url: https://iterm2.com/
+      - name: dotfiles
+        image: code.jpg
+        urls:
+          - website: GitHub
+            url: https://github.com/sayanee/dotfiles
+      - name: Shell
+        image: shell.jpg
+        urls:
+          - website: Oh My ZSH
+            url: https://ohmyz.sh/
+  - topic: Books
+    list:
+      - name: Getting Things Done
+        image: getting_things_done.jpg
+        urls:
+          - website: Amazon
+            url: https://amzn.to/3nc51WB
+      - name: Checklist Manifesto
+        image: checklist_manifesto.jpg
+        urls:
+          - website: Amazon
+            url: https://amzn.to/3eqlXED
+      - name: Designing Electronics that Work
+        image: designing-electronics.jpg
+        urls:
+          - website: Homepage
+            url: https://designingelectronics.com/
+
 ---
 
 <div class="block">
@@ -205,7 +213,7 @@ tools:
 {% for tool in page.tools %}
 <div class="block">
   <div class="container">
-    <h2 class="title is-2">{{ tool.topic }}</h2>
+    <h2 class="title is-2 has-background-info-light">{{ tool.topic }}</h2>
     <div class="content is-medium">
     {% for li in tool.list %}
     {% assign remainder = forloop.index | modulo: 3 %}
