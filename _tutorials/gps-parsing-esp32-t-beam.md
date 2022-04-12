@@ -14,7 +14,7 @@ components:
     url: https://s.click.aliexpress.com/e/_9ggvh6
 dev_board: LilyGO T-Beam
 chips:
-  - ESP32
+  - ESP32-DOWDQ6
   - NEO-6M
 features:
   - UART

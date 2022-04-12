@@ -6,7 +6,7 @@ dependancies:
   - name: ESP32 Arduino
     url: https://github.com/espressif/arduino-esp32
 chips:
-  - ESP32
+  - ESP32-DOWDQ6
 dev_board: LilyGO T-Beam
 images:
   console: haversine-console.png

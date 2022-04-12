@@ -17,7 +17,7 @@ components:
   - name: TTGO T-Beam
     url: https://s.click.aliexpress.com/e/_9ggvh6
 chips:
-  - ESP32
+  - ESP32-DOWDQ6
 features:
   - LoRa
   - duplex

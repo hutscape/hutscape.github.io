@@ -7,7 +7,7 @@ dependancies:
   - name: SiLabs CP210x USB to UART Bridge VCP Drivers
     url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
 chips:
-  - ESP32
+  - ESP32-DOWDQ6
   - NEO-6M
 dev_board: LilyGO T-Beam
 sensors:

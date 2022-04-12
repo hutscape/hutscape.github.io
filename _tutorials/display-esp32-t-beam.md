@@ -7,7 +7,7 @@ dependancies:
   - name: OLED SSD1306 for ESP8266
     url: https://github.com/ThingPulse/esp8266-oled-ssd1306
 chips:
-  - ESP32
+  - ESP32-DOWDQ6
   - SSD1306
 dev_board: LilyGO T-Beam
 features:
