@@ -26,24 +26,9 @@ layout: default
       <div class="column is-3">
         <img src="https://hutscape.com/{{ project.name | downcase }}/images/prototype/front.jpg" alt="{{ project.name }} photo">
       </div>
-
-
       <div class="column is-9">
-        <div class="level">
-          <div class="level-left">
-            <h3 class="title">{{ project.name }}</h3>
-            <p class="handwriting has-text-grey">V{{project.version}}</p>
-          </div>
-          <div class="level-right">
-            {% if project.completion %}
-            <p class="has-text-grey is-size-7">Completed in {{ project.completion }}</p>
-            {% else %}
-            <span class="tag is-warning is-size-7">ongoing</span>
-            {% endif %}
-          </div>
-        </div>
+        <h3 class="title">{{ project.name }}</h3>
         <p class="subtitle">{{ project.description }}</p>
-
         <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <div class="tags has-addons">
@@ -56,7 +41,6 @@ layout: default
               <span class="tag is-medium is-light">{{project.power}}</span>
             </div>
           </div>
-
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-dark">
@@ -68,7 +52,6 @@ layout: default
               <span class="tag is-light is-medium">{{project.wireless}}</span>
             </div>
           </div>
-
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-dark">
@@ -80,7 +63,6 @@ layout: default
               <span class="tag is-light is-medium">{{project.sensor}}</span>
             </div>
           </div>
-
           <div class="control">
             <div class="tags has-addons">
               <span class="tag is-medium is-dark">
@@ -93,7 +75,6 @@ layout: default
             </div>
           </div>
         </div>
-
         <div class="field is-grouped is-grouped-multiline">
           {% if project.cogs_usd %}
           <div class="control">
@@ -103,7 +84,6 @@ layout: default
             </div>
           </div>
           {% endif %}
-
           {% if project.bom %}
           <div class="control">
             <div class="tags has-addons">
@@ -112,16 +92,6 @@ layout: default
             </div>
           </div>
           {% endif %}
-
-          {% if project.vendors %}
-          <div class="control">
-            <div class="tags has-addons">
-              <span class="tag is-medium is-light">vendors</span>
-              <span class="tag is-medium is-white">{{project.vendors}}</span>
-            </div>
-          </div>
-          {% endif %}
-
           {% if project.battery_life %}
           <div class="control">
             <div class="tags has-addons">
@@ -130,8 +100,18 @@ layout: default
             </div>
           </div>
           {% endif %}
+          <div class="control">
+            <div class="tags has-addons">
+              {% if project.completion %}
+              <span class="tag is-medium is-light">completed</span>
+              <span class="tag is-medium is-success is-light">{{project.completion}}</span>
+              {% else %}
+              <span class="tag is-medium is-light">ongoing</span>
+              <span class="tag is-medium is-warning is-light">{{project.completion}}</span>
+              {% endif %}
+            </div>
+          </div>
         </div>
-
         <a class="button is-large is-fullwidth is-info" href="{{site.url}}{{ project.url }}">How to build it</a>
       </div>
     </div>
