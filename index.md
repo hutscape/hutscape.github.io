@@ -27,8 +27,28 @@ layout: default
         <img src="https://hutscape.com/{{ project.name | downcase }}/images/prototype/front.jpg" alt="{{ project.name }} photo">
       </div>
       <div class="column is-9">
-        <h3 class="title">{{ project.name }}</h3>
-        <p class="subtitle">{{ project.description }}</p>
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <h2 class="title is-2 is-spaced">{{ project.name }}</h2>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="control">
+                {% if project.completion %}
+                <div class="tags has-addons">
+                  <span class="tag is-medium is-light">completed</span>
+                  <span class="tag is-medium is-success is-light">{{project.completion}}</span>
+                </div>
+                {% else %}
+                  <span class="tag is-medium is-warning is-light">ongoing</span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="subtitle is-4">{{ project.description }}</p>
         <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <div class="tags has-addons">
@@ -100,17 +120,6 @@ layout: default
             </div>
           </div>
           {% endif %}
-          <div class="control">
-            <div class="tags has-addons">
-              {% if project.completion %}
-              <span class="tag is-medium is-light">completed</span>
-              <span class="tag is-medium is-success is-light">{{project.completion}}</span>
-              {% else %}
-              <span class="tag is-medium is-light">ongoing</span>
-              <span class="tag is-medium is-warning is-light">{{project.completion}}</span>
-              {% endif %}
-            </div>
-          </div>
         </div>
         <a class="button is-large is-fullwidth is-info" href="{{site.url}}{{ project.url }}">How to build it</a>
       </div>
