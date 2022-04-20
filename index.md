@@ -42,7 +42,10 @@ layout: default
                   <span class="tag is-medium is-success is-light">{{project.completion}}</span>
                 </div>
                 {% else %}
-                  <span class="tag is-medium is-warning is-light">ongoing</span>
+                <div class="tags has-addons">
+                  <span class="tag is-medium is-light is-light">ongoing</span>
+                  <span class="tag is-medium is-warning is-light">since {{project.started}}</span>
+                </div>
                 {% endif %}
               </div>
             </div>
