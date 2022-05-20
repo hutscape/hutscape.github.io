@@ -27,6 +27,18 @@ tools:
         urls:
           - website: Amazon
             url: https://amzn.to/3jasNAq
+      - name: Digital microscope
+        description: Functional for this price range. I use it to read and inspect small chips, electronic components and soldering works.
+        image: microscope.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_9IoM6L
+      - name: Power Supply
+        description: I use it to power my PCBs. It ranges upto 16V, 10A, which is sufficient for my low power use cases.
+        image: psu.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_AUols3
       - name: Battery charger
         description: Versatile charger for rechargeable batteries. I use it for both household and electronics projects.
         image: charger.png
@@ -39,6 +51,12 @@ tools:
         urls:
           - website: PartsBox
             url: https://partsbox.com
+      - name: Vernier Caliper
+        description: Yes, it is analog, not digital, but that also means it will last for years! And it comes in a case.
+        image: vernier_caliper.jpg
+        urls:
+          - website: AliExpress
+            url: https://s.click.aliexpress.com/e/_9GLEAT
       - name: Solder paste
         description: Reliable, good quality with syringe for easy use.
         image: solder_paste.jpg
