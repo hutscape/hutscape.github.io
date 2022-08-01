@@ -1,0 +1,37 @@
+<section class="section is-small">
+  <div class="container">
+    <div class="block">
+      <div class="content is-medium">
+        <p>Some links below are affiliate. I receive a small commission at no extra cost to you.</p>
+      </div>
+    </div>
+
+    {% for t in site.tools %}
+    {% if t.sequence == 1 %}
+    {% assign tool = t %}
+    <div class="block">
+      <div class="container">
+        <div class="content is-medium">
+          {% for li in t.list %}
+          {% assign remainder = forloop.index | modulo: 3 %}
+          {% if remainder == 1 %}
+          <div class="columns is-multiline is-mobile" style="margin-bottom: 50px;">
+            {% endif %}
+            <div class="column is-4-tablet is-12-mobile tool">
+              <a style="width: 100%" target="_blank" href="{{ li.urls.first.url }}">
+                <img src="/assets/images/tools/{{ li.image }}" class="tools" />
+                <p class="title is-3">{{ li.name }}</p>
+                <p class="subtitle is-5">{{ li.description }}</p>
+              </a>
+            </div>
+            {% if remainder == 0 %}
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
