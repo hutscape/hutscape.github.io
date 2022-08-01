@@ -44,12 +44,10 @@
     .content figure { text-align: inherit; }
   </style>
 
-  {% if page.url == "/tools" %}
+  {% if page.url contains "/tools" %}
   <style>
-    .tool { margin-bottom: 200px; width: 250px; height: 250px; }
-    .tool img { max-width: 100%; height: 100%; transition: transform .35s ease; margin-bottom: 10px; }
-    .tool:hover img { transform: scale(1.1); }
-    .tool p { color: #4a4a4a; }
+    img.tools { max-width: 200px; transition: transform .35s ease; }
+    img.tools:hover { transform: scale(1.1); }
   </style>
   {% endif %}
 

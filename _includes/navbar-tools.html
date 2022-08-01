@@ -1,0 +1,27 @@
+<section class="section is-small">
+  <div class="container">
+    <div class="tabs is-toggle is-fullwidth">
+      <ul>
+        {% assign tools = site.tools | sort: 'sequence' %}
+        {% for tool in tools %}
+        {{ page.url}}, {{tool.url}}
+        {% if page.url == tool.url %}
+        <li class="is-active">
+          <a href="{{site.url}}{{ tool.url }}">
+            <span class="icon is-small"><i class="fas fa-{{tool.icon}}" aria-hidden="true"></i></span>
+            <span>{{tool.title}}</span>
+          </a>
+        </li>
+        {% else %}
+        <li>
+          <a href="{{site.url}}{{ tool.url }}">
+            <span class="icon is-small"><i class="fas fa-{{tool.icon}}" aria-hidden="true"></i></span>
+            <span>{{tool.title}}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -27,3 +27,6 @@ collections:
   checklists:
     output: true
     permalink: /checklists/:name
+  tools:
+    output: true
+    permalink: /tools/:name

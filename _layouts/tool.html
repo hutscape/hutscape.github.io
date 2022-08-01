@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <p class="title is-1">Tools</p>
+      <p class="subtitle is-5">Stuff we use and we love!</p>
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <div class="tabs is-toggle is-fullwidth">
+      <ul>
+        {% assign tools = site.tools | sort: 'sequence' %}
+        {% for tool in tools %}
+        {% if page.url == tool.url %}
+        <li class="is-active">
+          <a href="{{site.url}}{{ tool.url }}">
+            <span class="icon is-small"><i class="fas fa-{{tool.icon}}" aria-hidden="true"></i></span>
+            <span>{{tool.title}}</span>
+          </a>
+        </li>
+        {% else %}
+        <li>
+          <a href="{{site.url}}{{ tool.url }}">
+            <span class="icon is-small"><i class="fas fa-{{tool.icon}}" aria-hidden="true"></i></span>
+            <span>{{tool.title}}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="block">
+      <div class="content is-medium">
+        <p>Some links below are affiliate. I receive a small commission at no extra cost to you.</p>
+      </div>
+    </div>
+
+    {% for tool in page.tools %}
+    <div class="block">
+      <div class="container">
+        <div class="content is-medium">
+          {% for li in tool.list %}
+          {% assign remainder = forloop.index | modulo: 3 %}
+          {% if remainder == 1 %}
+          <div class="columns is-multiline is-mobile" style="margin-bottom: 50px;">
+            {% endif %}
+            <div class="column is-4-tablet is-12-mobile tool">
+              <a style="width: 100%" target="_blank" href="{{ li.urls.first.url }}">
+                <img src="/assets/images/tools/{{ li.image }}" class="tools"/>
+                <p class="title is-3">{{ li.name }}</p>
+                <p class="subtitle is-5">{{ li.description }}</p>
+              </a>
+            </div>
+            {% if remainder == 0 %}
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
