@@ -46,11 +46,10 @@ layout: default
       </div>
     </div>
 
-    {% for tool in page.tools %}
     <div class="block">
       <div class="container">
         <div class="content is-medium">
-          {% for li in tool.list %}
+          {% for li in page.list %}
           {% assign remainder = forloop.index | modulo: 3 %}
           {% if remainder == 1 %}
           <div class="columns is-multiline is-mobile" style="margin-bottom: 50px;">
@@ -69,6 +68,5 @@ layout: default
         </div>
       </div>
     </div>
-    {% endfor %}
   </div>
 </section>
