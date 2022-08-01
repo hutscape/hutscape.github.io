@@ -4,7 +4,6 @@
       <ul>
         {% assign tools = site.tools | sort: 'sequence' %}
         {% for tool in tools %}
-        {{ page.url}}, {{tool.url}}
         {% if page.url == tool.url %}
         <li class="is-active">
           <a href="{{site.url}}{{ tool.url }}">
