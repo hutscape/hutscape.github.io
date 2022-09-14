@@ -1,6 +1,6 @@
 void setup() {
   delay(500);
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(500);
   Serial.println("\n\n================================");
   Serial.print("Chip Model: ");
@@ -17,6 +17,4 @@ void setup() {
   Serial.println("================================");
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+void loop() { }
