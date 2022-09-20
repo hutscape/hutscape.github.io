@@ -1,0 +1,12 @@
+esphome:
+  name: hello
+
+esp32:
+  board: esp32dev
+  variant: ESP32S3
+  framework:
+    type: arduino
+
+logger:
+  level: DEBUG
+  baud_rate: 0

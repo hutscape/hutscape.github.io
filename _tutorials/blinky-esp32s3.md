@@ -12,7 +12,7 @@ components:
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
   console: blinky-esp32s3-console.png
-  prototype: blinky-esp32s3-prototype.jpg
+  prototype: hello-world-esp32s3-prototype.jpg
 features:
   - blinky
   - led
