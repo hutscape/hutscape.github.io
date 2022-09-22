@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${default}"
+            ],
+            "defines": [],
+            "compileCommands": "${workspaceFolder}/hello_world/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

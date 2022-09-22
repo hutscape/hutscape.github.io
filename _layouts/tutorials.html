@@ -178,11 +178,16 @@ layout: default
     {% elsif page.code == "c" %}
       <!-- For C/C++ file code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
-      {% highlight c %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.c %}{% endhighlight %}
 
-      <h2 class="title is-2">Makefile</h2>
-      {% highlight make %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/Makefile %}{%
-      endhighlight %}
+      {% if page.source_code_path %}
+        {% highlight c %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.source_code_path }} %}{% endhighlight %}
+      {% else %}
+        {% highlight c %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.c %}{% endhighlight %}
+
+        <h2 class="title is-2">Makefile</h2>
+        {% highlight make %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/Makefile %}{%
+        endhighlight %}
+      {% endif %}
     {% else %}
       <!-- For Arduino INO file code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
