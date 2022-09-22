@@ -1,6 +1,6 @@
 void setup() {
   delay(500);
-  Serial.begin(9600);
+  Serial.begin(115200);
   delay(500);
   Serial.println("\n\n================================");
   Serial.print("Chip Model: ");
