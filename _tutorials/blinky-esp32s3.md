@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky ESP32-S3-DevKitC-1
+title: Blinky ESP32-S3 with Arduino
 dependancies:
   - name: ESP32 Arduino
     url: https://github.com/espressif/arduino-esp32
@@ -12,11 +12,12 @@ components:
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
   console: blinky-esp32s3-console.png
-  prototype: hello-world-esp32s3-prototype.jpg
+  prototype: blinky-esp32s3-prototype.jpg
 features:
   - blinky
   - led
   - serial
+  - esp32s3
 references:
   - name: Buy the official Espressif devkit
     url: https://www.espressif.com/en/products/devkits/esp32-devkitc/overview

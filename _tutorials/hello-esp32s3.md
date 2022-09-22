@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Hello world ESP32-S3-DevKitC-1
+title: Hello world ESP32-S3 with Arduino
 dependancies:
   - name: ESP32 Arduino
     url: https://github.com/espressif/arduino-esp32
@@ -12,12 +12,13 @@ components:
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
   console: hello-world-esp32s3-console.png
-  prototype: hello-world-esp32s3-prototype.jpg
+  prototype: hello-esp32s3-prototype.jpg
 features:
   - chip
   - core
   - version
   - serial
+  - esp32s3
 references:
   - name: Buy the official Espressif devkit
     url: https://www.espressif.com/en/products/devkits/esp32-devkitc/overview

@@ -11,9 +11,10 @@ components:
   - name: ESP32-S3-DevKitC-1-N8R2
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
-  prototype: hello-world-esp32s3-prototype.jpg
+  prototype: hello-esp32s3-prototype.jpg
 features:
   - esphome
+  - esp32s3
 code: yaml
 references:
   - name: Install ESPHome
