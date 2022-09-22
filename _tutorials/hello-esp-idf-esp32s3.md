@@ -17,6 +17,7 @@ features:
   - esp-idf
   - serial
   - esp32s3
+  - vscode
 code: c
 source_code_path: hello_world/main/hello_world_main.c
 references:
