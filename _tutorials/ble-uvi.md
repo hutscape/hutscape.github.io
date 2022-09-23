@@ -56,24 +56,7 @@ UV Index [GATT Characteristics](https://www.bluetooth.com/wp-content/uploads/Sit
 
 Use the nRF Connect iPhone app to view the UV Index values.
 
-<section class="section is-small">
-  <div class="container">
-    <div class="columns is-multiline is-desktop">
-      <div class="column is-half">
-        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect.jpg" alt="">
-      </div>
-
-      <div class="column is-half">
-        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-services.jpg" alt="">
-      </div>
-
-      <div class="column is-half">
-        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-char.jpg" alt="">
-      </div>
-
-      <div class="column is-half">
-        <img src="{{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-char-read.jpg" alt="">
-      </div>
-    </div>
-  </div>
-</section>
+![]({{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect.jpg)
+![]({{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-services.jpg)
+![]({{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-char.jpg)
+![]({{ site.url }}/assets/images/tutorials/ble-uvi-nrf-connect-char-read.jpg)
