@@ -71,7 +71,7 @@ The SPI pins for Arduino M0 / SAMD21G are defined as following:
 | `19` | `PB10` | `SERCOM4/PAD[2]` | MOSI |
 | `20` | `PB11` | `SERCOM4/PAD[3]` | SCK |
 
-<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="">
+![]({{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png)
 
 ## Pins
 
@@ -84,4 +84,4 @@ The SPI pins for Arduino M0 / SAMD21G are defined as following:
 | CLK | SCK on ICSP connector | PB11
 | DIN | COPI on ISCP connector | PB10
 
-<img src="{{ site.url }}/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-pinout.png" alt="Pinouts for RobotDyn M0 Mini ICSP connector">
+![]({{ site.url }}/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-pinout.png)

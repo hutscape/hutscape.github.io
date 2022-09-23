@@ -28,8 +28,8 @@ This example contains feature detection code in JavaScript. Load the HTML file f
 
 ## Chrome
 
-<img src="{{ site.url }}/assets/images/tutorials/web-hw-feature-detection-chrome.png" alt="HW APIs availability on Chrome browser">
+![]{{ site.url }}/assets/images/tutorials/web-hw-feature-detection-chrome.png)
 
 ## Safari
 
-<img src="{{ site.url }}/assets/images/tutorials/web-hw-feature-detection-safari.png" alt="HW APIs availability on Safari browser">
+![]{{ site.url }}/assets/images/tutorials/web-hw-feature-detection-safari.png)

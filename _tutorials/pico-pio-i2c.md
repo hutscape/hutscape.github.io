@@ -47,7 +47,7 @@ This example code does an I2C Bus Scan for the sensors `Si7021` and `VCNL4000` w
 The datasheets of the 2 sensors below show that the serial monitor prints are in line with the information in the datasheet.
 
 The I2C address for `Si7021` is `0x40`.
-<img src="{{ site.url }}/assets/images/tutorials/pico-i2c-datasheet-si7021.png" alt="Si7021 datasheet note on the I2C address">
+![]({{ site.url }}/assets/images/tutorials/pico-i2c-datasheet-si7021.png)
 
 The I2C address for `VCNL4000` is `0x13`.
-<img src="{{ site.url }}/assets/images/tutorials/pico-i2c-datasheet-VCNL4000.png" alt="VCNL4000 datasheet note on the I2C address">
+![]({{ site.url }}/assets/images/tutorials/pico-i2c-datasheet-VCNL4000.png)

@@ -47,7 +47,7 @@ Take [note of the actual SPI pins used on SAMD21G](https://github.com/arduino/Ar
 { PORTB, 10, PIO_SERCOM_ALT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10 }, // MOSI: SERCOM4/PAD[2] PB10
 ```
 
-<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="Datasheet pin information">
+![]{{ site.url }}/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png)
 
 ### Logic Analyzer capture
 

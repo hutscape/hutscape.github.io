@@ -54,4 +54,4 @@ byte destination = 0xAA;
 1. Haversine distance with the peer node
 1. Last time since both the local and peer node could get GPS fix around the same time enough to get a valid Haversine distance
 
-<img src="{{ site.url }}/assets/images/tutorials/lora-duplex-gps-esp32-t-beam-info.jpg" alt="Information displayed on the OLED">
+![]({{ site.url }}/assets/images/tutorials/lora-duplex-gps-esp32-t-beam-info.jpg)

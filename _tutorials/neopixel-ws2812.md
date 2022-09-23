@@ -40,8 +40,8 @@ The signals were captured with the Saleae Logic Analyser.
 
 Zoomed out signals:
 
-<img src="{{ site.url }}/assets/images/tutorials/neopixel-ws2812-signal-zoomed-out.png" alt="WS2818 signal captured with 10 pixels">
+![]({{ site.url }}/assets/images/tutorials/neopixel-ws2812-signal-zoomed-out.png)
 
 Magnified signal at a closer look:
 
-<img src="{{ site.url }}/assets/images/tutorials/neopixel-ws2812-signal-zoomed-in.png" alt="WS2818 signal captured with 10 pixels">
+![]({{ site.url }}/assets/images/tutorials/neopixel-ws2812-signal-zoomed-in.png)

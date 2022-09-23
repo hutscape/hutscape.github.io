@@ -43,26 +43,26 @@ This code example creates a simple colored blinky with RaspberryPI Pico board wi
 
 <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}/pico-neopixel-option-a.sal" class="button is-primary">Download Saleae Analyser File</a>
 
-<img src="{{ site.url }}/assets/images/tutorials/pico-neopixel-prototype-option-a.png" alt="Display 7 colors with 500ms delay">
+![]({{ site.url }}/assets/images/tutorials/pico-neopixel-prototype-option-a.png)
 
 The logic analyzer traces show the 7 colors.
 
-<img src="{{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-a-zoomout.png" alt="Display 7 colors with 500ms delay">
+![]({{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-a-zoomout.png)
 
 The logic analyser traces show the Red LED signal zoomed in.
 
-<img src="{{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-a-zoomin.png" alt="Zoomed in signal of the RED colored LED display">
+![]({{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-a-zoomin.png)
 
 ## Option B: Cascading pixels
 
 <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}/pico-neopixel-option-B.sal" class="button is-primary">Download Saleae Analyser File</a>
 
-<img src="{{ site.url }}/assets/images/tutorials/pico-neopixel-prototype-option-b.png" alt="Display cascading color">
+![]({{ site.url }}/assets/images/tutorials/pico-neopixel-prototype-option-b.png)
 
 The logic analyzer shows one signal that is cascading with multiple colors.
 
-<img src="{{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-b-zoomout.png" alt="Display cascading colors">
+![]({{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-b-zoomout.png)
 
 The logic analyzer shows a zoomed-in signal of the cascading colors.
 
-<img src="{{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-b-zoomin.png" alt="Display cascading color">
+![]({{ site.url }}/assets/images/tutorials/pico-neopixel-signals-option-b-zoomin.png)
