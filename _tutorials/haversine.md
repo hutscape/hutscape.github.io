@@ -26,4 +26,4 @@ This example contains the Haversine implement in Arduino. 3 Lat-Long values were
 
 E.g. Distance between Reichstag and Brandenburg Gate in Berlin
 
-<img src="{{ site.url }}/assets/images/tutorials/haversine-google-maps.png" alt="Distance between Reichstag and Brandenburg Gate in Berlin as shown in Google Maps">
+![]({{ site.url }}/assets/images/tutorials/haversine-google-maps.png)
