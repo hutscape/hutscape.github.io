@@ -21,8 +21,8 @@ View the decoded asynchronous serial signal from the graph produced by Saleae.
 
 Capture the signal in Saleae:
 
-<img src="{{ site.url }}/assets/images/tutorials/logic-analyzer-uart-all-signals.png" alt="All signals">
+![]({{ site.url }}/assets/images/tutorials/logic-analyzer-uart-all-signals.png)
 
 Add asynchronous serial to decode the captured signal:
 
-<img src="{{ site.url }}/assets/images/tutorials/logic-analyzer-uart-decoded-signal.png" alt="Decoded asynchronous serial signals">
+![]({{ site.url }}/assets/images/tutorials/logic-analyzer-uart-decoded-signal.png)
