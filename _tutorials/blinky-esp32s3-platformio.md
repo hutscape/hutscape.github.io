@@ -43,4 +43,4 @@ references:
   ![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-serial-monitor.png)
 
 <!-- TODO: Serial print is not working -->
-<h3 class="has-background-warning-light">TODO SERIAL PRINT NOT WORKING</h3>
+<h3 class="has-background-warning-light">TODO: SERIAL PRINT NOT WORKING</h3>
