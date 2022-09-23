@@ -40,7 +40,7 @@ View the decoded non-standard signal from the graph produced by Saleae to read t
 
 Capture the signal in Saleae:
 
-<img src="{{ site.url }}/assets/images/tutorials/logic-analyzer-signal-all-signals.png" alt="All signals">
+![]({{ site.url }}/assets/images/tutorials/logic-analyzer-signal-all-signals.png)
 
 Manually decoding the signal gives us:
 
