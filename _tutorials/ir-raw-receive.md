@@ -42,12 +42,12 @@ uint16_t rawData[RAW_DATA_LEN] = { 3418, 1742, 410, 1318, 410, 1314, 362, 506, 3
 
 ### Example of the Apple TV 4th Gen remote
 
-<img src="{{ site.url }}/assets/images/tutorials/ir-raw-receive-appletv-remote-code.png" alt="IR Raw code received from Apple TV remote">
+![]({{ site.url }}/assets/images/tutorials/ir-raw-receive-appletv-remote-code.png)
 
-<img src="{{ site.url }}/assets/images/tutorials/ir-raw-receive-appletv-remote-signals.png" alt="IR Raw signals received from Apple TV remote">
+![]({{ site.url }}/assets/images/tutorials/ir-raw-receive-appletv-remote-signals.png)
 
 ### Example of the Roomba remote
 
-<img src="{{ site.url }}/assets/images/tutorials/ir-raw-receive-roomba-remote-code.png" alt="IR Raw code received from Roomba remote">
+![]({{ site.url }}/assets/images/tutorials/ir-raw-receive-roomba-remote-code.png)
 
-<img src="{{ site.url }}/assets/images/tutorials/ir-raw-receive-roomba-remote-signals.png" alt="IR Raw signals received from Roomba remote">
+![]({{ site.url }}/assets/images/tutorials/ir-raw-receive-roomba-remote-signals.png)
