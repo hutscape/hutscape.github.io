@@ -31,11 +31,11 @@ Create options in using different variable values with `#define` statement. The 
 
 Run command `make a` to put the `LOCAL_ADDRESS` value as `0xAA`.
 
-<img src="{{ site.url }}/assets/images/tutorials/define-options-console-a.png" alt="Option with the local address as 0xAA">
+![]({{ site.url }}/assets/images/tutorials/define-options-console-a.png)
 
 Run `make b` to put the `LOCAL_ADDRESS` value as `0xBB`.
 
-<img src="{{ site.url }}/assets/images/tutorials/define-options-console-b.png" alt="Option with the local address as 0xBB">
+![]({{ site.url }}/assets/images/tutorials/define-options-console-b.png)
 
 The `make` command will run the `arduino-cli compile` with options to `#define` the `LOCAL_ADDRESS` and `DESTINATION_ADDRESS` values.
 
