@@ -32,14 +32,14 @@ has_code: false
 
 Converting up from `3.3V` to `5V`.
 
-<img src="{{ site.url }}/assets/images/tutorials/level-shifter-4channel-up-schematic.png" alt="Level shifting up schematic">
+![]({{ site.url }}/assets/images/tutorials/level-shifter-4channel-up-schematic.png)
 
-<img src="{{ site.url }}/assets/images/tutorials/level-shifter-4channel-up-multimeter.png" alt="Level shifting up Multimeter result">
+![]({{ site.url }}/assets/images/tutorials/level-shifter-4channel-up-multimeter.png)
 
 ## Level shifting down
 
 Converting down from `5V` to `3.3V`.
 
-<img src="{{ site.url }}/assets/images/tutorials/level-shifter-4channel-down-schematic.png" alt="Level shifting down schematic">
+![]({{ site.url }}/assets/images/tutorials/level-shifter-4channel-down-schematic.png)
 
-<img src="{{ site.url }}/assets/images/tutorials/level-shifter-4channel-down-multimeter.png" alt="Level shifting down Multimeter result">
+![]({{ site.url }}/assets/images/tutorials/level-shifter-4channel-down-multimeter.png)
