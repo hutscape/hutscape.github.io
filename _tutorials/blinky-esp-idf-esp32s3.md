@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky with ESP-IDF in VS Code
+title: Blinky with ESP32S3 ESP-IDF in VS Code
 dependancies:
   - name: ESP-IDF VS Code IDE Installation
     url: https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/index.html#ide
