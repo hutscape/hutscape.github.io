@@ -12,6 +12,7 @@ components:
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
   prototype: blinky-esp32s3-prototype.jpg
+  console: blinky-esp32s3-platformio-console.png
 features:
   - blinky
   - led
@@ -32,15 +33,12 @@ references:
 ---
 
 1. Create new project with PlatformIO on VS Code editor
-  ![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-create-project.png)
+  [![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-create-project.png)]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-create-project.png)
 1. Edit file `src/main.cpp` with blinky Arduino code
 1. Edit `platform.ini` to other configurations
 1. Click Build ✅ to compile the code
-  ![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-build.png)
+  [![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-build.png)]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-build.png)
 1. Click Upload ➡️ to flash the firmware on the board
-  ![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-upload.png)
+  [![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-upload.png)]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-upload.png)
 1. Click Serial monitor 🔌 to view the serial prints
-  ![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-serial-monitor.png)
-
-<!-- TODO: Serial print is not working -->
-<h3 class="has-background-warning-light">TODO: SERIAL PRINT NOT WORKING</h3>
+  [![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-console.png)]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-console.png)
