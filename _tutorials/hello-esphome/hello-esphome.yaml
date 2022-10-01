@@ -1,15 +1,19 @@
 esphome:
   name: hello
 
+  on_boot:
+    then:
+      - logger.log: "Hello World"
+
 esp32:
   board: esp32-s3-devkitc-1
   variant: esp32s3
   framework:
     type: arduino
-    version: 2.0.4
+    version: 2.0.3
     platform_version: 5.1.0
 
 logger:
   level: DEBUG
-  baud_rate: 0
+  baud_rate: 115200
   deassert_rts_dtr: true
