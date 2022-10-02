@@ -14,6 +14,8 @@ esp32:
     platform_version: 5.1.0
 
 logger:
-  level: DEBUG
+  level: VERBOSE
   baud_rate: 115200
   deassert_rts_dtr: true
+  # Enable USB CDC: https://esphome.io/components/logger.html#hardware-uarts
+  # hardware_uart: USB_CDC
