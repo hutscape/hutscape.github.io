@@ -1,0 +1,29 @@
+esphome:
+  name: hello
+
+esp32:
+  board: esp32-s3-devkitc-1
+  variant: esp32s3
+  framework:
+    type: arduino
+    version: 2.0.3
+    platform_version: 5.1.0
+
+logger:
+  level: DEBUG
+  baud_rate: 0
+  deassert_rts_dtr: true
+  # Enable USB CDC: https://esphome.io/components/logger.html#hardware-uarts
+  # hardware_uart: USB_CDC
+
+switch:
+  - platform: gpio
+    pin:
+      number: 48
+      mode: output
+    id: board_light
+
+interval:
+  - interval: 500ms
+    then:
+      - switch.toggle: board_light

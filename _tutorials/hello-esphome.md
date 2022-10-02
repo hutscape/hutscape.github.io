@@ -23,7 +23,7 @@ references:
     url: https://esphome.io/guides/getting_started_command_line.html#
   - name: ESPHome config by Alex Mekkering
     url: https://alexmekkering.github.io/esphome-config/
-  - name: SHA=256 comparison fail
+  - name: SHA-256 comparison fail
     url: https://www.esp32.com/viewtopic.php?f=12&t=27454&hilit=SHA+256+comparison+failed
 ---
 
