@@ -175,6 +175,10 @@ layout: default
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}"
         class="button is-primary">Download config</a>
       {% highlight yaml %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.yaml %}{% endhighlight %}
+    {% elsif page.code == "rust" %}
+      <!-- For rust config examples in ESPHome -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
+      {% highlight rust %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.source_code_path }} %}{% endhighlight %}
     {% elsif page.code == "c" %}
       <!-- For C/C++ file code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
