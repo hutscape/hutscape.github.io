@@ -2,7 +2,11 @@
 
 default: serve
 
-serve:
+list:
+	echo "List all file extensions that are not HTML:"
+	grep -riL "html" _site/tutorials || true
+
+serve: list
 	bundle exec jekyll serve --trace
 
 build:
