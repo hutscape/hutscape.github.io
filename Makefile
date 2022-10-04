@@ -1,16 +1,15 @@
 .PHONY: default serve build projects
 
-default: serve
+default: build list serve
 
 list:
-	echo "List all file extensions that are not HTML:"
-	grep -riL "html" _site/tutorials || true
+	find _site/tutorials '!' -name '*.html'
 
-serve: list
+serve:
 	bundle exec jekyll serve --trace
 
 build:
-	jekyll build
+	bundle exec jekyll build --trace
 
 projects:
 	node scripts/query_projects.js
