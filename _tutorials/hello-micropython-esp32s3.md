@@ -117,3 +117,4 @@ This method will rollback from Micropython to Arduino on ESP32
     Hard resetting via RTS pin...
     ```
 1. Flash in the [blinky example via ESP-IDF](./blinky-esp-idf-esp32s3)
+1. Flash in the [blinky example for Arduino](./blinky-esp32s3)
