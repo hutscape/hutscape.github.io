@@ -7,6 +7,7 @@ youtube: https://www.youtube.com/user/sweska/videos
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
 exclude: [
+  _tutorials/.embuild/*,
   _tutorials/*.h,
   _tutorials/*.ino,
   _tutorials/*.json,
@@ -31,7 +32,6 @@ exclude: [
   _tutorials/*.yaml,
   _tutorials/*.pio,
   _tutorials/*.cargo*,
-  _tutorials/*.embuild*,
   _tutorials/*target*,
   _tutorials/*.rs,
   _tutorials/*.toml,

@@ -9,6 +9,7 @@ serve:
 	bundle exec jekyll serve --trace
 
 build:
+	rm -rf _site
 	bundle exec jekyll build --trace
 
 projects:
