@@ -4,6 +4,8 @@ title: Blinky ESP32-S3 with Micropython
 dependancies:
   - name: ESP32S3 Generic Micropython bin
     url: https://micropython.org/download/GENERIC_S3/
+  - name: Esptool
+    url: https://github.com/espressif/esptool
   - name: ampy
     url: https://github.com/scientifichackers/ampy
 chips:
@@ -84,3 +86,34 @@ references:
     ```sh
     ampy --port /dev/cu.usbserial-1410 run blink.py
     ```
+
+## Erase flash
+
+This method will rollback from Micropython to Arduino on ESP32
+
+1. Plug in the board on the `UART` port
+1. Check the port address
+    ```sh
+    $ ls /dev/cu.*
+    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+    ```
+1. Erase the flash
+    ```sh
+    $ esptool.py --port /dev/cu.usbmodem1234561 erase_flash
+
+    esptool.py v4.3
+    Serial port /dev/cu.SLAB_USBtoUART
+    Connecting....
+    Detecting chip type... ESP32-S3
+    Chip is ESP32-S3 (revision v0.1)
+    Features: WiFi, BLE
+    Crystal is 40MHz
+    MAC: 7c:df:a1:e2:79:08
+    Uploading stub...
+    Running stub...
+    Stub running...
+    Erasing flash (this may take a while)...
+    Chip erase completed successfully in 21.4s
+    Hard resetting via RTS pin...
+    ```
+1. Flash in the [blinky example via ESP-IDF](./blinky-esp-idf-esp32s3)
