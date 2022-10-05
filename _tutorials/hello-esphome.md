@@ -12,6 +12,7 @@ components:
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
   prototype: hello-esp32s3-prototype.jpg
+  console: hello-esphome-console.png
 features:
   - esphome
   - esp32s3
@@ -44,9 +45,32 @@ Version: 2022.8.3
 
 ### Compile and upload
 
-```sh
-esphome run hello-esphome.yaml
-```
+1. [Compile](https://esphome.io/guides/cli.html#compile-command) firmware for this board
 
-<!-- TODO: Serial print is not working -->
-<h3 class="has-background-warning-light">TODO: SERIAL PRINT NOT WORKING</h3>
+    ```sh
+    esphome compile hello-esphome.yaml
+    ```
+1. Plug into the `USB` port of the board and check the port address
+
+    ```sh
+    $ ls /dev/cu.*
+
+    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.usbmodem14101
+    ```
+1. [Upload](https://esphome.io/guides/cli.html#upload-command) the firmware
+
+    ```sh
+    esphome upload --device /dev/cu.usbmodem14101 hello-esphome.yaml
+    ```
+1. Unplug and plug into the `UART` port of the board
+1. Check the new port address
+
+    ```sh
+    $ ls /dev/cu.*
+    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+    ```
+1. Access the [logs](https://esphome.io/guides/cli.html#logs-command)
+
+    ```sh
+    esphome logs --device /dev/cu.usbserial-1410 hello-esphome.yaml
+    ```
