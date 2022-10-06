@@ -30,11 +30,15 @@ references:
   - name: Arduino Pins
     url: https://github.com/espressif/arduino-esp32/blob/master/variants/esp32s3/pins_arduino.h
 prerequisites:
-  - name: Hello world ESP32-S3-DevKitC-1
+  - name: Hello world ESP32-S3-DevKit C-1
     url: ./hello-world-esp32s3
 ---
 
+### LED
+
 `LED_BUILTIN` is pin 48 as defined in the [Arduino variant](https://github.com/espressif/arduino-esp32/blob/master/variants/esp32s3/pins_arduino.h#L17) and [schematic](https://dl.espressif.com/dl/SCH_ESP32-S3-DEVKITC-1_V1_20210312C.pdf).
+
+Alternatively `#define LED 5` can be used as well to test a simpler LED.
 
 ### Upload using USB port
 
