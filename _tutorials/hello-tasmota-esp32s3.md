@@ -68,3 +68,36 @@ references:
 
 <!-- TODO -->
 <h3 class="has-background-warning-light">TODO: PSU CONFIG and SERIAL MONITOR</h3>
+
+### Rollback from Tasmota to Arduino
+
+1. Plug into the `UART` port
+1. Check the port address
+
+    ```sh
+    $ ls /dev/cu.*
+    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+    ```
+1. Erase flash
+
+    ```sh
+    $ esptool.py --port /dev/cu.usbserial-1410 erase_flash
+
+    esptool.py v4.3
+    Serial port /dev/cu.usbserial-1410
+    Connecting....
+    Detecting chip type... ESP32-S3
+    Chip is ESP32-S3 (revision v0.1)
+    Features: WiFi, BLE
+    Crystal is 40MHz
+    MAC: 7c:df:a1:e2:79:08
+    Uploading stub...
+    Running stub...
+    Stub running...
+    Erasing flash (this may take a while)...
+    Chip erase completed successfully in 21.3s
+    Hard resetting via RTS pin...
+    ```
+1. Plug into the `USB` port
+1. Flash the [PlatformIO Blinky example](./blinky-esp32s3-platformio)
+1. Flash in the [blinky Arduino example](./blinky-esp32s3)

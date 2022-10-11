@@ -87,9 +87,7 @@ references:
     ampy --port /dev/cu.usbserial-1410 run blink.py
     ```
 
-## Erase flash
-
-This method will rollback from Micropython to Arduino on ESP32
+## Rollback from Micropython to Arduino
 
 1. Plug in the board on the `UART` port
 1. Check the port address

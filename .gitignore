@@ -3,6 +3,7 @@
 *.elf
 *.DS_Store
 *.hex
+*.old
 
 ideas
 _site
