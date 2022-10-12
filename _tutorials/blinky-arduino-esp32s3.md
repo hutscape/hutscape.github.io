@@ -34,8 +34,8 @@ references:
   - name: Arduino Pins
     url: https://github.com/espressif/arduino-esp32/blob/master/variants/esp32s3/pins_arduino.h
 prerequisites:
-  - name: Hello world ESP32-S3-DevKit C-1
-    url: ./hello-world-esp32s3
+  - name: Hello world with Arduino on ESP32-S3
+    url: ./hello-arduino-esp32s3
 ---
 
 ### LED
