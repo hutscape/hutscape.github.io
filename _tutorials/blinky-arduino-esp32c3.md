@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky ESP32-C3 with Arduino
+title: Blinky with Arduino on ESP32-C3
 dependancies:
   - name: ESP32 Arduino
     url: https://github.com/espressif/arduino-esp32
