@@ -11,7 +11,7 @@ chips:
 video: Os5sGlw3PV0
 dev_board: Adafruit Feather Bluefruit
 images:
-  arduino: blinky-nrf52-arduino-settings.png
+  settings: blinky-nrf52-arduino-settings.png
   console: blinky-nrf52-console.png
   prototype: blinky-nrf52-prototype.jpg
 components:

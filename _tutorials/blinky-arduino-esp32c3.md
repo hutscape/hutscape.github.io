@@ -11,7 +11,7 @@ components:
   - name: ESP32-C3-DevKitM-1
     url: https://www.aliexpress.com/item/1005003989099547.html
 images:
-  arduino: blinky-esp32c3-arduino-settings.png
+  settings: blinky-esp32c3-arduino-settings.png
   prototype: blinky-esp32c3-prototype.jpg
 features:
   - blinky

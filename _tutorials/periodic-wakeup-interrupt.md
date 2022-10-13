@@ -15,7 +15,7 @@ features:
   - sleep
   - wakeup
 images:
-  arduino: periodic-wakeup-interrupt-arduino-settings.png
+  settings: periodic-wakeup-interrupt-arduino-settings.png
   console: periodic-wakeup-interrupt-console.png
   schematic: periodic-wakeup-interrupt-schematic.jpg
   prototype: periodic-wakeup-interrupt-prototype.jpg

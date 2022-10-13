@@ -13,7 +13,7 @@ components:
 images:
   console: blinky-arduino-esp32s3-console.png
   prototype: blinky-esp32s3-prototype.jpg
-  arduino: blinky-arduino-esp32s3-settings.png
+  settings: blinky-arduino-esp32s3-settings.png
   schematic: blinky-arduino-esp32s3-schematic.png
 features:
   - blinky

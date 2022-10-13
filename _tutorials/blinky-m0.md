@@ -14,7 +14,7 @@ components:
   - name: RobotDyn M0 Mini
     url: https://s.click.aliexpress.com/e/_AZG8aU
 images:
-  arduino: blinky-m0-arduino-setting.png
+  settings: blinky-m0-arduino-setting.png
   console: blinky-m0-console.png
   prototype: blinky-m0-prototype.jpg
 references:
