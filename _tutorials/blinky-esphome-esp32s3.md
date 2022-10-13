@@ -21,6 +21,12 @@ prerequisites:
   - name: Hello world with ESPHome
     url: ./hello-esphome
 references:
+  - name: Buy the official Espressif devkit
+    url: https://www.espressif.com/en/products/devkits/esp32-devkitc/overview
+  - name: Schematic of ESP32-S3-DEVKITC-1 V1
+    url: https://dl.espressif.com/dl/SCH_ESP32-S3-DEVKITC-1_V1_20210312C.pdf
+  - name: Pinouts
+    url: https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout
   - name: Blink How?
     url: https://community.home-assistant.io/t/blink-how/307243/16
   - name: Enable USB CDC to log “hello world” to ESP32-S3 dev board for ESPHome
