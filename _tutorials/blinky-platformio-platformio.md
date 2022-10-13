@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky ESP32-S3 with PlatformIO on VS Code
+title: Blinky with PlatformIO VS Code on ESP32-S3
 dependancies:
   - name: PlatformIO IDE for VSCode
     url: https://docs.platformio.org/en/stable/integration/ide/vscode.html#installation
