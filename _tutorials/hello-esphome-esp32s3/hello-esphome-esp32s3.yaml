@@ -2,8 +2,11 @@ esphome:
   name: hello
 
   on_boot:
-    then:
-      - logger.log: "Hello World"
+    - repeat:
+        count: 10
+        then:
+          - logger.log: "Hello World"
+          - delay: 1s
 
 esp32:
   board: esp32-s3-devkitc-1

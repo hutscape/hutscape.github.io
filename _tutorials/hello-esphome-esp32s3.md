@@ -12,7 +12,7 @@ components:
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
   prototype: hello-esp32s3-prototype.jpg
-  console: hello-esphome-console.png
+  console: hello-esphome-esp32s3-console.png
 features:
   - esphome
   - esp32s3

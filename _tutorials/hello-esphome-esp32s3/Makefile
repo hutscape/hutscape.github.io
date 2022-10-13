@@ -18,4 +18,4 @@ log:
 	esphome logs --device $(SERIAL_PORT) $(YAML_FILE)
 
 clean:
-	rm -r .esphome
+	rm -rf .esphome
