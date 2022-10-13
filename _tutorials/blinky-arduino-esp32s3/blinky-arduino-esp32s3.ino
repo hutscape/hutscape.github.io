@@ -1,6 +1,9 @@
+#define LED LED_BUILTIN
+// #define LED 5
+
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, LOW);
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, LOW);
 
   Serial.begin(115200);
   Serial.println("Start blinky");
@@ -16,10 +19,10 @@ void loop() {
 
 void ledON() {
   Serial.println("LED ON");
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(LED, LOW);
 }
 
 void ledOFF() {
   Serial.println("LED OFF");
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(LED, HIGH);
 }
