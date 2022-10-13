@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Hello world with ESPHome
+title: Hello world with ESPHome on ESP32-S3
 dependancies:
   - name: ESPHome
     url: https://esphome.io/guides/installing_esphome.html
@@ -48,7 +48,7 @@ Version: 2022.8.3
 1. [Compile](https://esphome.io/guides/cli.html#compile-command) firmware for this board
 
     ```sh
-    esphome compile hello-esphome.yaml
+    esphome compile hello-esphome-esp32s3.yaml
     ```
 1. Plug into the `USB` port of the board and check the port address
 
@@ -60,8 +60,11 @@ Version: 2022.8.3
 1. [Upload](https://esphome.io/guides/cli.html#upload-command) the firmware
 
     ```sh
-    esphome upload --device /dev/cu.usbmodem14101 hello-esphome.yaml
+    esphome upload --device /dev/cu.usbmodem14101 hello-esphome-esp32s3.yaml
     ```
+
+### Access logs
+
 1. Unplug and plug into the `UART` port of the board
 1. Check the new port address
 
@@ -72,5 +75,5 @@ Version: 2022.8.3
 1. Access the [logs](https://esphome.io/guides/cli.html#logs-command)
 
     ```sh
-    esphome logs --device /dev/cu.usbserial-1410 hello-esphome.yaml
+    esphome logs --device /dev/cu.usbserial-1410 hello-esphome-esp32s3.yaml
     ```
