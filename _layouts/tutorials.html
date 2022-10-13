@@ -174,6 +174,10 @@ layout: default
       <!-- For yaml config examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download config</a>
       {% highlight yaml %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.yaml %}{% endhighlight %}
+
+      <h2 class="title is-2">Makefile</h2>
+      {% highlight make %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/Makefile %}{%
+      endhighlight %}
     {% elsif page.code == "rust" %}
       <!-- For rust examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
