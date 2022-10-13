@@ -261,6 +261,24 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.images.list %}
+<hr>
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+    {% for im in page.images.list %}
+
+    <div class="column is-half">
+      <a href="/assets/images/tutorials/{{ im.image }}">
+        <img src="/assets/images/tutorials/{{ im.image }}" alt="{{ page.title | escape }} browser"></a>
+      <p class="subtitle is-4">{{ im.description }}</p>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if page.references %}
 <section class="section is-small">
   <div class="container">

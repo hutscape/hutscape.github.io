@@ -11,7 +11,9 @@ components:
   - name: ESP32-S3-DevKitC-1-N8R2
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
-  prototype: hello-esp32s3-prototype.jpg
+  prototype: blinky-esp32s3-gpio5.jpg
+  console: blinky-esphome-esp32s3-console.png
+  schematic: blinky-arduino-esp32s3-schematic.png
 features:
   - esphome
   - esp32s3
@@ -33,7 +35,16 @@ references:
     url: https://community.home-assistant.io/t/enable-usb-cdc-to-log-hello-world-to-esp32-s3-dev-board-for-esphome/463164
 ---
 
-Compiling and uploading is successful!
+### LED
 
-<!-- TODO: Serial print is not working -->
-<h3 class="has-background-warning-light">TODO: BLINKY NOT SHOWING</h3>
+Wireup a simple LED and resistor to `GPIO5`
+
+[![]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-schematic.png)]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-schematic.png)
+
+### Compile and upload
+
+1. Plug in the board into the `USB` port
+1. Compile
+
+    ```sh
+    ```

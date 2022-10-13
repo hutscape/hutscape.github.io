@@ -15,6 +15,11 @@ images:
   prototype: blinky-esp32s3-prototype.jpg
   settings: blinky-arduino-esp32s3-settings.png
   schematic: blinky-arduino-esp32s3-schematic.png
+  list:
+    - image: blinky-esp32s3-gpio5.jpg
+      description: Use GPIO5 to add a simple external LED
+    - image: hello-esp32s3-uart.jpg
+      description: Change to the UART port to view the serial monitor
 features:
   - blinky
   - led

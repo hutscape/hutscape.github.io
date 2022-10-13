@@ -1,5 +1,5 @@
 esphome:
-  name: hello
+  name: blinky
 
 esp32:
   board: esp32-s3-devkitc-1
@@ -10,8 +10,8 @@ esp32:
     platform_version: 5.1.0
 
 logger:
-  level: DEBUG
-  baud_rate: 0
+  level: VERBOSE
+  baud_rate: 115200
   deassert_rts_dtr: true
   # Enable USB CDC: https://esphome.io/components/logger.html#hardware-uarts
   # hardware_uart: USB_CDC
@@ -19,11 +19,12 @@ logger:
 switch:
   - platform: gpio
     pin:
-      number: 48
+      number: 5
       mode: output
-    id: board_light
+    id: led
 
 interval:
-  - interval: 500ms
+  - interval: 2s
     then:
-      - switch.toggle: board_light
+      - switch.toggle: led
+      - logger.log: "LED toggling"
