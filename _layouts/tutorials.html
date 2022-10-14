@@ -181,6 +181,10 @@ layout: default
       <!-- For python examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
       {% highlight rust %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.source_code_path }} %}{% endhighlight %}
+
+      <h2 class="title is-2">Makefile</h2>
+      {% highlight make %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/Makefile %}{%
+      endhighlight %}
     {% elsif page.code == "c" %}
       <!-- For C/C++ file code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
@@ -210,12 +214,12 @@ layout: default
 <section class="section is-small">
   <div class="container">
     <div class="columns is-multiline is-desktop">
-      {% if page.images.console %}
+      {% if page.images.prototype %}
       <div class="column is-half">
-        <h2 class="title is-2">Serial console</h2>
-        <p class="subtitle is-4">Serial output from the firmware.</p>
-        <a href="/assets/images/tutorials/{{ page.images.console }}"><img
-            src="/assets/images/tutorials/{{ page.images.console }}" alt="{{ page.title | escape }} serial console"></a>
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/{{ page.images.prototype }}"><img
+            src="/assets/images/tutorials/{{ page.images.prototype }}" alt="{{ page.title | escape }} prototype"></a>
       </div>
       {% endif %}
 
@@ -232,15 +236,18 @@ layout: default
       <div class="column is-half">
         <h2 class="title is-2">Arduino IDE settings</h2>
         <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
-        <a href="/assets/images/tutorials/{{ page.images.settings }}"><img src="/assets/images/tutorials/{{ page.images.settings }}" alt="{{ page.title | escape }} Arduino IDE settings"></a>
+        <a href="/assets/images/tutorials/{{ page.images.settings }}"><img
+            src="/assets/images/tutorials/{{ page.images.settings }}"
+            alt="{{ page.title | escape }} Arduino IDE settings"></a>
       </div>
       {% endif %}
 
-      {% if page.images.prototype %}
+      {% if page.images.console %}
       <div class="column is-half">
-        <h2 class="title is-2">Prototype</h2>
-        <p class="subtitle is-4">A photo of the actual setup.</p>
-        <a href="/assets/images/tutorials/{{ page.images.prototype }}"><img src="/assets/images/tutorials/{{ page.images.prototype }}" alt="{{ page.title | escape }} prototype"></a>
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/{{ page.images.console }}"><img
+            src="/assets/images/tutorials/{{ page.images.console }}" alt="{{ page.title | escape }} serial console"></a>
       </div>
       {% endif %}
 
