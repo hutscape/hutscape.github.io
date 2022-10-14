@@ -1,7 +1,7 @@
 from machine import Pin
 import time
 
-led = Pin(48, Pin.OUT)
+led = Pin(5, Pin.OUT)
 for i in range(10):
   led.on()
   time.sleep_ms(500)

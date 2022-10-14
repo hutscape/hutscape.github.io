@@ -36,6 +36,7 @@ exclude: [
   _tutorials/*.rs,
   _tutorials/*.toml,
   _tutorials/*.lock,
+  _tutorials/*.bin,
   CNAME,
   Gemfile,
   Gemfile.lock,

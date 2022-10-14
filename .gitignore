@@ -4,6 +4,7 @@
 *.DS_Store
 *.hex
 *.old
+*.bin
 
 ideas
 _site

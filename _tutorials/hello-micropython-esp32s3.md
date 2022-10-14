@@ -17,7 +17,9 @@ components:
 code: python
 source_code_path: blink.py
 images:
-  prototype: blinky-esp32s3-prototype.jpg
+  prototype: blinky-esp32s3-gpio5.jpg
+  schematic: blinky-arduino-esp32s3-schematic.png
+  console: blinky-micropython-esp32s3-console.png
 features:
   - blinky
   - led
@@ -33,15 +35,12 @@ references:
     url: https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout
 ---
 
-## Flash Micropython
+### LED
 
-1. Check version of `esptool.py`
-    ```sh
-    $ esptool.py version
+Wire up a simple LED and resistor to [`GPIO5` of the board](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout).
 
-    esptool.py v4.3
-    4.3
-    ```
+### Upload Micropython binary
+
 1. Plug in the board via the `USB` port to know the port number
     ```sh
     $ ls /dev/cu.*
@@ -72,7 +71,7 @@ references:
     $ esptool.py --chip esp32s3 --port /dev/cu.usbmodem14101 write_flash -z 0 GENERIC_S3-20220618-v1.19.1.bin
     ```
 
-## Serial
+## Access the Serial monitor with the Python code
 
 1. Download [ampy](https://github.com/scientifichackers/ampy)
 1. Plug in the board through the `UART` port
