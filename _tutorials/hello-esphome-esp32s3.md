@@ -13,6 +13,9 @@ components:
 images:
   prototype: hello-esp32s3-prototype.jpg
   console: hello-esphome-esp32s3-console.png
+  list:
+    - image: hello-esp32s3-uart.jpg
+      description: Change to the UART port to view the logs
 features:
   - esphome
   - esp32s3

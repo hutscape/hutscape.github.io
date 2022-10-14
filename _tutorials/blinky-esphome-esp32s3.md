@@ -20,7 +20,7 @@ features:
   - blinky
 code: yaml
 prerequisites:
-  - name: Hello world with ESPHome
+  - name: Hello world with ESPHome on ESP32-S3
     url: ./hello-esphome
 references:
   - name: Buy the official Espressif devkit
@@ -37,14 +37,39 @@ references:
 
 ### LED
 
-Wireup a simple LED and resistor to `GPIO5`
-
-[![]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-schematic.png)]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-schematic.png)
+Wireup a simple LED and resistor to [`GPIO5` pin on the board](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout).
 
 ### Compile and upload
 
-1. Plug in the board into the `USB` port
-1. Compile
+1. [Compile](https://esphome.io/guides/cli.html#compile-command) firmware for this board
 
     ```sh
+    esphome compile blinky-esphome-esp32s3.yaml
+    ```
+1. Plug into the `USB` port of the board and check the port address
+
+    ```sh
+    $ ls /dev/cu.*
+
+    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.usbmodem14101
+    ```
+1. [Upload](https://esphome.io/guides/cli.html#upload-command) the firmware
+
+    ```sh
+    esphome upload --device /dev/cu.usbmodem14101 blinky-esphome-esp32s3.yaml
+    ```
+
+### Access logs
+
+1. Unplug and plug into the `UART` port of the board
+1. Check the new port address
+
+    ```sh
+    $ ls /dev/cu.*
+    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+    ```
+1. Access the [logs](https://esphome.io/guides/cli.html#logs-command)
+
+    ```sh
+    esphome logs --device /dev/cu.usbserial-1410 blinky-esphome-esp32s3.yaml
     ```
