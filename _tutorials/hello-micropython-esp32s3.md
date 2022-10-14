@@ -89,14 +89,14 @@ Wire up a simple LED and resistor to [`GPIO5` of the board](https://docs.espress
 ## Rollback from Micropython to Arduino
 
 1. Plug in the board on the `UART` port
-1. Check the port address
+1. Check the port address with `ls /dev/cu.*`
     ```sh
     $ ls /dev/cu.*
     /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
     ```
 1. Erase the flash
     ```sh
-    $ esptool.py --port /dev/cu.usbmodem1234561 erase_flash
+    $ esptool.py --port /dev/cu.usbserial-1410 erase_flash
 
     esptool.py v4.3
     Serial port /dev/cu.SLAB_USBtoUART
