@@ -27,6 +27,8 @@ images:
     - image: blinky-esp32s3-uart-bridge-schematic.png
       description: Use an UART-USB bridge with an external power supply to view the serial monitor
     - image: blinky-esp32s3-uart-bridge-prototype.jpg
+      description: Setup of using an external USB power with an UART-USB bridge to the computer
+    - image: blinky-esp32s3-psu-prototype.jpg
       description: Setup of using an external power supply with an UART-USB bridge to the computer
 features:
   - blinky
@@ -77,6 +79,7 @@ Alternatively `#define LED 5` can be used as well to test a simpler LED.
 
 ### Access serial monitor using UART port
 
+1. Plug into the `USB` port.
 1. Compile and upload with `USB CDC on Boot` disabled.
 1. Unplug and plug into the `UART` port and check the address
 
@@ -91,8 +94,10 @@ Alternatively `#define LED 5` can be used as well to test a simpler LED.
 
 Use this option when using an external power supply for the board.
 
+1. Plug into the `USB` port of the board to the computer.
 1. Compile and upload with `USB CDC on Boot` disabled.
-1. Connect `TX`, `RX` and `GND` to an external USB-UART bridge
+1. Unplug from the `USB` port and into the power supply unit.
+1. Connect `TX`, `RX` and `GND` to an external USB-UART bridge connected to the computer.
   [![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-uart-bridge-schematic.png)]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-uart-bridge-schematic.png)
 1. Plug into the `UART` port and check the address
     ```sh
@@ -104,6 +109,7 @@ Use this option when using an external power supply for the board.
 
 ### Access serial monitor using USB port
 
+1 Plug into the `USB` port.
 1. Compile and upload with `USB CDC on Boot` enabled.
     [![]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-settings.png)]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-settings.png)
 1. Plug into the `USB` port
