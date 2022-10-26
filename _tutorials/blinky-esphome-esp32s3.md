@@ -37,7 +37,7 @@ references:
 
 ### LED
 
-Wireup a simple LED and resistor to [`GPIO5` pin on the board](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout).
+The default RGB LED on-board which is `GPIO48`, does not seem to work with ESPHome. So, wireup a simple LED and resistor to [`GPIO5` pin on the board](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout).
 
 ### Compile and upload
 

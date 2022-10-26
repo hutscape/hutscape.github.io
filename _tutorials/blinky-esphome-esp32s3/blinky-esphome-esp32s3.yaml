@@ -13,13 +13,11 @@ logger:
   level: VERBOSE
   baud_rate: 115200
   deassert_rts_dtr: true
-  # Enable USB CDC: https://esphome.io/components/logger.html#hardware-uarts
-  # hardware_uart: USB_CDC
 
 switch:
   - platform: gpio
     pin:
-      number: 5
+      number: 5 # default LED on-board GPIO48, does not seem to work
       mode: output
     id: led
 
