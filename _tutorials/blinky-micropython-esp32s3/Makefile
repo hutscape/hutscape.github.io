@@ -12,9 +12,17 @@ help: ## Show help message
 
 upload: ## Erase flash and then upload the micropython binary
 	@echo "Ensure you plug in the board into the USB port"
+	@ls /dev/cu.*
 	esptool.py --chip esp32s3 --port $(UPLOAD_PORT) erase_flash
 	esptool.py --chip esp32s3 --port $(UPLOAD_PORT) write_flash -z 0 $(BIN_FILENAME)
 
 log: ## Access the serial monitor with ampy
+	@ls /dev/cu.*
 	@echo "Ensure you plug in the board into the UART port"
 	ampy --port $(SERIAL_PORT) run $(PYTHON_FILE)
+
+rollback:
+	@ls /dev/cu.*
+	@echo "Ensure you plug in the board into the UART port"
+	esptool.py --port $(SERIAL_PORT) erase_flash
+	@echo "Flash in ESP-IDF blinky"

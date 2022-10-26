@@ -37,7 +37,7 @@ references:
 
 ### LED
 
-Wire up a simple LED and resistor to [`GPIO5` of the board](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout).
+The default on-board RGB LED `GPIO48` does not work with the blinky code. Hence, wire up a simple LED and resistor to [`GPIO5` of the board](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout).
 
 ### Upload Micropython binary
 
@@ -73,7 +73,10 @@ Wire up a simple LED and resistor to [`GPIO5` of the board](https://docs.espress
 
 ## Access the Serial monitor with the Python code
 
-1. Download [ampy](https://github.com/scientifichackers/ampy)
+1. Download [ampy](https://github.com/scientifichackers/ampy) and ensure it is available
+    ```sh
+    ampy --help
+    ```
 1. Plug in the board through the `UART` port
 1. Check the port number of the board
     ```sh
