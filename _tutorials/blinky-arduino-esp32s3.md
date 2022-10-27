@@ -113,7 +113,7 @@ Use this option when using an external power supply for the board.
 
 ### Access serial monitor using USB port
 
-1 Plug into the `USB` port.
+1. Plug into the `USB` port.
 1. Compile and upload with `USB CDC on Boot` enabled.
     [![]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-settings.png)]({{ site.url }}/assets/images/tutorials/blinky-arduino-esp32s3-settings.png)
 1. Plug into the `USB` port

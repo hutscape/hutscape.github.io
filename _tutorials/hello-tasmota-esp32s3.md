@@ -143,5 +143,5 @@ references:
     Hard resetting via RTS pin...
     ```
 1. Plug into the `USB` port
-1. Flash the [PlatformIO Blinky example](./blinky-esp32s3-platformio)
+1. Flash the [PlatformIO Blinky example](./blinky-platformio-esp32s3)
 1. Flash in the [blinky Arduino example](./blinky-arduino-esp32s3)
