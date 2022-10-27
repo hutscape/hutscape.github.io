@@ -38,9 +38,9 @@ references:
     url: https://github.com/arendst/Tasmota/discussions/14973#discussioncomment-2251403
 ---
 
-### Install with esptool
+### Upload firmware with esptool
 
-1. Download `tasmota32s3cdc.bin` from [ESP32 current release](http://ota.tasmota.com/tasmota32/release/)
+1. Download `tasmota32s3cdc.factory.bin` from [ESP32 current release](http://ota.tasmota.com/tasmota32/release/)
 1. Plug in the board into the `USB` port and check the address
 
     ```sh
@@ -70,7 +70,7 @@ references:
 1. [Flash](https://docs.espressif.com/projects/esptool/en/latest/esp32s3/esptool/flash-modes.html) the binary using `esptool.py`
 
     ```sh
-    $ esptool.py --port /dev/cu.usbmodem14101 write_flash --flash_mode dio --flash_size 4MB 0x0 tasmota32s3cdc.bin
+    $ esptool.py --port /dev/cu.usbmodem14101 write_flash --flash_mode dio --flash_size 4MB 0x0 tasmota32s3cdc.factory.bin
 
     esptool.py v4.3
     Serial port /dev/cu.usbmodem14101
@@ -93,25 +93,10 @@ references:
     Hard resetting via RTS pin...
     ```
 
-### Troubleshooting: Keeps rebooting
-
-1. Plug into the `UART` port
-1. Check the port addresses
-
-    ```sh
-    $ ls /dev/cu.*
-
-    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
-    ```
-1. Connect to the serial monitor via the port and baud rate `115200`
-
-1. Notice that the board keeps rebooting
-
-    [![]({{ site.url }}/assets/images/tutorials/hello-tasmota-esp32s3-rebooting.png)]({{ site.url }}/assets/images/tutorials/hello-tasmota-esp32s3-rebooting.png)
-1. Plug in the board into a power supply unit
+### Connect to WiFi
 
 <!-- TODO -->
-<h3 class="has-background-warning-light">TODO: PSU CONFIG and SERIAL MONITOR</h3>
+<h3 class="has-background-warning-light">TODO: </h3>
 
 ### Rollback from Tasmota to Arduino
 

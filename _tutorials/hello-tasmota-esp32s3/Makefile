@@ -1,4 +1,4 @@
-BIN_FILENAME=tasmota32s3cdc.bin
+BIN_FILENAME=tasmota32s3cdc.factory.bin
 UPLOAD_PORT?=/dev/cu.usbmodem1*
 UART_PORT?=/dev/cu.usbserial-14*
 
