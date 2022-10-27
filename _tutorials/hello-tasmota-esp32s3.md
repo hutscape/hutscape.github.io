@@ -3,8 +3,8 @@ layout: tutorials
 title: Hello world ESP32-S3 with Tasmota
 dependancies:
   - name: Esptool
-    url:
-  - name: Tasmota flashing
+    url: https://github.com/espressif/esptool
+  - name: Tasmota flashing with estool.py
     url: https://tasmota.github.io/docs/Getting-Started/#flashing
 chips:
   - ESP32-S3-WROOM-1-N8R2
@@ -12,6 +12,9 @@ dev_board: ESP32-S3-DevKitC-1
 components:
   - name: ESP32-S3-DevKitC-1-N8R2
     url: https://www.aliexpress.com/item/1005003979778978.html
+prerequisutes:
+  - name: Blinky with Arduino on ESP32-S3
+    url: blinky-arduino-esp32s3
 has_code: false
 images:
   prototype: hello-esp32s3-prototype.jpg
@@ -27,12 +30,14 @@ references:
     url: https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout
   - name: Tasmota getting started
     url: https://tasmota.github.io/docs/Getting-Started/
+  - name: Error - Invalid image block, can't boot
+    url: https://github.com/arendst/Tasmota/discussions/14973#discussioncomment-2251403
 ---
 
 ### Install with esptool
 
-1. Download `tasmota32s3.bin` from [ESP32 current release](http://ota.tasmota.com/tasmota32/release/)
-1. Plug in the board into the USB board and check the port
+1. Download `tasmota32s3cdc.bin` from [ESP32 current release](http://ota.tasmota.com/tasmota32/release/)
+1. Plug in the board into the `USB` port and check the address
 
     ```sh
     $ ls /dev/cu.*
@@ -42,11 +47,46 @@ references:
 
     ```sh
     $ esptool.py --port  /dev/cu.usbmodem14101 erase_flash
+
+    esptool.py v4.3
+    Serial port /dev/cu.usbmodem14101
+    Connecting...
+    Detecting chip type... ESP32-S3
+    Chip is ESP32-S3 (revision v0.1)
+    Features: WiFi, BLE
+    Crystal is 40MHz
+    MAC: 7c:df:a1:e2:79:08
+    Uploading stub...
+    Running stub...
+    Stub running...
+    Erasing flash (this may take a while)...
+    Chip erase completed successfully in 21.3s
+    Hard resetting via RTS pin...
     ```
 1. [Flash](https://docs.espressif.com/projects/esptool/en/latest/esp32s3/esptool/flash-modes.html) the binary using `esptool.py`
 
     ```sh
-    $ esptool.py --port /dev/cu.usbmodem14101 write_flash --flash_mode dio --flash_size 4MB 0x0 tasmota32s3.bin
+    $ esptool.py --port /dev/cu.usbmodem14101 write_flash --flash_mode dio --flash_size 4MB 0x0 tasmota32s3cdc.bin
+
+    esptool.py v4.3
+    Serial port /dev/cu.usbmodem14101
+    Connecting....
+    Detecting chip type... ESP32-S3
+    Chip is ESP32-S3 (revision v0.1)
+    Features: WiFi, BLE
+    Crystal is 40MHz
+    MAC: 7c:df:a1:e2:79:08
+    Uploading stub...
+    Running stub...
+    Stub running...
+    Configuring flash size...
+    Flash will be erased from 0x00000000 to 0x0014bfff...
+    Compressed 1357744 bytes to 960077...
+    Wrote 1357744 bytes (960077 compressed) at 0x00000000 in 16.1 seconds (effective 675.9 kbit/s)...
+    Hash of data verified.
+
+    Leaving...
+    Hard resetting via RTS pin...
     ```
 
 ### Troubleshooting: Keeps rebooting
@@ -100,4 +140,4 @@ references:
     ```
 1. Plug into the `USB` port
 1. Flash the [PlatformIO Blinky example](./blinky-esp32s3-platformio)
-1. Flash in the [blinky Arduino example](./blinky-esp32s3)
+1. Flash in the [blinky Arduino example](./blinky-arduino-esp32s3)
