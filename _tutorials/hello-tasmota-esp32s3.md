@@ -12,6 +12,10 @@ dev_board: ESP32-S3-DevKitC-1
 components:
   - name: ESP32-S3-DevKitC-1-N8R2
     url: https://www.aliexpress.com/item/1005003979778978.html
+  - name: (Optional) Power supply unit
+    url: https://s.click.aliexpress.com/e/_AUols3
+  - name: (Optional) USB Female to 4MM Banana Plug Test Lead
+    url: https://s.click.aliexpress.com/e/_DmRto71
 prerequisutes:
   - name: Blinky with Arduino on ESP32-S3
     url: blinky-arduino-esp32s3

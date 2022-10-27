@@ -14,10 +14,15 @@ components:
     url: https://amzn.to/3xbq53W
   - name: CP2102 USB 2.0 to UART TTL 5PIN Connector Module
     url: https://www.aliexpress.com/item/32694152202.html
+  - name: (Optional) Power supply unit
+    url: https://s.click.aliexpress.com/e/_AUols3
+  - name: (Optional) USB Female to 4MM Banana Plug Test Lead
+    url: https://s.click.aliexpress.com/e/_DmRto71
 video: Os5sGlw3PV0
 images:
   console: blinky-arduino-console.png
   prototype: blinky-arduino-prototype.jpg
+  schematic: blinky-arduino-psu-schematic.png
   list:
     - image: blinky-arduino-psu-prototype.jpg
       description: Use an external power supply and a UART-USB bridge to view the serial monitor
@@ -35,5 +40,5 @@ Create a blinky LED with Arduino UNO board with `ATmega328p` microcontroller. LE
 As an alternative, external power supply unit can be used with an UART-USB bridge.
 
 1. Wireup Arduino UNO with an external power supply and UART-USB bridge to the computer
-    [![]({{ site.url }}/assets/images/tutorials/blinky-arduino-schematic.png)]({{ site.url }}/assets/images/tutorials/blinky-arduino-schematic.png)
+    [![]({{ site.url }}/assets/images/tutorials/blinky-arduino-psu-schematic.png)]({{ site.url }}/assets/images/tutorials/blinky-arduino-psu-schematic.png)
 1. Start the serial monitor on the computer.
