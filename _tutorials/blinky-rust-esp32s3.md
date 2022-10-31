@@ -13,8 +13,8 @@ components:
   - name: ESP32-S3-DevKitC-1-N8R2
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
-  console: hello-rust-esp32s3-console.png
-  prototype: hello-esp32s3-prototype.jpg
+  console: blinky-rust-esp32s3-console.png
+  prototype: blinky-esp32s3-gpio5.jpg
 features:
   - rust
   - serial
@@ -32,32 +32,32 @@ references:
     url: https://github.com/esp-rs/rust-build
   - name: ESP IDF Template
     url: https://github.com/esp-rs/esp-idf-template
+  - name: Rust book
+    url: https://esp-rs.github.io/book/
 ---
 
+### Install dependancies
+
 1. [Install for Xtensa](https://github.com/esp-rs/rust-build#installation-commands)
-  ```
-  git clone https://github.com/esp-rs/rust-build.git
-  cd rust-build
-  ./install-rust-toolchain.sh
-  . export-esp.sh
-  ```
+    ```
+    git clone https://github.com/esp-rs/rust-build.git
+    cd rust-build
+    ./install-rust-toolchain.sh
+    . export-esp.sh
+    ```
 1. Set `$PATH`
-
-  ```
-  IMPORTANT!
-  The following environment variables need to be updated:
-  export LIBCLANG_PATH="~/.espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-x86_64-apple-darwin/lib/"
-  export PATH="~/.espressif/tools/xtensa-esp32-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:~/.espressif/tools/xtensa-esp32s2-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:~/.espressif/tools/xtensa-esp32s3-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:$PATH"
-  ```
+    ```
+    export LIBCLANG_PATH="~/.espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-x86_64-apple-darwin/lib/"
+    export PATH="~/.espressif/tools/xtensa-esp32-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:~/.espressif/tools/xtensa-esp32s2-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:~/.espressif/tools/xtensa-esp32s3-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:$PATH"
+    ```
 1. Install Cargo [sub-commands](https://github.com/esp-rs/esp-idf-template#install-cargo-sub-commands)
-  ```
-  cargo install cargo-generate
-  cargo install ldproxy
-  cargo install espflash
-  cargo install espmonitor
-  ```
+    ```
+    cargo install cargo-generate
+    cargo install ldproxy
+    cargo install espflash
+    cargo install espmonitor
+    ```
 1. [Generate the project](https://github.com/esp-rs/esp-idf-template#generate-the-project)
-
     ```sh
     $ cargo generate --vcs none --git https://github.com/esp-rs/esp-idf-template cargo
 
@@ -82,17 +82,29 @@ references:
     🔧   Moving generated files into: `/Users/sayanee/Desktop/hello`...
     ✨   Done! New project created /Users/sayanee/Desktop/hello
     ```
+
+### Compile
+
+1. Change directory into the project name
+  ```sh
+    $ cd hello
+  ```
 1. [Compile / build](https://github.com/esp-rs/esp-idf-template#build) the project
   ```sh
-  $ cd hello
   $ cargo build
   ```
+
+## Upload the firmware
+
 1. Plug in the board into the USB port (not the UART port).
 1. [Upload / Flash](https://github.com/esp-rs/esp-idf-template#flash)
   ```sh
   espflash /dev/cu.usbmodem14101 target/xtensa-esp32s3-espidf/debug/hello
   ```
-1. Start the [serial monitor](https://github.com/esp-rs/esp-idf-template#monitor)
+
+## View the logs
+
+Start the [serial monitor](https://github.com/esp-rs/esp-idf-template#monitor)
   ```sh
   espmonitor /dev/cu.usbmodem14101
   ```

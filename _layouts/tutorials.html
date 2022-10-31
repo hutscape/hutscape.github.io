@@ -177,6 +177,10 @@ layout: default
       <!-- For rust examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
       {% highlight rust %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.source_code_path }} %}{% endhighlight %}
+
+      <h2 class="title is-2">Makefile</h2>
+      {% highlight make %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/Makefile %}{%
+      endhighlight %}
     {% elsif page.code == "python" %}
       <!-- For python examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>

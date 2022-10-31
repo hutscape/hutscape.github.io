@@ -1,5 +1,5 @@
 [package]
-name = "hello-rust-esp32s3"
+name = "blinky-rust-esp32s3"
 version = "0.1.0"
 authors = ["Sayanee <sayanee@gmail.com>"]
 edition = "2021"
@@ -16,8 +16,9 @@ opt-level = "z"
 pio = ["esp-idf-sys/pio"]
 
 [dependencies]
+embedded-hal = "1.0.0-alpha.8"
 esp-idf-sys = { version = "0.31.9", features = ["binstart"] }
-
+esp-idf-hal = "0.38.1"
 
 [build-dependencies]
 embuild = "0.30"
