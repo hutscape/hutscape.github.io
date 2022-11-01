@@ -77,6 +77,12 @@ list:
     urls:
       - website: IKEA
         url: https://www.ikea.com/us/en/cat/samla-series-12553/
+  - name: USB to Banana Plug
+    description: Useful with the power supply unit
+    image: banana-lead.jpg
+    urls:
+      - website: AliExpress
+        url: https://s.click.aliexpress.com/e/_DcfLZKL
   - name: Flux cleaning solvent
     image: flu.jpg
     urls:
