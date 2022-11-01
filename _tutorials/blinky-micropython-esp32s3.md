@@ -20,6 +20,9 @@ images:
   prototype: blinky-esp32s3-gpio5.jpg
   schematic: blinky-arduino-esp32s3-schematic.png
   console: blinky-micropython-esp32s3-console.png
+  list:
+    - image: blinky-esp32s3-gpio5-top.jpg
+      description: Use GPIO5 to add a simple external LED
 features:
   - blinky
   - led

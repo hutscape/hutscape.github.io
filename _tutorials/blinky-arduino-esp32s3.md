@@ -26,13 +26,15 @@ images:
   list:
     - image: blinky-esp32s3-gpio5.jpg
       description: Use GPIO5 to add a simple external LED
+    - image: blinky-esp32s3-gpio5-top.jpg
+      description: Use GPIO5 to add a simple external LED
     - image: hello-esp32s3-uart.jpg
       description: Change to the UART port to view the serial monitor
-    - image: blinky-esp32s3-uart-bridge-schematic.png
-      description: Use an UART-USB bridge with an external power supply to view the serial monitor
     - image: blinky-esp32s3-uart-bridge-prototype.jpg
       description: Setup of using an external USB power with an UART-USB bridge to the computer
     - image: blinky-esp32s3-psu-prototype.jpg
+      description: Setup of using an external power supply with an UART-USB bridge to the computer
+    - image: blinky-esp32s3-psu-prototype-top.jpg
       description: Setup of using an external power supply with an UART-USB bridge to the computer
 features:
   - blinky

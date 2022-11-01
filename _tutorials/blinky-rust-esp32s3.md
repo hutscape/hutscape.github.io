@@ -15,6 +15,9 @@ components:
 images:
   console: blinky-rust-esp32s3-console.png
   prototype: blinky-esp32s3-gpio5.jpg
+  list:
+    - image: blinky-esp32s3-gpio5-top.jpg
+      description: Use GPIO5 to add a simple external LED
 features:
   - rust
   - serial
