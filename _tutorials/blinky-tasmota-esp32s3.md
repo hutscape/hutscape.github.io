@@ -21,7 +21,7 @@ prerequisutes:
     url: blinky-arduino-esp32s3
 has_code: false
 images:
-  prototype: blinky-esp32s3-gpio5.jpg
+  prototype: blinky-tasmota-prototype.jpg
   schematic: blinky-arduino-esp32s3-schematic.png
   list:
     - image: blinky-esp32s3-gpio5-top.jpg
