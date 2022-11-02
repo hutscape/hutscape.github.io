@@ -159,6 +159,7 @@ layout: default
     {% if page.code == "html" %}
       <!-- For HTML code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
+      <code class="is-size-4">{{ page.path | remove: "_tutorials/" | remove: ".md" }}.html</code>
       <a href="{{ site.url }}/{{ page.path | remove: '_tutorials/' | replace:'.md','' }}" class="button is-primary">View demo</a>
       {% highlight html %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.html %}{% endhighlight %}
     {% elsif page.code == "shell" %}
@@ -168,6 +169,7 @@ layout: default
     {% elsif page.code == "yaml" %}
       <!-- For yaml config examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download config</a>
+      <code class="is-size-4">{{ page.path | remove: "_tutorials/" | remove: ".md" }}.yaml</code>
       {% highlight yaml %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.yaml %}{% endhighlight %}
 
       <h2 class="title is-2">Makefile</h2>
@@ -176,6 +178,7 @@ layout: default
     {% elsif page.code == "rust" %}
       <!-- For rust examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
+      <code class="is-size-4">{{ page.source_code_path }}</code>
       {% highlight rust %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.source_code_path }} %}{% endhighlight %}
 
       <h2 class="title is-2">Makefile</h2>
@@ -184,6 +187,7 @@ layout: default
     {% elsif page.code == "python" %}
       <!-- For python examples in ESPHome -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
+      <code class="is-size-4">{{ page.source_code_path }}</code>
       {% highlight rust %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.source_code_path }} %}{% endhighlight %}
 
       <h2 class="title is-2">Makefile</h2>
@@ -192,7 +196,7 @@ layout: default
     {% elsif page.code == "c" %}
       <!-- For C/C++ file code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
-
+      <code class="is-size-4">{{ page.source_code_path }}</code>
       {% if page.source_code_path %}
         {% highlight c %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.source_code_path }} %}{% endhighlight %}
       {% else %}
@@ -205,6 +209,7 @@ layout: default
     {% else %}
       <!-- For Arduino INO file code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/{{page.path | replace:'.md',''}}" class="button is-primary">Download code</a>
+      <code class="is-size-4">{{ page.path | remove: "_tutorials/" | remove: ".md" }}.ino</code>
       {% highlight c %}{% include_relative {{ page.path | remove: "_tutorials/" | remove: ".md" }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.ino %}{% endhighlight %}
 
       <h2 class="title is-2">Makefile</h2>

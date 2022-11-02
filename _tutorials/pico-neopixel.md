@@ -30,6 +30,7 @@ references:
   - name: Level shifting with Neopixel
     url: https://learn.adafruit.com/neopixel-levelshifter
 code: c
+source_code_path: pico-neopixel.c
 prerequisites:
   - name: Blinky with RaspberryPI Pico
     url: ./blinky-pico

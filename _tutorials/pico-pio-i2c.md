@@ -40,6 +40,7 @@ references:
   - name: VCNL4000 datasheet
     url: https://cdn.sparkfun.com/datasheets/BreakoutBoards/vcnl4000.pdf
 code: c
+source_code_path: pico-pio-i2c.c
 ---
 
 This example code does an I2C Bus Scan for the sensors `Si7021` and `VCNL4000` with PIO.

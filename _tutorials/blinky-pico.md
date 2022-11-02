@@ -27,6 +27,7 @@ references:
   - name: Raspberry Pi Pico SDK
     url: https://raspberrypi.github.io/pico-sdk-doxygen/
 code: c
+source_code_path: blinky-pico.c
 ---
 
 Create a blinky LED with RaspberryPI Pico board with `RP2040` microcontroller using the native C/C++ SDK.
