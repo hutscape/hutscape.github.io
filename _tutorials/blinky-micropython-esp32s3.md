@@ -121,4 +121,4 @@ The default on-board RGB LED `GPIO48` does not work with the blinky code. Hence,
     ```
 1. Plug into the `USB` port of the board
 1. Flash in the [blinky example via ESP-IDF](./blinky-esp-idf-esp32s3)
-1. Flash in the [blinky example for Arduino](./blinky-esp32s3)
+1. Flash in the [blinky example for Arduino](./blinky-arduino-esp32s3)
