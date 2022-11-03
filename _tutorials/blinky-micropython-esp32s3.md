@@ -119,5 +119,6 @@ The default on-board RGB LED `GPIO48` does not work with the blinky code. Hence,
     Chip erase completed successfully in 21.4s
     Hard resetting via RTS pin...
     ```
+1. Plug into the `USB` port of the board
 1. Flash in the [blinky example via ESP-IDF](./blinky-esp-idf-esp32s3)
 1. Flash in the [blinky example for Arduino](./blinky-esp32s3)
