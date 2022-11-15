@@ -92,33 +92,8 @@ The default on-board RGB LED `GPIO48` does not work with the blinky code. Hence,
     ampy --port /dev/cu.usbserial-1410 run blink.py
     ```
 
-## Rollback from Micropython to Arduino
+### Rollback from Micropython to Arduino
 
-1. Plug in the board on the `UART` port
-1. Check the port address with `ls /dev/cu.*`
-    ```sh
-    $ ls /dev/cu.*
-    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
-    ```
-1. Erase the flash
-    ```sh
-    $ esptool.py --port /dev/cu.usbserial-1410 erase_flash
-
-    esptool.py v4.3
-    Serial port /dev/cu.SLAB_USBtoUART
-    Connecting....
-    Detecting chip type... ESP32-S3
-    Chip is ESP32-S3 (revision v0.1)
-    Features: WiFi, BLE
-    Crystal is 40MHz
-    MAC: 7c:df:a1:e2:79:08
-    Uploading stub...
-    Running stub...
-    Stub running...
-    Erasing flash (this may take a while)...
-    Chip erase completed successfully in 21.4s
-    Hard resetting via RTS pin...
-    ```
-1. Plug into the `USB` port of the board
-1. Flash in the [blinky example via ESP-IDF](./blinky-esp-idf-esp32s3)
-1. Flash in the [blinky example for Arduino](./blinky-arduino-esp32s3)
+1. Follow the [rollback steps](./rollback-esp32s3) to erase the flash.
+1. [Flash in blinky with ESP-IDF](./blinky-esp-idf-esp32s3).
+1. [Flash in blinky with Arduino](./blinky-arduino-esp32c3).

@@ -16,7 +16,7 @@ components:
     url: https://s.click.aliexpress.com/e/_AUols3
   - name: (Optional) USB Female to 4MM Banana Plug Test Lead
     url: https://s.click.aliexpress.com/e/_DmRto71
-prerequisutes:
+prerequisites:
   - name: Blinky with Arduino on ESP32-S3
     url: blinky-arduino-esp32s3
 has_code: false
@@ -96,18 +96,6 @@ references:
 
 ### Rollback from Tasmota to Arduino
 
-1. Plug into the `UART` port
-1. Check the port address
-
-    ```sh
-    $ ls /dev/cu.*
-    /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
-    ```
-1. Erase flash
-
-    ```sh
-    $ esptool.py --port /dev/cu.usbserial-1410 erase_flash
-    ```
-1. Plug into the `USB` port
-1. Flash the [PlatformIO Blinky example](./blinky-platformio-esp32s3)
-1. Flash in the [blinky Arduino example](./blinky-arduino-esp32s3)
+1. Follow the [rollback steps](./rollback-esp32s3) to erase the flash.
+1. [Flash in blinky with ESP-IDF](./blinky-esp-idf-esp32s3).
+1. [Flash in blinky with Arduino](./blinky-arduino-esp32c3).
