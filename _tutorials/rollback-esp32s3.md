@@ -25,7 +25,7 @@ prerequisites:
     url: blinky-micropython-esp32s3
 has_code: false
 images:
-  prototype: blinky-esp32s3-prototype.jpg
+  prototype: esp32s3-prototype.jpg
 features:
   - rollback
   - arduino

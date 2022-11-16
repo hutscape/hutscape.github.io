@@ -14,7 +14,7 @@ components:
     url: https://www.aliexpress.com/item/1005003979778978.html
 images:
   console: scan-wifi-arduino-esp32s3.png
-  prototype: blinky-esp32s3-prototype.jpg
+  prototype: esp32s3-prototype.jpg
 features:
   - scan
   - wifi

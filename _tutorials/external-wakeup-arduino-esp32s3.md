@@ -30,10 +30,14 @@ features:
   - wakeup
   - trigger
   - sleep
+  - esp32s3
 images:
-  prototype: esp32s3-prototype.jpeg
+  prototype: external-wakeup-arduino-esp32s3-prototype.jpg
   console: external-wakeup-arduino-esp32s3-console.png
   schematic: external-wakeup-arduino-esp32s3-schematic.png
+  list:
+    - image: external-wakeup-arduino-esp32s3-prototype-user-view.jpg
+      description: Add a push button and an external LED to test wakeup the board
 prerequisites:
   - name: Hello world with Arduino on ESP32-S3
     url: ./hello-arduino-esp32s3

@@ -16,7 +16,7 @@ components:
     url: https://www.aliexpress.com/item/32694152202.html
 images:
   console: connect-wifi-arduino-esp32s3-console.png
-  prototype: blinky-esp32s3-prototype.jpg
+  prototype: esp32s3-prototype.jpg
 features:
   - wifi
   - connect

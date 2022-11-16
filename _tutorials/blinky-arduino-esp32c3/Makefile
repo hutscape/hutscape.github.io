@@ -1,4 +1,4 @@
-BOARD?=esp32:esp32:esp32c3:CDCOnBoot=cdc
+BOARD?=esp32:esp32:esp32c3
 PORT?=/dev/cu.SLAB_USBtoUART*
 BUILD=build
 
