@@ -3,7 +3,7 @@ description: Everyday practical home automation projects
 url: "https://hutscape.com"
 markdown: kramdown
 permalink: /:title
-youtube: https://www.youtube.com/user/sweska/videos
+youtube: https://www.youtube.com/@sayanee
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
 exclude: [
