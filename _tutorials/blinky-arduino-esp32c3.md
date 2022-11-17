@@ -13,6 +13,7 @@ components:
 images:
   settings: blinky-esp32c3-arduino-settings.png
   prototype: blinky-esp32c3-prototype.jpg
+  console: blinky-esp32c3-arduino-console.png
 features:
   - blinky
   - led
@@ -32,7 +33,6 @@ prerequisites:
     url: ./hello-world-esp32s3
 ---
 
-`LED_BUILTIN` is `GPIO8` as defined in the [pin out](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html#pin-layout).
+The on-board LED `LED_BUILTIN` is `GPIO8` as defined in the [pin out](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html#pin-layout).
 
-<!-- TODO: Serial print is not working -->
-<h3 class="has-background-warning-light">TODO: SERIAL PRINT NOT WORKING</h3>
+Compile and upload the firmware via the Arduino IDE or `arduino-cli` with `Makefile`.

@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky with ESP32C3 ESP-IDF in VS Code
+title: Blinky with ESP-IDF in VS Code on ESP32-C3
 dependancies:
   - name: ESP-IDF VS Code IDE Installation
     url: https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/index.html#ide
@@ -47,4 +47,4 @@ references:
       [![]({{ site.url }}/assets/images/tutorials/blinky-esp-idf-esp32c3-flash.png)]({{ site.url }}/assets/images/tutorials/blinky-esp-idf-esp32c3-flash.png)
 1. Build, Flash and monitor in the bottom green status bar icon 🔥
 1. Watch the serial monitor come up automatically in the terminal
-  [![]({{ site.url }}/assets/images/tutorials/blinky-esp-idf-esp32c3-all.png)]({{ site.url }}/assets/images/tutorials/blinky-esp-idf-esp32c3-all.png))
+  [![]({{ site.url }}/assets/images/tutorials/blinky-esp-idf-esp32c3-all.png)]({{ site.url }}/assets/images/tutorials/blinky-esp-idf-esp32c3-all.png)
