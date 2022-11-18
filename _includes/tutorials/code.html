@@ -6,10 +6,10 @@
 
     {% if page.code == "html" %}
       <!-- For HTML code examples -->
-      <a href="{{ site.github.code_folder }}{{ tutorial_name }}" class="button is-primary">Download code</a>
-      <a href="{{ site.url }}/{{ tutorial_name }}" class="button is-primary">View demo</a>
-      <code class="is-size-4">{{ tutorial_name }}.html</code>
-      {% highlight html %}{% include_relative code/{{ tutorial_name }}/{{ tutorial_name }}.html %}{% endhighlight %}
+      <a href="{{ site.github.demo_folder }}{{ tutorial_name }}" class="button is-primary">Download code</a>
+      <a href="{{ site.url }}/tutorials/{{ tutorial_name }}-demo.html" class="button is-primary">View demo</a>
+      <code class="is-size-4">{{ tutorial_name }}-demo.html</code>
+      {% highlight html %}{% include_relative demo/{{ tutorial_name }}/{{ tutorial_name }}-demo.html %}{% endhighlight %}
     {% elsif page.code == "shell" %}
       <!-- For shell script code examples -->
       <a href="{{ site.url }}/{{ tutorial_name }}" class="button is-primary">View command line code</a>

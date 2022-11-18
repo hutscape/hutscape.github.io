@@ -8,6 +8,7 @@ youtube: https://www.youtube.com/@sayanee
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
   code_folder: https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/
+  demo_folder: https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/demo/
 exclude: [
   _tutorials/code,
   CNAME,
@@ -27,3 +28,6 @@ collections:
   tools:
     output: true
     permalink: /tools/:name
+  demo:
+    output: true
+    permalink: /demo/:name
