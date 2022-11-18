@@ -7,7 +7,7 @@
     {% if page.code == "html" %}
       <!-- For HTML code examples -->
       <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/{{ tutorial_name }}-demo" class="button is-primary">Download code</a>
-      <a href="{{ site.url }}/tutorials/{{ tutorial_name }}-demo.html" class="button is-primary">View demo</a>
+      <a href="{{ site.url }}/{{ tutorial_name }}-demo.html" class="button is-primary">View demo</a>
       <code class="is-size-4">{{ tutorial_name }}-demo.html</code>
       {% highlight html %}{% include_relative {{ tutorial_name }}-demo/{{ tutorial_name }}-demo.html %}{% endhighlight %}
     {% elsif page.code == "shell" %}
