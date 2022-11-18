@@ -27,6 +27,11 @@ list:
     urls:
       - website: Amazon
         url: https://amzn.to/3xzKZZu
+  - name: Photo editing
+    image: ps-lr.jpg
+    urls:
+      - website: Adobe
+        url: https://www.adobe.com/creativecloud/photography.html
   - name: Photography background
     image: pvc-paper.jpg
     urls:
@@ -47,11 +52,6 @@ list:
     urls:
       - website: daVinci Resolve
         url: https://www.blackmagicdesign.com/products/davinciresolve/
-  - name: Music
-    image: uppbeat.jpg
-    urls:
-      - website: Uppbeat
-        url: https://uppbeat.io?referral=sayanee-8wzr3
   - name: Scripting
     image: grammarly.jpg
     urls:
