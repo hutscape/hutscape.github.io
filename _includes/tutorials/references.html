@@ -1,0 +1,15 @@
+{% if page.references %}
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        {% for ref in page.references %}
+        <li><a href="{{ref.url}}">{{ ref.name }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+{% endif %}

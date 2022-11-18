@@ -1,0 +1,71 @@
+{% if page.images %}
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      {% if page.images.prototype %}
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/{{ page.images.prototype }}"><img
+            src="/assets/images/tutorials/{{ page.images.prototype }}" alt="{{ page.title | escape }} prototype"></a>
+      </div>
+      {% endif %}
+
+      {% if page.images.schematic %}
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/{{ page.images.schematic }}"><img
+            src="/assets/images/tutorials/{{ page.images.schematic }}" alt="{{ page.title | escape }} schematic"></a>
+      </div>
+      {% endif %}
+
+      {% if page.images.settings %}
+      <div class="column is-half">
+        <h2 class="title is-2">Arduino IDE settings</h2>
+        <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
+        <a href="/assets/images/tutorials/{{ page.images.settings }}"><img
+            src="/assets/images/tutorials/{{ page.images.settings }}"
+            alt="{{ page.title | escape }} Arduino IDE settings"></a>
+      </div>
+      {% endif %}
+
+      {% if page.images.console %}
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/{{ page.images.console }}"><img
+            src="/assets/images/tutorials/{{ page.images.console }}" alt="{{ page.title | escape }} serial console"></a>
+      </div>
+      {% endif %}
+
+      {% if page.images.browser %}
+      <div class="column is-half">
+        <h2 class="title is-2">Browser console</h2>
+        <p class="subtitle is-4">Open the browser developer console.</p>
+        <a href="/assets/images/tutorials/{{ page.images.browser }}"><img
+            src="/assets/images/tutorials/{{ page.images.browser }}" alt="{{ page.title | escape }} browser"></a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.images.list %}
+<hr>
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      {% for im in page.images.list %}
+
+      <div class="column is-half">
+        <a href="/assets/images/tutorials/{{ im.image }}">
+          <img src="/assets/images/tutorials/{{ im.image }}" alt="{{ page.title | escape }} browser"></a>
+        <p class="subtitle is-4">{{ im.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

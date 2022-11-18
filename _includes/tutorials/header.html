@@ -1,0 +1,148 @@
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">{{ page.title | escape }}</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      {% if page.dev_board %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">{{ page.dev_board }}</span>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.firmware %}
+      {% for firmware in page.firmware %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">{{ firmware }}</span>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      {% if page.chips %}
+      {% for chip in page.chips %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">{{ chip }}</span>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      {% if page.tool %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">tool</span>
+          <span class="tag is-light">{{ page.tool }}</span>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.sensors %}
+      {% for sensor in page.sensors %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">sensor</span>
+          <span class="tag is-light">{{ sensor }}</span>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      {% if page.features %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          {% for feat in page.features %}
+          <span class="tag is-light">{{ feat }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.versions %}
+      {% for v in page.versions %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-link">{{ v.name }} version</span>
+          <span class="tag is-light">{{ v.version }}</span>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+    <hr>
+
+    {% if page.dependancies or page.prerequisites %}
+    <h2 class="title is-2">Before starting</h2>
+    {% endif %}
+
+    <div class="columns is-desktop">
+      {% if page.dependancies %}
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                {% for dep in page.dependancies %}
+                <li><a href="{{ dep.url }}">{{ dep.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.prerequisites %}
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler or similar examples:</div>
+            <div class="content">
+              <ol>
+                {% for pre in page.prerequisites %}
+                <li><a href="{{ pre.url }}">{{ pre.name }}</a></li>
+                {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.components %}
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                {% for comp in page.components %}
+                <li><a href="{{ comp.url }}">{{ comp.name }}</a></li>
+                {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
