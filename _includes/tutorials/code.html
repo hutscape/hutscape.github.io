@@ -7,21 +7,18 @@
     {% if page.code == "html" %}
       <!-- For HTML code examples -->
       <a href="{{ site.github.code_folder }}{{ tutorial_name }}" class="button is-primary">Download code</a>
+      <a href="{{ site.url }}/{{ tutorial_name }}" class="button is-primary">View demo</a>
       <code class="is-size-4">{{ tutorial_name }}.html</code>
-      <a href="{{ site.url }}/{{ page.path | remove: '_tutorials/' | remove: '.md' }}" class="button is-primary">View demo</a>
-      {% highlight html %}{% include_relative code/{{ tutorial_name }}/{{ page.path |
-      remove: "_tutorials/" | remove: ".md" }}.html %}{% endhighlight %}
+      {% highlight html %}{% include_relative code/{{ tutorial_name }}/{{ tutorial_name }}.html %}{% endhighlight %}
     {% elsif page.code == "shell" %}
       <!-- For shell script code examples -->
-      <a href="{{ site.url }}/{{ page.path | remove: '_tutorials/' | remove: '.md' }}" class="button is-primary">View command line code</a>
-      {% highlight shell %}{% include_relative code/{{ tutorial_name }}/{{ page.path |
-      remove: "_tutorials/" | remove: ".md" }}.sh %}{% endhighlight %}
+      <a href="{{ site.url }}/{{ tutorial_name }}" class="button is-primary">View command line code</a>
+      {% highlight shell %}{% include_relative code/{{ tutorial_name }}/{{ tutorial_name }}.sh %}{% endhighlight %}
     {% elsif page.code == "yaml" %}
       <!-- For yaml config examples in ESPHome -->
       <a href="{{ site.github.code_folder }}{{ tutorial_name }}" class="button is-primary">Download config</a>
       <code class="is-size-4">{{ tutorial_name }}.yaml</code>
-      {% highlight yaml %}{% include_relative code/{{ tutorial_name }}/{{ page.path |
-      remove: "_tutorials/" | remove: ".md" }}.yaml %}{% endhighlight %}
+      {% highlight yaml %}{% include_relative code/{{ tutorial_name }}/{{ tutorial_name }}.yaml %}{% endhighlight %}
 
       <h2 class="title is-2">Makefile</h2>
       {% highlight make %}{% include_relative code/{{ tutorial_name }}/Makefile %}{%
@@ -54,7 +51,7 @@
         {% highlight c %}{% include_relative code/{{ tutorial_name }}/{{
       page.source_code_path }} %}{% endhighlight %}
       {% else %}
-        {% highlight c %}{% include_relative code/{{ tutorial_name }}/{{ page.path | remove: "_tutorials/" | remove: ".md" }}.c %}{% endhighlight %}
+        {% highlight c %}{% include_relative code/{{ tutorial_name }}.c %}{% endhighlight %}
 
         <h2 class="title is-2">Makefile</h2>
         {% highlight make %}{% include_relative code/{{ tutorial_name }}/Makefile %}{% endhighlight %}
@@ -63,8 +60,7 @@
       <!-- For Arduino INO file code examples -->
       <a href="{{ site.github.code_folder }}{{ tutorial_name }}" class="button is-primary">Download code</a>
       <code class="is-size-4">{{ tutorial_name }}.ino</code>
-      {% highlight c %}{% include_relative code/{{ tutorial_name }}/{{ page.path |
-      remove: "_tutorials/" | remove: ".md" }}.ino %}{% endhighlight %}
+      {% highlight c %}{% include_relative code/{{ tutorial_name }}/{{ tutorial_name }}.ino %}{% endhighlight %}
 
       <h2 class="title is-2">Makefile</h2>
       {% highlight make %}{% include_relative code/{{ tutorial_name }}/Makefile %}{% endhighlight %}
