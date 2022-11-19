@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky with ESPHome ESP32C3
+title: Blinky with ESPHome ESP32-C3
 dependancies:
   - name: ESPHome
     url: https://esphome.io/guides/installing_esphome.html

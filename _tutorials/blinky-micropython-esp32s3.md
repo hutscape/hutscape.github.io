@@ -2,7 +2,7 @@
 layout: tutorials
 title: Blinky ESP32-S3 with Micropython
 dependancies:
-  - name: ESP32S3 Generic Micropython bin
+  - name: ESP32-S3 Generic Micropython bin
     url: https://micropython.org/download/GENERIC_S3/
   - name: Esptool
     url: https://github.com/espressif/esptool
