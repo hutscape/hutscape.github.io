@@ -1,0 +1,28 @@
+esphome:
+  name: blinky
+  platformio_options:
+    board_build.flash_mode: dio
+
+esp32:
+  board: esp32-c3-devkitm-1
+  variant: ESP32C3
+  framework:
+    type: esp-idf
+
+logger:
+  level: VERBOSE
+  baud_rate: 115200
+  deassert_rts_dtr: true
+
+switch:
+  - platform: gpio
+    pin:
+      number: 3 # on-board LED GPIO8 does not work, so GPIO5 is used
+      mode: output
+    id: led
+
+interval:
+  - interval: 2s
+    then:
+      - switch.toggle: led
+      - logger.log: "LED toggling"
