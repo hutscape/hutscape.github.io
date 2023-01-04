@@ -49,7 +49,6 @@ The default RGB LED on-board which is `GPIO8` does on work. So, wire up a simple
 1. Erase the entire flash
     ```sh
     esptool.py --chip esp32c3 --port /dev/cu.SLAB_USBtoUART erase_flash
-    esptool.py v4.3
     ```
 1. Flash the firmware starting at address 0
     ```sh
@@ -75,6 +74,6 @@ The default RGB LED on-board which is `GPIO8` does on work. So, wire up a simple
 
 ### Rollback from Micropython to Arduino
 
-1. Follow the [rollback steps](./rollback-esp32s3) to erase the flash.
+1. Follow the [rollback steps](./rollback-esp32c3) to erase the flash.
 1. [Flash in blinky with ESP-IDF](./blinky-esp-idf-esp32c3).
 1. [Flash in blinky with Arduino](./blinky-arduino-esp32c3).

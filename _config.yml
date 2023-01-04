@@ -16,6 +16,7 @@ exclude: [
   Gemfile.lock,
   LICENSE.md,
   Makefile,
+  _tutorials/**/Makefile,
   README.md
 ]
 collections:
