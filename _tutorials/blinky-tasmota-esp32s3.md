@@ -98,4 +98,4 @@ references:
 
 1. Follow the [rollback steps](./rollback-esp32s3) to erase the flash.
 1. [Flash in blinky with ESP-IDF](./blinky-esp-idf-esp32s3).
-1. [Flash in blinky with Arduino](./blinky-arduino-esp32c3).
+1. [Flash in blinky with Arduino](./blinky-arduino-esp32s3).

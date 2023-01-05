@@ -1,6 +1,5 @@
-BIN_FILENAME=tasmota32s3cdc.factory.bin
-UPLOAD_PORT?=/dev/cu.usbmodem1*
-UART_PORT?=/dev/cu.usbserial-14*
+BIN_FILENAME=tasmota32c3cdc.factory.bin
+PORT?=/dev/cu.SLAB_USBtoUART*
 
 .PHONY: help default upload log rollback
 
@@ -12,10 +11,10 @@ help: ## Show help message
 upload: ## Erase flash and then upload the tasmota binary
 	@echo "Ensure you plug in the board into the USB port"
 	@ls /dev/cu.*
-	esptool.py --port  $(UPLOAD_PORT) erase_flash
-	esptool.py --port $(UPLOAD_PORT) write_flash --flash_mode dio --flash_size 4MB 0x0 $(BIN_FILENAME)
+	esptool.py --port $(PORT) erase_flash
+	esptool.py --chip esp32c3 --port $(PORT) --baud 460800 write_flash -z 0x0 $(BIN_FILENAME)
 
 rollback: ## Rollback from Tasmota to Arduino
-	@echo "Ensure you plug in the board into the UART port"
-	esptool.py --port $(UART_PORT) erase_flash
-	@echo "Upload Blinky PlatformIO and Arduino code"
+	@echo "Ensure you plug in the board into the USB port"
+	esptool.py --port $(PORT) erase_flash
+	@echo "Upload Blinky ESP-IDF or Arduino"
