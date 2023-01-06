@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Blinky ESP32-C3 with Micropython
+title: Blinky with Micropython on ESP32-C3
 dependancies:
   - name: ESP32-C3 with USB Micropython bin
     url: https://micropython.org/download/esp32c3-usb/

@@ -92,6 +92,8 @@ references:
   ```sh
     $ cd hello
   ```
+1. Edit file `src/main.rs` with the blinky code
+1. Edit `Cargo.toml` to add dependancies
 1. [Compile / build](https://github.com/esp-rs/esp-idf-template#build) the project
   ```sh
   $ cargo build

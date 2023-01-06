@@ -1,0 +1,25 @@
+[package]
+name = "blinky-rust-esp32c3"
+version = "0.1.0"
+authors = ["Sayanee <sayanee@gmail.com>"]
+edition = "2021"
+resolver = "2"
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+[features]
+pio = ["esp-idf-sys/pio"]
+
+[dependencies]
+embedded-hal = "1.0.0-alpha.8"
+esp-idf-sys = { version = "0.31.11", features = ["binstart"] }
+esp-idf-hal = "0.38.1"
+
+[build-dependencies]
+embuild = "0.30.4"
+anyhow = "1"
