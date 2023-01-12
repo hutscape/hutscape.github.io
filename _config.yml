@@ -17,6 +17,7 @@ exclude: [
   LICENSE.md,
   Makefile,
   _tutorials/**/Makefile,
+  _tutorials/**/*.js,
   README.md
 ]
 collections:
