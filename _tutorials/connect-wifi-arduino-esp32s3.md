@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: Connect to a WiFi network
+title: Connect to a WiFi network with Arduino on ESP32-S3
 dependancies:
   - name: ESP32 Arduino
     url: https://github.com/espressif/arduino-esp32
