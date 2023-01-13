@@ -14,7 +14,7 @@ components:
     url: https://www.aliexpress.com/item/1005003989099547.html
 images:
   prototype: blinky-gpio3-esp32c3-prototype.jpg
-  schematic: blinky-esphome-esp32c3-schematic.png
+  schematic: blinky-gpio3-esp32c3-schematic.png
   console: blinky-rust-esp32c3-console.png
 features:
   - rust

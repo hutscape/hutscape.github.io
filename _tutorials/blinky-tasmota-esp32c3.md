@@ -20,7 +20,7 @@ components:
 has_code: false
 images:
   prototype: blinky-gpio3-esp32c3-prototype.jpg
-  schematic: blinky-esphome-esp32c3-schematic.png
+  schematic: blinky-gpio3-esp32c3-schematic.png
 features:
   - tasmota
   - esp32c3
@@ -74,7 +74,7 @@ references:
 ### Control LED via the web
 
 1. Wire up a simple LED to `GPIO3`
-    [![]({{ site.url }}/assets/images/tutorials/blinky-esphome-esp32c3-schematic.png)]({{ site.url }}/assets/images/tutorials/blinky-esphome-esp32c3-schematic.png)
+    [![]({{ site.url }}/assets/images/tutorials/blinky-gpio3-esp32c3-schematic.png)]({{ site.url }}/assets/images/tutorials/blinky-gpio3-esp32c3-schematic.png)
 1. Plug in the board to an external power supply.
 1. Click `Configuration`
     [![]({{ site.url }}/assets/images/tutorials/blinky-tasmota-esp32c3-config.png)]({{ site.url }}/assets/images/tutorials/blinky-tasmota-esp32c3-config.png)

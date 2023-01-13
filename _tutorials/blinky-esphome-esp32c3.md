@@ -13,7 +13,7 @@ components:
 images:
   prototype: blinky-gpio3-esp32c3-prototype.jpg
   console: blinky-esphome-esp32c3-console.png
-  schematic: blinky-esphome-esp32c3-schematic.png
+  schematic: blinky-gpio3-esp32c3-schematic.png
 features:
   - esphome
   - esp32c3

@@ -18,7 +18,7 @@ code: python
 source_code_path: blink.py
 images:
   prototype: blinky-gpio3-esp32c3-prototype.jpg
-  schematic: blinky-esphome-esp32c3-schematic.png
+  schematic: blinky-gpio3-esp32c3-schematic.png
   console: blinky-micropython-esp32c3-console.png
 features:
   - blinky
