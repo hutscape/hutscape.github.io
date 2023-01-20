@@ -1,6 +1,6 @@
 ---
 layout: tutorials
-title: External wakeup
+title: External wakeup with Arduino on ESP32-S3
 dependancies:
   - name: ESP32 Arduino
     url: https://github.com/espressif/arduino-esp32
