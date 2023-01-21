@@ -6,7 +6,7 @@
     <div class="content">
       <ol>
         {% for ref in page.references %}
-        <li><a href="{{ref.url}}">{{ ref.name }}</a></li>
+        <li id="footnote-{{ forloop.index }}"><a href="{{ref.url}}">{{ ref.name }}</a></li>
         {% endfor %}
       </ol>
     </div>

@@ -25,7 +25,7 @@ references:
     url: https://github.com/espressif/arduino-esp32/blob/master/variants/esp32c3/pins_arduino.h
   - name: External wakeup code
     url: https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/DeepSleep/ExternalWakeUp/ExternalWakeUp.ino
-  - name: ESP32C3 undefined reference to `esp_sleep_enable_ext0_wakeup'
+  - name: ESP32C3 undefined reference to esp_sleep_enable_ext0_wakeup
     url: https://github.com/espressif/arduino-esp32/issues/7005#issuecomment-1188708571
   - name: I can't use IO pin to wake the chip from deep sleep for esp32-c3
     url: https://github.com/espressif/arduino-esp32/issues/5813#issuecomment-955178864
