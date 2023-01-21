@@ -1,5 +1,3 @@
-#define BUTTON_PIN_BITMASK 0x200000000  // 2^33 in hex
-
 #define LED 3  // or use LED_BUILTIN for on-board LED
 #define INTERRUPT_PIN 4
 RTC_DATA_ATTR int bootCount = 0;
