@@ -1,11 +1,16 @@
 byte transmit = 7;  // define our transmit pin
 byte data = 170;    // value to transmit, binary 10101010
-byte mask = 1;      // our bitmask
+byte mask = 0b00000100;  // (0x04) which corresponds to the bit 2
 byte bitDelay = 100;
 
 void setup() {
   pinMode(transmit, OUTPUT);
   Serial.begin(115200);
+
+  Serial.print("data: ");
+  Serial.print(data);
+  Serial.print("   ");
+  Serial.println(data, BIN);
 
   Serial.print("1 << 10101010:  ");
   Serial.println(1 << data, BIN);
@@ -18,6 +23,7 @@ void setup() {
 
   Serial.print("10101010 << 1:  ");
   Serial.println(data << 1, BIN);
+  Serial.println("\n");
 
   for (mask = 00000001; mask > 0; mask <<= 1) {  // iterate through bit mask
     Serial.print("mask: ");
@@ -32,9 +38,24 @@ void setup() {
       digitalWrite(transmit, LOW);  // send 0
       Serial.println("LOW");
     }
-    delayMicroseconds(bitDelay);  // delay
+    delayMicroseconds(bitDelay);    // delay
     Serial.println("-------------");
   }
+
+  Serial.println("\n");
+  data = 170;
+  mask = 0b00000100;
+  Serial.print("data:  ");
+  Serial.println(data, BIN);
+  Serial.print("mask:  ");
+  Serial.println(mask, BIN);
+
+  Serial.print("Turn on pin 2 (data |= mask):    ");
+  data |= mask;
+  Serial.println(data, BIN);
+  Serial.print("Turn off pin 2 (data &= ~mask):  ");
+  data &= ~mask;
+  Serial.println(data, BIN);
 }
 
 void loop() { }
