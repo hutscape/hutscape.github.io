@@ -17,7 +17,7 @@ logger:
 switch:
   - platform: gpio
     pin:
-      number: 3 # on-board LED GPIO8 does not work, so GPIO5 is used
+      number: 3 # on-board LED GPIO8 does not work, so GPIO3 is used
       mode: output
     id: led
 
