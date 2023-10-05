@@ -1,5 +1,5 @@
 YAML_FILE=blinky-esphome-esp32c3.yaml
-PORT?=/dev/cu.SLAB_USBtoUART*
+PORT?=/dev/cu.usbserial-*
 
 .PHONY: default compile upload log clean
 
@@ -18,4 +18,4 @@ log: ## Start the logs
 	esphome logs --device $(PORT) $(YAML_FILE)
 
 clean: ## Remove all build files
-	rm -r .esphome
+	rm -rf .esphome
