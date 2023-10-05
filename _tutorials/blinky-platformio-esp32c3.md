@@ -31,8 +31,8 @@ references:
   - name: ESP32c3 - No serial output from built in jtag hardware
     url: https://github.com/espressif/arduino-esp32/issues/6545
 prerequisites:
-  - name: Hello world ESP32-S3
-    url: ./hello-world-esp32s3
+  - name: Blinky with Arduino on ESP32-C3
+    url: ./blinky-arduino-esp32c3
 ---
 
 The on-board LED `LED_BUILTIN` is `GPIO8` as defined in the [pin out](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html#pin-layout).
