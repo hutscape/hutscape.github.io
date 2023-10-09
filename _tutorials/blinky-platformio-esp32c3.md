@@ -37,4 +37,17 @@ prerequisites:
 
 The on-board LED `LED_BUILTIN` is `GPIO8` as defined in the [pin out](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html#pin-layout).
 
-Compile and upload the firmware via the PlatformIO plugin on VS Code
+Compile and upload the firmware via the PlatformIO plugin on VS Code.
+
+1. Create new project with PlatformIO on VS Code editor
+  [![]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32s3-create-project.png)]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32s3-create-project.png)
+1. Add the project name, board `Espressif ESP32-C3-DevkitM-1`, and Framework `Arduino`
+  [![]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32c3-project-wizard.png)]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32c3-project-wizard.png)
+1. Edit file `src/main.cpp` with blinky Arduino code
+1. Edit `platform.ini` with configurations
+1. Click Build ✅ to compile the code
+  [![]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32c3-build.png)]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32c3-build.png)
+1. Click Upload ➡️ to flash the firmware on the board
+  [![]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32c3-upload.png)]({{ site.url }}/assets/images/tutorials/blinky-platformio-esp32c3-upload.png)
+1. Click Serial monitor 🔌 to view the serial prints
+  [![]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-console.png)]({{ site.url }}/assets/images/tutorials/blinky-esp32s3-platformio-console.png)
