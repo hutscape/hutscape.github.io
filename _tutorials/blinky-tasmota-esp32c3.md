@@ -2,11 +2,8 @@
 layout: tutorials
 title: Blinky with Tasmota on ESP32-C3
 dependancies:
-  - name: Esptool
-    url: https://github.com/espressif/esptool
-  - name: Tasmota binaries
-    url: http://ota.tasmota.com/tasmota32/release/
   - name: Tasmota web installer
+    url: https://tasmota.github.io/install/
 chips:
   - ESP32-C3-MINI-1-N4
 dev_board: ESP32-C3-DevKitM-1
