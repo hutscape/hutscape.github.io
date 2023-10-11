@@ -6,8 +6,8 @@ dependancies:
     url: https://micropython.org/download/esp32c3-usb/
   - name: Esptool
     url: https://github.com/espressif/esptool
-  - name: ampy
-    url: https://github.com/scientifichackers/ampy
+  - name: rshell
+    url: https://github.com/dhylands/rshell
 chips:
   - ESP32-C3-MINI-1-N4
 dev_board: ESP32-C3-DevKitM-1
@@ -15,7 +15,7 @@ components:
   - name: ESP32-C3-DevKitM-1
     url: https://www.aliexpress.com/item/1005003989099547.html
 code: python
-source_code_path: blink.py
+source_code_path: blinky.py
 images:
   prototype: blinky-gpio3-esp32c3-prototype.jpg
   schematic: blinky-gpio3-esp32c3-schematic.png
@@ -55,22 +55,30 @@ The default RGB LED on-board which is `GPIO8` does on work. So, wire up a simple
     esptool.py --chip esp32c3 --port /dev/cu.SLAB_USBtoUART write_flash -z 0 _tutorials/code/blinky-micropython-esp32c3/esp32c3-*.bin
     ```
 
-## Access the Serial monitor with the Python code
+## Access the Serial monitor with rshell
 
-1. Download [ampy](https://github.com/scientifichackers/ampy) and ensure it is available
+1. Download [rshell](https://github.com/dhylands/rshell) and ensure it is available
     ```sh
-    ampy --help
+    pip install rshell
     ```
 1. Plug in the board
 1. Check the port number of the board
     ```sh
     ls /dev/cu.*
-    /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+    /dev/cu.usbserial-1410
     ```
-1. Run the python script
+1. Connect to the board
     ```sh
-    ampy --port /dev/cu.usbserial-1410 run blink.py
+    rshell -p  /dev/cu.usbserial-1410
     ```
+1. Upload the python file `blink.py` in rshell
+    ```sh
+    cp blinky.py /pyboard
+    ```
+1. Enter the RELP with `repl`
+1. Type `import blinky` or whatever the filename is
+1. See the external LED blink 10 times
+    [![]({{ site.url }}/assets/images/tutorials/blinky-micropython-esp32c3-console.png)]({{ site.url }}/assets/images/tutorials/blinky-micropython-esp32c3-console.png)
 
 ### Rollback from Micropython to Arduino
 

@@ -1,6 +1,6 @@
 PYTHON_FILE=blink.py
-BIN_FILENAME=esp32c3-20220618-v1.19.1.bin
-PORT?=/dev/cu.SLAB_USBtoUART*
+BIN_FILENAME=ESP32_GENERIC_C3-20231005-v1.21.0.bin
+PORT?=/dev/cu.usbserial-*
 
 .PHONY: help default upload log
 
@@ -15,10 +15,13 @@ upload: ## Erase flash and then upload the micropython binary
 	esptool.py --chip esp32c3 --port $(PORT) erase_flash
 	esptool.py --chip esp32c3 --port $(PORT) --baud 460800 write_flash -z 0x0 $(BIN_FILENAME)
 
-log: ## Access the serial monitor with ampy
+log: ## Access the serial monitor with rshell
 	@ls /dev/cu.*
 	@echo "Ensure you plug in the board into the USB port"
-	ampy --port $(PORT) run $(PYTHON_FILE)
+	@echo "Then upload the python file with command: cp blinky.py /pyboard"
+	@echo "Then entier the REPL with command: repl"
+	@echo "Then enter command: import blinky"
+	rshell --port $(PORT)
 
 rollback:
 	@ls /dev/cu.*
