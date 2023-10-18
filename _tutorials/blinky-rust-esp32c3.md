@@ -20,6 +20,7 @@ features:
   - rust
   - blinky
   - esp32c3
+  - riscv
 code: rust
 source_code_path: src/main.rs
 references:
@@ -47,26 +48,33 @@ references:
     cargo install ldproxy
     cargo install espup
     cargo install espflash
+    cargo install cargo-espmonitor
 
     cargo install --list
     ```
 1. [Generate the project](https://github.com/esp-rs/esp-idf-template#generate-the-project)
     ```sh
-    cargo generate --vcs none --git https://github.com/esp-rs/esp-idf-template cargo
+    cargo generate esp-rs/esp-idf-template cargo
     ```
+
+    With options:
+    - project-name: blinky-rust-esp32c3
+    - MCU target: esp32c3
+    - Configure advanced template options: false
 
     Typical output:
     ```
+    $  cargo generate esp-rs/esp-idf-template cargo
+
+    ⚠️   Favorite `esp-rs/esp-idf-template` not found in config, using it as a git repository: https://github.com/esp-rs/esp-idf-template.git
     🤷   Project Name: blinky-rust-esp32c3
     🔧   Destination: /Users/sayanee/Desktop/blinky-rust-esp32c3 ...
     🔧   project-name: blinky-rust-esp32c3 ...
     🔧   Generating template ...
-    ✔ 🤷   STD support · true
-    ✔ 🤷   MCU · esp32c3
-    ✔ 🤷   ESP-IDF native build version (v4.3.2 = previous stable, v4.4 = stable, mainline = UNSTABLE) · v4.4
-    ? 🤷   Configure project to use Dev Containers (VS Code, GitHub Codespaces and Gitpod)?
-    ✔ 🤷   Configure project to use Dev Containers (VS Code, GitHub Codespaces and Gitpod)?
+    ✔ 🤷   Which MCU to target? · esp32c3
+    ✔ 🤷   Configure advanced template options? · false
     🔧   Moving generated files into: `/Users/sayanee/Desktop/blinky-rust-esp32c3`...
+    🔧   Initializing a fresh Git repository
     ✨   Done! New project created /Users/sayanee/Desktop/blinky-rust-esp32c3
     ```
 
@@ -74,16 +82,13 @@ references:
 
 1. Change directory into the project name
   ```sh
-    $ cd blinky-rust-esp32c3
+  $ cd blinky
   ```
 1. Edit file `src/main.rs` with the [blinky code](#code).
 1. Edit `Cargo.toml` to add dependencies
-  ```toml
-  [dependencies]
-  embedded-hal = "1.0.0-alpha.8"
-  esp-idf-sys = { version = "0.31.11", features = ["binstart"] }
-  esp-idf-hal = "0.38.1"
-  ```
+
+  {% highlight toml %}{% include_relative code/{{ page.path | remove: "_tutorials/" | remove: ".md" }}/Cargo.toml %}{% endhighlight %}
+
 1. [Compile / build](https://github.com/esp-rs/esp-idf-template#build) the project
   ```sh
   $ cargo build
@@ -96,17 +101,17 @@ references:
 
     ```sh
     $ ls /dev/cu.*
-    /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+    /dev/cu.usbserial-1410
     ```
 
 1. [Upload / Flash](https://github.com/esp-rs/esp-idf-template#flash)
   ```sh
-  espflash /dev/cu.SLAB_USBtoUART target/riscv32imc-esp-espidf/debug/blinky-rust-esp32c3
+  espflash flash target/riscv32imc-esp-espidf/debug/blinky
   ```
 
 ## View the logs
 
 Start the [serial monitor](https://github.com/esp-rs/esp-idf-template#monitor)
   ```sh
-  espmonitor /dev/cu.SLAB_USBtoUART
+  cargo espmonitor /dev/cu.usbserial-1410 --chip esp32c3
   ```

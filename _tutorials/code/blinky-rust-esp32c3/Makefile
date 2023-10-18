@@ -1,4 +1,4 @@
-PORT?=/dev/cu.SLAB_USBtoUART*
+PORT?=/dev/cu.usbserial-*
 PROJECT_NAME=blinky-rust-esp32c3
 
 .PHONY: default compile upload log clean
@@ -13,10 +13,10 @@ compile: ## Compile rust
 	cargo build
 
 upload: ## Upload the firmware to the board
-	espflash $(PORT) target/riscv32imc-esp-espidf/debug/$(PROJECT_NAME)
+	espflash flash target/riscv32imc-esp-espidf/debug/$(PROJECT_NAME)
 
 log: ## Start the logs
-	espmonitor $(PORT)
+	cargo espmonitor $(PORT) --chip esp32c3
 
 clean: ## Remove all build files
 	cargo clean

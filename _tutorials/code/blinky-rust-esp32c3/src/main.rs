@@ -1,23 +1,18 @@
-use std::thread;
-use std::time::Duration;
+use esp_idf_hal::{delay::FreeRtos, gpio::PinDriver, peripherals::Peripherals};
 use esp_idf_sys as _;
-use embedded_hal::digital::blocking::OutputPin;
-use esp_idf_hal::peripherals::Peripherals;
 
 fn main() {
-  esp_idf_sys::link_patches();
+    esp_idf_sys::link_patches();
 
-  let peripherals = Peripherals::take().unwrap();
-  let mut led = peripherals.pins.gpio3.into_output().unwrap();
-  let n = 1;
+    let peripherals = Peripherals::take().unwrap();
+    let mut led_pin = PinDriver::output(peripherals.pins.gpio3).unwrap();
 
-  while n == 1 {
-    led.set_high().unwrap();
-    thread::sleep(Duration::from_millis(1000));
+    loop {
+        led_pin.set_low().unwrap();
+        FreeRtos::delay_ms(1000);
 
-    led.set_low().unwrap();
-    thread::sleep(Duration::from_millis(1000));
-
-    println!("blink");
-  }
+        led_pin.set_high().unwrap();
+        FreeRtos::delay_ms(1000);
+        println!("blink");
+    }
 }
