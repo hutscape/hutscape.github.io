@@ -32,8 +32,8 @@ references:
     url: https://github.com/esp-rs/rust-build
   - name: ESP IDF Template
     url: https://github.com/esp-rs/esp-idf-template
-  - name: Rust book
-    url: https://esp-rs.github.io/book/
+  - name: Rust blinky on ESP32-C3 by Shane Mattner
+    url: https://github.com/shanemmattner/ESP32-C3_Rust_Tutorials/tree/main/Tutorials/p0-output
 ---
 
 ### Install dependancies
