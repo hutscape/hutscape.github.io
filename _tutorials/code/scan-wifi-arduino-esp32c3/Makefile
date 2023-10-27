@@ -1,5 +1,5 @@
 BOARD?=esp32:esp32:esp32c3
-PORT?=/dev/cu.SLAB_USBtoUART*
+PORT?=/dev/cu.usbserial-*
 BUILD=build
 ## Pass in V=--verbose to output more information than default
 
