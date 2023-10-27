@@ -1,11 +1,10 @@
-#include <WiFi.h>
+#include "WiFi.h"
 #include "Secret.h"
 
-// Secret.h contents:
-// char ssid[] = "secret";
-// char pass[] = "secret";
-
 void setup() {
+  // (Optional)Press reset button
+  // on the dev board to see these print statements
+
   Serial.begin(115200);
   while (!Serial) { }
 

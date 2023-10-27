@@ -14,3 +14,4 @@ _site
 .embed
 build
 node_modules
+.vscode
