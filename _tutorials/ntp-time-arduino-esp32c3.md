@@ -1,11 +1,11 @@
 ---
 layout: tutorials
-title: Connect to a WiFi network with Arduino on ESP32-C3
+title: Display NTP time  with Arduino on ESP32-C3
 dependancies:
   - name: ESP32 Arduino
     url: https://github.com/espressif/arduino-esp32
-  - name: CP210x USB to UART Bridge VCP Drivers
-    url: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads
+  - name: Arduino NTP Client
+    url: https://github.com/arduino-libraries/NTPClient
 chips:
   - ESP32-C3-MINI-1-N4
 dev_board: ESP32-C3-DevKitM-1
@@ -15,10 +15,11 @@ components:
 images:
   settings: blinky-esp32c3-arduino-settings.png
   prototype: blinky-esp32c3-prototype.jpg
-  console: connect-wifi-arduino-esp32c3.png
+  console: ntp-time-arduino-esp32c3-console.png
 features:
   - wifi
-  - connect
+  - ntp
+  - time
   - ssid
   - esp32c3
 references:
@@ -35,20 +36,4 @@ prerequisites:
     url: ./scan-wifi-arduino-esp32c3
 ---
 
-Create a file `Secret.h` in the same folder with the code.
-
-```sh
-$ tree
-.
-├── Secret.h
-└── connect-wifi-arduino-esp32c3.ino
-```
-
-Include the actual Wifi SSID name and password in the file.
-
-```h
-char ssid[] = "secret";
-char pass[] = "secret";
-```
-
-Compile and upload the firmware to connect to the WiFi.
+Time example will print NTP time with timezone offset `timeZoneOffset`. It will also check if the time is within specified hours.
