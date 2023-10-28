@@ -1,13 +1,13 @@
 - name: Capsicum
   sequence: 5
   url: /capsicum
-  description: 🫑 Retrofit a wired doorbell to add WiFi and make it smart 🔔
+  description: 🫑 Retrofit a wired doorbell to add WiFi and make it connected 🔔
   wireless: WiFi
-  mcu: ESP32
+  mcu: ESP32-C3
   sensor: bell
-  power: AAA
+  power: 16340
   status: ongoing
-  started: April 2022
+  started: Oct 2023
 
 - name: Oak
   sequence: 4
