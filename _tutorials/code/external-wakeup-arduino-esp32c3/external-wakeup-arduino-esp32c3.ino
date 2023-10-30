@@ -15,7 +15,7 @@ void setup() {
   print_wakeup_reason();
 
   Serial.println("Going to blink the LED 10 times");
-  blink(10);
+  blink(10);  // Allow time for wakeup
   Serial.println("Going to sleep now");
 
   esp_deep_sleep_enable_gpio_wakeup(1 << INTERRUPT_PIN,

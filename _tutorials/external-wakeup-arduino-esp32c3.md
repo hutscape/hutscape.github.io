@@ -38,8 +38,8 @@ features:
   - sleep
   - esp32c3
 prerequisites:
-  - name: Hello world with Arduino on ESP32-C3
-    url: ./hello-arduino-esp32c3
+  - name: Blinky with Arduino on ESP32-C3
+    url: ./blinky-arduino-esp32c3
 ---
 
 Wire up the hardware according to the schematic. Compile and upload the firmware.
