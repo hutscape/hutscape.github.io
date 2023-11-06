@@ -2,6 +2,15 @@
   <div class="container">
     <h1 class="title is-1 has-background-info-light">{{ page.title | escape }}</h1>
     <div class="field is-grouped is-grouped-multiline">
+      {% if page.date_updated %}
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-primary is-info">Updated on </span>
+          <span class="tag is-primary is-light">{{ page.date_updated | date: "%-d %B %Y" }}</span>
+        </div>
+      </div>
+      {% endif %}
+
       {% if page.dev_board %}
       <div class="control">
         <div class="tags has-addons">
