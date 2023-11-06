@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-08-31
 layout: tutorials
 title: Send command via serial monitor
 dev_board: Arduino UNO

@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-01-13
 layout: tutorials
 title: Timer wakeup with Arduino on ESP32-C3
 dependancies:

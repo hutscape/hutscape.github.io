@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-12-02
 layout: tutorials
 title: Print debug and trace info with a libary, header file and ifdef
 dependancies:

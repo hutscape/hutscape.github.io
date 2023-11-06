@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-11-02
 layout: tutorials
 title: Neopixel with RaspberryPI Pico
 

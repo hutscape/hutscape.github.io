@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-11-19
 layout: tutorials
 title: Blinky with ESP32-S3 ESP-IDF in VS Code
 dependancies:

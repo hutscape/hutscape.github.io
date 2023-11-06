@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-10-27
 layout: tutorials
 title: Blinky Arduino UNO
 dev_board: Arduino UNO

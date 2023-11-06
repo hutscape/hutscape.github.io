@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-10-09
 layout: tutorials
 title: Blinky with PlatformIO VS Code on ESP32-C3
 dependancies:

@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-01-12
 layout: tutorials
 title: Connect to a WiFi network with Arduino on ESP32-S3
 dependancies:

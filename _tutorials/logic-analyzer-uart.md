@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-09-23
 layout: tutorials
 title: Analyzing UART signals
 dev_board: Arduino UNO

@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-10-08
 layout: tutorials
 title: GPS parsing via I2C
 dependancies:

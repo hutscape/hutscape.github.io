@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-01-09
 layout: tutorials
 title: Scan WiFi with Arduino on ESP32-C3
 dependancies:

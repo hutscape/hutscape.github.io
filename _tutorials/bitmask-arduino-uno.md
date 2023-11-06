@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-01-26
 layout: tutorials
 title: Bit mask with Arduino on UNO
 dev_board: Arduino UNO

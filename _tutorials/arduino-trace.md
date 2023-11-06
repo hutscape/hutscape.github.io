@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-12-02
 layout: tutorials
 title: Print dump and trace with a library
 dependancies:

@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-09-03
 layout: tutorials
 title: Arduino struct with functions in seperate folder
 dev_board: LilyGO T-Beam

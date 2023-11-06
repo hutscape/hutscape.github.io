@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-08-31
 layout: tutorials
 title: Using 121GW multimeter as a data logger
 tool: 121GW EEVBlog Multimeter

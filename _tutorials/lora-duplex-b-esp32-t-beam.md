@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-04-12
 layout: tutorials
 title: LoRa Duplex B with ESP32 T-Beam
 

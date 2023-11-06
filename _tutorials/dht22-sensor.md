@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-08-31
 layout: tutorials
 title: DHT22 sensor
 dependancies:

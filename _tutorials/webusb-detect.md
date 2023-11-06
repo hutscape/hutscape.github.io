@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-08-27
 layout: tutorials
 title: Web USB detect device
 dependancies:

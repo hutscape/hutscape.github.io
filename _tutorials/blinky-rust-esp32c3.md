@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-10-19
 layout: tutorials
 title: Blinky with Rust on ESP32-C3
 dependancies:

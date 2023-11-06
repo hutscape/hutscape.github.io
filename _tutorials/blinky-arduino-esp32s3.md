@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-11-01
 layout: tutorials
 title: Blinky with Arduino on ESP32-S3
 dependancies:

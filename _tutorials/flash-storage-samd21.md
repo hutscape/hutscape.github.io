@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-09-03
 layout: tutorials
 title: Read and Write to the flash memory
 dependancies:

@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-08-31
 layout: tutorials
 title: Wakeup on interrupt
 dev_board: Arduino UNO

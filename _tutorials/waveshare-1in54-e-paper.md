@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-12-16
 layout: tutorials
 title: Waveshare 1.54 inch
 

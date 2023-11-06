@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-09-23
 layout: tutorials
 title: Waveshare 1.54 inch V2.1 with Arduino Zero
 

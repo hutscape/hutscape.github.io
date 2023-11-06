@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-08-29
 layout: tutorials
 title: Blinky on Arduino Nano 33 BLE Sense board
 dependancies:

@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-12-02
 layout: tutorials
 title: String functions
 dev_board: Arduino UNO

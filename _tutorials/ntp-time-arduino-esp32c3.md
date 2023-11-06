@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-10-27
 layout: tutorials
 title: Display NTP time  with Arduino on ESP32-C3
 dependancies:

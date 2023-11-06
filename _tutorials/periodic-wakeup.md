@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-09-03
 layout: tutorials
 title: Periodic wakeup with SAMD21
 

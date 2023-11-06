@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-10-14
 layout: tutorials
 title: Hello world with ESPHome on ESP32-S3
 dependancies:

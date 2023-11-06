@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-10-12
 layout: tutorials
 title: Hello world with Arduino on ESP32-S3
 dependancies:

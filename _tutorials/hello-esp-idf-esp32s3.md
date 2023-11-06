@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-09-22
 layout: tutorials
 title: Hello World with ESP-IDF in VS Code
 dependancies:

@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-04-12
 layout: tutorials
 title: Display Lat Long on T-Beam
 dependancies:

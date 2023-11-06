@@ -1,4 +1,5 @@
 ---
+date_updated: 2021-09-04
 layout: tutorials
 title: LoRa Duplex B
 dev_board: Arduino UNO

@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-01-20
 layout: tutorials
 title: External wakeup with Arduino on ESP32-S3
 dependancies:

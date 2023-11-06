@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-10-11
 layout: tutorials
 title: Blinky with Micropython on ESP32-C3
 dependancies:

@@ -1,4 +1,5 @@
 ---
+date_updated: 2023-01-06
 layout: tutorials
 title: Hello world ESP32-S3 with Rust
 dependancies:

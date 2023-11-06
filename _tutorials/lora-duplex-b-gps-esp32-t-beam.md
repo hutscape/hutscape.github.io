@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-09-23
 layout: tutorials
 title: LoRa GPS Duplex B with ESP32 T-Beam
 

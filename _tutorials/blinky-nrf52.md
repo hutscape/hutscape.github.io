@@ -1,4 +1,5 @@
 ---
+date_updated: 2022-10-13
 layout: tutorials
 title: Blinky nRF52
 dependancies:
