@@ -12,7 +12,7 @@ components:
   - name: ESP32-C3-DevKitM-1
     url: https://www.aliexpress.com/item/1005003989099547.html
 images:
-  # prototype: press-buzzer-arduino-esp32c3-prototype.jpg
+  prototype: press-buzzer-arduino-esp32c3-prototype.jpg
   schematic: press-buzzer-arduino-esp32c3-schematic.png
   console: push-button-arduino-esp32c3-console.png
 features:
