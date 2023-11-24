@@ -24,13 +24,15 @@ layout: default
   <section class="section is-small">
     <div class="columns">
       <div class="column is-3">
-        <img src="https://hutscape.com/{{ project.name | downcase }}/images/prototype/front.jpg" alt="{{ project.name }} photo">
+        <a href="{{site.url}}{{ project.url }}"><img src="https://hutscape.com/{{ project.name | downcase }}/images/prototype/front.jpg" alt="{{ project.name }} photo"></a>
       </div>
       <div class="column is-9">
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-              <h2 class="title is-2 is-spaced">{{ project.name }}</h2>
+              <h2 class="title is-2 is-spaced">
+                <a href="{{site.url}}{{ project.url }}">{{ project.name }}</a>
+              </h2>
             </div>
           </div>
           <div class="level-right">
