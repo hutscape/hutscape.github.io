@@ -1,5 +1,5 @@
 ---
-date_updated: 2023-01-13
+date_updated: 2023-11-13
 layout: tutorials
 title: Blinky with ESPHome ESP32-C3
 dependancies:

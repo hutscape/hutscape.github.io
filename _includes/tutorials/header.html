@@ -84,6 +84,22 @@
       {% endfor %}
       {% endif %}
     </div>
+
+    {% assign currentDate = site.time | date: "%s" | plus: 0 %}
+    {% assign articleDate = page.date_updated | date: "%s" | plus: 0 %}
+    {% assign sixMonthsAgo = currentDate | minus: 15778463 %}
+    {% assign oneYearAgo = currentDate | minus: 31556926 %}
+
+    {% if articleDate < oneYearAgo %}
+      <div class="notification is-warning is-danger">
+      This tutorial is more than 1 year old. If the steps below do not work, then please check the latest versions and the documentations of the individual tools used.
+      </div>
+    {% elsif articleDate < sixMonthsAgo %}
+      <div class="notification is-warning is-light">
+      This tutorial is more than 6 months old. If the steps below do not work, then please check the latest versions and the documentations of the individual tools used.
+      </div>
+    {% endif %}
+
     <hr>
 
     {% if page.dependancies or page.prerequisites %}
