@@ -20,6 +20,7 @@ features:
   - esp32c3
   - blinky
 code: yaml
+video: SWIAXcH9MuA
 references:
   - name: Schematic of ESP32-C3-DevKitM-1
     url: https://dl.espressif.com/dl/schematics/SCH_ESP32-C3-DEVKITM-1_V1_20200915A.pdf
