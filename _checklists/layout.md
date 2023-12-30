@@ -16,14 +16,13 @@ checks:
       - name: Ensure Bill of Materials with vendor links and datasheets are ready
       - name: Ensure schematic is divided up into functional logical blocks
       - name: Refer to the correct datasheet version number
-      - name: Associate mostly SMD components with size <code>0805</code> for ease of manufacturing / assembly
+      - name: Associate mostly SMD components with size <code>0603</code> or other standards for ease of manufacturing / assembly
       - name: Ensure ERC passes
-      - name: Export fresh Netlist
 
   - title: Grid
     list:
-      - name: Set coarse grid size od <code>50 mils</code>
-      - name: Import new Netlist
+      - name: Set coarse grid size od <code>50 mils (0.05 inch)</code>
+      - name: Import all components from schematic
 
   - title: Net classes
     list:
@@ -34,8 +33,8 @@ checks:
 
   - title: Component placement
     list:
-      - name: Group components into functional building blocks where possible with grid <code>25 mils</code>
-      - name: Note components that require physical considerations at the edge E.g. connectors
+      - name: Place components that require physical considerations at the edge E.g. connectors, switches
+      - name: Group components into functional building blocks where possible with grid <code>25 mils (0.025 inch)</code>
       - name: Place decoupling capacitors physically and electrically close to the desired components
       - name: Make notes on the long rats nest
 
