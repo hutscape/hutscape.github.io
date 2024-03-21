@@ -52,3 +52,5 @@ has_code: false
     ![]({{ site.url }}/assets/images/tutorials/nrf-power-profiler-esp32c3-params.png)
 1. Press the push button to wake up the ESP32-C3 to blink and then go to deep sleep.
     ![]({{ site.url }}/assets/images/tutorials/nrf-power-profiler-esp32c3-graph.png)
+1. Select the portion of the graph with `SHIFT` to display the average current and other values.
+1. Calculate [average battery life](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-battery-life) using the average current and battery capacity.
