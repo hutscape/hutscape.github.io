@@ -12,7 +12,7 @@ components:
   - name: ESP32-C3-DevKitM-1
     url: https://www.aliexpress.com/item/1005003989099547.html
 images:
-  # prototype:
+  prototype: nrf-power-profiler-esp32c3-prototype.jpg
   schematic: external-wakeup-arduino-esp32c3-schematic.png
   console: nrf-power-profiler-esp32c3-graph.png
 references:
@@ -33,10 +33,10 @@ has_code: false
 ---
 
 1. Use the [External wakeup with Arduino on ESP32-C3](./external-wakeup-arduino-esp32c3) tutorial to prepare the sample code.
-1. Connect the ESP32-C3-DevKitM-1 to the nRF Power Profiler 2 with `Vout` to `5V` and `GND` pins.
+1. Connect the ESP32-C3-DevKitM-1 to the nRF Power Profiler 2 with `Vout` to `5V` and `GND` pins. Ensure the device is **only powered** from the nRF Power Profiler 2.
 1. Connect the nRF Power Profiler 2 to your computer using the USB cable via the `USB DATA/POWER`.
     ![]({{ site.url }}/assets/images/tutorials/nrf-power-profiler-esp32c3-connections.jpg)
-1. Open the nRF Connect for Desktop application.
+1. Open the [nRF Connect for Desktop](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop) application.
 1. Click `OPEN` for the `Power Profiler` app.
     ![]({{ site.url }}/assets/images/tutorials/nrf-power-profiler-esp32c3-app.png)
 1. Select `PPK2` from the list of devices on top left-hand corner.
