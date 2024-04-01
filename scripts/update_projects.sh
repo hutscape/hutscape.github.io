@@ -18,6 +18,7 @@ do
   echo "\n\n"
   echo -e "\033[1mUpdating submodules in $project\033[0m"
   cd $project
+  git submodule foreach --recursive git reset --hard HEAD
   git submodule update --remote
   git add .
   git commit -m "$message"
