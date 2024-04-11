@@ -23,9 +23,13 @@ features:
   - consumption
   - current
   - nrf
-  - profile
+  - profiler
   - kit
   - esp32-c3
+  - PPK2
+  - ppk2
+  - measurement
+  - instrument
 prerequisites:
   - name: External wakeup with Arduino on ESP32-C3
     url: ./external-wakeup-arduino-esp32c3
