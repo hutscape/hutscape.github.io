@@ -29,6 +29,12 @@ list:
     urls:
       - website: AliExpress
         url: https://s.click.aliexpress.com/e/_9IoM6L
+  - name: nRF Power profiler
+    description: Very affordable power consumption measurement device  from Nordic especially if you are building low power devices.
+    image: ppk2.jpg
+    urls:
+      - website: AliExpress
+        url: https://s.click.aliexpress.com/e/_DmnVIbR
   - name: Power Supply
     description: I use it to power my PCBs. It ranges upto 16V, 10A, which is sufficient for my low power use cases.
     image: psu.jpg
