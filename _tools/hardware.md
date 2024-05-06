@@ -59,6 +59,12 @@ list:
     urls:
       - website: AliExpress
         url: https://s.click.aliexpress.com/e/_9GLEAT
+  - name: Solder seal wire with heat shrink
+    description: Great for joining wires. It's a heat shrink with solder inside. No need for soldering iron!
+    image: solder_seal.jpg
+    urls:
+      - website: AliExpress
+        url: https://s.click.aliexpress.com/e/_DdYoe9v
   - name: Solder paste
     description: Reliable, good quality with syringe for easy use.
     image: solder_paste.jpg
