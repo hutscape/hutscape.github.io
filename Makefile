@@ -14,3 +14,7 @@ build:
 
 projects:
 	node scripts/query_projects.js
+
+update:
+	rm Gemfile.lock
+	bundle install
