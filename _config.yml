@@ -5,6 +5,7 @@ year: 2024
 markdown: kramdown
 permalink: /:title
 youtube: https://www.youtube.com/@sayanee
+paypal: https://www.paypal.com/ncp/payment/4JU23HRF65P66
 github:
   repository_url: https://github.com/hutscape/hutscape.github.io
   code_folder: https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/
